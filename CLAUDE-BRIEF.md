@@ -14,13 +14,30 @@ I am building **HealthLedgerAI** — an AI-powered compliance and accounting int
 ---
 
 ## What the Product Does
-**Core value proposition:** AI that reads hospital cooperation agreements and ensures accounting compliance — so hospitals don't misclassify payments, miss compliance obligations, or fail regulatory audits.
+
+**IMPORTANT — Product Framing (resolved May 2026):**
+Two framings exist across project files. They are NOT competing — they are two layers of the same system. Always frame them together:
+
+**Layer 1 — Foundation (the differentiator):**
+**Cooperation Agreement Mapping** — The AI reads, structures, and understands each hospital's specific cooperation agreements. This is the moat. Generic billing tools don't know what the agreements say. HealthLedgerAI does.
+
+**Layer 2 — Output (what the CFO cares about):**
+**Billing Error & Anomaly Detection** — Because the system knows the agreements, it detects when billing violates them. A taxonomy of error categories (billing wrong rate, expired agreement, missing pre-authorisation, wrong payer, duplicate claim, co-payment miscalculation, documentation gap, etc.) flows from the agreement layer. The detection accuracy is only possible *because* of the agreement foundation.
+
+**How to frame it in conversation:**
+- Lead with the pain: billing errors, rejected EOPYY claims, revenue loss, compliance risk
+- Then explain the reason the detection is accurate: it's grounded in their actual agreements, not generic rules
+- CFO angle: Layer 2 (revenue recovered, rejections reduced)
+- Compliance angle: Layer 1 (agreement obligations tracked and enforced)
+- CEO angle: both (revenue protection + compliance risk reduction)
+
+**Core value proposition:** AI that reads hospital cooperation agreements and uses them as the ground truth to detect billing errors, prevent compliance violations, and protect revenue — so hospitals don't misclassify payments, miss obligations, or fail audits.
 
 **Four product pillars:**
 1. **Cooperation Agreement Mapping** — Extract structured data from agreements (PDFs, Word docs in Greek/English), identify parties, payment terms, compliance obligations
-2. **Accounting Compliance** — Validate accounting entries against Greek GAAP / Special Healthcare Accounting Plan (KHBV equivalent) and applicable law
+2. **Billing Error & Anomaly Detection** — Flag deviations from agreement terms before or after billing; taxonomy of error categories derived from agreement analysis
 3. **Hospital-Specific AI** — Custom-trained per hospital client on their own agreement corpus
-4. **On-Site Methodology** — Implementation includes embedded fieldwork with the accounting team
+4. **On-Site Methodology** — Implementation includes embedded fieldwork with the accounting team (active: Erasmus placement in Greece provides live on-site research opportunity)
 
 ---
 
@@ -64,6 +81,11 @@ I am building **HealthLedgerAI** — an AI-powered compliance and accounting int
 - Imperial College Healthcare partnership (March 2024)
 - **Key contact:** Dr. Vassilis Apostolopoulos (CEO, AMG) — group-level sale via Athens
 - **Entry angle:** "Your Oncology Center is the most complex billing event in your history. Let's make the €40M investment pay faster."
+
+---
+
+## Current Status — Erasmus in Greece (upcoming)
+The founder has an upcoming Erasmus placement in Greece (duration: several months). This creates a live on-site research and sales opportunity — particularly for EIMC Thessaloniki and the Athens Medical Group. The academic Erasmus context is a natural door-opener for hospital accounting department access ("researching hospital cooperation agreements"). The location within Greece will determine tactical priority (Thessaloniki = direct EIMC access; Athens = AMG group headquarters access).
 
 ---
 
