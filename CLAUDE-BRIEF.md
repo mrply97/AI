@@ -84,8 +84,39 @@ Two framings exist across project files. They are NOT competing — they are two
 
 ---
 
-## Current Status — Erasmus in Greece (upcoming)
-The founder has an upcoming Erasmus placement in Greece (duration: several months). This creates a live on-site research and sales opportunity — particularly for EIMC Thessaloniki and the Athens Medical Group. The academic Erasmus context is a natural door-opener for hospital accounting department access ("researching hospital cooperation agreements"). The location within Greece will determine tactical priority (Thessaloniki = direct EIMC access; Athens = AMG group headquarters access).
+## Current Status — Erasmus for Young Entrepreneurs (EYE), Thessaloniki
+
+**Program:** Erasmus for Young Entrepreneurs (EYE) — EU-funded exchange for new entrepreneurs. NOT a student Erasmus. This is an entrepreneurship exchange: the founder (New Entrepreneur) spends 1–6 months working with/learning from an experienced entrepreneur host in another EU country. EU pays a monthly living allowance (~€700–1,300/month).
+
+**Host business (Greece):**
+ΥΙΟΙ ΣΤΥΛΙΑΝΟΥ ΚΕΡΑΜΙΔΑ — Λογιστικό Γραφείο (Accounting/Bookkeeping Firm)
+Μαραθώνος 23, Σταυρούπολη, Thessaloniki 56431
++30 2310 651 167 / +30 2310 650 356 | kerkir29@otenet.gr
+→ **An accounting firm in Thessaloniki** — directly in HealthLedgerAI's domain. Host may have healthcare/clinic clients. Working inside this firm = live fieldwork for the PhD and product development.
+
+**IO in Greece (Intermediate Organisation):**
+Alexandra Thomaidou — Erasmus for Young Entrepreneurs Supervisor
+Smart Umbrella — www.smartumbrella.eu
+Frixou 9, Thessaloniki 54627 | +30 2310 222 856 | info@smartumbrella.eu
+→ Thessaloniki business support network. Smart Umbrella knows other local entrepreneurs and businesses — a potential introduction channel.
+
+**IO in Germany:**
+Simon Opitz — Hochschulzentrum Fulda Transfer
+Heinrich-von-Bibra-Platz 1b, 36037 Fulda
+
+**Strategic significance — why this matters enormously:**
+1. **Thessaloniki = EIMC's city.** Ιατρικό Διαβαλκανικό is in the same city as the host firm. Physical proximity removes the biggest barrier to a first meeting.
+2. **Accounting firm host = domain credibility.** Working inside a Greek accounting office while doing PhD research on hospital cooperation agreements is the most credible possible context for approaching hospital accounting departments.
+3. **The natural door-opener:** "I'm a researcher working with a Thessaloniki accounting firm on my PhD about hospital cooperation agreements — I'd like to visit your accounting team" is not a cold sales call. It is an academic research visit with local business backing.
+4. **EYE = EU entrepreneurship credibility.** The program itself signals that the EU has validated this as a serious entrepreneurial project.
+5. **Smart Umbrella network** = introductions to Thessaloniki business and healthcare community.
+6. **Host firm clients** = the accounting firm may already serve clinics, private practices, or hospital suppliers — potential warm introductions.
+
+**Actions to take before arrival:**
+- Email the host firm (ΚΕΡΑΜΙΔΑ) and ask if they have any healthcare sector clients
+- Connect with Alexandra Thomaidou at Smart Umbrella and ask about healthcare business connections in Thessaloniki
+- Research EIMC's annual Oncology Symposium dates — aim to attend during the Erasmus period
+- Prepare a one-page research brief (in Greek) explaining the PhD topic — use this as the introduction document for hospital visits
 
 ---
 
