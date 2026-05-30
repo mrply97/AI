@@ -20,9 +20,7 @@
   --f-sans:  var(--font-jost), 'Helvetica Neue', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background-color: var(--cream);
@@ -31,40 +29,77 @@ body {
   font-weight: 300;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* ── 3D Scene ── */
+
+/* Perspective origin lives here — one perspective for the whole scene */
+.scene-root {
   position: relative;
+  min-height: 100vh;
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
+  overflow: hidden;
 }
 
-/* Radial ambient glow */
-body::before {
-  content: '';
-  position: fixed;
+/* Tilt wrapper — Framer Motion applies rotateX/rotateY here */
+.scene-tilt {
+  position: relative;
+  min-height: 100vh;
+  /* transform-style set inline by Framer Motion */
+}
+
+/* ── Depth layers (absolute, pointer-events off) ── */
+
+/* Furthest back: ambient gradient glow */
+.layer-ambient {
+  position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(160,133,88,0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 85% 90%, rgba(74,107,90,0.09) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(212,169,160,0.05) 0%, transparent 70%);
+  transform: translateZ(-160px);
   pointer-events: none;
-  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(160,133,88,0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 90%, rgba(74,107,90,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(212,169,160,0.06) 0%, transparent 70%);
 }
 
-/* Film-grain texture */
-body::after {
+/* Film grain at mid-back */
+.layer-ambient::after {
   content: '';
-  position: fixed;
+  position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
 }
 
-.wrapper {
+/* Botanical — pushed back in Z */
+.botanical-layer {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform-origin: center center;
+  /* translateZ(-100px) set inline by component */
+  width: clamp(180px, 25vw, 340px);
+  opacity: 0.13;
+  pointer-events: none;
+  margin-top: -300px; /* vertical centering */
+}
+
+/* Floating ornaments — closest to viewer */
+.orbs-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Main content — at Z=0, natural flow */
+.scene-content {
   position: relative;
-  z-index: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 clamp(24px, 6vw, 80px);
+  /* translateZ(0) — sits at scene baseline */
 }
 
 /* ── Nav ── */
@@ -149,15 +184,7 @@ nav {
   max-width: 820px;
 }
 
-.eyebrow {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 28px;
-}
-
+/* ── Kinetic 3D Headline ── */
 .headline {
   font-family: var(--f-serif);
   font-size: clamp(52px, 9.5vw, 100px);
@@ -166,25 +193,26 @@ nav {
   letter-spacing: -0.01em;
   color: var(--ink);
   margin-bottom: 40px;
-  perspective: 1000px;
 }
 
-.headline .word {
+.word {
   display: inline-block;
   margin-right: 0.22em;
   will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
-.headline .word-italic-sage {
+.word-italic-sage {
   font-style: italic;
   color: var(--sage);
 }
 
-.headline .word-italic-gold {
+.word-italic-gold {
   font-style: italic;
   color: var(--gold);
 }
 
+/* ── Subtext ── */
 .subtext {
   font-size: clamp(14px, 1.8vw, 17px);
   font-weight: 300;
@@ -244,7 +272,7 @@ nav {
   background: rgba(74,107,90,0.06);
 }
 
-/* ── CTA / Contact ── */
+/* ── Contact ── */
 .contact-section {
   margin-bottom: clamp(48px, 8vh, 80px);
 }
@@ -283,12 +311,8 @@ nav {
   transition: transform 0.4s ease;
 }
 
-.contact-link:hover {
-  color: var(--sage);
-}
-.contact-link:hover::after {
-  transform: scaleX(1);
-}
+.contact-link:hover { color: var(--sage); }
+.contact-link:hover::after { transform: scaleX(1); }
 
 /* ── Scroll indicator ── */
 .scroll-hint {
@@ -311,23 +335,7 @@ nav {
   height: 40px;
   background: linear-gradient(180deg, var(--gold-lt), transparent);
   margin-left: 2px;
-}
-
-/* ── Botanical ── */
-.botanical {
-  position: fixed;
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(180px, 25vw, 340px);
-  opacity: 0.12;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.botanical svg {
-  width: 100%;
-  height: auto;
+  transform-origin: top;
 }
 
 /* ── Footer ── */
@@ -356,8 +364,8 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  .botanical { display: none; }
-  .nav-tag { display: none; }
+  .botanical-layer { display: none; }
+  .nav-tag         { display: none; }
+  .scroll-hint     { display: none; }
   footer { flex-direction: column; gap: 10px; align-items: flex-start; }
-  .scroll-hint { display: none; }
 }
