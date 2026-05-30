@@ -6,6 +6,7 @@ import ProblemHook from '@/components/ProblemHook'
 import Botanical from '@/components/Botanical'
 import HeroScene from '@/components/HeroScene'
 import FloatingOrbs from '@/components/FloatingOrbs'
+import ParticleField from '@/components/ParticleField'
 
 const PILLARS = [
   'Cooperation Agreement Mapping',
@@ -63,6 +64,9 @@ export default function Home() {
 
   return (
     <div ref={pageRef}>
+      {/* Canvas particle field — sits behind the 3D scene */}
+      <ParticleField />
+
       <HeroScene>
 
         {/* ── Layer -3: Ambient deep glow (furthest back) ── */}
