@@ -11,6 +11,7 @@ import Marquee from '@/components/Marquee'
 import SectionHow from '@/components/SectionHow'
 import SectionAstrology from '@/components/SectionAstrology'
 import SectionTransits from '@/components/SectionTransits'
+import SectionTimeline from '@/components/SectionTimeline'
 import SectionContact from '@/components/SectionContact'
 
 const PILLARS = [
@@ -178,6 +179,9 @@ export default function Home() {
 
       {/* ── NATAL CHART & TRANSITS ── */}
       <SectionTransits />
+
+      {/* ── TRANSIT TIMELINE Jun–Dec 2026 ── */}
+      <SectionTimeline />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />
