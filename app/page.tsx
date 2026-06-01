@@ -10,6 +10,7 @@ import CustomCursor from '@/components/CustomCursor'
 import Marquee from '@/components/Marquee'
 import SectionHow from '@/components/SectionHow'
 import SectionAstrology from '@/components/SectionAstrology'
+import SectionTransits from '@/components/SectionTransits'
 import SectionContact from '@/components/SectionContact'
 
 const PILLARS = [
@@ -174,6 +175,9 @@ export default function Home() {
 
       {/* ── ASTROLOGY PLANETS ── */}
       <SectionAstrology />
+
+      {/* ── NATAL CHART & TRANSITS ── */}
+      <SectionTransits />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />

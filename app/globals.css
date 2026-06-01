@@ -316,6 +316,18 @@ nav {
   letter-spacing: 0.04em;
 }
 
+/* ── Transit section ── */
+.transits-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .transits-layout { grid-template-columns: 1fr; }
+}
+
 /* ── Astrology section ── */
 .astrology-layout {
   display: grid;
