@@ -13,17 +13,89 @@
       "skillPath": "05-sales/account-research/SKILL.md",
       "computedHash": "8e17bf0b44d475bc43142fd4aa6d74fddb8f15b7c8b910066f3b3528a9c81521"
     },
+    "actualize": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/actualize/SKILL.md",
+      "computedHash": "620bd618107e9513e31fb01750e75f338d52837f9745d2181cafc84f888b282e"
+    },
+    "add-task": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sdd/skills/add-task/SKILL.md",
+      "computedHash": "103bbdb108a0f2d324b951a0b1ea5506f476d35fa04d26d09b723a9a169bccb3"
+    },
+    "agent-evaluation": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/agent-evaluation/SKILL.md",
+      "computedHash": "6b5726e82325752e9d713b926837fb02b6c2d3a5407edbd8f2517e575fc9efb6"
+    },
+    "agent-teams": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/agent-teams/SKILL.md",
+      "computedHash": "30ab25f84dbbe5b536439fa2a57e330dd2f5d60db2410ee17be8d0d970b7c7c2"
+    },
+    "analyse": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/analyse/SKILL.md",
+      "computedHash": "d4d9d5024c499687bde3bb183dd2827d15d2c822d28444ab6c079957037d9658"
+    },
+    "analyse-problem": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/analyse-problem/SKILL.md",
+      "computedHash": "ae97fe68961bdfb45f766680fafb29bec779e0af928b2973563576ea65a2183f"
+    },
+    "analyze-issue": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/analyze-issue/SKILL.md",
+      "computedHash": "7ce6f319d1c293b419894eb37d7a4b3e412e77e51b0cff54fa925464d411812e"
+    },
+    "apply-anthropic-skill-best-practices": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/apply-anthropic-skill-best-practices/SKILL.md",
+      "computedHash": "3796be8ec455b982fce34df492fd63d51403338f0369e7cdfdff44f9d1eb7a66"
+    },
+    "attach-review-to-pr": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/attach-review-to-pr/SKILL.md",
+      "computedHash": "2ef91d89a9263a6245712ed5ed0a8e59e82e5b3aaccf28bf549271f18d0ae2ae"
+    },
+    "auto-setup": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/auto-setup/SKILL.md",
+      "computedHash": "6752b960a2e830efad469e204bea2023901fc791c2938ef66cdce384c8a389c4"
+    },
+    "batch-orchestration": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/batch-orchestration/SKILL.md",
+      "computedHash": "889b115275a25dacf4d41a4ee13b17e7b4626e48b887e8e669940ed63de187d1"
+    },
     "board-meeting-prep": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "01-executive-leadership/board-meeting-prep/SKILL.md",
       "computedHash": "9e7f913edd211e95a45b93519accaa980a04bd60bedc7577cd049614996f301e"
     },
-    "brainstorming": {
-      "source": "w95/awesome-claude-corporate-skills",
+    "brainstorm": {
+      "source": "NeoLabHQ/context-engineering-kit",
       "sourceType": "github",
-      "skillPath": "09-product-management/brainstorming/SKILL.md",
-      "computedHash": "5cafa1558b0b6bd4d4c71f23d5567b7fcbbcdb4b0a50b0c5f69a80a3cebaf9b8"
+      "skillPath": "plugins/sdd/skills/brainstorm/SKILL.md",
+      "computedHash": "aae87c7499be56b53bd145649917625979ba84492274b13872e7a8822857f1d3"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "computedHash": "8df9b47092524833138b58682d03f2e153a242e550d1693657afdbee0cc9cdb0"
     },
     "brand-guidelines": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -36,6 +108,18 @@
       "sourceType": "github",
       "skillPath": "04-marketing/brand-voice-enforcement/SKILL.md",
       "computedHash": "8269b6edf6ff2fd889707fc017b4f552d5bb39c2a5b6a0a17dc68e28577832ac"
+    },
+    "bug-capture": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/bug-capture/SKILL.md",
+      "computedHash": "16a274ae05d8e200a8f0090f0f6e704cca167e21b6ef4202fd4b6741115f1586"
+    },
+    "build-mcp": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/mcp/skills/build-mcp/SKILL.md",
+      "computedHash": "0891800e8e614d2e8ffdfe0fd5c967d03edc5e9dd116fd5136e7e1f98045909f"
     },
     "business-case-builder": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -67,6 +151,12 @@
       "skillPath": "04-marketing/canvas-design/SKILL.md",
       "computedHash": "0386a413438b1778e5d834b036b2b6fc2c7a5a00dfa2ff7fe82a6b8b8c5e033e"
     },
+    "cause-and-effect": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/cause-and-effect/SKILL.md",
+      "computedHash": "11317a0a501c8ee4eb14b1b3c53dae27c6c6bc9df6542d78500ed54878bfe76f"
+    },
     "caveman": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -96,6 +186,18 @@
       "sourceType": "github",
       "skillPath": "08-it-engineering/code-review/SKILL.md",
       "computedHash": "bb7c3f709a5af910c79d29452a0fb7de7ba8408d2d39c2fe7c3e9a66ae7dc1f9"
+    },
+    "commit": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/commit/SKILL.md",
+      "computedHash": "1b47d61ac6c5a1e292eeccb5a96ae7fa2a4abd6e035192822013ab662925eae6"
+    },
+    "compact-guard": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/compact-guard/SKILL.md",
+      "computedHash": "94d7efccc342ab3440152a97481eb0dd0e0c53bf605c538b1910279ada18cf59"
     },
     "compensation-benchmarking": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -151,6 +253,18 @@
       "skillPath": "04-marketing/content-research-writer/SKILL.md",
       "computedHash": "de7e9085e875a651f209c826d1a5e7dd5f2436fb38fe565ef76b54492c1a0c22"
     },
+    "context-engineering": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/context-engineering/SKILL.md",
+      "computedHash": "86d85e781c65c79289dce1767a80b74bdea5fb1cf23b14c4b1d4db538d6f2175"
+    },
+    "context-optimizer": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/context-optimizer/SKILL.md",
+      "computedHash": "59a9304df91b1b5e4183fcfa4554e2717f5a3d3c7874875765942fa1ddcbe709"
+    },
     "contract-negotiation": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -163,11 +277,71 @@
       "skillPath": "06-legal-compliance/contract-review/SKILL.md",
       "computedHash": "d8f3fa7dafba5756fe830ab7f20a82cc9c13ca21fd9f05a2483745c60c2f616a"
     },
+    "cost-tracker": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/cost-tracker/SKILL.md",
+      "computedHash": "1b151b1de4b0ffb3537224b9eb765959df32f971c936beadefa43da88e5864ca"
+    },
+    "create-agent": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-agent/SKILL.md",
+      "computedHash": "b2b315d9084d5ce888542a65049e403688f509ae3c044745e79c066a24142606"
+    },
     "create-an-asset": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "05-sales/create-an-asset/SKILL.md",
       "computedHash": "24007eb75210c0e20add8f61db29713f71eee14f7edf9334e41359b58533a373"
+    },
+    "create-command": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-command/SKILL.md",
+      "computedHash": "0e33136495b8341746e0a16acda1425285e7565abd85e590aa68d46632e5b18d"
+    },
+    "create-hook": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-hook/SKILL.md",
+      "computedHash": "87e714f40b60dc3dfbad6780c6a208315b94ad89cf5049de66a6420fe43b5a48"
+    },
+    "create-ideas": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sdd/skills/create-ideas/SKILL.md",
+      "computedHash": "7e7ffe4866f5998d70b2200655faeffb24130fe5ce4046d5cbc268246d4d30af"
+    },
+    "create-pr": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/create-pr/SKILL.md",
+      "computedHash": "3c43770128b808571de8faab45c62c15717c3ff802d3383714ab88ec3a8d4a1b"
+    },
+    "create-rule": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-rule/SKILL.md",
+      "computedHash": "9405b8dae5188e6b4149c309a088357c46920be32312a624654bbef15d42d2eb"
+    },
+    "create-skill": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-skill/SKILL.md",
+      "computedHash": "350e5ca909108e515c1510110554e5ba90fe9198b6454b5632f37efcdb043690"
+    },
+    "create-workflow-command": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/create-workflow-command/SKILL.md",
+      "computedHash": "39150a2b18fe124033281eb8a4796823d93c8c94e80e63278446112ca2ffed1c"
+    },
+    "critique": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/reflexion/skills/critique/SKILL.md",
+      "computedHash": "c7508be7ee8bf6d726f0fc4e691a555a632477a52d3669832e3d481cfa5fa6dd"
     },
     "csv-data-summarizer": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -229,6 +403,12 @@
       "skillPath": "08-it-engineering/software-architecture/SKILL.md",
       "computedHash": "4c66f05d2a0fd2e3be319f63c3def9744450cad46e833d2ceda9fb30c55a562e"
     },
+    "decay": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/decay/SKILL.md",
+      "computedHash": "4e8797591ca041f0566c2f121a1645b072511bf2cbe06001e9c296f4c5098fcf"
+    },
     "deep-research": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -247,6 +427,12 @@
       "skillPath": "skills/deprecated/design-an-interface/SKILL.md",
       "computedHash": "885b05367fb1cf61a1e27e0d50f14d2502a05c1fa276c6e9ea050ce6a90e7095"
     },
+    "deslop": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/deslop/SKILL.md",
+      "computedHash": "bfc135b26261db70116af930be688ceb6d7715e4cc1208840088093c609bd978"
+    },
     "developer-growth-analysis": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -264,6 +450,36 @@
       "sourceType": "github",
       "skillPath": "04-marketing/discover-brand/SKILL.md",
       "computedHash": "76ef6eb240ee986fa3909f6c8e26516d1b2f7ea9004cfaa7978374ebc586124b"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
+      "computedHash": "e21044ae7496fc285f1df9ff3fb518a3a20bea6f5216c1f59f4987e12c769a0a"
+    },
+    "do-and-judge": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/do-and-judge/SKILL.md",
+      "computedHash": "80fa1e700b453601d46ea8c4be17bda9dce938774fc03c1cb3afae4399c53c0e"
+    },
+    "do-competitively": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/do-competitively/SKILL.md",
+      "computedHash": "651996f562bef779be46a918805a6f61a06d8b1e582e93e344a99cfaa25d2d81"
+    },
+    "do-in-parallel": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/do-in-parallel/SKILL.md",
+      "computedHash": "cfb9b22509464437fbdf9e255d93481f5c658616dfa815eabd3ee8da8c014888"
+    },
+    "do-in-steps": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/do-in-steps/SKILL.md",
+      "computedHash": "be5e54a4ef28f0be276ef8fd3be505e4821eed4a8fad8cdf7c780feecc9145de"
     },
     "doc-coauthoring": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -343,6 +559,12 @@
       "skillPath": "11-customer-success/escalation/SKILL.md",
       "computedHash": "56a796da1e622e6b09527f69d30a63551e46080bda1526cd17ad4a5545e5a60a"
     },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "b41c919caf1bb07fbacb0e29899ac513f9eb11cd4dd695975ad352c2c03cc4d7"
+    },
     "executive-communication": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -361,11 +583,29 @@
       "skillPath": "07-operations/file-organizer/SKILL.md",
       "computedHash": "1b03d0f0879230671fba161b92d732c9ae7e947bfe061cbf008d39fa9df1ed8b"
     },
-    "frontend-design": {
-      "source": "w95/awesome-claude-corporate-skills",
+    "file-watcher": {
+      "source": "rohitg00/pro-workflow",
       "sourceType": "github",
-      "skillPath": "08-it-engineering/frontend-design/SKILL.md",
-      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+      "skillPath": "skills/file-watcher/SKILL.md",
+      "computedHash": "0d3983b306b52adbd1324a20906903ed71e3ee6907d7850b3f3463c538cd5751"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "computedHash": "932d23af11a3eb2b758f5b1d9aec7b6d28ddd26658328414f87f34dff7179d19"
+    },
+    "fix-tests": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/tdd/skills/fix-tests/SKILL.md",
+      "computedHash": "438c5dbe6544a9d35f1dec776b6cc0f2eaa9aef87a1c00cae76a2cfe2cea0c3b"
+    },
+    "frontend-design": {
+      "source": "Ilm-Alan/frontend-design",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "0346f726533c85e1ffd07e879ee64874efc1ef99c4a8979209aff53216f7588a"
     },
     "fsi-comps-analysis": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -391,6 +631,18 @@
       "skillPath": "skills/misc/git-guardrails-claude-code/SKILL.md",
       "computedHash": "53a1de29d2b76481202608376fa4a20a8bd7e65b0b8a907a8c9578e629cf313f"
     },
+    "git-notes": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/git-notes/SKILL.md",
+      "computedHash": "f7f6194d3484f773fd1cd30dddbefbfe8d1a1d15b8986d82940bb2e0efd07648"
+    },
+    "git-worktrees": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/git-worktrees/SKILL.md",
+      "computedHash": "5e873d36aff12018aa17d7c3824508d537ccac847b55e7dafc1b9041429aa236"
+    },
     "grill-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -403,6 +655,12 @@
       "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
       "computedHash": "eb0e91e84277283dc2b23ed544399e53afd6b5287e5b6929f25fe8aa608e164b"
     },
+    "gstack": {
+      "source": "adryanmoldokkr32-pixel/gstack",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "bd5d3e7334b460d3308a7dc87d9abe5fe35c30429b124fef31749e931f852287"
+    },
     "guideline-generation": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -414,6 +672,18 @@
       "sourceType": "github",
       "skillPath": "skills/productivity/handoff/SKILL.md",
       "computedHash": "1a78d774f8a59db5daa6e65e20a6596872fa8cde769f9a6e3a09b678dd5ae8cc"
+    },
+    "i-remotion": {
+      "source": "ItachiDevv/i-remotion-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "6ee496e56423ac866a5fcbfb2a3b5e5ba6b66e87035089dfc6fa62e3927aca70"
+    },
+    "implement-task": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sdd/skills/implement-task/SKILL.md",
+      "computedHash": "6054cf3e2519decb3dc654e4f5a0b3d9139feb8cb550df0de290d11acd18502d"
     },
     "improve-codebase-architecture": {
       "source": "mattpocock/skills",
@@ -438,6 +708,12 @@
       "sourceType": "github",
       "skillPath": "02-finance-accounting/initiating-coverage/SKILL.md",
       "computedHash": "a7b412545b16145a5b2ebdb14bc16086c8a33143fa58abdfba2955c995135074"
+    },
+    "insights": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/insights/SKILL.md",
+      "computedHash": "97fe76e78aed734fe9299528b84c14b9041e2c348084e9c69cbb7d17a7b2b019"
     },
     "interactive-dashboard-builder": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -475,6 +751,24 @@
       "skillPath": "03-human-resources/job-description-writer/SKILL.md",
       "computedHash": "f196ab6362e9658ae0ecab22771e8d48b42249cb48d016b14d45f10cdce54a48"
     },
+    "judge": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/judge/SKILL.md",
+      "computedHash": "c7668a2c2d8890132daacd6b871f01bd7631ec861877acf5c2d56d4094c9fea8"
+    },
+    "judge-with-debate": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/judge-with-debate/SKILL.md",
+      "computedHash": "60e11beb39ef52f69f3055b7bad3892bdc7ac7bee89fbc7f1e416c88c8312319"
+    },
+    "kaizen": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/kaizen/SKILL.md",
+      "computedHash": "ae364846e6517ea5a9c56a690c6ca8b4662964f881a93f35225418d25634e098"
+    },
     "kaizen:kaizen": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -505,6 +799,12 @@
       "skillPath": "08-it-engineering/langsmith-fetch/SKILL.md",
       "computedHash": "7953660eee3f80ce985956e4ad2ed1f551efca6aad596b7f3479d5a829602180"
     },
+    "launch-sub-agent": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/launch-sub-agent/SKILL.md",
+      "computedHash": "74f8c5dcdad2aa1c544aa2bf2ce80c2a225f903e62b5a9dc53bc65bd88d6c9bf"
+    },
     "lbo-model": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -517,11 +817,35 @@
       "skillPath": "05-sales/lead-research-assistant/SKILL.md",
       "computedHash": "08cf5477dfdcbefa0758fad431c226efb9f09e108c8c6477b4a14db2d6810889"
     },
+    "learn-rule": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/learn-rule/SKILL.md",
+      "computedHash": "6faaaca6b4ecd32bfe6d1bf7f48789e25a177ead4c3d4060a95d4ed35d43fe0c"
+    },
     "legal-risk-assessment": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "06-legal-compliance/legal-risk-assessment/SKILL.md",
       "computedHash": "fbc4dffe38a8b8d59ccee1d016654497dc1d9f2f4ceb5ca632dcb4715d22c07f"
+    },
+    "llm-council": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/llm-council/SKILL.md",
+      "computedHash": "2031ef9a12a6622aac4f2abae4f96343ec295f98acee911f57c390026f9e3d0f"
+    },
+    "llm-gate": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/llm-gate/SKILL.md",
+      "computedHash": "c0b928179392e0acc97f476eeb213cc91da82ebc0e534fa7ac4b1d73673f993c"
+    },
+    "load-issues": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/git/skills/load-issues/SKILL.md",
+      "computedHash": "f555cb970947501938a628fde2b74cf69f0d124d8dadf80ea6e1f6e3b6e06039"
     },
     "ma-due-diligence": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -534,6 +858,12 @@
       "sourceType": "github",
       "skillPath": "04-marketing/market-research/SKILL.md",
       "computedHash": "0e3b449ccffe57b1330f2f5fa281795926ab3299d88d342b044c0abb6b512f30"
+    },
+    "mcp-audit": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/mcp-audit/SKILL.md",
+      "computedHash": "0ae0d7d066b1622a0de76efcd6bfb9c2b2053fb4168036ff2e6ccdee6a1bfb9c"
     },
     "mcp-builder": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -553,6 +883,12 @@
       "skillPath": "07-operations/meeting-insights-analyzer/SKILL.md",
       "computedHash": "73d94649632b9b146bb9a745a31efcbc315a8916f14619a327f009b54d1be656"
     },
+    "memorize": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/reflexion/skills/memorize/SKILL.md",
+      "computedHash": "6fd7d0eb1f41a842a4f8064c07a43bd3d6844d03430e18b8d62657985463451d"
+    },
     "memory-management": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -564,6 +900,12 @@
       "sourceType": "github",
       "skillPath": "skills/misc/migrate-to-shoehorn/SKILL.md",
       "computedHash": "8f1a623a019abca0ab5e22e8deaae375829368cc1344016010201cf650331d33"
+    },
+    "multi-agent-patterns": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/multi-agent-patterns/SKILL.md",
+      "computedHash": "6a224cf3bcbfe3feae946f6aa075a4a4c7ab2d73c0b86139b2aa952fbdf17c79"
     },
     "nda-triage": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -589,6 +931,18 @@
       "skillPath": "11-customer-success/onboarding-playbook/SKILL.md",
       "computedHash": "00d8bc4706f0ef1a13098089609d1e91f5be2db5cc04e54204cad9d1861f893f"
     },
+    "orchestrate": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/orchestrate/SKILL.md",
+      "computedHash": "a2ef4d7d80ac1fab31a99eab14bdfa7c5aecb7658a3cdf1f740e71a251524984"
+    },
+    "parallel-worktrees": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/parallel-worktrees/SKILL.md",
+      "computedHash": "80c343c412a088177940e5f6ad9c210de0445adb07bd773393e17ad866844e2f"
+    },
     "pdf": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -601,11 +955,35 @@
       "skillPath": "03-human-resources/performance-review-assistant/SKILL.md",
       "computedHash": "020ded5c331a2b3c151df25f788d676307adb2ad4e66f4807348cefd2593bffd"
     },
+    "permission-tuner": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/permission-tuner/SKILL.md",
+      "computedHash": "98c5f23707708b679d228c1db36a1792252d6dc38d6ca661d959a95d3aad60be"
+    },
     "pitch-deck": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "02-finance-accounting/pitch-deck/SKILL.md",
       "computedHash": "52cb8677872896c311b474ad78c0339224af063bfe5e05e466c83b3e83a8fcb9"
+    },
+    "plan-do-check-act": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/plan-do-check-act/SKILL.md",
+      "computedHash": "8d0f45800b4c87da26e1a2c4ec9fd7a3232fb4f5fb3346ef17dc7dc79b02cfc8"
+    },
+    "plan-interrogate": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/plan-interrogate/SKILL.md",
+      "computedHash": "7e725fa98198a5a0c910a06950299635b53defbdc12c59ea396cf54abd08f45a"
+    },
+    "plan-task": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sdd/skills/plan-task/SKILL.md",
+      "computedHash": "1e04d4babe2731ad088dcc4ef8708feae96bb59df9357bdd1298d1d4702b5c2f"
     },
     "postgres": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -625,6 +1003,12 @@
       "skillPath": "09-product-management/prd-writer/SKILL.md",
       "computedHash": "0dbe8e06e37436b864406463e77b80c4d6ee861d32b1420f0f2678dba086d309"
     },
+    "pro-workflow": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/pro-workflow/SKILL.md",
+      "computedHash": "f16cb39ac67eaa699863f147e68d89bdf85cfe256d936e0924c22ed3c3478e8e"
+    },
     "process-optimization": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -642,6 +1026,18 @@
       "sourceType": "github",
       "skillPath": "07-operations/project-status-report/SKILL.md",
       "computedHash": "ecb7d394a82f529b9e7e299a83e2f4431fa601465a8775851b20ef9240899739"
+    },
+    "prompt-engineering": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/prompt-engineering/SKILL.md",
+      "computedHash": "28717ed0eafe344d25d9d76e74109c0f1db3f5ced98d67406cee55d85d48d553"
+    },
+    "propose-hypotheses": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/propose-hypotheses/SKILL.md",
+      "computedHash": "dd8ff52cec578299ae165e20dbb37af5a28a7917bff96be28d13e7144b75c385"
     },
     "prospect": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -667,11 +1063,47 @@
       "skillPath": "11-customer-success/qbr-builder/SKILL.md",
       "computedHash": "f77c9b96e1efbd160071b9948e9acdbbb061d4b2f9eaf00ed30cc80de2caf954"
     },
+    "query": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/query/SKILL.md",
+      "computedHash": "76c732f68fd252c414108435b051f8e1f2ee272e69f5956e0d61cf7bdfe5c7af"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "computedHash": "2760c85d4f4117b0006e7ba755f4bbd61f8f4c185f347999763c97f507274e30"
+    },
+    "reflect": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/reflexion/skills/reflect/SKILL.md",
+      "computedHash": "7523a929fd950d8b5342081996a97eb8cf1f264dd787afd8bd9e354de87924f5"
+    },
+    "replay-learnings": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/replay-learnings/SKILL.md",
+      "computedHash": "905d9de71b42f9b832477619256733633ed15777253d927bdaba53cfd1b32383"
+    },
     "request-refactor-plan": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/deprecated/request-refactor-plan/SKILL.md",
       "computedHash": "176cf1d0c4dc4fc4d958c4bc4ed67f222f2656bda2f3f15e3a3e98b2e5edaf2f"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "computedHash": "874f3786b05007a8b4a60452a4cd89b9917c645d34b6b1e40ea05037d12f0e67"
+    },
+    "reset": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/reset/SKILL.md",
+      "computedHash": "62bb643e93212a4c2f6bcae41df163c22c2df75268d3e9cc3a28c904ccb32735"
     },
     "resource-planning": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -691,6 +1123,18 @@
       "skillPath": "skills/in-progress/review/SKILL.md",
       "computedHash": "4a2b10bb81e568516c52018e73b8255a02066024257d7c907fa65826d62bc8dd"
     },
+    "review-local-changes": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/review/skills/review-local-changes/SKILL.md",
+      "computedHash": "3a076efd0d00579489d4c8d2104fe1236eeaa0aa0b7240d239cc39ddc67fd381"
+    },
+    "review-pr": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/review/skills/review-pr/SKILL.md",
+      "computedHash": "f0e96f9446c2d75ce487f73d2f1f662267ab229ae46ff904decdc8ff359989e8"
+    },
     "rfp-builder": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -708,6 +1152,18 @@
       "sourceType": "github",
       "skillPath": "09-product-management/roadmap-builder/SKILL.md",
       "computedHash": "7c417b70991266fb601877dbc5a53f09a3f60b61ca6141c84dbbb7a4777a79ca"
+    },
+    "root-cause-tracing": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/root-cause-tracing/SKILL.md",
+      "computedHash": "84214415f9d366e047a8925f562e3b72ada0b06cedf8614d7ef91aef92e92d2a"
+    },
+    "safe-mode": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/safe-mode/SKILL.md",
+      "computedHash": "23a675ef363dee3a0ba863ad08510055ed8602888c1c8bd162c2b21561d431c1"
     },
     "scaffold-exercises": {
       "source": "mattpocock/skills",
@@ -733,6 +1189,30 @@
       "skillPath": "05-sales/sequence-load/SKILL.md",
       "computedHash": "0579ba1d88acb9a264e95c9039061329ae180f1ead839726d6a5b72b1aaa43cc"
     },
+    "session-handoff": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/session-handoff/SKILL.md",
+      "computedHash": "4c005642a561acce84193c24ef388d9b6f34e6953ab8fad368e0caecfa154142"
+    },
+    "setup-arxiv-mcp": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/mcp/skills/setup-arxiv-mcp/SKILL.md",
+      "computedHash": "9e798571afd4e5030510baedcc6eadce3f09ff1b63d2a78dae5e263988b514bd"
+    },
+    "setup-codemap-cli": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/mcp/skills/setup-codemap-cli/SKILL.md",
+      "computedHash": "9d7fe34d3512afeb4af7eff52854d2feaa6573a05854e7eabd0fe1cdce8e49bb"
+    },
+    "setup-context7-mcp": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/mcp/skills/setup-context7-mcp/SKILL.md",
+      "computedHash": "05ed783bf9134b50b029b374abfac58cd0136cfe5132a04ba86ef18c85b881d4"
+    },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -744,6 +1224,12 @@
       "sourceType": "github",
       "skillPath": "skills/misc/setup-pre-commit/SKILL.md",
       "computedHash": "f9aeedf0a1f560ec465c3939c54434c2d949ac8b958a0493db52216f688a0366"
+    },
+    "setup-serena-mcp": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/mcp/skills/setup-serena-mcp/SKILL.md",
+      "computedHash": "7e4a1bddbfb1785b6e2f024dce477481fc85b0471c09717c3b33387f3054b6eb"
     },
     "skill-creator": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -762,6 +1248,12 @@
       "sourceType": "github",
       "skillPath": "11-customer-success/slack-search/SKILL.md",
       "computedHash": "e5e3036a66093d3ff1d392b7c56fab0ba5d2f0d026d6bc5717f27d6935918772"
+    },
+    "smart-commit": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/smart-commit/SKILL.md",
+      "computedHash": "83c83a3fd93a8187ad08dc552058c49b639606b655f38bd4372950cf08f84d86"
     },
     "social-media-strategy": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -787,6 +1279,12 @@
       "skillPath": "09-product-management/sprint-planning/SKILL.md",
       "computedHash": "8f0ce85d102ee5f675087b41ff69d76cdefb0227875607632a3abce706f3174d"
     },
+    "sprint-status": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/sprint-status/SKILL.md",
+      "computedHash": "3200fc4501a5550ae39582cdb2bd2c1a6aed3a7c441248bfbe83d06070a95cf4"
+    },
     "sql-queries": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -799,11 +1297,23 @@
       "skillPath": "10-data-analytics/statistical-analysis/SKILL.md",
       "computedHash": "c2e55066517148585900127ba4863cf5f3b49728c63d37cd53ff7db0fd1f224d"
     },
+    "status": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/fpf/skills/status/SKILL.md",
+      "computedHash": "836aed59b3371fcd2fcf0166bf63f0c912993d02687381e1ee6e7aa6e8c7503d"
+    },
     "strategic-planning": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "01-executive-leadership/strategic-planning/SKILL.md",
       "computedHash": "948c0c3251aa7600e5a091d29e95d4336ea506d3f07a309863dceed334808089"
+    },
+    "subagent-driven-development": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/subagent-driven-development/SKILL.md",
+      "computedHash": "d5b7b82d2d0f8132c574a4bbdcd5856e9e99e7edfebc30b8b8e4f64158b88535"
     },
     "supplier-scorecard": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -811,11 +1321,23 @@
       "skillPath": "12-procurement-supply-chain/supplier-scorecard/SKILL.md",
       "computedHash": "24b6fbe039d8182c73823a34394ff6c5f90345536c06aea607e9b217bfdf9122"
     },
+    "survey-generator": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/survey-generator/SKILL.md",
+      "computedHash": "0d550494b9bd887a08f17342d537fb9bbe46b6f4d1220f3a2c17bb365ce2ecf9"
+    },
     "system-design": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "08-it-engineering/system-design/SKILL.md",
       "computedHash": "5915b5f79ae74f20473c4922075b091f290374d26b26c927af9c767102424ac4"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "7246fdd3a795fc3daff0af72044ca99bf836e4e6a46844742858786fdfb86488"
     },
     "tailored-resume-generator": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -854,10 +1376,22 @@
       "computedHash": "3f0795a17cd18ea117f41bcfb8fef66fa17b1a00a2c1a0a7f134e090f0dcdb92"
     },
     "test-driven-development": {
-      "source": "w95/awesome-claude-corporate-skills",
+      "source": "NeoLabHQ/context-engineering-kit",
       "sourceType": "github",
-      "skillPath": "08-it-engineering/test-driven-development/SKILL.md",
-      "computedHash": "ee9f03c4c6592be2933409f2d73ff5861412fb8cacde2eaca0e914d73ab2de07"
+      "skillPath": "plugins/tdd/skills/test-driven-development/SKILL.md",
+      "computedHash": "ed985d7e012c0caa184828052f4300aeb799f1dcfab87c0c916dfd8ee23bfd7c"
+    },
+    "test-prompt": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/test-prompt/SKILL.md",
+      "computedHash": "c62965fea8bb00a8003b11de1af4bdbebd784428a23c23cd14ad255744d8a3e4"
+    },
+    "test-skill": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/test-skill/SKILL.md",
+      "computedHash": "754e3996f05462cc9caeaad2a794359d8c9cb16e7b66dd14844c0f26420f997f"
     },
     "testing-strategy": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -870,6 +1404,18 @@
       "sourceType": "github",
       "skillPath": "04-marketing/theme-factory/SKILL.md",
       "computedHash": "80805b82d1644a20087c1b9982ad43f0bf53615ca745d3375fc209967e066086"
+    },
+    "thoroughness-scoring": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/thoroughness-scoring/SKILL.md",
+      "computedHash": "d2aaafeb1ff4ffb0fda1a844550440f197f601e99e4bfe4be89b2bba7c1dcac5"
+    },
+    "thought-based-reasoning": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/customaize-agent/skills/thought-based-reasoning/SKILL.md",
+      "computedHash": "23a4669c49aace2adf9f47aae9b4090813c787c93f0924667076fd198abc725e"
     },
     "ticket-triage": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -889,6 +1435,18 @@
       "skillPath": "skills/engineering/to-prd/SKILL.md",
       "computedHash": "a6d6d475f1d01c201937fa0c306e55b7056b02023ad615bc92f57514e831dd31"
     },
+    "token-efficiency": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/token-efficiency/SKILL.md",
+      "computedHash": "bc04fa39ebf7f7990bb8efa183aada752d11233199fa349de1d85aba97d58211"
+    },
+    "tree-of-thoughts": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/sadd/skills/tree-of-thoughts/SKILL.md",
+      "computedHash": "66c25b0ef69738253bc401bde4d29db9dc74e042e69bd9f5e956badeaaa2b4c5"
+    },
     "triage": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -907,11 +1465,29 @@
       "skillPath": "skills/deprecated/ubiquitous-language/SKILL.md",
       "computedHash": "c8968b02b83c365bc81d85cc17fb4c8854b80f5b6dece322164fff5b00142231"
     },
+    "update-docs": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/docs/skills/update-docs/SKILL.md",
+      "computedHash": "96ca0027be872315c74f09d257c2dd51111c8c185b7e8e3e2650db12ebc821dd"
+    },
     "user-research-synthesizer": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
       "skillPath": "09-product-management/user-research-synthesizer/SKILL.md",
       "computedHash": "601cfb62eb0ee78b47f094773c02dffff56c033615e0ef59eafeb0d0efe59dbb"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "computedHash": "bd10bc57c23040630b17c877a9bc7b4be40c35161a2e2f110d770d78e3b0a4ff"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "computedHash": "de10fd3ff46d797acc92b9df6b3ea456a5cd1d095b73c90bc921e83cce4c5bb9"
     },
     "vendor-evaluation": {
       "source": "w95/awesome-claude-corporate-skills",
@@ -925,6 +1501,12 @@
       "skillPath": "07-operations/vendor-management/SKILL.md",
       "computedHash": "6f656577f9af7897f1f19d4ac0026c55a6134293ac3a02ff5f9562ba833a357e"
     },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "9b446f0c7fe1cfb560b1d34439523b1a76d5f177290007b2c053a1c749a4a8ba"
+    },
     "webapp-testing": {
       "source": "w95/awesome-claude-corporate-skills",
       "sourceType": "github",
@@ -937,11 +1519,59 @@
       "skillPath": "05-sales/weekly-prep-brief/SKILL.md",
       "computedHash": "d60fe1eeaa88a22898acd94a21f4028d85b6ce0a43f26e19abaf3bab78899a97"
     },
+    "why": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/kaizen/skills/why/SKILL.md",
+      "computedHash": "1dc562881dbe6e4fe3de8c070282dc87ae910b4198a11d340dbbea8f6192b8a7"
+    },
+    "wiki-builder": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/wiki-builder/SKILL.md",
+      "computedHash": "99f74241dabe543cf767137f0ff730d1adc72feccfd4e21eca7859bc0681bbf2"
+    },
+    "wiki-query": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/wiki-query/SKILL.md",
+      "computedHash": "86609ed3ae358a97343b2bf3257ecdf244389db89afa408b648e6851f54b39c3"
+    },
+    "wiki-research-loop": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/wiki-research-loop/SKILL.md",
+      "computedHash": "3d20d0eb3d72095caa3af64f8b2f2d156cd853c0862399be17e08c609af43c18"
+    },
+    "wiki-viewer": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/wiki-viewer/SKILL.md",
+      "computedHash": "7d2dbb00caad31227210c8fe2c0797f8427cb0c79072ae0b3cd2e939a2300c67"
+    },
+    "wrap-up": {
+      "source": "rohitg00/pro-workflow",
+      "sourceType": "github",
+      "skillPath": "skills/wrap-up/SKILL.md",
+      "computedHash": "d5cf4d548dc43ed1c9000f100f077be879105c268ae1de881b42f70741074044"
+    },
     "write-a-skill": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/productivity/write-a-skill/SKILL.md",
       "computedHash": "b44d8aab2ead83c716e01af4c9a24ccc4575ce70ad58ec4f1749fb88c9cc82ba"
+    },
+    "write-concisely": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/docs/skills/write-concisely/SKILL.md",
+      "computedHash": "785b6367f985aa9f11ddad41b63b1f58d99f0547e4136b8c188dae6ab913fa74"
+    },
+    "write-tests": {
+      "source": "NeoLabHQ/context-engineering-kit",
+      "sourceType": "github",
+      "skillPath": "plugins/tdd/skills/write-tests/SKILL.md",
+      "computedHash": "4ba1642d05f0f1c27114a109d73284f6ea0c8d45d0df9612b774c647dd744dc3"
     },
     "writing-beats": {
       "source": "mattpocock/skills",
@@ -955,11 +1585,23 @@
       "skillPath": "skills/in-progress/writing-fragments/SKILL.md",
       "computedHash": "1c21ac5c7444041a7536527b2016a5f7c5626d9f2279380ea4a418cbee548f6f"
     },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "2b986445454a025ca2c3839f8a2024747e8cce0517948437232cd113d2719060"
+    },
     "writing-shape": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/in-progress/writing-shape/SKILL.md",
       "computedHash": "4cae0b2eccd512594a1edc15a0eeffaa2f11e7f2cf21dd4cf9213171c165d324"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-skills/SKILL.md",
+      "computedHash": "c0a92e629e39ea91b1f54da67a6aa92723008a8ef5b500c6de078f55485937c7"
     },
     "xlsx": {
       "source": "w95/awesome-claude-corporate-skills",
