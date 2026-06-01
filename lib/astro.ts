@@ -119,14 +119,15 @@ export function calcNatal(
   const lstR    = lst * (Math.PI / 180)
   const latR    = latDeg * (Math.PI / 180)
   const epsR    = eps * (Math.PI / 180)
-  const ascRaw  = norm(
-    Math.atan2(-Math.cos(lstR), Math.sin(epsR) * Math.tan(latR) + Math.cos(epsR) * Math.sin(lstR))
+  // Ascendant: eastern horizon crossing of ecliptic
+  const ascRaw = norm(
+    Math.atan2(Math.cos(lstR), -(Math.sin(epsR) * Math.tan(latR) + Math.cos(epsR) * Math.sin(lstR)))
     * (180 / Math.PI)
   )
 
-  // MC
+  // MC: ecliptic crossing of the meridian (no latitude dependence)
   const mcRaw = norm(
-    Math.atan2(Math.sin(lstR), Math.cos(lstR) * Math.sin(epsR) + Math.tan(latR) * Math.cos(epsR))
+    Math.atan2(Math.sin(lstR), Math.cos(lstR) * Math.cos(epsR))
     * (180 / Math.PI)
   )
 
