@@ -9,6 +9,7 @@ import ParticleField from '@/components/ParticleField'
 import CustomCursor from '@/components/CustomCursor'
 import Marquee from '@/components/Marquee'
 import SectionHow from '@/components/SectionHow'
+import SectionAstrology from '@/components/SectionAstrology'
 import SectionContact from '@/components/SectionContact'
 
 const PILLARS = [
@@ -170,6 +171,9 @@ export default function Home() {
 
       {/* ── HOW IT WORKS ── */}
       <SectionHow />
+
+      {/* ── ASTROLOGY PLANETS ── */}
+      <SectionAstrology />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />

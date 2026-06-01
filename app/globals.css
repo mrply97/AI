@@ -316,10 +316,29 @@ nav {
   letter-spacing: 0.04em;
 }
 
+/* ── Astrology section ── */
+.astrology-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 512px) 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: clamp(10px, 1.2vw, 16px);
+  align-content: start;
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  .botanical-layer { display: none; }
-  .nav-tag         { display: none; }
-  .scroll-hint     { display: none; }
-  .site-footer     { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .botanical-layer  { display: none; }
+  .nav-tag          { display: none; }
+  .scroll-hint      { display: none; }
+  .site-footer      { flex-direction: column; gap: 10px; align-items: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .astrology-layout { grid-template-columns: 1fr; }
 }
