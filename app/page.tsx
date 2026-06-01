@@ -1,12 +1,15 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
 import ProblemHook from '@/components/ProblemHook'
 import Botanical from '@/components/Botanical'
 import HeroScene from '@/components/HeroScene'
 import FloatingOrbs from '@/components/FloatingOrbs'
 import ParticleField from '@/components/ParticleField'
+import CustomCursor from '@/components/CustomCursor'
+import Marquee from '@/components/Marquee'
+import SectionHow from '@/components/SectionHow'
+import SectionContact from '@/components/SectionContact'
 
 const PILLARS = [
   'Cooperation Agreement Mapping',
@@ -15,14 +18,14 @@ const PILLARS = [
   'On-Site Methodology',
 ]
 
-// ── 3D word-flip reveal: each word rotates in on the X axis from above ──
+const LINES: { text: string; cls?: string }[][] = [
+  [{ text: 'The' }, { text: 'intelligence', cls: 'word-italic-sage' }],
+  [{ text: 'healthcare' }, { text: 'accounting' }],
+  [{ text: 'has been' }, { text: 'waiting for.', cls: 'word-italic-gold' }],
+]
+
 const wordVariant = {
-  hidden: {
-    opacity: 0,
-    rotateX: -90,
-    y: 8,
-    transformOrigin: 'center top',
-  },
+  hidden: { opacity: 0, rotateX: -90, y: 8, transformOrigin: 'center top' },
   visible: (i: number) => ({
     opacity: 1,
     rotateX: 0,
@@ -37,51 +40,31 @@ const wordVariant = {
 }
 
 const fadeUp = (delay: number) => ({
-  hidden:   { opacity: 0, y: 20 },
-  visible:  { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay } },
+  hidden:  { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay } },
 })
-
-// Headline words grouped into visual lines
-const LINES: { text: string; cls?: string }[][] = [
-  [{ text: 'The' }, { text: 'intelligence', cls: 'word-italic-sage' }],
-  [{ text: 'healthcare' }, { text: 'accounting' }],
-  [{ text: 'has been' }, { text: 'waiting for.', cls: 'word-italic-gold' }],
-]
 
 const CONTENT_START = 7.5
 
 export default function Home() {
-  const pageRef = useRef<HTMLDivElement>(null)
-
-  // Scroll-driven parallax: botanical drifts up slower than content
-  const { scrollYProgress } = useScroll({
-    target: pageRef,
-    offset: ['start start', 'end start'],
-  })
-  const botanicalScrollY = useTransform(scrollYProgress, [0, 1], ['0%', '-28%'])
+  // Botanical drifts up as you scroll past the hero
+  const { scrollY } = useScroll()
+  const botanicalScrollY = useTransform(scrollY, [0, 700], ['0%', '-22%'])
 
   let wordIdx = 0
 
   return (
-    <div ref={pageRef}>
-      {/* Canvas particle field — sits behind the 3D scene */}
+    <>
+      <CustomCursor />
       <ParticleField />
 
+      {/* ── HERO — 3D tilt scene ── */}
       <HeroScene>
-
-        {/* ── Layer -3: Ambient deep glow (furthest back) ── */}
         <div className="layer-ambient" aria-hidden="true" />
-
-        {/* ── Layer -2: Botanical illustration ── */}
         <Botanical scrollY={botanicalScrollY} />
-
-        {/* ── Layer +2: Floating gold ornaments (closest) ── */}
         <FloatingOrbs />
 
-        {/* ── Layer 0: All visible content ── */}
         <div className="scene-content">
-
-          {/* Nav */}
           <motion.nav variants={fadeUp(0.1)} initial="hidden" animate="visible">
             <a className="logo" href="#">
               <span className="logo-dot" />
@@ -90,13 +73,10 @@ export default function Home() {
             <span className="nav-tag">Healthcare Accounting Intelligence</span>
           </motion.nav>
 
-          {/* Problem hook → eyebrow */}
           <ProblemHook />
 
-          {/* Hero */}
           <section className="hero">
-
-            {/* ── 3D headline: words flip in from rotateX -90 → 0 ── */}
+            {/* 3D word-flip headline */}
             <h1
               className="headline"
               style={{ transformStyle: 'preserve-3d', perspective: '600px' }}
@@ -159,8 +139,8 @@ export default function Home() {
                   key={p}
                   className="pillar"
                   variants={{
-                    hidden:   { opacity: 0, y: 14 },
-                    visible:  { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+                    hidden:  { opacity: 0, y: 14 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
                   }}
                 >
                   {p}
@@ -169,20 +149,8 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="contact-section"
-              variants={fadeUp(CONTENT_START + 0.55)}
-              initial="hidden"
-              animate="visible"
-            >
-              <p className="contact-label">Get in touch</p>
-              <a className="contact-link" href="mailto:info@healthledgerai.com">
-                info@healthledgerai.com
-              </a>
-            </motion.div>
-
-            <motion.div
               className="scroll-hint"
-              variants={fadeUp(CONTENT_START + 0.7)}
+              variants={fadeUp(CONTENT_START + 0.65)}
               initial="hidden"
               animate="visible"
             >
@@ -193,20 +161,24 @@ export default function Home() {
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
               />
             </motion.div>
-
           </section>
-
-          <motion.footer
-            variants={fadeUp(CONTENT_START + 0.85)}
-            initial="hidden"
-            animate="visible"
-          >
-            <span className="footer-copy">© 2026 HealthLedger AI &nbsp;·&nbsp; All rights reserved</span>
-            <span className="footer-tag">Something important is being built.</span>
-          </motion.footer>
-
         </div>
       </HeroScene>
-    </div>
+
+      {/* ── MARQUEE ticker ── */}
+      <Marquee />
+
+      {/* ── HOW IT WORKS ── */}
+      <SectionHow />
+
+      {/* ── CONTACT / WAITLIST ── */}
+      <SectionContact />
+
+      {/* ── FOOTER ── */}
+      <footer className="site-footer">
+        <span className="footer-copy">© 2026 HealthLedger AI &nbsp;·&nbsp; All rights reserved</span>
+        <span className="footer-tag">Something important is being built.</span>
+      </footer>
+    </>
   )
 }
