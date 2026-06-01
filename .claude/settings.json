@@ -21,6 +21,16 @@
       "env": {
         "TWENTY_FIRST_API_KEY": "21st_sk_f00d07ddb5c469f504cdeaa57bde631489ad7dd0a8734ec9c1532437a2eda70a"
       }
+    },
+    "airtable": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@airtable/mcp-server"
+      ],
+      "env": {
+        "AIRTABLE_TOKEN": "${AIRTABLE_TOKEN}"
+      }
     }
   }
 }
