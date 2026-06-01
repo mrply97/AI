@@ -1,0 +1,11 @@
+{
+  "enabledPlugins": {
+    "nano-banana-2@nano-banana-2-plugins": true
+  },
+  "mcpServers": {
+    "nano-banana-2": {
+      "command": "npx",
+      "args": ["-y", "nano-banana-2-mcp@0.1.1"]
+    }
+  }
+}
