@@ -14,6 +14,7 @@ import SectionAstrology from '@/components/SectionAstrology'
 import SectionTimeline from '@/components/SectionTimeline'
 import SectionLove from '@/components/SectionLove'
 import SectionSynastry from '@/components/SectionSynastry'
+import SectionSynastryTiming from '@/components/SectionSynastryTiming'
 import SectionContact from '@/components/SectionContact'
 
 // astronomia VSOP87 data requires client-side evaluation only
@@ -193,6 +194,9 @@ export default function Home() {
 
       {/* ── SYNASTRY ── */}
       <SectionSynastry />
+
+      {/* ── CROSSING SYNASTRY TIMING ── */}
+      <SectionSynastryTiming />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />
