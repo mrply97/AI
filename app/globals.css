@@ -316,6 +316,18 @@ nav {
   letter-spacing: 0.04em;
 }
 
+/* ── Synastry section ── */
+.synastry-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .synastry-layout { grid-template-columns: 1fr; }
+}
+
 /* ── Love section ── */
 .love-layout {
   display: grid;

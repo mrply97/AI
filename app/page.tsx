@@ -1,5 +1,6 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import ProblemHook from '@/components/ProblemHook'
 import Botanical from '@/components/Botanical'
@@ -10,10 +11,13 @@ import CustomCursor from '@/components/CustomCursor'
 import Marquee from '@/components/Marquee'
 import SectionHow from '@/components/SectionHow'
 import SectionAstrology from '@/components/SectionAstrology'
-import SectionTransits from '@/components/SectionTransits'
 import SectionTimeline from '@/components/SectionTimeline'
 import SectionLove from '@/components/SectionLove'
+import SectionSynastry from '@/components/SectionSynastry'
 import SectionContact from '@/components/SectionContact'
+
+// astronomia VSOP87 data requires client-side evaluation only
+const SectionTransits = dynamic(() => import('@/components/SectionTransits'), { ssr: false })
 
 const PILLARS = [
   'Cooperation Agreement Mapping',
@@ -186,6 +190,9 @@ export default function Home() {
 
       {/* ── LOVE & RELATIONSHIP TRANSITS ── */}
       <SectionLove />
+
+      {/* ── SYNASTRY ── */}
+      <SectionSynastry />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />
