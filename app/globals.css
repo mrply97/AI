@@ -316,6 +316,18 @@ nav {
   letter-spacing: 0.04em;
 }
 
+/* ── Love section ── */
+.love-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .love-layout { grid-template-columns: 1fr; }
+}
+
 /* ── Timeline section ── */
 .timeline-layout {
   display: grid;
