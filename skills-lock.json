@@ -30,6 +30,12 @@
       "sourceType": "github",
       "skillPath": "skills/obsidian-markdown/SKILL.md",
       "computedHash": "cacc9058a35ad3fd4985b4c31121bff8202f1337c39808c1326ded6a19a7915f"
+    },
+    "obsidian-second-brain": {
+      "source": "eugeniughelbur/obsidian-second-brain",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "7de55c323e43e7ebe57e50b9d41064311b92499e86fa6b66118342120c1d7203"
     }
   }
 }
