@@ -1,0 +1,62 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "nano-banana-2@nano-banana-2-plugins": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "impeccable@impeccable": true
+  },
+  "mcpServers": {
+    "nano-banana-2": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "nano-banana-2-mcp@0.1.1"
+      ]
+    },
+    "@21st-dev/magic": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/magic@latest"
+      ],
+      "env": {
+        "TWENTY_FIRST_API_KEY": "21st_sk_f00d07ddb5c469f504cdeaa57bde631489ad7dd0a8734ec9c1532437a2eda70a"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "airtable": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@airtable/mcp-server"
+      ],
+      "env": {
+        "AIRTABLE_TOKEN": "${AIRTABLE_TOKEN}"
+      }
+    },
+    "composio": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@composio/mcp@latest"
+      ],
+      "env": {
+        "COMPOSIO_API_KEY": "${COMPOSIO_API_KEY}"
+      }
+    }
+  }
+}
