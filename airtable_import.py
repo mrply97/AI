@@ -57,30 +57,33 @@ TASKS = [
     {"Task": "Update CLAUDE-BRIEF.md with new developments", "Phase": "Ongoing", "Category": "Admin", "Priority": "Low", "Target Date": "Ongoing", "Status": "Ongoing", "Notes": "Paste CLAUDE-BRIEF.md at start of any new Claude session to restore full context."},
 ]
 
-def create_base():
+def get_workspace_id():
+    r = requests.get("https://api.airtable.com/v0/meta/workspaces", headers=HEADERS)
+    if r.status_code != 200:
+        print(f"Error listing workspaces: {r.status_code} — {r.text}")
+        return None
+    workspaces = r.json().get("workspaces", [])
+    if not workspaces:
+        print("No workspaces found.")
+        return None
+    ws = workspaces[0]
+    print(f"Using workspace: {ws['name']} ({ws['id']})")
+    return ws["id"]
+
+def create_base(workspace_id):
     print("Creating Airtable base...")
     payload = {
         "name": "HealthLedgerAI — EIC Checklist",
+        "workspaceId": workspace_id,
         "tables": [{
             "name": "Tasks",
             "fields": [
                 {"name": "Task", "type": "singleLineText"},
                 {"name": "Phase", "type": "singleLineText"},
                 {"name": "Category", "type": "singleLineText"},
-                {"name": "Priority", "type": "singleSelect", "options": {"choices": [
-                    {"name": "Critical", "color": "redBright"},
-                    {"name": "High", "color": "orangeBright"},
-                    {"name": "Medium", "color": "yellowBright"},
-                    {"name": "Low", "color": "greenBright"},
-                ]}},
+                {"name": "Priority", "type": "singleLineText"},
                 {"name": "Target Date", "type": "singleLineText"},
-                {"name": "Status", "type": "singleSelect", "options": {"choices": [
-                    {"name": "To Do", "color": "grayBright"},
-                    {"name": "In Progress", "color": "blueBright"},
-                    {"name": "Waiting", "color": "purpleBright"},
-                    {"name": "Done", "color": "greenBright"},
-                    {"name": "Ongoing", "color": "cyanBright"},
-                ]}},
+                {"name": "Status", "type": "singleLineText"},
                 {"name": "Notes", "type": "multilineText"},
             ]
         }]
@@ -88,12 +91,11 @@ def create_base():
     r = requests.post("https://api.airtable.com/v0/meta/bases", headers=HEADERS, json=payload)
     if r.status_code != 200:
         print(f"Error creating base: {r.status_code} — {r.text}")
-        return None, None
+        return None
     data = r.json()
     base_id = data["id"]
-    table_id = data["tables"][0]["id"]
     print(f"Base created: {base_id}")
-    return base_id, table_id
+    return base_id
 
 def insert_tasks(base_id):
     print(f"Inserting {len(TASKS)} tasks...")
@@ -109,12 +111,14 @@ def insert_tasks(base_id):
             print(f"Error inserting batch: {r.status_code} — {r.text}")
         else:
             print(f"  Inserted rows {i+1}–{min(i+10, len(records))}")
-    print("Done! Open Airtable — your base is ready.")
+    print("\nDone! Open Airtable — your base is ready.")
 
 if __name__ == "__main__":
     if TOKEN == "paste_your_token_here":
         print("ERROR: Paste your Airtable personal access token into the TOKEN variable in this script.")
     else:
-        base_id, table_id = create_base()
-        if base_id:
-            insert_tasks(base_id)
+        workspace_id = get_workspace_id()
+        if workspace_id:
+            base_id = create_base(workspace_id)
+            if base_id:
+                insert_tasks(base_id)
