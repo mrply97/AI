@@ -57,20 +57,9 @@ TASKS = [
     {"Task": "Update CLAUDE-BRIEF.md with new developments", "Phase": "Ongoing", "Category": "Admin", "Priority": "Low", "Target Date": "Ongoing", "Status": "Ongoing", "Notes": "Paste CLAUDE-BRIEF.md at start of any new Claude session to restore full context."},
 ]
 
-def get_workspace_id():
-    r = requests.get("https://api.airtable.com/v0/meta/workspaces", headers=HEADERS)
-    if r.status_code != 200:
-        print(f"Error listing workspaces: {r.status_code} — {r.text}")
-        return None
-    workspaces = r.json().get("workspaces", [])
-    if not workspaces:
-        print("No workspaces found.")
-        return None
-    ws = workspaces[0]
-    print(f"Using workspace: {ws['name']} ({ws['id']})")
-    return ws["id"]
+WORKSPACE_ID = "wspvfkkNC00oZP0SY"
 
-def create_base(workspace_id):
+def create_base(workspace_id=WORKSPACE_ID):
     print("Creating Airtable base...")
     payload = {
         "name": "HealthLedgerAI — EIC Checklist",
@@ -117,8 +106,6 @@ if __name__ == "__main__":
     if TOKEN == "paste_your_token_here":
         print("ERROR: Paste your Airtable personal access token into the TOKEN variable in this script.")
     else:
-        workspace_id = get_workspace_id()
-        if workspace_id:
-            base_id = create_base(workspace_id)
-            if base_id:
-                insert_tasks(base_id)
+        base_id = create_base()
+        if base_id:
+            insert_tasks(base_id)
