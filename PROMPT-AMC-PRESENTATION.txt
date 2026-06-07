@@ -1,0 +1,143 @@
+Create a stunning, full-screen HTML presentation (single file, no external dependencies except Google Fonts) for a company called HealthLedgerAI pitching to the American Medical Center (AMC) in Nicosia, Cyprus. This is a high-stakes executive pitch to the General Manager of Cyprus's most prestigious private hospital.
+
+=== DESIGN SPECIFICATIONS ===
+Fonts: Import from Google Fonts — Cormorant Garamond (serif, for headlines) and Jost (sans-serif, for body). Use @import in the <style> tag.
+Color palette:
+  --cream: #F4EFE4  (background)
+  --gold: #A08558   (accents, dividers, highlights)
+  --gold-lt: #C9AA7C (lighter gold)
+  --sage: #4A6B5A   (secondary color, key points)
+  --ink: #1E1A14    (primary text)
+  --ink-soft: #4A4438 (body text)
+  --ink-mute: #8A8070 (labels, captions)
+  --ivory: #EDE7D8  (card backgrounds)
+
+Style: Luxury, understated, sophisticated. Like a premium consulting firm deck. No gradients, no bright colors. Elegant whitespace. Serif headlines, clean sans-serif body text.
+
+Layout: Full-screen slides (100vw × 100vh). One slide visible at a time. Navigation via left/right arrow keys AND clicking left/right sides of the screen. Show slide number (e.g. "3 / 10") bottom right. Show a small animated progress bar at the bottom.
+
+Animations: Subtle fadeIn on slide content when transitioning. No flashy effects.
+
+Add a small HealthLedgerAI logo in the top-left of every slide: a sage-colored dot (8px, pulsing animation) followed by "HealthLedger AI" in Cormorant Garamond 16px. This is the presenter's company.
+
+=== SLIDE CONTENT — BUILD EXACTLY THESE 11 SLIDES ===
+
+--- SLIDE 1: TITLE ---
+Label (small, gold, uppercase, tracked): CONFIDENTIAL EXECUTIVE BRIEF
+Main headline (large serif): "A New Intelligence for American Medical Center"
+Subline (medium, italic serif, sage): Accounting Compliance · Cooperation Agreements · AI Built for Your Hospital
+Bottom left: HealthLedgerAI · healthledgerai.com
+Bottom right: Presented to: Constantinos Michaelides, General Manager · May 2026
+Background: cream with a very subtle right-side decorative element (a thin vertical gold line and a small botanical SVG — a simple lily with sage stems, barely visible, opacity 0.08)
+
+--- SLIDE 2: THE SITUATION ---
+Label: THE CONTEXT
+Headline (serif): "You operate entirely outside GESY."
+Body text: "That is a deliberate, principled decision — and a competitive advantage. But it means every single bill AMC issues is a bespoke private transaction. No HIO standardisation. No set tariffs. Just you, your insurers, and your agreements."
+Below that, three horizontal cards side by side:
+  Card 1 — Icon: a document with lines. Title: "6+ Active Insurer Agreements". Text: "Each with its own fee schedule, pre-authorisation rules, claim format, and payment timeline."
+  Card 2 — Icon: a building. Title: "Ministry of Health Agreement". Text: "State-referral billing running parallel to private billing since 2001. Separate accounting treatment required."
+  Card 3 — Icon: arrows expanding. Title: "Limassol + Nicosia Tower". Text: "Two simultaneous expansions. Two new sets of billing workflows. Both opening by 2026."
+
+--- SLIDE 3: THE SIGNAL ---
+Label: WHAT WE NOTICED
+Headline (serif): "You're solving billing complexity with headcount."
+Body: "In the first five months of 2026, AMC posted three separate finance and administrative roles:"
+Show three stacked quote-style boxes (gold left border):
+  "Casualty Administrator — Knowledge of SAP system will be considered an advantage."
+  "Payroll Accountant — Knowledge of SAP system will be considered an advantage."
+  "Insurance Liaison & Administrative Officer — Hands-on proficiency with SAP ERP is a desirable criterion."
+Below: A single line in sage, italic serif: "SAP is live at AMC — but it is not fully embedded. These roles exist because the system alone is not enough."
+
+--- SLIDE 4: THE COST ---
+Label: THE REAL COST OF MANUAL BILLING
+Headline (serif): "Every rejected claim. Every delayed payment. Every manually keyed entry."
+Layout: Two columns.
+Left column — three pain points with gold bullet markers:
+  "Insurance claim errors rejected post-submission — revenue lost permanently or recovered only after months of follow-up"
+  "SAP underutilisation — system purchased, staff not consistently trained, integrations incomplete"
+  "No billing infrastructure for Limassol — 68 new beds opening 2026 with no automated billing workflow in place"
+Right column — a prominent stat box (sage border):
+  Large number in Cormorant Garamond: "3"
+  Label below: "Open finance roles simultaneously"
+  Subtext: "The finance team is understaffed relative to the complexity of a rapidly expanding, 100% private-billing tertiary hospital with a new Middle Eastern parent imposing group reporting standards."
+
+--- SLIDE 5: PUREHEALTH FACTOR ---
+Label: THE NEW OWNERSHIP DIMENSION
+Headline (serif): "PureHealth (Abu Dhabi) now has a stake in AMC."
+Body: "In October 2025, PureHealth — a listed Abu Dhabi healthcare conglomerate — completed its €800 million acquisition of 60% of Hellenic Healthcare Group, which holds 50% of AMC. PureHealth manages 11+ hospitals globally."
+Two side-by-side implication boxes (ivory background, gold border):
+  Box 1 — Title: "What this means now". Text: "Group KPIs, standardised financial reporting, and ERP harmonisation requirements will arrive top-down from Abu Dhabi. AMC needs to be ready."
+  Box 2 — Title: "What this means for HealthLedgerAI". Text: "AMC needs compliance infrastructure that satisfies both Cyprus-local requirements AND PureHealth group standards. We are designed for exactly this."
+
+--- SLIDE 6: THE SOLUTION ---
+Label: HEALTHLEDGER AI
+Headline (serif): "AI that reads your agreements and ensures your accounting is compliant."
+Center: A simple horizontal flow diagram (text-based, elegant):
+  [Cooperation Agreements] → [AI Extraction Engine] → [Compliance Rules Layer] → [SAP / Accounting System] → [Audit Trail]
+Below the diagram, four feature cards in a 2×2 grid:
+  Card 1: "Agreement Mapping" — Reads every cooperation agreement (PDF, Word, scanned). Extracts parties, payment terms, obligations, expiry dates. In English and Greek.
+  Card 2: "Compliance Validation" — Every accounting entry validated against the specific agreement that generated it. Flags misclassifications before they reach an auditor.
+  Card 3: "SAP Integration" — Works directly inside your existing SAP environment. No parallel system, no double entry.
+  Card 4: "Audit Trail" — Every AI decision logged with timestamp, rationale, and reference. Ready for PureHealth group reporting and Cyprus regulatory review.
+
+--- SLIDE 7: BUILT FOR AMC SPECIFICALLY ---
+Label: YOUR HOSPITAL · YOUR CONFIGURATION
+Headline (serif): "Custom-trained on your agreements. Built from the inside."
+Body: "HealthLedgerAI is not a generic accounting tool. Before any implementation, we conduct an on-site immersion — working alongside your accounting team, mapping your existing agreements, identifying compliance gaps. The AI is then trained specifically on AMC's agreement corpus."
+Three milestone cards in a horizontal row (with step numbers 1, 2, 3):
+  Step 1: "Immersion (Week 1–2)". "On-site with your accounting team. Map all active cooperation agreements. Identify current billing pain points."
+  Step 2: "Configuration (Week 3–6)". "AI trained on AMC's specific agreements. SAP connector configured. Insurance billing workflows built."
+  Step 3: "Pilot (Month 2–3)". "Live on a defined scope — e.g. all private insurance claims for one month. Measure: rejection rate reduction, time saved, SAP entry accuracy."
+
+--- SLIDE 8: LIMASSOL READINESS ---
+Label: THE LIMASSOL OPPORTUNITY
+Headline (serif): "68 new beds. Opening 2026. Billing infrastructure needed before Day 1."
+Body: "The €60 million Limassol hospital will also operate outside GESY — meaning the same 100% private billing complexity as Nicosia, from Day 1. Setting up manual processes post-launch means months of revenue inefficiency. Setting up HealthLedgerAI pre-launch means Limassol opens billing-ready."
+A timeline graphic (horizontal, minimal):
+  [Now] — "Pilot at Nicosia AMC" → [Q3 2026] — "Limassol opens with HealthLedgerAI pre-configured" → [2027] — "Both facilities on unified billing intelligence platform"
+Bottom note (gold, italic): "The Nicosia pilot is not just about Nicosia. It is the blueprint for Limassol."
+
+--- SLIDE 9: RESEARCH FOUNDATION ---
+Label: WHY TRUST THIS
+Headline (serif): "Not built in a lab. Built from the inside."
+Two-column layout:
+Left: Body text — "HealthLedgerAI is grounded in doctoral research on hospital cooperation agreements in Cyprus and Greece — conducted through on-site immersion in hospital accounting departments. This is not a generic AI product adapted for healthcare. It is built from a deep understanding of exactly the agreements AMC signs, exactly the compliance obligations those agreements create, and exactly the accounting treatment they require."
+Right: Three credential cards (stacked):
+  "PhD Research — Cyprus & Greece hospital cooperation agreements · On-site immersion methodology"
+  "Domain Specificity — Built exclusively for hospital accounting · Not a general-purpose AI tool"
+  "Academic Rigour — Every compliance rule cites the specific regulation it enforces · No black-box outputs"
+
+--- SLIDE 10: PROPOSED NEXT STEPS ---
+Label: THE PROPOSAL
+Headline (serif): "A three-month paid pilot. Zero commitment beyond that."
+Center: A clean three-box layout:
+  Box 1 (gold border) — "Month 1: Discovery & Setup". "On-site immersion with AMC accounting team. Map all active agreements. Configure SAP connector. Define pilot scope."
+  Box 2 (sage border) — "Month 2–3: Live Pilot". "HealthLedgerAI live on agreed scope. Weekly reporting. Measure rejection rates, processing time, compliance gaps found."
+  Box 3 (gold border) — "Month 3: Decision". "Full results review. ROI calculation. Decision on full deployment and Limassol pre-configuration."
+Bottom: "The pilot is designed to produce a clear financial result — not a proof of concept. If the numbers do not justify expansion, you do not expand."
+
+--- SLIDE 11: CLOSING ---
+Label: HEALTHLEDGER AI
+Headline (serif, large, centered): "The intelligence AMC's accounting has been waiting for."
+Subline (italic serif, sage, centered): "Built from doctoral research. Grounded in the agreements you sign every day."
+Center: Contact block:
+  "info@healthledgerai.com"
+  "healthledgerai.com"
+Below: A quiet line in ink-mute: "All information in this presentation is shared under a signed Confidentiality Agreement. HealthLedgerAI · © 2026"
+Right side: Same subtle botanical SVG as slide 1, opacity 0.06.
+
+=== TECHNICAL REQUIREMENTS ===
+- Single HTML file, fully self-contained
+- Google Fonts imported via @import in CSS
+- Keyboard navigation: ArrowLeft / ArrowRight (and ArrowUp/ArrowDown as aliases)
+- Click navigation: clicking left 30% of screen goes back, right 30% goes forward
+- Slide counter bottom-right: "X / 11" in small gold text
+- Progress bar: 3px bar at very bottom, gold fill, animates smoothly between slides
+- Each slide fades in (opacity 0 → 1, translateY 10px → 0, 0.4s ease) when shown
+- All content must fit without scrolling at 1280×800 viewport minimum
+- Print-friendly: @media print shows all slides stacked vertically, one per page
+- NO external CSS files, NO external JS files, NO external images (use inline SVG only)
+- Add a small "ESC = exit fullscreen" hint if the presentation is opened fullscreen
+
+Make it genuinely beautiful. This is a presentation to the decision-maker of Cyprus's most prestigious private hospital. It must feel premium.

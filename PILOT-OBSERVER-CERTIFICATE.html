@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>HealthLedgerAI — Prototype Demonstration Observer Certificate</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+  :root {
+    --cream: #F4EFE4;
+    --gold: #A08558;
+    --gold-lt: #C9AA7C;
+    --sage: #4A6B5A;
+    --ink: #1E1A14;
+    --ink-soft: #4A4438;
+    --ink-mute: #8A8070;
+    --ivory: #EDE7D8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    font-family: 'Jost', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 720px;
+    background: white;
+    padding: 60px 64px;
+    border: 1px solid var(--gold-lt);
+    position: relative;
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 0.5px solid var(--gold-lt);
+    pointer-events: none;
+  }
+
+  .logo-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--sage);
+    border-radius: 50%;
+  }
+
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .doc-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--sage);
+    margin-bottom: 36px;
+  }
+
+  .gold-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 36px;
+  }
+
+  .preamble {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .details-block {
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+
+  .detail-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .detail-row:last-child { margin-bottom: 0; }
+
+  .detail-label {
+    font-weight: 500;
+    color: var(--ink-mute);
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+
+  .detail-value {
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .certification-text {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .items-list {
+    margin: 0 0 24px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .items-list li {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--ink-soft);
+    padding: 6px 0 6px 20px;
+    position: relative;
+    line-height: 1.6;
+    border-bottom: 0.5px solid var(--ivory);
+  }
+
+  .items-list li:last-child { border-bottom: none; }
+
+  .items-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .note-box {
+    background: var(--cream);
+    border: 1px solid var(--gold-lt);
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .note-box strong {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .sig-section {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .sig-block {}
+
+  .sig-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+
+  .sig-line {
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .sig-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .sig-role {
+    font-size: 11.5px;
+    font-weight: 300;
+    color: var(--ink-mute);
+    margin-bottom: 2px;
+  }
+
+  .sig-date-line {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-weight: 300;
+  }
+
+  .sig-date-blank {
+    display: inline-block;
+    border-bottom: 1px solid var(--ink-mute);
+    width: 120px;
+    margin-left: 6px;
+  }
+
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 0.5px solid var(--gold-lt);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 10.5px;
+    color: var(--ink-mute);
+    font-weight: 300;
+  }
+
+  .footer-left { line-height: 1.8; }
+  .footer-right { text-align: right; line-height: 1.8; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page {
+      border: none;
+      padding: 40px 48px;
+      max-width: 100%;
+      box-shadow: none;
+    }
+    .page::before { border: 0.5px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="logo-line">
+    <div class="logo-dot"></div>
+    <span class="logo-name">HealthLedger AI</span>
+  </div>
+
+  <div class="doc-label">Observer Certificate — Prototype Demonstration</div>
+
+  <h1>Certification of Presence at<br>HealthLedgerAI Prototype Demonstration</h1>
+  <div class="subtitle">Pre-Pilot Validation Session · Hospital Accounting Intelligence System</div>
+
+  <div class="gold-rule"></div>
+
+  <p class="preamble">
+    This document certifies that the undersigned Observer was physically present at a structured demonstration
+    of the HealthLedgerAI prototype system conducted by the Founder, Maria Polychroniadou, and confirms
+    the details of the session as recorded below.
+  </p>
+
+  <div class="details-block">
+    <div class="detail-row">
+      <span class="detail-label">Date of Demonstration</span>
+      <span class="detail-value">___________________________</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Location</span>
+      <span class="detail-value">___________________________</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Duration (approx.)</span>
+      <span class="detail-value">___________________________</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Presented by</span>
+      <span class="detail-value">Maria Polychroniadou, Founder & CEO, HealthLedgerAI</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Input data used</span>
+      <span class="detail-value">Anonymised / synthetic hospital invoice dataset (no real patient data)</span>
+    </div>
+  </div>
+
+  <p class="certification-text">
+    The Observer confirms having witnessed the following elements of the HealthLedgerAI prototype:
+  </p>
+
+  <ul class="items-list">
+    <li>Upload or input of a structured hospital invoice dataset</li>
+    <li>Automated detection of billing errors and anomalies across defined categories</li>
+    <li>Generation of a structured alert report with error classification and risk prioritisation</li>
+    <li>Review of at least one specific error category, including the detection logic applied</li>
+    <li>Discussion of how the system would be configured against a hospital's specific cooperation agreements</li>
+  </ul>
+
+  <p class="certification-text">
+    The Observer confirms that this session was conducted as a pre-pilot feasibility demonstration.
+    This certificate does not constitute a commercial commitment, letter of intent, or endorsement of any kind.
+    It is issued solely to document the fact of the Observer's presence at the demonstration session.
+  </p>
+
+  <div class="note-box">
+    <strong>Note on data privacy:</strong> All invoice data used in this demonstration was synthetic or anonymised.
+    No real patient records, real billing data, or confidential hospital information was used or disclosed during
+    this session. HealthLedgerAI operates under GDPR-compliant data handling protocols.
+  </div>
+
+  <div class="sig-section">
+    <div class="sig-block">
+      <div class="sig-label">Observer (Witness)</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">___________________________</div>
+      <div class="sig-role">Name</div>
+      <div class="sig-role" style="margin-top:6px">___________________________</div>
+      <div class="sig-role">Title / Role</div>
+      <div class="sig-role" style="margin-top:6px">___________________________</div>
+      <div class="sig-role">Organisation</div>
+      <div class="sig-date-line">Date: <span class="sig-date-blank"></span></div>
+    </div>
+
+    <div class="sig-block">
+      <div class="sig-label">Presenter (HealthLedgerAI)</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">Maria Polychroniadou</div>
+      <div class="sig-role">Founder & CEO</div>
+      <div class="sig-role">HealthLedgerAI</div>
+      <div class="sig-date-line">Date: <span class="sig-date-blank"></span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      HealthLedgerAI<br>
+      info@healthledgerai.com · healthledgerai.com
+    </div>
+    <div class="footer-right">
+      This document is issued for documentation purposes only.<br>
+      It does not constitute a commercial agreement of any kind.<br>
+      HealthLedgerAI · © 2026
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
