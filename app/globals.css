@@ -379,6 +379,18 @@ nav {
   align-content: start;
 }
 
+/* ── New Moon section ── */
+.new-moon-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .new-moon-layout { grid-template-columns: 1fr; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .botanical-layer  { display: none; }

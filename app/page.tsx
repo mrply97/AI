@@ -16,6 +16,7 @@ import SectionLove from '@/components/SectionLove'
 import SectionSynastry from '@/components/SectionSynastry'
 import SectionSynastryTiming from '@/components/SectionSynastryTiming'
 import SectionSynastry2027 from '@/components/SectionSynastry2027'
+import SectionNewMoon from '@/components/SectionNewMoon'
 import SectionContact from '@/components/SectionContact'
 
 // astronomia VSOP87 data requires client-side evaluation only
@@ -201,6 +202,9 @@ export default function Home() {
 
       {/* ── SYNASTRY 2027 FORECAST ── */}
       <SectionSynastry2027 />
+
+      {/* ── NEW MOON IN GEMINI — life arc to 2033 ── */}
+      <SectionNewMoon />
 
       {/* ── CONTACT / WAITLIST ── */}
       <SectionContact />
