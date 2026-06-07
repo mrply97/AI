@@ -58,6 +58,10 @@
       "env": {
         "COMPOSIO_API_KEY": "${COMPOSIO_API_KEY}"
       }
+    },
+    "higgsfield": {
+      "type": "http",
+      "url": "https://mcp.higgsfield.ai/mcp"
     }
   }
 }
