@@ -1,0 +1,48 @@
+name: Loop Triage (daily)
+
+on:
+  schedule:
+    # Runs every morning at 07:00 UTC
+    - cron: "0 7 * * *"
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run loop triage
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          claude --print \
+            "You are running the loop-triage skill. \
+             Scan the last 24 hours of CI failures, open issues, and recent commits. \
+             Produce a concise findings report. \
+             For each actionable finding, create a GitHub issue if one does not exist. \
+             Write a summary to loop-state/triage-$(date +%Y-%m-%d).md." \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,mcp__github__*"
+
+      - name: Commit triage state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add loop-state/ || true
+          git diff --staged --quiet || git commit -m "chore: daily triage $(date +%Y-%m-%d)"
+          git push || true

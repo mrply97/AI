@@ -1,0 +1,39 @@
+name: Loop Upgrade Deps (weekly)
+
+on:
+  schedule:
+    # Runs every Monday at 08:00 UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run upgrade-deps loop
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          claude --print \
+            "You are running the upgrade-deps skill. \
+             Check package.json for outdated or vulnerable dependencies using npm outdated and npm audit. \
+             Group findings by: security patches, minor updates, major updates. \
+             Apply security patches immediately and open a single PR. \
+             Log findings to loop-state/deps-$(date +%Y-%m-%d).md." \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,mcp__github__*"

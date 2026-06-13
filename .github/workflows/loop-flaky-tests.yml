@@ -1,0 +1,43 @@
+name: Loop Flaky Test Triage (on CI failure)
+
+on:
+  # Triggers whenever the main CI workflow fails
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  flaky-triage:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run triage-flaky skill
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          claude --print \
+            "You are running the triage-flaky skill. \
+             A CI run just failed. Investigate the failure. \
+             If the test is flaky (non-deterministic), quarantine it by adding a skip marker and open a GitHub issue. \
+             If it is a real regression, open a GitHub issue with full reproduction steps. \
+             Do not modify any code beyond the skip marker. \
+             Log findings to loop-state/flaky-$(date +%Y-%m-%dT%H-%M).md." \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,mcp__github__*"
