@@ -1,0 +1,56 @@
+name: Loop Flaky Test Triage (on CI failure)
+
+on:
+  # Only trigger on failures from trusted branches (not fork PRs)
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main, master, develop]
+  workflow_dispatch:
+
+jobs:
+  flaky-triage:
+    # Extra guard: skip if triggered by a fork PR (untrusted source)
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'failure' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write    # only to open a triage issue
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect test logs (trusted shell step, no agent)
+        run: |
+          mkdir -p loop-state
+          # Capture last 200 lines of recent git log for context
+          git log --oneline -20 > loop-state/recent-commits.txt
+          echo "Log collected"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Analyse failure + classify (read-only, no Bash)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          claude --print \
+            "You are running the triage-flaky skill. \
+             A CI run on the main branch just failed. \
+             Read loop-state/recent-commits.txt for recent changes. \
+             Search for open issues related to this failure via GitHub MCP tools. \
+             Classify the failure as: FLAKY (non-deterministic) or REGRESSION (real bug). \
+             If no existing issue tracks this, create one with full details. \
+             Write your classification and reasoning to loop-state/flaky-$(date +%Y-%m-%dT%H-%M).md. \
+             Do NOT modify any source or test files." \
+            --allowedTools "Read,Write,Glob,Grep,mcp__github__list_issues,mcp__github__issue_write,mcp__github__search_issues"

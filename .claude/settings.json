@@ -14,7 +14,8 @@
   "enabledPlugins": {
     "nano-banana-2@nano-banana-2-plugins": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
-    "impeccable@impeccable": true
+    "impeccable@impeccable": true,
+    "security-guidance@claude-plugins-official": true
   },
   "mcpServers": {
     "nano-banana-2": {
@@ -47,6 +48,20 @@
       "env": {
         "AIRTABLE_TOKEN": "${AIRTABLE_TOKEN}"
       }
+    },
+    "composio": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@composio/mcp@latest"
+      ],
+      "env": {
+        "COMPOSIO_API_KEY": "${COMPOSIO_API_KEY}"
+      }
+    },
+    "higgsfield": {
+      "type": "http",
+      "url": "https://mcp.higgsfield.ai/mcp"
     }
   }
 }
