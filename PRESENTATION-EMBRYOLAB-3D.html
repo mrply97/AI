@@ -446,8 +446,80 @@ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='htt
   </div>
 </div>
 
-<!-- 6 THE ASK -->
-<div class="slide s-ask" data-slide="5">
+<!-- 6 RESEARCH QUESTIONS -->
+<div class="slide s-light" data-slide="5">
+  <div class="bg-ambient"></div>
+  <div class="slide-inner">
+    <p class="s-tag">Research Questions</p>
+    <h2 class="s-title">What I need to understand about your billing process</h2>
+    <p class="s-subtitle">These questions directly shape the next version of the prototype</p>
+    <div class="gold-rule"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="padding:10px 14px;background:var(--sage);margin-bottom:4px">
+          <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-weight:500">Your System</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.1s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">01</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">What software do you use for billing — a hospital management system, SAP, or clinic-specific?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.15s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">02</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">Can you export billing data to Excel or CSV, or is it locked inside the system?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.2s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">03</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">Is there a dedicated billing team, or does general admin staff handle invoicing?</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="padding:10px 14px;background:var(--red);margin-bottom:4px">
+          <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-weight:500">Validating the Problem</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.25s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">04</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">What is your approximate EOPYY claim rejection rate? <em style="color:var(--ink-mute)">(Industry average: 8–15%)</em></p>
+        </div>
+        <div class="ask-item" style="transition-delay:.3s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">05</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">What are the most common reasons EOPYY rejects your claims?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.35s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">06</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">Do you currently check for duplicate invoices before submitting to insurers?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.4s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">07</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">Has a billing error ever been discovered in an external audit?</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="padding:10px 14px;background:var(--amber);margin-bottom:4px">
+          <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-weight:500">IVF Billing Specifics</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.45s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">08</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">Do you bill IVF cycles as a single bundled code, or do you bill each component separately?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.5s;display:block;padding:14px 16px">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">09</p>
+          <p style="font-size:12px;color:var(--ink-soft);line-height:1.65">When a cycle is cancelled mid-way, how is the partial billing handled — where do errors typically occur?</p>
+        </div>
+        <div class="ask-item" style="transition-delay:.55s;display:block;padding:14px 16px;border-left:2px solid var(--gold)">
+          <p style="font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.08em;margin-bottom:5px">10 ★ KEY</p>
+          <p style="font-size:12px;color:var(--ink);line-height:1.65;font-weight:400">Looking at this alert report — do any of these error types reflect situations you've actually encountered?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 7 THE ASK -->
+<div class="slide s-ask" data-slide="6">
   <div class="bg-ambient"></div>
   <div class="slide-inner" style="max-width:1000px">
     <p class="s-tag">What I Am Asking For</p>
@@ -478,8 +550,8 @@ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='htt
   </div>
 </div>
 
-<!-- 7 ABOUT -->
-<div class="slide s-about" data-slide="6">
+<!-- 8 ABOUT -->
+<div class="slide s-about" data-slide="7">
   <div class="bg-ambient"></div>
   <div class="about-inner">
     <div class="about-left">
