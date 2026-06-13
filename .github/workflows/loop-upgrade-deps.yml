@@ -2,12 +2,37 @@ name: Loop Upgrade Deps (weekly)
 
 on:
   schedule:
-    # Runs every Monday at 08:00 UTC
     - cron: "0 8 * * 1"
   workflow_dispatch:
 
 jobs:
-  upgrade:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read   # read-only; PR opened in separate job below
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Collect npm audit output (trusted shell step, no agent)
+        run: |
+          mkdir -p loop-state
+          npm install --ignore-scripts 2>&1 | tail -5 || true
+          npm outdated --json > loop-state/outdated.json 2>/dev/null || true
+          npm audit --json > loop-state/audit.json 2>/dev/null || true
+          echo "Audit complete"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dep-signals
+          path: loop-state/
+
+  analyse-and-patch:
+    needs: audit
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,8 +40,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
         with:
-          fetch-depth: 0
+          name: dep-signals
+          path: loop-state/
 
       - uses: actions/setup-node@v4
         with:
@@ -25,15 +53,35 @@ jobs:
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Run upgrade-deps loop
+      - name: Analyse audit + propose package.json patch (no Bash)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           claude --print \
             "You are running the upgrade-deps skill. \
-             Check package.json for outdated or vulnerable dependencies using npm outdated and npm audit. \
-             Group findings by: security patches, minor updates, major updates. \
-             Apply security patches immediately and open a single PR. \
-             Log findings to loop-state/deps-$(date +%Y-%m-%d).md." \
-            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,mcp__github__*"
+             Read loop-state/audit.json and loop-state/outdated.json. \
+             Identify security-critical vulnerabilities (severity: high or critical). \
+             Read package.json. \
+             Write an updated package.json that bumps only the vulnerable packages to their patched versions. \
+             Do not change any other versions. \
+             Write a summary of changes to loop-state/deps-$(date +%Y-%m-%d).md." \
+            --allowedTools "Read,Write,Glob,Grep"
+
+      - name: Apply patch + open PR (trusted shell step, not agent)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="loop/dep-patch-$(date +%Y-%m-%d)"
+          git checkout -b "$BRANCH"
+          npm install --ignore-scripts --package-lock-only 2>/dev/null || true
+          git add package.json package-lock.json loop-state/ || true
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "fix(deps): security patch $(date +%Y-%m-%d)"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "fix(deps): automated security patch $(date +%Y-%m-%d)" \
+            --body "$(cat loop-state/deps-$(date +%Y-%m-%d).md 2>/dev/null || echo 'Automated dependency security patch.')" \
+            --base main \
+            --head "$BRANCH"

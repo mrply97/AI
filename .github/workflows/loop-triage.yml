@@ -2,17 +2,15 @@ name: Loop Triage (daily)
 
 on:
   schedule:
-    # Runs every morning at 07:00 UTC
     - cron: "0 7 * * *"
-  workflow_dispatch: # allow manual trigger
+  workflow_dispatch:
 
 jobs:
   triage:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      issues: write
-      pull-requests: write
+      contents: read
+      issues: write        # only what Claude needs to create issues
 
     steps:
       - uses: actions/checkout@v4
@@ -23,26 +21,36 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Collect repo signals (trusted shell step, no agent)
+        run: |
+          mkdir -p loop-state
+          git log --oneline --since="24 hours ago" > loop-state/recent-commits.txt
+          git log --oneline --since="24 hours ago" --all --format="%H %s" >> loop-state/recent-commits.txt || true
+          echo "Collected $(wc -l < loop-state/recent-commits.txt) commits"
+
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Run loop triage
+      - name: Run loop-triage (read + issues only, no Bash)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           claude --print \
             "You are running the loop-triage skill. \
-             Scan the last 24 hours of CI failures, open issues, and recent commits. \
+             Read the file loop-state/recent-commits.txt for recent commits. \
+             Read any existing open issues via the GitHub MCP tools. \
              Produce a concise findings report. \
-             For each actionable finding, create a GitHub issue if one does not exist. \
-             Write a summary to loop-state/triage-$(date +%Y-%m-%d).md." \
-            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,mcp__github__*"
+             For each actionable finding not already tracked, create a GitHub issue. \
+             Write your summary report to loop-state/triage-$(date +%Y-%m-%d).md." \
+            --allowedTools "Read,Write,Glob,Grep,mcp__github__list_issues,mcp__github__issue_write,mcp__github__search_issues"
 
-      - name: Commit triage state
+      - name: Commit triage state (trusted shell step, not agent)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add loop-state/ || true
           git diff --staged --quiet || git commit -m "chore: daily triage $(date +%Y-%m-%d)"
           git push || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
