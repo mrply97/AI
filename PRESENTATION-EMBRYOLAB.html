@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthLedgerAI — Embryolab Research Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E8;
+      --white: #FFFFFF;
+      --gold: #A08558;
+      --gold-lt: #C9AA7C;
+      --sage: #3D6B52;
+      --sage-lt: #EBF2EE;
+      --ink: #1A1614;
+      --ink-soft: #4A4438;
+      --ink-mute: #8A8070;
+      --red: #B03A2A;
+      --red-lt: #FAEAE7;
+      --amber: #B06A1A;
+      --amber-lt: #FEF3E2;
+    }
+
+    body {
+      background: var(--cream);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+    }
+
+    /* ── SLIDE WRAPPER ─────────────────────────────── */
+    .deck { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .slide {
+      background: var(--white);
+      border: 1px solid rgba(160,133,88,0.18);
+      margin-bottom: 32px;
+      padding: 56px 64px;
+      page-break-after: always;
+    }
+
+    /* ── SHARED ELEMENTS ───────────────────────────── */
+    .slide-tag {
+      font-size: 9px; font-weight: 400; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+    }
+
+    .slide-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 400; color: var(--ink);
+      line-height: 1.2; margin-bottom: 8px;
+    }
+
+    .slide-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px; font-style: italic; color: var(--ink-soft);
+      margin-bottom: 36px;
+    }
+
+    .divider { height: 1px; background: rgba(160,133,88,0.22); margin: 28px 0; }
+
+    p { font-size: 14px; line-height: 1.8; color: var(--ink-soft); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── COVER ─────────────────────────────────────── */
+    .cover { text-align: center; padding: 72px 64px; }
+
+    .logo-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; margin-bottom: 40px;
+    }
+
+    .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 500; letter-spacing: 0.06em; color: var(--ink);
+    }
+
+    .cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px; font-weight: 400; color: var(--ink);
+      line-height: 1.15; margin-bottom: 12px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-style: italic; color: var(--ink-soft);
+      margin-bottom: 40px;
+    }
+
+    .cover-meta {
+      font-size: 12px; color: var(--ink-mute); letter-spacing: 0.06em; line-height: 2;
+    }
+
+    .cover-tag {
+      display: inline-block;
+      background: var(--sage-lt); color: var(--sage);
+      font-size: 10px; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 6px 16px;
+      margin-bottom: 32px;
+    }
+
+    /* ── STAT GRID ─────────────────────────────────── */
+    .stat-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin: 28px 0;
+    }
+
+    .stat-box {
+      text-align: center; padding: 28px 16px;
+      border: 1px solid rgba(160,133,88,0.2);
+      background: rgba(160,133,88,0.03);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px; font-weight: 300; color: var(--sage);
+      line-height: 1; margin-bottom: 6px;
+    }
+
+    .stat-label { font-size: 11px; letter-spacing: 0.1em; color: var(--ink-mute); text-transform: uppercase; }
+
+    /* ── ALERT EXAMPLES ────────────────────────────── */
+    .alert-list { margin: 20px 0; }
+
+    .alert-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 18px 20px; margin-bottom: 12px;
+      border-left: 3px solid;
+    }
+
+    .alert-item.high { background: var(--red-lt); border-color: var(--red); }
+    .alert-item.medium { background: var(--amber-lt); border-color: var(--amber); }
+
+    .alert-badge {
+      font-size: 18px; line-height: 1; flex-shrink: 0; padding-top: 2px;
+    }
+
+    .alert-body { flex: 1; }
+
+    .alert-detector {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px;
+    }
+
+    .alert-finding {
+      font-size: 13px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 4px;
+    }
+
+    .alert-action {
+      font-size: 12px; color: var(--ink-mute); font-style: italic;
+    }
+
+    /* ── FEATURE LIST ──────────────────────────────── */
+    .feature-list { list-style: none; margin: 20px 0; }
+
+    .feature-list li {
+      display: flex; gap: 14px; align-items: flex-start;
+      font-size: 14px; line-height: 1.7; color: var(--ink-soft);
+      margin-bottom: 14px; padding-bottom: 14px;
+      border-bottom: 1px solid rgba(160,133,88,0.12);
+    }
+
+    .feature-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .feature-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; color: var(--sage); min-width: 28px; padding-top: 2px;
+    }
+
+    /* ── TWO-COL ───────────────────────────────────── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0; }
+
+    .col-box {
+      padding: 24px; border: 1px solid rgba(160,133,88,0.18);
+      background: rgba(160,133,88,0.03);
+    }
+
+    .col-box-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px; font-weight: 600; color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    /* ── ASK BOX ───────────────────────────────────── */
+    .ask-box {
+      background: var(--sage-lt);
+      border: 1px solid rgba(61,107,82,0.2);
+      border-left: 4px solid var(--sage);
+      padding: 28px 32px; margin-top: 28px;
+    }
+
+    .ask-box-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 500; color: var(--sage);
+      margin-bottom: 12px;
+    }
+
+    .ask-list { list-style: none; margin: 0; }
+
+    .ask-list li {
+      font-size: 14px; color: var(--ink-soft); line-height: 1.7;
+      padding: 6px 0; border-bottom: 1px solid rgba(61,107,82,0.1);
+      display: flex; gap: 10px;
+    }
+
+    .ask-list li:last-child { border-bottom: none; }
+    .ask-num { color: var(--sage); font-weight: 500; min-width: 20px; }
+
+    /* ── PRINT ─────────────────────────────────────── */
+    @media print {
+      body { background: #fff; }
+      .deck { padding: 0; }
+      .slide { border: none; margin: 0; padding: 48px 56px; page-break-after: always; }
+      .cover { padding: 64px 56px; }
+    }
+  </style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ── SLIDE 1: COVER ───────────────────────────────────────── -->
+  <div class="slide cover">
+    <div class="logo-row">
+      <span class="logo-dot"></span>
+      <span class="logo-text">HealthLedger AI</span>
+    </div>
+    <div class="cover-tag">Confidential · Research Prototype · June 2026</div>
+    <h1 class="cover-title">Billing Compliance<br>for Private Clinics</h1>
+    <p class="cover-subtitle">A research prototype for detecting billing errors<br>in private healthcare — tested on real data</p>
+    <div class="divider" style="max-width:120px; margin: 32px auto;"></div>
+    <div class="cover-meta">
+      Presented to Embryolab Fertility Clinic, Thessaloniki<br>
+      Maria Polychroniadou · PhD Researcher · HealthLedgerAI<br>
+      BSc International Management · MSc Accounting &amp; Finance
+    </div>
+  </div>
+
+  <!-- ── SLIDE 2: THE PROBLEM ─────────────────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">The Problem</p>
+    <h2 class="slide-title">Private clinics lose money on billing errors they cannot see</h2>
+    <p class="slide-subtitle">Σφάλματα χρέωσης που περνούν απαρατήρητα</p>
+    <div class="divider"></div>
+
+    <p>Every private clinic in Greece processes hundreds of invoices per month — to EOPYY, to private insurers, and directly to patients. Hidden inside that volume are systematic errors that go undetected because no one has time to check them manually.</p>
+
+    <ul class="feature-list">
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">Duplicate invoices</strong> — the same procedure billed twice to the same insurer, often months apart. Insurers eventually detect these and claw back payments with penalties.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">Upcoding</strong> — a procedure billed above its allowed maximum rate under EOPYY or insurer tariffs. A common audit trigger that puts EOPYY contracts at risk.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">Phantom billing</strong> — an invoice raised for a date when the patient has no recorded appointment. Can indicate data entry error or, in an audit, look like fraud.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">Unbundling</strong> — procedure components that should be billed as one bundled code are billed individually at a higher combined total.</span>
+      </li>
+    </ul>
+
+    <p style="margin-top: 20px; font-size: 13px; color: var(--ink-mute);">These are not hypothetical. In a dataset of 506 invoices modelled on private clinic billing data, the HealthLedgerAI prototype detected 70 alerts across 8 error types.</p>
+  </div>
+
+  <!-- ── SLIDE 3: THE SOLUTION ────────────────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">The Solution</p>
+    <h2 class="slide-title">HealthLedgerAI</h2>
+    <p class="slide-subtitle">Automated billing compliance detection — in seconds, not weeks</p>
+    <div class="divider"></div>
+
+    <p>HealthLedgerAI is a Python-based prototype that reads a clinic's billing data (invoices, appointments, procedure rates, insurer networks) and automatically flags billing anomalies — before they reach an insurer, before an audit, and before a payment is made that will need to be reversed.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-number">11</div>
+        <div class="stat-label">Detectors running in parallel</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">506</div>
+        <div class="stat-label">Invoices analysed in the test</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">70</div>
+        <div class="stat-label">Alerts flagged automatically</div>
+      </div>
+    </div>
+
+    <p>The output is a plain Excel report — no special software needed to read it. Every alert includes the invoice ID, the patient ID, what was found, and a recommended action. The clinic's billing team can work through it directly.</p>
+
+    <div class="two-col">
+      <div class="col-box">
+        <p class="col-box-title">What it reads</p>
+        <p style="font-size: 13px; margin: 0;">Invoice records · Patient records · Appointment records · Procedure rate tables · Bundle rules · Insurer network lists</p>
+      </div>
+      <div class="col-box">
+        <p class="col-box-title">What it produces</p>
+        <p style="font-size: 13px; margin: 0;">Excel report with All Alerts, HIGH Priority, and MEDIUM Priority tabs — ready to hand to the billing team</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 4: DEMO OUTPUT ─────────────────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">Live Demo Results</p>
+    <h2 class="slide-title">What the output looks like</h2>
+    <p class="slide-subtitle">Examples from the prototype alert report — 506 invoices analysed</p>
+    <div class="divider"></div>
+
+    <p>The following are real alerts generated by the prototype on a test dataset. Each finding is assigned a risk level and a recommended action.</p>
+
+    <div class="alert-list">
+
+      <div class="alert-item high">
+        <span class="alert-badge">🔴</span>
+        <div class="alert-body">
+          <p class="alert-detector">D1 · Duplicate Invoice — HIGH RISK</p>
+          <p class="alert-finding">Vendor 'Radiology Dept' | Amount €145 | Date 2026-02-03 — billed twice to the same insurer on the same date.</p>
+          <p class="alert-action">Action: Verify with vendor. Reject duplicate before payment to avoid insurer clawback.</p>
+        </div>
+      </div>
+
+      <div class="alert-item high">
+        <span class="alert-badge">🔴</span>
+        <div class="alert-body">
+          <p class="alert-detector">D2 · Upcoding — HIGH RISK</p>
+          <p class="alert-finding">Procedure billed at €806 against a maximum allowed rate of €620. Excess of €186 per invoice.</p>
+          <p class="alert-action">Action: Withhold payment. Request clinical justification. Risk of EOPYY audit flag.</p>
+        </div>
+      </div>
+
+      <div class="alert-item high">
+        <span class="alert-badge">🔴</span>
+        <div class="alert-body">
+          <p class="alert-detector">D4 · Phantom Billing — HIGH RISK</p>
+          <p class="alert-finding">Invoice raised for patient P047 on 2026-03-14, but no appointment record exists for that patient on that date.</p>
+          <p class="alert-action">Action: Verify patient was physically present. Do not submit to insurer without confirmation.</p>
+        </div>
+      </div>
+
+      <div class="alert-item medium">
+        <span class="alert-badge">🟡</span>
+        <div class="alert-body">
+          <p class="alert-detector">D11 · Repeated Same-Day Procedure — MEDIUM RISK</p>
+          <p class="alert-finding">Same procedure billed 3 times on the same day for the same patient. May be legitimate — but needs clinical note confirmation.</p>
+          <p class="alert-action">Action: Verify clinical notes confirm multiple administrations before submitting to insurer.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size: 12px; color: var(--ink-mute); margin-top: 8px;">All 70 alerts are available in the full Excel report. HIGH priority: 53 alerts. MEDIUM priority: 17 alerts.</p>
+  </div>
+
+  <!-- ── SLIDE 5: WHY FERTILITY CLINICS ───────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">Relevance to Embryolab</p>
+    <h2 class="slide-title">Why fertility clinics are a natural fit</h2>
+    <p class="slide-subtitle">Γιατί οι κλινικές γονιμότητας έχουν ιδιαίτερα σύνθετη χρέωση</p>
+    <div class="divider"></div>
+
+    <p>Fertility clinics operate in one of the most billing-intensive environments in private healthcare. A single IVF cycle generates multiple billing events across different categories — consultations, laboratory procedures, medications, anaesthesia, embryology services — each with different tariff rules.</p>
+
+    <ul class="feature-list">
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">EOPYY + private insurers simultaneously</strong> — IVF is covered by EOPYY up to 3 cycles for women under 50. This means clinics bill two different systems with different rules for the same patient. Mixed billing increases the risk of errors.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">High procedure values</strong> — IVF cycle costs range from €3,000–€6,000. A single upcoding or duplicate billing error at this scale represents significant financial exposure.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">Multi-step billing sequences</strong> — each cycle involves 8–12 separate billing events. Date mismatches and duplicate entries are common in high-volume, multi-step billing processes.</span>
+      </li>
+      <li>
+        <span class="feature-icon">→</span>
+        <span><strong style="color:var(--ink); font-weight:400;">ISO certification environment</strong> — Embryolab is ISO 9001:2015 and EN 15224 certified, meaning it already operates to documented process standards. A billing compliance tool fits naturally into that framework.</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── SLIDE 6: THE ASK ─────────────────────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">What I Am Asking For</p>
+    <h2 class="slide-title">20 minutes and your honest opinion</h2>
+    <p class="slide-subtitle">Δεν πουλάω τίποτα — ζητώ εμπειρογνωμοσύνη</p>
+    <div class="divider"></div>
+
+    <p>I am a doctoral researcher, not a salesperson. HealthLedgerAI is a research prototype I am developing as part of my PhD on billing compliance in private healthcare in Greece and Cyprus. I am here to learn from practitioners — not to sell a product.</p>
+
+    <p>I have signed a Non-Disclosure Agreement with you before showing this material, which means everything I share is protected and everything Embryolab shares with me stays within the boundaries of that agreement.</p>
+
+    <div class="ask-box">
+      <p class="ask-box-title">Specifically, I would like to ask:</p>
+      <ul class="ask-list">
+        <li><span class="ask-num">1.</span><span>Do the types of billing errors this prototype detects reflect real problems you encounter in your billing process?</span></li>
+        <li><span class="ask-num">2.</span><span>Are there error types I have missed that are common in fertility clinic billing in Greece?</span></li>
+        <li><span class="ask-num">3.</span><span>Would a tool like this — even at prototype stage — be useful to your billing or administration team?</span></li>
+        <li><span class="ask-num">4.</span><span>Would you be willing to provide a short written statement that you reviewed this prototype as part of a research validation? (This is voluntary and for my doctoral research record only.)</span></li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 24px; font-size: 13px; color: var(--ink-mute);">Your feedback will directly shape the next version of this prototype. If the research progresses, I would welcome the opportunity to continue the conversation — but there is no obligation of any kind.</p>
+  </div>
+
+  <!-- ── SLIDE 7: ABOUT ───────────────────────────────────────── -->
+  <div class="slide">
+    <p class="slide-tag">About the Researcher</p>
+    <h2 class="slide-title">Maria Polychroniadou</h2>
+    <p class="slide-subtitle">PhD Researcher · HealthLedgerAI Founder</p>
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div>
+        <p><strong style="color:var(--ink); font-weight:400;">Academic background</strong></p>
+        <ul class="feature-list" style="margin-top: 12px;">
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>BSc International Management</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>MSc Accounting &amp; Finance</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>PhD candidate — AI &amp; billing compliance in private healthcare (Greece &amp; Cyprus)</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>Erasmus for Young Entrepreneurs participant — Thessaloniki, 2026</span></li>
+        </ul>
+      </div>
+      <div>
+        <p><strong style="color:var(--ink); font-weight:400;">HealthLedgerAI</strong></p>
+        <ul class="feature-list" style="margin-top: 12px;">
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>Pre-launch research prototype</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>11 billing error detectors built and tested</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>Applied to EIT Jumpstarter 2026</span></li>
+          <li><span class="feature-icon" style="font-size:14px;">·</span><span>Target: EIC Pre-Accelerator 2027</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p style="text-align: center; font-size: 13px; color: var(--ink-mute);">
+      healthledgerai.com · info@healthledgerai.com<br>
+      All information in this presentation is covered by the NDA signed prior to this meeting.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
