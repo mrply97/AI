@@ -7,6 +7,18 @@
       "skillPath": "skills/defuddle/SKILL.md",
       "computedHash": "0ed68bc3e818ba0e6b8d192357ea3daaf552a3893f8854e7fd43c06831f91323"
     },
+    "demo-loop": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/demo-loop/SKILL.md",
+      "computedHash": "3e722d452060c4a178d30c1f7e315b1015df948e43c9782de6b976e304ef4fe7"
+    },
+    "draft-postmortem": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/draft-postmortem/SKILL.md",
+      "computedHash": "8ccfb376692841d23e822f13ed831b4c1c744b6d9e7ab09dc7c9603d2405dc9e"
+    },
     "higgsfield-generate": {
       "source": "higgsfield-ai/skills",
       "sourceType": "github",
@@ -37,6 +49,30 @@
       "skillPath": "skills/json-canvas/SKILL.md",
       "computedHash": "56cbac74a93e4fba97f4d44bccfdeaae89e545b223f47df392c7705e01e6c543"
     },
+    "loop-budget": {
+      "source": "cobusgreyling/loop-engineering",
+      "sourceType": "github",
+      "skillPath": "skills/loop-budget/SKILL.md",
+      "computedHash": "123ce9165f5547d980ca1a965a51a3880f1736ac1c496f2c169376abf8af847b"
+    },
+    "loop-triage": {
+      "source": "cobusgreyling/loop-engineering",
+      "sourceType": "github",
+      "skillPath": "skills/loop-triage/SKILL.md",
+      "computedHash": "fac0ef8586819fb538c3daee53466d4314bb547627538ab8e17e420ff4d9c9c3"
+    },
+    "loop-verifier": {
+      "source": "cobusgreyling/loop-engineering",
+      "sourceType": "github",
+      "skillPath": "skills/loop-verifier/SKILL.md",
+      "computedHash": "adb13f66aabdeb90f412b50ce80c89cdda50d2961eb069ef3d3a842ba4e484e8"
+    },
+    "minimal-fix": {
+      "source": "cobusgreyling/loop-engineering",
+      "sourceType": "github",
+      "skillPath": "skills/minimal-fix/SKILL.md",
+      "computedHash": "3974d05401d6f771bcd5b31b82ec74e4e2115b7b52b45a70c98d34fb98a73b7c"
+    },
     "obsidian-bases": {
       "source": "kepano/obsidian-skills",
       "sourceType": "github",
@@ -60,6 +96,30 @@
       "sourceType": "github",
       "skillPath": "SKILL.md",
       "computedHash": "7de55c323e43e7ebe57e50b9d41064311b92499e86fa6b66118342120c1d7203"
+    },
+    "parallel-sandbox": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/parallel-sandbox/SKILL.md",
+      "computedHash": "9d1651e6f5154740a79041cfae58d460ff74a74168723d6a2e544d79bc66bf1d"
+    },
+    "reconcile-docs": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/reconcile-docs/SKILL.md",
+      "computedHash": "759eb5771230e6ee955e2a4eb562f67361074f083459ab7eceed934ec99ea4a5"
+    },
+    "triage-flaky": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/triage-flaky/SKILL.md",
+      "computedHash": "b8322614c82d6a2d22bc64e26a41f10231d16cab8d2859c6a5d65eb5e6b245af"
+    },
+    "upgrade-deps": {
+      "source": "az9713/loop-engineering",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/upgrade-deps/SKILL.md",
+      "computedHash": "a8283c32671673dc882daca6e769e930365f697b99847585bb45e4a3fa4cbfdc"
     }
   }
 }
