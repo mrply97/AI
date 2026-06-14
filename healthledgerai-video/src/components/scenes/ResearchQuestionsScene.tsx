@@ -8,41 +8,39 @@ import {
 } from "remotion";
 import { COLORS } from "../../constants/colors";
 import { SPRING_SNAPPY } from "../../constants/timing";
-import { FloatingOrbs } from "../shared/FloatingOrbs";
+import { ShaderBG } from "../shared/ShaderBG";
+import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
 
 const columns = [
   {
-    title: "Your System",
-    color: COLORS.sage,
-    bg: `${COLORS.sage}15`,
-    border: `${COLORS.sage}40`,
+    title: "Your Current System",
+    color: COLORS.sageLt,
+    borderColor: COLORS.sage,
     questions: [
       "What software manages billing today?",
-      "How are EOPYY submissions handled?",
+      "How are EOPYY submissions currently handled?",
       "Who reviews invoices before submission?",
     ],
   },
   {
     title: "Validating the Problem",
-    color: COLORS.red,
-    bg: `${COLORS.red}10`,
-    border: `${COLORS.red}30`,
+    color: "#E57373",
+    borderColor: "#C0392B",
     questions: [
-      "Have duplicate invoices reached payers?",
+      "Have duplicate invoices ever reached payers?",
       "Have EOPYY audits flagged anomalies?",
-      "How often do amounts exceed agreed rates?",
+      "How often do billed amounts exceed agreed rates?",
     ],
   },
   {
     title: "IVF Billing Specifics",
-    color: COLORS.amber,
-    bg: `${COLORS.amber}12`,
-    border: `${COLORS.amber}35`,
+    color: "#F0C060",
+    borderColor: "#D4A017",
     questions: [
-      "How is embryo storage billed over time?",
+      "How is embryo cryostorage billed over time?",
       "How are partial-cycle cancellations handled?",
-      "★  Would a signed Letter of Intent be possible?",
+      "★  Could Embryolab provide a Letter of Intent?",
     ],
   },
 ];
@@ -51,35 +49,38 @@ export const ResearchQuestionsScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headlineEntrance = spring({ frame, fps, delay: 5, config: { damping: 200 } });
-  const headlineY = interpolate(headlineEntrance, [0, 1], [30, 0]);
-  const headlineOpacity = interpolate(headlineEntrance, [0, 1], [0, 1]);
+  const labelSpring = spring({ frame, fps, delay: 5, config: { damping: 200 } });
+  const labelOpacity = interpolate(labelSpring, [0, 1], [0, 1]);
+
+  const titleSpring = spring({ frame, fps, delay: 12, config: { damping: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [40, 0]);
+  const titleOpacity = interpolate(titleSpring, [0, 1], [0, 1]);
 
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
-        padding: "50px 80px",
+        background: COLORS.ink,
+        padding: "72px 80px",
         flexDirection: "column",
       }}
     >
-      <FloatingOrbs opacity={0.13} />
+      <ShaderBG
+        color1="#A08558"
+        color2="#1E1A14"
+        color3="#4A6B5A"
+        intensity={0.55}
+        speed={0.5}
+      />
       <GrainOverlay opacity={0.04} />
 
-      <div
-        style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 6,
-        }}
-      >
+      <div style={{ opacity: labelOpacity, marginBottom: 10 }}>
         <span
           style={{
             fontFamily: "sans-serif",
-            fontSize: 11,
-            letterSpacing: "0.18em",
+            fontSize: 12,
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
-            color: COLORS.gold,
+            color: COLORS.goldLt,
           }}
         >
           Research Questions
@@ -88,89 +89,115 @@ export const ResearchQuestionsScene: React.FC = () => {
 
       <div
         style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 32,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+          marginBottom: 40,
         }}
       >
         <h2
           style={{
             fontFamily: "serif",
-            fontSize: 48,
+            fontSize: 58,
             fontWeight: 300,
-            color: COLORS.ink,
+            color: COLORS.cream,
             margin: 0,
-            lineHeight: 1.1,
+            lineHeight: 1.08,
           }}
         >
-          What I need to{" "}
-          <span style={{ color: COLORS.gold, fontWeight: 600 }}>learn from you</span>
+          What I want to{" "}
+          <span
+            style={{
+              background: `linear-gradient(90deg, ${COLORS.gold}, ${COLORS.goldLt})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontWeight: 600,
+            }}
+          >
+            learn from you
+          </span>
         </h2>
       </div>
 
-      <div style={{ display: "flex", gap: 20, flex: 1 }}>
+      {/* Three columns */}
+      <div style={{ display: "flex", gap: 24, flex: 1 }}>
         {columns.map((col, ci) => {
-          const colSpring = spring({ frame, fps, delay: 18 + ci * 12, config: SPRING_SNAPPY });
-          const colY = interpolate(colSpring, [0, 1], [40, 0]);
+          const colSpring = spring({ frame, fps, delay: 30 + ci * 15, config: SPRING_SNAPPY });
+          const colY = interpolate(colSpring, [0, 1], [50, 0]);
           const colOpacity = interpolate(colSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+
           return (
             <div
               key={col.title}
               style={{
+                flex: 1,
                 transform: `translateY(${colY}px)`,
                 opacity: colOpacity,
-                flex: 1,
-                padding: "22px 20px",
-                background: col.bg,
-                border: `1px solid ${col.border}`,
-                borderRadius: 16,
-                display: "flex",
-                flexDirection: "column",
-                gap: 14,
               }}
             >
-              <h3
+              <LiquidGlassCard
+                dark
+                accentColor={col.borderColor}
                 style={{
-                  fontFamily: "serif",
-                  fontSize: 20,
-                  color: col.color,
-                  margin: 0,
-                  fontWeight: 700,
-                  paddingBottom: 10,
-                  borderBottom: `1px solid ${col.border}`,
+                  height: "100%",
+                  padding: "28px 26px",
+                  borderTop: `3px solid ${col.borderColor}`,
+                  borderRadius: "0 0 24px 24px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 0,
                 }}
               >
-                {col.title}
-              </h3>
-              {col.questions.map((q, qi) => {
-                const qSpring = spring({
-                  frame,
-                  fps,
-                  delay: 28 + ci * 12 + qi * 8,
-                  config: SPRING_SNAPPY,
-                });
-                const qOpacity = interpolate(qSpring, [0, 1], [0, 1]);
-                const isLast = qi === col.questions.length - 1 && ci === 2;
-                return (
-                  <div
-                    key={qi}
-                    style={{
-                      opacity: qOpacity,
-                      fontFamily: "sans-serif",
-                      fontSize: 14,
-                      color: isLast ? col.color : COLORS.inkSoft,
-                      lineHeight: 1.5,
-                      fontWeight: isLast ? 600 : 400,
-                      padding: isLast ? "8px 10px" : 0,
-                      background: isLast ? `${col.color}18` : "transparent",
-                      borderRadius: isLast ? 8 : 0,
-                      border: isLast ? `1px solid ${col.color}40` : "none",
-                    }}
-                  >
-                    {q}
-                  </div>
-                );
-              })}
+                <h3
+                  style={{
+                    fontFamily: "serif",
+                    fontSize: 22,
+                    color: col.color,
+                    margin: "0 0 20px",
+                    fontWeight: 700,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {col.title}
+                </h3>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                  {col.questions.map((q, qi) => {
+                    const qSpring = spring({
+                      frame,
+                      fps,
+                      delay: 45 + ci * 15 + qi * 12,
+                      config: { damping: 200 },
+                    });
+                    const qOpacity = interpolate(qSpring, [0, 1], [0, 1]);
+                    const isLast = qi === col.questions.length - 1 && ci === 2;
+                    return (
+                      <div
+                        key={qi}
+                        style={{
+                          opacity: qOpacity,
+                          padding: isLast ? "12px 14px" : "0",
+                          background: isLast ? `${col.borderColor}20` : "transparent",
+                          border: isLast ? `1px solid ${col.borderColor}50` : "none",
+                          borderRadius: isLast ? 12 : 0,
+                        }}
+                      >
+                        <p
+                          style={{
+                            fontFamily: "sans-serif",
+                            fontSize: 17,
+                            color: isLast ? col.color : `${COLORS.cream}CC`,
+                            margin: 0,
+                            lineHeight: 1.55,
+                            fontWeight: isLast ? 600 : 300,
+                          }}
+                        >
+                          {q}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </LiquidGlassCard>
             </div>
           );
         })}

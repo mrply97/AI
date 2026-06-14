@@ -8,103 +8,102 @@ import {
 } from "remotion";
 import { COLORS } from "../../constants/colors";
 import { SPRING_BOUNCY, SPRING_SNAPPY } from "../../constants/timing";
-import { FloatingOrbs } from "../shared/FloatingOrbs";
-import { ParticleField } from "../shared/ParticleField";
+import { ShaderBG } from "../shared/ShaderBG";
+import { LiquidLogo } from "../shared/LiquidLogo";
 import { GrainOverlay } from "../shared/GrainOverlay";
-
-const chips = ["Billing Compliance", "Greek Healthcare", "AI-Powered", "EIC 2027"];
 
 export const CoverScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const logoEntrance = spring({ frame, fps, delay: 5, config: SPRING_BOUNCY });
-  const titleEntrance = spring({ frame, fps, delay: 15, config: { damping: 200 } });
-  const subtitleEntrance = spring({ frame, fps, delay: 25, config: { damping: 200 } });
+  const logoSpring = spring({ frame, fps, delay: 8, config: SPRING_BOUNCY });
+  const logoScale = interpolate(logoSpring, [0, 1], [0.4, 1]);
+  const logoOpacity = interpolate(logoSpring, [0, 0.6], [0, 1], { extrapolateRight: "clamp" });
 
-  const logoScale = interpolate(logoEntrance, [0, 1], [0.5, 1]);
-  const logoOpacity = interpolate(logoEntrance, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+  const nameSpring = spring({ frame, fps, delay: 22, config: { damping: 200 } });
+  const nameY = interpolate(nameSpring, [0, 1], [40, 0]);
+  const nameOpacity = interpolate(nameSpring, [0, 1], [0, 1]);
 
-  const titleY = interpolate(titleEntrance, [0, 1], [40, 0]);
-  const titleOpacity = interpolate(titleEntrance, [0, 1], [0, 1]);
+  const titleSpring = spring({ frame, fps, delay: 35, config: { damping: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [50, 0]);
+  const titleOpacity = interpolate(titleSpring, [0, 1], [0, 1]);
 
-  const subtitleY = interpolate(subtitleEntrance, [0, 1], [30, 0]);
-  const subtitleOpacity = interpolate(subtitleEntrance, [0, 1], [0, 1]);
+  const taglineSpring = spring({ frame, fps, delay: 50, config: { damping: 200 } });
+  const taglineOpacity = interpolate(taglineSpring, [0, 1], [0, 1]);
+
+  const footerSpring = spring({ frame, fps, delay: 65, config: SPRING_SNAPPY });
+  const footerOpacity = interpolate(footerSpring, [0, 1], [0, 1]);
 
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(135deg, ${COLORS.ink} 0%, #2A2318 50%, #1A1208 100%)`,
+        background: COLORS.ink,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        gap: 0,
       }}
     >
-      <FloatingOrbs opacity={0.4} />
-      <ParticleField count={50} color={COLORS.goldLt} />
-      <GrainOverlay opacity={0.05} />
+      <ShaderBG
+        color1="#C9AA7C"
+        color2="#1E1A14"
+        color3="#4A6B5A"
+        intensity={0.75}
+        speed={0.8}
+      />
+      <GrainOverlay opacity={0.04} />
 
       {/* Logo mark */}
       <div
         style={{
           transform: `scale(${logoScale})`,
           opacity: logoOpacity,
-          marginBottom: 28,
-          display: "flex",
-          alignItems: "center",
-          gap: 14,
+          marginBottom: 36,
         }}
       >
-        <div
-          style={{
-            width: 52,
-            height: 52,
-            borderRadius: 14,
-            background: `linear-gradient(135deg, ${COLORS.gold}, ${COLORS.goldLt})`,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: `0 0 30px ${COLORS.gold}60`,
-          }}
-        >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" fill={COLORS.ink} opacity="0.9" />
-            <path d="M2 17l10 5 10-5" stroke={COLORS.ink} strokeWidth="2" fill="none" opacity="0.7" />
-            <path d="M2 12l10 5 10-5" stroke={COLORS.ink} strokeWidth="2" fill="none" opacity="0.5" />
-          </svg>
-        </div>
+        <LiquidLogo size={96} />
+      </div>
+
+      {/* Brand name */}
+      <div
+        style={{
+          transform: `translateY(${nameY}px)`,
+          opacity: nameOpacity,
+          marginBottom: 12,
+        }}
+      >
         <span
           style={{
-            fontFamily: "serif",
-            fontSize: 22,
+            fontFamily: "sans-serif",
+            fontSize: 16,
             color: COLORS.goldLt,
-            letterSpacing: "0.12em",
+            letterSpacing: "0.22em",
             textTransform: "uppercase",
+            fontWeight: 400,
           }}
         >
           HealthLedgerAI
         </span>
       </div>
 
-      {/* Main title */}
+      {/* Main headline */}
       <div
         style={{
           transform: `translateY(${titleY}px)`,
           opacity: titleOpacity,
           textAlign: "center",
-          marginBottom: 16,
+          marginBottom: 28,
+          padding: "0 120px",
         }}
       >
         <h1
           style={{
             fontFamily: "serif",
-            fontSize: 72,
+            fontSize: 88,
             fontWeight: 300,
             color: COLORS.cream,
-            margin: 0,
-            lineHeight: 1.1,
-            letterSpacing: "-0.01em",
+            margin: "0 0 8px",
+            lineHeight: 1.05,
+            letterSpacing: "-0.02em",
           }}
         >
           Billing Compliance
@@ -112,86 +111,77 @@ export const CoverScene: React.FC = () => {
         <h1
           style={{
             fontFamily: "serif",
-            fontSize: 72,
+            fontSize: 88,
             fontWeight: 600,
-            background: `linear-gradient(90deg, ${COLORS.gold}, ${COLORS.goldLt}, ${COLORS.gold})`,
+            background: `linear-gradient(90deg, ${COLORS.gold} 0%, ${COLORS.goldLt} 50%, ${COLORS.gold} 100%)`,
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             margin: 0,
-            lineHeight: 1.1,
+            lineHeight: 1.05,
           }}
         >
           Intelligence
         </h1>
       </div>
 
-      {/* Subtitle */}
+      {/* Tagline */}
       <div
         style={{
-          transform: `translateY(${subtitleY}px)`,
-          opacity: subtitleOpacity,
+          opacity: taglineOpacity,
           textAlign: "center",
-          marginBottom: 48,
+          marginBottom: 56,
         }}
       >
         <p
           style={{
             fontFamily: "sans-serif",
-            fontSize: 20,
+            fontSize: 24,
             color: COLORS.inkMute,
             margin: 0,
-            letterSpacing: "0.04em",
             fontWeight: 300,
+            letterSpacing: "0.02em",
           }}
         >
           AI-powered fraud detection for private clinics in Greece
         </p>
       </div>
 
-      {/* Floating chips */}
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-        {chips.map((chip, i) => {
-          const chipSpring = spring({ frame, fps, delay: 35 + i * 8, config: SPRING_SNAPPY });
-          const chipY = interpolate(chipSpring, [0, 1], [20, 0]);
-          const chipOpacity = interpolate(chipSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
-          return (
-            <div
-              key={chip}
-              style={{
-                transform: `translateY(${chipY}px)`,
-                opacity: chipOpacity,
-                padding: "8px 18px",
-                borderRadius: 100,
-                border: `1px solid ${COLORS.gold}40`,
-                background: `${COLORS.gold}15`,
-                fontFamily: "sans-serif",
-                fontSize: 13,
-                color: COLORS.goldLt,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-              }}
-            >
-              {chip}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Bottom line */}
+      {/* Footer attribution */}
       <div
         style={{
           position: "absolute",
-          bottom: 40,
-          left: "50%",
-          transform: "translateX(-50%)",
-          opacity: subtitleOpacity * 0.6,
-          fontFamily: "sans-serif",
-          fontSize: 13,
-          color: COLORS.inkMute,
-          letterSpacing: "0.06em",
+          bottom: 48,
+          opacity: footerOpacity,
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
         }}
       >
-        Presented to Embryolab Fertility Clinic · Thessaloniki
+        <div
+          style={{
+            width: 40,
+            height: 1,
+            background: `${COLORS.gold}60`,
+          }}
+        />
+        <span
+          style={{
+            fontFamily: "sans-serif",
+            fontSize: 14,
+            color: `${COLORS.gold}90`,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+          }}
+        >
+          Presented to Embryolab Fertility Clinic · Thessaloniki
+        </span>
+        <div
+          style={{
+            width: 40,
+            height: 1,
+            background: `${COLORS.gold}60`,
+          }}
+        />
       </div>
     </AbsoluteFill>
   );

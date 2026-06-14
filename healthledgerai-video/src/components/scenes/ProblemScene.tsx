@@ -7,192 +7,210 @@ import {
   useVideoConfig,
 } from "remotion";
 import { COLORS } from "../../constants/colors";
-import { SPRING_SNAPPY, SPRING_BOUNCY } from "../../constants/timing";
-import { FloatingOrbs } from "../shared/FloatingOrbs";
+import { SPRING_SNAPPY } from "../../constants/timing";
+import { ShaderBGLight } from "../shared/ShaderBG";
+import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
-
-const problems = [
-  {
-    icon: "⚠",
-    title: "Manual Review Fails",
-    detail: "Billing auditors catch < 5% of errors",
-    color: "#C0392B",
-  },
-  {
-    icon: "💸",
-    title: "Upcoding & Phantom Bills",
-    detail: "Inflated procedures drain insurer budgets",
-    color: "#E67E22",
-  },
-  {
-    icon: "🔀",
-    title: "Unbundling Schemes",
-    detail: "Split codes bypass bundle pricing rules",
-    color: "#C0392B",
-  },
-  {
-    icon: "🆔",
-    title: "Identity Collisions",
-    detail: "Duplicate patient IDs enable fraud",
-    color: "#E67E22",
-  },
-];
 
 export const ProblemScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headlineEntrance = spring({ frame, fps, delay: 5, config: { damping: 200 } });
-  const headlineY = interpolate(headlineEntrance, [0, 1], [30, 0]);
-  const headlineOpacity = interpolate(headlineEntrance, [0, 1], [0, 1]);
+  const labelSpring = spring({ frame, fps, delay: 5, config: { damping: 200 } });
+  const labelOpacity = interpolate(labelSpring, [0, 1], [0, 1]);
 
-  const statEntrance = spring({ frame, fps, delay: 15, config: SPRING_BOUNCY });
-  const statScale = interpolate(statEntrance, [0, 1], [0.7, 1]);
-  const statOpacity = interpolate(statEntrance, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+  const titleSpring = spring({ frame, fps, delay: 12, config: { damping: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [40, 0]);
+  const titleOpacity = interpolate(titleSpring, [0, 1], [0, 1]);
+
+  const statSpring = spring({ frame, fps, delay: 28, config: { damping: 8, mass: 0.5 } });
+  const statScale = interpolate(statSpring, [0, 1], [0.7, 1]);
+  const statOpacity = interpolate(statSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+
+  const card1Spring = spring({ frame, fps, delay: 50, config: SPRING_SNAPPY });
+  const card1X = interpolate(card1Spring, [0, 1], [-80, 0]);
+  const card1Opacity = interpolate(card1Spring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+
+  const card2Spring = spring({ frame, fps, delay: 68, config: SPRING_SNAPPY });
+  const card2X = interpolate(card2Spring, [0, 1], [80, 0]);
+  const card2Opacity = interpolate(card2Spring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
 
   return (
     <AbsoluteFill
       style={{
         background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
-        padding: "60px 80px",
+        padding: "80px 100px",
         flexDirection: "column",
+        justifyContent: "center",
       }}
     >
-      <FloatingOrbs opacity={0.15} />
-      <GrainOverlay opacity={0.04} />
+      <ShaderBGLight opacity={0.14} />
+      <GrainOverlay opacity={0.035} />
 
-      {/* Section label */}
-      <div
-        style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 8,
-        }}
-      >
+      {/* Label */}
+      <div style={{ opacity: labelOpacity, marginBottom: 12 }}>
         <span
           style={{
             fontFamily: "sans-serif",
-            fontSize: 11,
-            letterSpacing: "0.18em",
+            fontSize: 12,
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: COLORS.gold,
+            fontWeight: 500,
           }}
         >
           The Challenge
         </span>
       </div>
 
-      {/* Headline */}
+      {/* Title */}
       <div
         style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 20,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+          marginBottom: 40,
         }}
       >
         <h2
           style={{
             fontFamily: "serif",
-            fontSize: 54,
+            fontSize: 68,
             fontWeight: 300,
             color: COLORS.ink,
             margin: 0,
-            lineHeight: 1.1,
+            lineHeight: 1.08,
           }}
         >
           Healthcare billing is{" "}
-          <span style={{ color: COLORS.red, fontWeight: 600 }}>broken</span>
+          <span style={{ color: "#C0392B", fontWeight: 600 }}>broken</span>
         </h2>
       </div>
 
-      {/* Big stat */}
+      {/* Big stat — centrepiece */}
       <div
         style={{
           transform: `scale(${statScale})`,
           opacity: statOpacity,
-          marginBottom: 40,
-          padding: "16px 28px",
-          background: `${COLORS.red}12`,
-          border: `1px solid ${COLORS.red}30`,
-          borderRadius: 12,
           alignSelf: "flex-start",
-          display: "flex",
-          alignItems: "baseline",
-          gap: 10,
+          marginBottom: 48,
         }}
       >
-        <span
-          style={{
-            fontFamily: "serif",
-            fontSize: 56,
-            fontWeight: 700,
-            color: COLORS.red,
-          }}
-        >
-          3–10%
-        </span>
-        <span
-          style={{
-            fontFamily: "sans-serif",
-            fontSize: 16,
-            color: COLORS.inkSoft,
-            maxWidth: 260,
-            lineHeight: 1.4,
-          }}
-        >
-          of healthcare revenue lost to billing fraud &amp; errors globally
-        </span>
-      </div>
-
-      {/* Problem cards */}
-      <div style={{ display: "flex", gap: 20, flex: 1 }}>
-        {problems.map((p, i) => {
-          const cardEntrance = spring({ frame, fps, delay: 25 + i * 10, config: SPRING_SNAPPY });
-          const cardX = interpolate(cardEntrance, [0, 1], [-60, 0]);
-          const cardOpacity = interpolate(cardEntrance, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
-          return (
-            <div
-              key={p.title}
+        <LiquidGlassCard accentColor="#C0392B" style={{ padding: "28px 40px" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+            <span
               style={{
-                transform: `translateX(${cardX}px)`,
-                opacity: cardOpacity,
-                flex: 1,
-                padding: "24px 20px",
-                background: COLORS.white,
-                borderRadius: 16,
-                borderTop: `4px solid ${p.color}`,
-                boxShadow: "0 4px 24px rgba(30,26,20,0.08)",
-                display: "flex",
-                flexDirection: "column",
-                gap: 10,
+                fontFamily: "serif",
+                fontSize: 80,
+                fontWeight: 700,
+                color: "#C0392B",
+                lineHeight: 1,
               }}
             >
-              <span style={{ fontSize: 28 }}>{p.icon}</span>
-              <h3
-                style={{
-                  fontFamily: "serif",
-                  fontSize: 20,
-                  color: COLORS.ink,
-                  margin: 0,
-                  fontWeight: 600,
-                }}
-              >
-                {p.title}
-              </h3>
-              <p
-                style={{
-                  fontFamily: "sans-serif",
-                  fontSize: 14,
-                  color: COLORS.inkSoft,
-                  margin: 0,
-                  lineHeight: 1.5,
-                }}
-              >
-                {p.detail}
-              </p>
-            </div>
-          );
-        })}
+              3–10%
+            </span>
+            <span
+              style={{
+                fontFamily: "sans-serif",
+                fontSize: 20,
+                color: COLORS.inkSoft,
+                maxWidth: 280,
+                lineHeight: 1.4,
+                fontWeight: 300,
+              }}
+            >
+              of healthcare revenue lost
+              <br />
+              to fraud &amp; billing errors
+            </span>
+          </div>
+        </LiquidGlassCard>
+      </div>
+
+      {/* Two problem cards — big, readable */}
+      <div style={{ display: "flex", gap: 28 }}>
+        <div
+          style={{
+            flex: 1,
+            transform: `translateX(${card1X}px)`,
+            opacity: card1Opacity,
+          }}
+        >
+          <LiquidGlassCard
+            accentColor="#C0392B"
+            style={{
+              borderTop: "4px solid #C0392B",
+              borderRadius: "4px 4px 24px 24px",
+              padding: "32px 36px",
+            }}
+          >
+            <div style={{ fontSize: 40, marginBottom: 16 }}>⚠️</div>
+            <h3
+              style={{
+                fontFamily: "serif",
+                fontSize: 28,
+                color: COLORS.ink,
+                margin: "0 0 12px",
+                fontWeight: 600,
+              }}
+            >
+              Upcoding &amp; Phantom Bills
+            </h3>
+            <p
+              style={{
+                fontFamily: "sans-serif",
+                fontSize: 18,
+                color: COLORS.inkSoft,
+                margin: 0,
+                lineHeight: 1.6,
+                fontWeight: 300,
+              }}
+            >
+              Inflated procedure codes and invoices for services never rendered drain insurer budgets undetected
+            </p>
+          </LiquidGlassCard>
+        </div>
+
+        <div
+          style={{
+            flex: 1,
+            transform: `translateX(${card2X}px)`,
+            opacity: card2Opacity,
+          }}
+        >
+          <LiquidGlassCard
+            accentColor="#E67E22"
+            style={{
+              borderTop: "4px solid #E67E22",
+              borderRadius: "4px 4px 24px 24px",
+              padding: "32px 36px",
+            }}
+          >
+            <div style={{ fontSize: 40, marginBottom: 16 }}>🔀</div>
+            <h3
+              style={{
+                fontFamily: "serif",
+                fontSize: 28,
+                color: COLORS.ink,
+                margin: "0 0 12px",
+                fontWeight: 600,
+              }}
+            >
+              Unbundling &amp; Identity Fraud
+            </h3>
+            <p
+              style={{
+                fontFamily: "sans-serif",
+                fontSize: 18,
+                color: COLORS.inkSoft,
+                margin: 0,
+                lineHeight: 1.6,
+                fontWeight: 300,
+              }}
+            >
+              Split procedure codes bypass bundle pricing, while duplicate patient IDs open the door to systematic fraud
+            </p>
+          </LiquidGlassCard>
+        </div>
       </div>
     </AbsoluteFill>
   );

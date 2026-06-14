@@ -7,56 +7,52 @@ import {
   useVideoConfig,
 } from "remotion";
 import { COLORS } from "../../constants/colors";
-import { SPRING_SNAPPY, SPRING_BOUNCY } from "../../constants/timing";
-import { FloatingOrbs } from "../shared/FloatingOrbs";
+import { SPRING_SNAPPY } from "../../constants/timing";
+import { ShaderBGLight } from "../shared/ShaderBG";
+import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
 
-const stats = [
-  { value: "11", label: "Detectors", sub: "automated checks" },
-  { value: "506", label: "Invoices", sub: "analysed in seconds" },
-  { value: "70", label: "Alerts", sub: "flagged instantly" },
-];
-
 const steps = [
-  { n: "01", text: "Load XLSX/CSV billing export" },
-  { n: "02", text: "Run 11 compliance detectors" },
-  { n: "03", text: "Ranked alert report generated" },
-  { n: "04", text: "Action prescribed per finding" },
+  { n: "01", text: "Upload your billing export (XLSX or CSV)" },
+  { n: "02", text: "11 compliance detectors run automatically" },
+  { n: "03", text: "Ranked alert report — action prescribed per finding" },
 ];
 
 export const SolutionScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headlineEntrance = spring({ frame, fps, delay: 5, config: { damping: 200 } });
-  const headlineY = interpolate(headlineEntrance, [0, 1], [30, 0]);
-  const headlineOpacity = interpolate(headlineEntrance, [0, 1], [0, 1]);
+  const labelSpring = spring({ frame, fps, delay: 5, config: { damping: 200 } });
+  const labelOpacity = interpolate(labelSpring, [0, 1], [0, 1]);
+
+  const titleSpring = spring({ frame, fps, delay: 12, config: { damping: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [40, 0]);
+  const titleOpacity = interpolate(titleSpring, [0, 1], [0, 1]);
+
+  const subtitleSpring = spring({ frame, fps, delay: 28, config: { damping: 200 } });
+  const subtitleOpacity = interpolate(subtitleSpring, [0, 1], [0, 1]);
 
   return (
     <AbsoluteFill
       style={{
         background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
-        padding: "60px 80px",
+        padding: "80px 100px",
         flexDirection: "column",
+        justifyContent: "center",
       }}
     >
-      <FloatingOrbs opacity={0.15} />
-      <GrainOverlay opacity={0.04} />
+      <ShaderBGLight opacity={0.13} />
+      <GrainOverlay opacity={0.035} />
 
-      <div
-        style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 6,
-        }}
-      >
+      <div style={{ opacity: labelOpacity, marginBottom: 12 }}>
         <span
           style={{
             fontFamily: "sans-serif",
-            fontSize: 11,
-            letterSpacing: "0.18em",
+            fontSize: 12,
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: COLORS.sage,
+            fontWeight: 500,
           }}
         >
           The Solution
@@ -65,88 +61,49 @@ export const SolutionScene: React.FC = () => {
 
       <div
         style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 36,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+          marginBottom: 16,
         }}
       >
         <h2
           style={{
             fontFamily: "serif",
-            fontSize: 54,
+            fontSize: 68,
             fontWeight: 300,
             color: COLORS.ink,
             margin: 0,
-            lineHeight: 1.1,
+            lineHeight: 1.08,
           }}
         >
-          HealthLedgerAI catches what{" "}
-          <span style={{ color: COLORS.sage, fontWeight: 600 }}>humans miss</span>
+          HealthLedgerAI catches{" "}
+          <span style={{ color: COLORS.sage, fontWeight: 600 }}>what humans miss</span>
         </h2>
       </div>
 
-      {/* Stats row */}
-      <div style={{ display: "flex", gap: 20, marginBottom: 36 }}>
-        {stats.map((s, i) => {
-          const statSpring = spring({ frame, fps, delay: 15 + i * 10, config: SPRING_BOUNCY });
-          const statScale = interpolate(statSpring, [0, 1], [0.6, 1]);
-          const statOpacity = interpolate(statSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
-          return (
-            <div
-              key={s.label}
-              style={{
-                transform: `scale(${statScale})`,
-                opacity: statOpacity,
-                flex: 1,
-                padding: "24px 20px",
-                background: `linear-gradient(135deg, ${COLORS.sage}18, ${COLORS.sageLt}10)`,
-                border: `1px solid ${COLORS.sage}30`,
-                borderRadius: 16,
-                textAlign: "center",
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "serif",
-                  fontSize: 52,
-                  fontWeight: 700,
-                  color: COLORS.sage,
-                  lineHeight: 1,
-                }}
-              >
-                {s.value}
-              </div>
-              <div
-                style={{
-                  fontFamily: "sans-serif",
-                  fontSize: 15,
-                  fontWeight: 600,
-                  color: COLORS.ink,
-                  marginTop: 4,
-                }}
-              >
-                {s.label}
-              </div>
-              <div
-                style={{
-                  fontFamily: "sans-serif",
-                  fontSize: 12,
-                  color: COLORS.inkMute,
-                  marginTop: 2,
-                }}
-              >
-                {s.sub}
-              </div>
-            </div>
-          );
-        })}
+      <div
+        style={{
+          opacity: subtitleOpacity,
+          marginBottom: 52,
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "sans-serif",
+            fontSize: 22,
+            color: COLORS.inkMute,
+            margin: 0,
+            fontWeight: 300,
+          }}
+        >
+          Three steps. Seconds, not hours.
+        </p>
       </div>
 
-      {/* Steps */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
         {steps.map((step, i) => {
-          const stepSpring = spring({ frame, fps, delay: 35 + i * 10, config: SPRING_SNAPPY });
-          const stepX = interpolate(stepSpring, [0, 1], [50, 0]);
+          const stepSpring = spring({ frame, fps, delay: 45 + i * 18, config: SPRING_SNAPPY });
+          const stepX = interpolate(stepSpring, [0, 1], [-60, 0]);
           const stepOpacity = interpolate(stepSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
           return (
             <div
@@ -154,35 +111,35 @@ export const SolutionScene: React.FC = () => {
               style={{
                 transform: `translateX(${stepX}px)`,
                 opacity: stepOpacity,
-                display: "flex",
-                alignItems: "center",
-                gap: 20,
-                padding: "14px 20px",
-                background: COLORS.white,
-                borderRadius: 12,
-                boxShadow: "0 2px 12px rgba(30,26,20,0.06)",
               }}
             >
-              <span
-                style={{
-                  fontFamily: "serif",
-                  fontSize: 22,
-                  fontWeight: 700,
-                  color: COLORS.gold,
-                  minWidth: 36,
-                }}
-              >
-                {step.n}
-              </span>
-              <span
-                style={{
-                  fontFamily: "sans-serif",
-                  fontSize: 16,
-                  color: COLORS.inkSoft,
-                }}
-              >
-                {step.text}
-              </span>
+              <LiquidGlassCard accentColor={COLORS.gold} style={{ padding: "28px 36px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+                  <span
+                    style={{
+                      fontFamily: "serif",
+                      fontSize: 52,
+                      fontWeight: 700,
+                      color: COLORS.gold,
+                      lineHeight: 1,
+                      minWidth: 64,
+                    }}
+                  >
+                    {step.n}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "sans-serif",
+                      fontSize: 24,
+                      color: COLORS.ink,
+                      lineHeight: 1.35,
+                      fontWeight: 400,
+                    }}
+                  >
+                    {step.text}
+                  </span>
+                </div>
+              </LiquidGlassCard>
             </div>
           );
         })}

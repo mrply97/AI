@@ -8,33 +8,24 @@ import {
 } from "remotion";
 import { COLORS } from "../../constants/colors";
 import { SPRING_SNAPPY } from "../../constants/timing";
-import { FloatingOrbs } from "../shared/FloatingOrbs";
+import { ShaderBGLight } from "../shared/ShaderBG";
+import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
 
 const points = [
   {
     icon: "🧬",
-    title: "IVF = Complex Billing",
+    title: "IVF billing is uniquely complex",
     detail:
-      "Multi-stage protocols, sperm/egg processing, embryo storage — each a billing surface for errors",
+      "Multi-stage protocols, sperm/egg processing, cryostorage, partial-cycle cancellations — each step is a potential billing error that manual review misses",
+    color: COLORS.sage,
   },
   {
     icon: "🏥",
-    title: "Private Clinic Risk",
+    title: "Private clinics face regulatory exposure",
     detail:
-      "Out-of-network billing, surprise charges, and insurer disputes create daily compliance pressure",
-  },
-  {
-    icon: "📋",
-    title: "Regulatory Exposure",
-    detail:
-      "EOPYY audits and Greek health law violations carry significant financial and reputational risk",
-  },
-  {
-    icon: "🔍",
-    title: "Manual Audit Gap",
-    detail:
-      "Your current manual review can be augmented — HealthLedgerAI flags anomalies before submission",
+      "EOPYY audits, surprise billing violations, out-of-network claims — HealthLedgerAI flags anomalies before they reach the insurer",
+    color: COLORS.gold,
   },
 ];
 
@@ -42,108 +33,114 @@ export const WhyEmbryolabScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headlineEntrance = spring({ frame, fps, delay: 5, config: { damping: 200 } });
-  const headlineY = interpolate(headlineEntrance, [0, 1], [30, 0]);
-  const headlineOpacity = interpolate(headlineEntrance, [0, 1], [0, 1]);
+  const labelSpring = spring({ frame, fps, delay: 5, config: { damping: 200 } });
+  const labelOpacity = interpolate(labelSpring, [0, 1], [0, 1]);
+
+  const titleSpring = spring({ frame, fps, delay: 12, config: { damping: 200 } });
+  const titleY = interpolate(titleSpring, [0, 1], [40, 0]);
+  const titleOpacity = interpolate(titleSpring, [0, 1], [0, 1]);
 
   return (
     <AbsoluteFill
       style={{
         background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
-        padding: "60px 80px",
+        padding: "80px 100px",
         flexDirection: "column",
+        justifyContent: "center",
       }}
     >
-      <FloatingOrbs opacity={0.15} />
-      <GrainOverlay opacity={0.04} />
+      <ShaderBGLight opacity={0.13} />
+      <GrainOverlay opacity={0.035} />
 
-      <div
-        style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 6,
-        }}
-      >
+      <div style={{ opacity: labelOpacity, marginBottom: 12 }}>
         <span
           style={{
             fontFamily: "sans-serif",
-            fontSize: 11,
-            letterSpacing: "0.18em",
+            fontSize: 12,
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: COLORS.blush,
+            fontWeight: 500,
           }}
         >
-          Why Embryolab
+          Why IVF Clinics
         </span>
       </div>
 
       <div
         style={{
-          transform: `translateY(${headlineY}px)`,
-          opacity: headlineOpacity,
-          marginBottom: 40,
+          transform: `translateY(${titleY}px)`,
+          opacity: titleOpacity,
+          marginBottom: 56,
         }}
       >
         <h2
           style={{
             fontFamily: "serif",
-            fontSize: 54,
+            fontSize: 68,
             fontWeight: 300,
             color: COLORS.ink,
             margin: 0,
-            lineHeight: 1.1,
+            lineHeight: 1.08,
           }}
         >
-          IVF clinics face{" "}
-          <span style={{ color: COLORS.sage, fontWeight: 600 }}>unique</span> billing challenges
+          Embryolab faces billing risks{" "}
+          <span style={{ color: COLORS.sage, fontWeight: 600 }}>every single day</span>
         </h2>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 18, flex: 1 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 28, flex: 1 }}>
         {points.map((p, i) => {
-          const ptSpring = spring({ frame, fps, delay: 18 + i * 12, config: SPRING_SNAPPY });
-          const ptX = interpolate(ptSpring, [0, 1], [i % 2 === 0 ? -60 : 60, 0]);
-          const ptOpacity = interpolate(ptSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+          const cardSpring = spring({ frame, fps, delay: 35 + i * 25, config: SPRING_SNAPPY });
+          const cardX = interpolate(cardSpring, [0, 1], [i % 2 === 0 ? -70 : 70, 0]);
+          const cardOpacity = interpolate(cardSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
           return (
             <div
               key={p.title}
               style={{
-                transform: `translateX(${ptX}px)`,
-                opacity: ptOpacity,
-                display: "flex",
-                alignItems: "center",
-                gap: 24,
-                padding: "18px 24px",
-                background: COLORS.white,
-                borderRadius: 16,
-                boxShadow: "0 4px 20px rgba(30,26,20,0.06)",
+                transform: `translateX(${cardX}px)`,
+                opacity: cardOpacity,
               }}
             >
-              <span style={{ fontSize: 32, minWidth: 48, textAlign: "center" }}>{p.icon}</span>
-              <div>
-                <h3
-                  style={{
-                    fontFamily: "serif",
-                    fontSize: 20,
-                    color: COLORS.ink,
-                    margin: "0 0 4px",
-                    fontWeight: 600,
-                  }}
-                >
-                  {p.title}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: "sans-serif",
-                    fontSize: 14,
-                    color: COLORS.inkSoft,
-                    margin: 0,
-                    lineHeight: 1.5,
-                  }}
-                >
-                  {p.detail}
-                </p>
-              </div>
+              <LiquidGlassCard accentColor={p.color} style={{ padding: "32px 40px" }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 28 }}>
+                  <span
+                    style={{
+                      fontSize: 48,
+                      lineHeight: 1,
+                      marginTop: 4,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {p.icon}
+                  </span>
+                  <div>
+                    <h3
+                      style={{
+                        fontFamily: "serif",
+                        fontSize: 30,
+                        color: COLORS.ink,
+                        margin: "0 0 14px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: "sans-serif",
+                        fontSize: 20,
+                        color: COLORS.inkSoft,
+                        margin: 0,
+                        lineHeight: 1.6,
+                        fontWeight: 300,
+                      }}
+                    >
+                      {p.detail}
+                    </p>
+                  </div>
+                </div>
+              </LiquidGlassCard>
             </div>
           );
         })}

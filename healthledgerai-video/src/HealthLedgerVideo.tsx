@@ -11,20 +11,20 @@ import { FPS, SCENE_DURATIONS } from "./constants/timing";
 import { CoverScene } from "./components/scenes/CoverScene";
 import { ProblemScene } from "./components/scenes/ProblemScene";
 import { SolutionScene } from "./components/scenes/SolutionScene";
+import { DemoNumbersScene } from "./components/scenes/DemoNumbersScene";
 import { DemoResultsScene } from "./components/scenes/DemoResultsScene";
 import { WhyEmbryolabScene } from "./components/scenes/WhyEmbryolabScene";
 import { ResearchQuestionsScene } from "./components/scenes/ResearchQuestionsScene";
-import { TheAskScene } from "./components/scenes/TheAskScene";
 import { AboutScene } from "./components/scenes/AboutScene";
 
 const scenes = [
   { component: CoverScene, duration: SCENE_DURATIONS.cover },
   { component: ProblemScene, duration: SCENE_DURATIONS.problem },
   { component: SolutionScene, duration: SCENE_DURATIONS.solution },
-  { component: DemoResultsScene, duration: SCENE_DURATIONS.demo },
-  { component: WhyEmbryolabScene, duration: SCENE_DURATIONS.whyEmbryo },
+  { component: DemoNumbersScene, duration: SCENE_DURATIONS.demoNumbers },
+  { component: DemoResultsScene, duration: SCENE_DURATIONS.demoAlerts },
+  { component: WhyEmbryolabScene, duration: SCENE_DURATIONS.whyIVF },
   { component: ResearchQuestionsScene, duration: SCENE_DURATIONS.research },
-  { component: TheAskScene, duration: SCENE_DURATIONS.ask },
   { component: AboutScene, duration: SCENE_DURATIONS.about },
 ];
 
