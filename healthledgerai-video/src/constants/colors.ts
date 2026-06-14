@@ -1,0 +1,15 @@
+export const COLORS = {
+  cream: "#F4EFE4",
+  ivory: "#EDE7D8",
+  gold: "#A08558",
+  goldLt: "#C9AA7C",
+  sage: "#4A6B5A",
+  sageLt: "#7A9E8A",
+  blush: "#D4A9A0",
+  ink: "#1E1A14",
+  inkSoft: "#4A4438",
+  inkMute: "#8A8070",
+  red: "#C0392B",
+  amber: "#D4A017",
+  white: "#FFFFFF",
+};
