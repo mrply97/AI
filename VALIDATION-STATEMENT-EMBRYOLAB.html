@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HealthLedgerAI — Research Validation Statement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F4EFE4; --ivory:#EDE7D8; --gold:#A08558; --gold-lt:#C9AA7C;
+    --sage:#4A6B5A; --sage-lt:#7A9E8A; --blush:#D4A9A0;
+    --ink:#1E1A14; --ink-soft:#4A4438; --ink-mute:#8A8070;
+  }
+  @page{
+    size:A4;
+    margin:18mm 16mm 16mm 16mm;
+    @bottom-center{
+      content:"HealthLedgerAI · Research Validation Statement · Confidential — covered by the signed NDA";
+      font-family:'Jost',sans-serif; font-size:7.5pt; color:#8A8070; letter-spacing:.04em;
+    }
+    @bottom-right{
+      content:"Page " counter(page) " of " counter(pages);
+      font-family:'Jost',sans-serif; font-size:7.5pt; color:#8A8070;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:'Jost',Helvetica,Arial,sans-serif;
+    color:var(--ink-soft); font-weight:300; font-size:10.5pt; line-height:1.55;
+    margin:0; background:#fff;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;}
+
+  /* ---- Masthead ---- */
+  .masthead{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    border-bottom:1.5px solid var(--gold); padding-bottom:10px; margin-bottom:22px;
+  }
+  .brand{display:flex; align-items:center; gap:9px; flex-shrink:0;}
+  .brand .mark{
+    width:22px; height:22px; border-radius:6px; flex-shrink:0;
+    background:linear-gradient(135deg,var(--gold),var(--gold-lt) 55%,var(--sage));
+    display:inline-block;
+  }
+  .brand .name{font-family:'Cormorant Garamond',serif; font-size:16pt; font-weight:600;
+    color:var(--ink); white-space:nowrap;}
+  .tag{
+    font-family:'Jost',sans-serif; font-size:7pt; font-weight:500; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--sage);
+    border:1px solid var(--sage); border-radius:3px; padding:4px 9px; white-space:nowrap;
+  }
+
+  /* ---- Title ---- */
+  .doc-title{font-size:27pt; font-weight:600; color:var(--ink); margin:0 0 4px; line-height:1.05;}
+  .doc-sub{font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13pt;
+    color:var(--ink-mute); margin:0 0 18px; font-weight:400;}
+
+  .intro{font-size:10pt; color:var(--ink-soft); margin:0 0 20px; line-height:1.6;}
+
+  /* ---- Sections ---- */
+  .section{margin-bottom:16px; break-inside:avoid;}
+  .sec-label{
+    font-family:'Jost',sans-serif; font-size:8pt; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--gold); margin:0 0 8px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .sec-label::before{content:""; width:16px; height:1.5px; background:var(--gold); display:inline-block;}
+
+  .panel{
+    background:var(--cream); border:1px solid var(--ivory);
+    border-left:3px solid var(--gold); border-radius:6px; padding:12px 16px;
+  }
+  .panel.sage{border-left-color:var(--sage);}
+
+  .kv{display:flex; gap:6px; font-size:9.5pt; margin:3px 0;}
+  .kv .k{color:var(--ink-mute); min-width:120px;}
+  .kv .v{color:var(--ink); font-weight:400;}
+
+  /* ---- Fill-in fields ---- */
+  .field{margin:11px 0;}
+  .field .flabel{font-size:8.5pt; color:var(--ink-mute); letter-spacing:.04em; margin-bottom:3px;
+    text-transform:uppercase; font-weight:500;}
+  .line{border-bottom:1px solid var(--ink-mute); height:17px;}
+  .row2{display:flex; gap:18px;}
+  .row2 .field{flex:1;}
+
+  /* ---- Checkboxes / declarations ---- */
+  .chk{display:flex; gap:10px; align-items:flex-start; margin:9px 0; font-size:9.7pt; line-height:1.5;}
+  .box{width:12px; height:12px; border:1.3px solid var(--ink-soft); background:#fff;
+    display:inline-block; flex-shrink:0; margin-top:2px;}
+  .chk strong{color:var(--ink); font-weight:600;}
+
+  /* ---- Feedback question ---- */
+  .q{margin:0 0 13px; break-inside:avoid;}
+  .q .qtext{font-size:9.7pt; color:var(--ink); margin-bottom:5px;}
+  .q .qtext .num{color:var(--gold); font-family:'Cormorant Garamond',serif; font-weight:700;
+    font-size:12pt; margin-right:6px;}
+  .opts{display:flex; gap:18px; margin:4px 0 6px;}
+  .opt{display:flex; gap:6px; align-items:center; font-size:9pt; color:var(--ink-soft);}
+  .opt .obox{width:11px; height:11px; border:1.3px solid var(--ink-soft); background:#fff;
+    display:inline-block; flex-shrink:0;}
+  .comment-line{border-bottom:1px solid #d9d0bf; height:15px; margin-top:5px;}
+
+  /* ---- Signature ---- */
+  .sign-grid{display:flex; gap:26px; margin-top:6px;}
+  .sign-col{flex:1;}
+  .sig-line{border-bottom:1.4px solid var(--ink-soft); height:38px;}
+  .sig-cap{font-size:8pt; color:var(--ink-mute); text-transform:uppercase; letter-spacing:.06em; margin-top:4px;}
+  .stamp{
+    border:1.4px dashed var(--ink-mute); border-radius:6px; height:96px;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink-mute); font-size:8.5pt; letter-spacing:.08em; text-transform:uppercase;
+  }
+
+  .note{font-size:8.6pt; color:var(--ink-mute); line-height:1.55; margin:0;}
+  .divider{height:1px; background:var(--ivory); margin:18px 0;}
+  .pagebreak{break-before:page;}
+</style>
+</head>
+<body>
+
+  <!-- ============ MASTHEAD ============ -->
+  <div class="masthead">
+    <div class="brand"><span class="mark"></span><span class="name">HealthLedger AI</span></div>
+    <span class="tag">Confidential · Research Document · 2026</span>
+  </div>
+
+  <h1 class="doc-title">Research Validation Statement</h1>
+  <p class="doc-sub">Confirmation of prototype review — for doctoral research records and EIC Pre-Accelerator evidence</p>
+
+  <p class="intro">
+    This is a <strong>voluntary statement</strong> confirming that a representative of the reviewing
+    organisation examined the HealthLedgerAI billing-compliance prototype during a research meeting.
+    It is collected solely for the researcher's doctoral record and as supporting evidence for the
+    European Innovation Council (EIC) Pre-Accelerator application. It carries
+    <strong>no commercial obligation</strong> of any kind, and all information exchanged is protected
+    under the Non-Disclosure Agreement signed prior to the meeting.
+  </p>
+
+  <!-- ============ A · RESEARCHER ============ -->
+  <div class="section">
+    <p class="sec-label">A · The Researcher &amp; Prototype</p>
+    <div class="panel">
+      <div class="kv"><span class="k">Researcher</span><span class="v">Maria Polychroniadou — PhD Researcher &amp; Founder, HealthLedgerAI</span></div>
+      <div class="kv"><span class="k">Research focus</span><span class="v">AI &amp; billing compliance in private healthcare (Greece &amp; Cyprus)</span></div>
+      <div class="kv"><span class="k">Prototype reviewed</span><span class="v">HealthLedgerAI — automated billing-compliance detector (11 detectors, pre-launch research prototype)</span></div>
+      <div class="kv"><span class="k">Contact</span><span class="v">info@healthledgerai.com · healthledgerai.com</span></div>
+    </div>
+  </div>
+
+  <!-- ============ B · ORGANISATION ============ -->
+  <div class="section">
+    <p class="sec-label">B · Reviewing Organisation &amp; Representative</p>
+    <div class="row2">
+      <div class="field"><div class="flabel">Organisation / Clinic name</div><div class="line"></div></div>
+      <div class="field"><div class="flabel">Department</div><div class="line"></div></div>
+    </div>
+    <div class="row2">
+      <div class="field"><div class="flabel">Representative — full name</div><div class="line"></div></div>
+      <div class="field"><div class="flabel">Position / Role</div><div class="line"></div></div>
+    </div>
+    <div class="row2">
+      <div class="field"><div class="flabel">Date of review</div><div class="line"></div></div>
+      <div class="field"><div class="flabel">Location (city)</div><div class="line"></div></div>
+    </div>
+  </div>
+
+  <!-- ============ C · DECLARATION ============ -->
+  <div class="section">
+    <p class="sec-label">C · Statement of Review</p>
+    <div class="chk"><span class="box"></span><span>I confirm that I <strong>reviewed the HealthLedgerAI prototype</strong> as presented to me during a research meeting on the date stated above.</span></div>
+    <div class="chk"><span class="box"></span><span>I understand the prototype is a <strong>pre-launch research tool</strong> developed as part of doctoral research, and that this review does not constitute a purchase, endorsement, or commercial commitment.</span></div>
+    <div class="chk"><span class="box"></span><span>I am <strong>authorised</strong> to provide this statement in connection with my role at the organisation named above.</span></div>
+    <div class="chk"><span class="box"></span><span>I consent to this statement being used <strong>as evidence</strong> in the researcher's doctoral record and EIC Pre-Accelerator application, within the limits of the signed NDA.</span></div>
+  </div>
+
+  <!-- ============ D · OPTIONAL FEEDBACK (page 2) ============ -->
+  <div class="section pagebreak">
+    <p class="sec-label">D · Optional Feedback for the Research</p>
+    <p class="note" style="margin-bottom:12px;">Your professional opinion directly shapes the next version of the prototype. All fields below are optional.</p>
+
+    <div class="q">
+      <div class="qtext"><span class="num">1</span>Do the billing errors this prototype detects reflect real problems you encounter in your billing process?</div>
+      <div class="opts">
+        <span class="opt"><span class="obox"></span> Yes</span>
+        <span class="opt"><span class="obox"></span> Partly</span>
+        <span class="opt"><span class="obox"></span> No</span>
+      </div>
+      <div class="comment-line"></div>
+    </div>
+
+    <div class="q">
+      <div class="qtext"><span class="num">2</span>Are there error types not covered here that are common in fertility-clinic billing in Greece?</div>
+      <div class="comment-line"></div>
+      <div class="comment-line"></div>
+    </div>
+
+    <div class="q">
+      <div class="qtext"><span class="num">3</span>Would a tool like this — even at prototype stage — be useful to your billing or administration team?</div>
+      <div class="opts">
+        <span class="opt"><span class="obox"></span> Yes</span>
+        <span class="opt"><span class="obox"></span> Maybe</span>
+        <span class="opt"><span class="obox"></span> No</span>
+      </div>
+      <div class="comment-line"></div>
+    </div>
+
+    <div class="q">
+      <div class="qtext"><span class="num">4</span>Any further comments or suggestions?</div>
+      <div class="comment-line"></div>
+      <div class="comment-line"></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ============ E · SIGNATURE ============ -->
+  <div class="section">
+    <p class="sec-label">E · Signature</p>
+    <div class="sign-grid">
+      <div class="sign-col">
+        <div class="sig-line"></div>
+        <div class="sig-cap">Signature of representative</div>
+        <div class="field" style="margin-top:16px;"><div class="flabel">Full name (printed)</div><div class="line"></div></div>
+        <div class="field"><div class="flabel">Position / Role</div><div class="line"></div></div>
+        <div class="field"><div class="flabel">Date</div><div class="line"></div></div>
+      </div>
+      <div class="sign-col">
+        <div class="stamp">Official stamp of the organisation</div>
+        <p class="note" style="margin-top:12px;">
+          A clinic stamp or letterhead is welcome but not required. A signed statement on its own is
+          fully sufficient for the research record.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="note">
+    <strong style="color:var(--ink);">Confidentiality.</strong> This document and any information it
+    contains are covered by the Non-Disclosure Agreement signed between the parties prior to the
+    review meeting. The statement will be stored securely and used only for the doctoral research
+    record and the EIC Pre-Accelerator application. It will not be published or shared with third
+    parties beyond what the EIC application process and doctoral examination require.
+    Questions: info@healthledgerai.com.
+  </p>
+
+</body>
+</html>
