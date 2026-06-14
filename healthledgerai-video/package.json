@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "bunx remotion studio",
-    "render": "bunx remotion render healthledgerai-landscape out/HealthLedgerAI-Embryolab.mp4 --overwrite"
+    "render": "bunx remotion render healthledgerai-landscape HealthLedgerAI-Embryolab-v3.mp4 --overwrite --ignore-certificate-errors"
   },
   "dependencies": {
     "@remotion/google-fonts": "^4.0.290",

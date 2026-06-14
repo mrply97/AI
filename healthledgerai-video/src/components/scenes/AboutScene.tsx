@@ -7,183 +7,187 @@ import {
   useVideoConfig,
 } from "remotion";
 import { COLORS } from "../../constants/colors";
-import { SPRING_SNAPPY, SPRING_BOUNCY } from "../../constants/timing";
+import { FONTS } from "../../constants/fonts";
+import { SPRING_SNAPPY } from "../../constants/timing";
 import { ShaderBG } from "../shared/ShaderBG";
 import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { LiquidLogo } from "../shared/LiquidLogo";
 import { GrainOverlay } from "../shared/GrainOverlay";
 
-const credentials = [
-  { icon: "🎓", text: "AI Engineer · Active learning roadmap 2026–27" },
-  { icon: "🏥", text: "Healthcare billing expertise · Greece & Cyprus" },
-  { icon: "🇪🇺", text: "EIC Pre-Accelerator candidate 2027" },
-  { icon: "🔒", text: "GDPR-first design · NDA available on request" },
+const academic = [
+  "BSc International Management",
+  "MSc Accounting & Finance",
+  "PhD candidate — AI & billing compliance in private healthcare (Greece & Cyprus)",
+  "Erasmus for Young Entrepreneurs — Thessaloniki, 2026",
+];
+
+const product = [
+  "Pre-launch research prototype",
+  "11 billing-error detectors built and tested",
+  "Applied to EIT Jumpstarter 2026",
+  "Target: EIC Pre-Accelerator 2027",
 ];
 
 export const AboutScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const logoSpring = spring({ frame, fps, delay: 5, config: SPRING_BOUNCY });
+  const logoSpring = spring({ frame, fps, delay: 5, config: { damping: 8, mass: 0.5 } });
   const logoScale = interpolate(logoSpring, [0, 1], [0.4, 1]);
   const logoOpacity = interpolate(logoSpring, [0, 0.6], [0, 1], { extrapolateRight: "clamp" });
 
-  const leftSpring = spring({ frame, fps, delay: 15, config: { damping: 200 } });
-  const leftY = interpolate(leftSpring, [0, 1], [40, 0]);
-  const leftOpacity = interpolate(leftSpring, [0, 1], [0, 1]);
+  const headSpring = spring({ frame, fps, delay: 14, config: { damping: 200 } });
+  const headY = interpolate(headSpring, [0, 1], [30, 0]);
+  const headOpacity = interpolate(headSpring, [0, 1], [0, 1]);
 
-  const quoteSpring = spring({ frame, fps, delay: 80, config: { damping: 200 } });
-  const quoteOpacity = interpolate(quoteSpring, [0, 1], [0, 1]);
+  const footSpring = spring({ frame, fps, delay: 95, config: { damping: 200 } });
+  const footOpacity = interpolate(footSpring, [0, 1], [0, 1]);
+
+  const Column: React.FC<{ title: string; items: string[]; baseDelay: number }> = ({
+    title,
+    items,
+    baseDelay,
+  }) => (
+    <div style={{ flex: 1 }}>
+      <h3
+        style={{
+          fontFamily: FONTS.sans,
+          fontSize: 16,
+          color: COLORS.goldLt,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          margin: "0 0 22px",
+          fontWeight: 500,
+        }}
+      >
+        {title}
+      </h3>
+      <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+        {items.map((it, i) => {
+          const sp = spring({ frame, fps, delay: baseDelay + i * 12, config: SPRING_SNAPPY });
+          const x = interpolate(sp, [0, 1], [40, 0]);
+          const opacity = interpolate(sp, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+          return (
+            <div key={i} style={{ transform: `translateX(${x}px)`, opacity }}>
+              <LiquidGlassCard dark style={{ padding: "16px 22px" }}>
+                <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                  <span style={{ color: COLORS.gold, fontSize: 16, marginTop: 2 }}>·</span>
+                  <span
+                    style={{
+                      fontFamily: FONTS.sans,
+                      fontSize: 17,
+                      color: COLORS.cream,
+                      lineHeight: 1.45,
+                      fontWeight: 300,
+                    }}
+                  >
+                    {it}
+                  </span>
+                </div>
+              </LiquidGlassCard>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 
   return (
     <AbsoluteFill
       style={{
         background: COLORS.ink,
-        padding: "72px 100px",
+        padding: "64px 100px",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      <ShaderBG
-        color1="#C9AA7C"
-        color2="#1E1A14"
-        color3="#7A9E8A"
-        intensity={0.65}
-        speed={0.6}
-      />
+      <ShaderBG color1="#C9AA7C" color2="#1E1A14" color3="#7A9E8A" intensity={0.6} speed={0.5} />
       <GrainOverlay opacity={0.04} />
 
-      <div style={{ display: "flex", gap: 72, alignItems: "center" }}>
-        {/* Left — bio */}
-        <div
-          style={{
-            flex: 1,
-            transform: `translateY(${leftY}px)`,
-            opacity: leftOpacity,
-          }}
-        >
-          <div
+      {/* Header */}
+      <div
+        style={{
+          transform: `translateY(${headY}px)`,
+          opacity: headOpacity,
+          marginBottom: 40,
+          display: "flex",
+          alignItems: "center",
+          gap: 24,
+        }}
+      >
+        <div style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}>
+          <LiquidLogo size={72} />
+        </div>
+        <div>
+          <span
             style={{
-              transform: `scale(${logoScale})`,
-              opacity: logoOpacity,
-              marginBottom: 32,
-              display: "inline-block",
+              fontFamily: FONTS.sans,
+              fontSize: 13,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: COLORS.gold,
+              fontWeight: 500,
             }}
           >
-            <LiquidLogo size={88} />
-          </div>
-
+            About the Researcher
+          </span>
           <h2
             style={{
-              fontFamily: "serif",
-              fontSize: 52,
+              fontFamily: FONTS.serif,
+              fontSize: 56,
               fontWeight: 600,
               color: COLORS.cream,
-              margin: "0 0 8px",
-              lineHeight: 1.1,
+              margin: "4px 0 2px",
+              lineHeight: 1.05,
             }}
           >
             Maria Polychroniadou
           </h2>
-
           <p
             style={{
-              fontFamily: "sans-serif",
-              fontSize: 16,
-              color: COLORS.gold,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              margin: "0 0 28px",
+              fontFamily: FONTS.serif,
+              fontStyle: "italic",
+              fontSize: 22,
+              color: COLORS.inkMute,
+              margin: 0,
               fontWeight: 400,
             }}
           >
-            Founder · HealthLedgerAI
+            PhD Researcher · HealthLedgerAI Founder
           </p>
-
-          <p
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: 20,
-              color: `${COLORS.cream}80`,
-              lineHeight: 1.7,
-              margin: "0 0 36px",
-              fontWeight: 300,
-            }}
-          >
-            Building AI-powered billing compliance tools
-            <br />for private healthcare in Greece and Cyprus.
-          </p>
-
-          <div
-            style={{
-              padding: "14px 24px",
-              background: `${COLORS.gold}18`,
-              border: `1px solid ${COLORS.gold}35`,
-              borderRadius: 12,
-              fontFamily: "sans-serif",
-              fontSize: 16,
-              color: COLORS.goldLt,
-              display: "inline-block",
-            }}
-          >
-            healthledgerai.com
-          </div>
         </div>
+      </div>
 
-        {/* Right — credentials */}
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 18 }}>
-          {credentials.map((c, i) => {
-            const credSpring = spring({ frame, fps, delay: 28 + i * 14, config: SPRING_SNAPPY });
-            const credX = interpolate(credSpring, [0, 1], [70, 0]);
-            const credOpacity = interpolate(credSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
-            return (
-              <div
-                key={i}
-                style={{
-                  transform: `translateX(${credX}px)`,
-                  opacity: credOpacity,
-                }}
-              >
-                <LiquidGlassCard dark style={{ padding: "20px 28px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-                    <span style={{ fontSize: 28, lineHeight: 1, flexShrink: 0 }}>{c.icon}</span>
-                    <span
-                      style={{
-                        fontFamily: "sans-serif",
-                        fontSize: 18,
-                        color: COLORS.cream,
-                        lineHeight: 1.4,
-                        fontWeight: 300,
-                      }}
-                    >
-                      {c.text}
-                    </span>
-                  </div>
-                </LiquidGlassCard>
-              </div>
-            );
-          })}
+      {/* Two columns */}
+      <div style={{ display: "flex", gap: 40, marginBottom: 32 }}>
+        <Column title="Academic Background" items={academic} baseDelay={28} />
+        <Column title="HealthLedgerAI" items={product} baseDelay={40} />
+      </div>
 
-          {/* Closing quote */}
-          <div
-            style={{
-              opacity: quoteOpacity,
-              marginTop: 8,
-              textAlign: "center",
-            }}
-          >
-            <span
-              style={{
-                fontFamily: "serif",
-                fontSize: 26,
-                color: COLORS.gold,
-                fontStyle: "italic",
-              }}
-            >
-              "Thank you for your time."
-            </span>
-          </div>
-        </div>
+      {/* Footer */}
+      <div style={{ opacity: footOpacity, textAlign: "center" }}>
+        <p
+          style={{
+            fontFamily: FONTS.sans,
+            fontSize: 17,
+            color: COLORS.goldLt,
+            margin: "0 0 6px",
+            fontWeight: 400,
+          }}
+        >
+          healthledgerai.com · info@healthledgerai.com
+        </p>
+        <p
+          style={{
+            fontFamily: FONTS.sans,
+            fontSize: 13,
+            color: `${COLORS.cream}60`,
+            margin: 0,
+            fontWeight: 300,
+          }}
+        >
+          All information in this presentation is covered by the NDA signed prior to this meeting.
+        </p>
       </div>
     </AbsoluteFill>
   );

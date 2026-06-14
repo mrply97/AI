@@ -1,30 +1,25 @@
 import React from "react";
 import { AbsoluteFill, Sequence, useVideoConfig } from "remotion";
-import { loadFont as loadCormorant } from "@remotion/google-fonts/CormorantGaramond";
-import { loadFont as loadJost } from "@remotion/google-fonts/Jost";
 
-// Module-scope font loading — MUST be outside any component
-loadCormorant("normal", { weights: ["300", "400", "600", "700"], subsets: ["latin"] });
-loadJost("normal", { weights: ["300", "400", "600", "700"], subsets: ["latin"] });
+// Load fonts at module scope (import has side effects).
+import "./constants/fonts";
 
-import { FPS, SCENE_DURATIONS } from "./constants/timing";
+import { SCENE_DURATIONS } from "./constants/timing";
 import { CoverScene } from "./components/scenes/CoverScene";
 import { ProblemScene } from "./components/scenes/ProblemScene";
 import { SolutionScene } from "./components/scenes/SolutionScene";
-import { DemoNumbersScene } from "./components/scenes/DemoNumbersScene";
 import { DemoResultsScene } from "./components/scenes/DemoResultsScene";
-import { WhyEmbryolabScene } from "./components/scenes/WhyEmbryolabScene";
-import { ResearchQuestionsScene } from "./components/scenes/ResearchQuestionsScene";
+import { RelevanceScene } from "./components/scenes/RelevanceScene";
+import { AskingScene } from "./components/scenes/AskingScene";
 import { AboutScene } from "./components/scenes/AboutScene";
 
 const scenes = [
   { component: CoverScene, duration: SCENE_DURATIONS.cover },
   { component: ProblemScene, duration: SCENE_DURATIONS.problem },
   { component: SolutionScene, duration: SCENE_DURATIONS.solution },
-  { component: DemoNumbersScene, duration: SCENE_DURATIONS.demoNumbers },
-  { component: DemoResultsScene, duration: SCENE_DURATIONS.demoAlerts },
-  { component: WhyEmbryolabScene, duration: SCENE_DURATIONS.whyIVF },
-  { component: ResearchQuestionsScene, duration: SCENE_DURATIONS.research },
+  { component: DemoResultsScene, duration: SCENE_DURATIONS.demo },
+  { component: RelevanceScene, duration: SCENE_DURATIONS.relevance },
+  { component: AskingScene, duration: SCENE_DURATIONS.asking },
   { component: AboutScene, duration: SCENE_DURATIONS.about },
 ];
 
