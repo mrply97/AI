@@ -122,22 +122,63 @@ Heinrich-von-Bibra-Platz 1b, 36037 Fulda
 ---
 
 ## What I've Built So Far
-- Landing page at healthledgerai.com (design complete — cream/gold/sage aesthetic, Cormorant Garamond + Jost typography)
-- Hospital intelligence briefs (internal, not public): amc-cyprus.html, eimc-thessaloniki.html
-- Full research on both target hospitals (see CLAUDE-CONTEXT.md for complete detail)
-- Working prototype: `healthledgerai_demo.py` — 11 rule-based billing-error detectors over an anonymised validation dataset (Layer 2 demonstrator)
-- No backend, no production AI model, no Greek NLP yet — in positioning/research phase
+
+### Website & Presentations
+- Landing page at healthledgerai.com (cream/gold/sage aesthetic, Cormorant Garamond + Jost)
+- Hospital intelligence briefs (internal, private branch): amc-cyprus.html, eimc-thessaloniki.html
+- Presentation for Embryolab: PRESENTATION-EMBRYOLAB.pdf (7 slides, branded)
+- Animated video presentation: HealthLedgerAI-Embryolab-v3.mp4 (105s, Remotion)
+
+### Legal & Research Documents
+- NDA-EMBRYOLAB.pdf — signed before Embryolab demo
+- VALIDATION-STATEMENT-EMBRYOLAB.pdf — print-and-sign research validation form (for PhD record + EIC)
+- GDPR-PILOT-PACKAGE.pdf — 4-page data processing agreement package for hospital pilots (DPA, ROPA, TOMs, signatures)
+
+### Prototype — Layer 2: Billing Error Detection (Python, offline)
+- `healthledgerai_demo.py` — 11 rule-based billing-error detectors (D1–D11), runs on Excel dataset
+- `healthledgerai_rules_engine.py` — config-driven rules engine: rules are JSON data, not code; add new rules without touching Python. Supports `--eopyy` / `--gesy` flags per hospital type
+- `rules_config.json` — all 11 rules declared as data with Greek law citations (legal_ref on every rule); EOPYY preview rules (EOP1/EOP2) and Special Healthcare Accounting Plan rule (HAS1) included
+- `healthledgerai_eopyy_validator.py` — standalone EOPYY pre-validation: 6 rules (tariff ceiling, required fields, 90-day deadline, insurer routing, duplicate claims, co-payment arithmetic)
+- `healthledgerai_audit.py` — immutable hash-chained audit trail (EU AI Act Art. 12, GDPR Art. 5(2)/30); tamper-evident, bilingual EL/EN labels, records legal basis per decision
+- `healthledgerai_demo_audited.py` — runs all 11 detectors with full audit logging + integrity verification
+
+### Prototype — Layer 1: Cooperation Agreement Analysis (Python + Claude API)
+- `healthledgerai_ingest.py` — PDF ingestion: auto-detects digital vs scanned pages; digital path via pdfplumber, OCR path via Tesseract 5.3.4 with Greek language pack (ell+eng); Greek language detection via Unicode heuristic
+- `healthledgerai_nlp.py` — Greek NLP pipeline using Claude API:
+  - `AgreementExtractor` — extracts structured data from Greek cooperation agreements: parties, procedure codes + max rates, co-payment rules, pre-auth requirements, billing deadlines, key obligations. Returns `AgreementData` (JSON-serialisable)
+  - `BilingualExplainer` — generates Greek (el) or English (en) explanations of billing alerts, grounded in the specific agreement clause + law article violated
+
+### Infrastructure
+- Tesseract OCR 5.3.4 with Greek (ell) + English (eng) language packs — auto-installed via session hook
+- Session-start hook (`.claude/hooks/session-start.sh`) — auto-installs Tesseract, pdfplumber, pdf2image, pytesseract, Pillow, anthropic SDK on every new session
+- Anthropic API key — injected every session via hook (HealthLedgerAI-Dev key, separate from GitHubActions key)
+
+### Validation Dataset
+- `HealthLedgerAI_Validation_Dataset_UPLOAD.xlsx` — anonymised synthetic dataset: 506 invoices, 120 patients, 498 appointments, 7 sheets
+- `HealthLedgerAI_Alert_Report.xlsx` — output report from detector run (53 HIGH / 17 MEDIUM alerts)
 
 ---
 
 ## What I Need Help With (Standing Priorities)
-1. Product architecture decisions (LLM stack, RAG pipeline, Greek NLP)
+1. ~~Product architecture decisions (LLM stack, RAG pipeline, Greek NLP)~~ — **Done (Jun 2026)**
 2. Go-to-market strategy for Cyprus first, then Greece
-3. DSGVO/GDPR documentation templates for hospital pilots
+3. ~~DSGVO/GDPR documentation templates for hospital pilots~~ — **Done: GDPR-PILOT-PACKAGE.pdf**
 4. EU AI Act classification analysis
 5. ROI calculator for hospital CFOs
 6. Content and messaging for hospital outreach
 7. Technical implementation planning
+
+## Part 4 — Critical Missing: Build Status (as of Jun 2026)
+| # | Item | Status |
+|---|------|--------|
+| 1 | Greek NLP pipeline (multilingual LLM + RAG) | ✅ Done — `healthledgerai_nlp.py` |
+| 2 | Document ingestion (OCR + Greek PDF) | ✅ Done — `healthledgerai_ingest.py` |
+| 3 | EOPYY claim pre-validation module | ✅ Done — `healthledgerai_eopyy_validator.py` |
+| 4 | GESY/HIO integration (Cyprus) | ⏸ Needs HIO portal access |
+| 5 | Basic compliance rules engine | ✅ Done — `healthledgerai_rules_engine.py` + `rules_config.json` |
+| 6 | SAP connector (confirmed at AMC) | ⏸ Needs SAP/AMC system access |
+| 7 | Audit trail module | ✅ Done — `healthledgerai_audit.py` |
+| 8 | GDPR/AVV documentation for hospital pilots | ✅ Done — `GDPR-PILOT-PACKAGE.pdf` |
 
 ---
 

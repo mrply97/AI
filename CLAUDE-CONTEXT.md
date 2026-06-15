@@ -222,14 +222,16 @@ Eurolife FFH (confirmed) · Interamerican (confirmed) · Εθνική Ασφαλ
 ## PART 4: PRODUCT GAPS & ROADMAP
 
 ### Critical Missing (Must Build)
-1. Greek NLP pipeline (multilingual LLM + RAG on Greek legal text)
-2. Document ingestion (OCR + extraction from Greek PDF agreements)
-3. EOPYY claim pre-validation module
-4. GESY/HIO integration (Cyprus entry point)
-5. Basic compliance rules engine (Special Healthcare Accounting Plan)
-6. SAP connector (confirmed at AMC)
-7. Audit trail module (immutable log of all AI decisions)
-8. GDPR/AVV documentation for hospital pilots
+| # | Item | Status | File |
+|---|------|--------|------|
+| 1 | Greek NLP pipeline (multilingual LLM + RAG on Greek legal text) | ✅ Done | `healthledgerai_nlp.py` — `AgreementExtractor` + `BilingualExplainer` via Claude API |
+| 2 | Document ingestion (OCR + extraction from Greek PDF agreements) | ✅ Done | `healthledgerai_ingest.py` — pdfplumber (digital) + Tesseract ell+eng (scanned) |
+| 3 | EOPYY claim pre-validation module | ✅ Done | `healthledgerai_eopyy_validator.py` — 6 rules (tariff, fields, deadline, routing, duplicates, co-pay) |
+| 4 | GESY/HIO integration (Cyprus entry point) | ⏸ Blocked | Needs HIO portal credentials |
+| 5 | Basic compliance rules engine (Special Healthcare Accounting Plan) | ✅ Done | `healthledgerai_rules_engine.py` + `rules_config.json` — rules as JSON data |
+| 6 | SAP connector (confirmed at AMC) | ⏸ Blocked | Needs SAP/AMC system access |
+| 7 | Audit trail module (immutable log of all AI decisions) | ✅ Done | `healthledgerai_audit.py` — SHA-256 hash-chained, EU AI Act Art. 12 compliant |
+| 8 | GDPR/AVV documentation for hospital pilots | ✅ Done | `GDPR-PILOT-PACKAGE.pdf` — DPA, ROPA, TOMs, signatures (4 pages) |
 
 ### Important (Phase 2)
 1. Contract lifecycle management (renewal alerts, version history)
