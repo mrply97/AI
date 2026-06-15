@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthLedgerAI — GDPR Pilot Documentation Package</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F4EFE4;
+      --ivory: #EDE7D8;
+      --gold: #A08558;
+      --gold-lt: #C9AA7C;
+      --sage: #4A6B5A;
+      --ink: #1E1A14;
+      --ink-soft: #4A4438;
+      --ink-mute: #8A8070;
+    }
+
+    @page {
+      size: A4;
+      margin: 18mm 16mm 16mm 16mm;
+      @bottom-center {
+        content: "HealthLedgerAI · GDPR Pilot Documentation Package · Confidential";
+        font-family: 'Jost', sans-serif; font-size: 7.5pt; color: #8A8070; letter-spacing: .04em;
+      }
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: 'Jost', sans-serif; font-size: 7.5pt; color: #8A8070;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Jost', Helvetica, Arial, sans-serif;
+      color: var(--ink-soft);
+      font-weight: 300;
+      font-size: 10pt;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    }
+
+    /* ---- Masthead ---- */
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1.5px solid var(--gold);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .brand { display: flex; align-items: center; flex-shrink: 0; }
+    .brand .mark {
+      width: 20px; height: 20px; border-radius: 5px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-lt) 55%, var(--sage));
+      display: inline-block;
+      margin-right: 9px;
+    }
+    .brand .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15pt; font-weight: 600; color: var(--ink); white-space: nowrap;
+    }
+
+    .doc-badge {
+      font-family: 'Jost', sans-serif;
+      font-size: 7pt; font-weight: 500; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--sage);
+      border: 1px solid var(--sage); border-radius: 3px; padding: 3px 8px; white-space: nowrap;
+    }
+
+    /* ---- Page title area ---- */
+    .doc-title-block { margin-bottom: 18px; }
+    .doc-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 8pt; font-weight: 500; letter-spacing: .20em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+    }
+    .doc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26pt; font-weight: 600; color: var(--ink);
+      line-height: 1.05; margin-bottom: 4px;
+    }
+    .doc-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 12pt; color: var(--ink-mute);
+      font-weight: 400; margin-bottom: 14px;
+    }
+
+    /* ---- Section labels ---- */
+    .sec-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 7.5pt; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--gold); margin: 0 0 8px;
+      display: flex; align-items: center;
+    }
+    .sec-label::before {
+      content: "";
+      width: 14px; height: 1.5px; background: var(--gold);
+      display: inline-block; margin-right: 8px; flex-shrink: 0;
+    }
+
+    /* ---- Parties panel ---- */
+    .panel {
+      background: var(--cream);
+      border: 1px solid var(--ivory);
+      border-left: 3px solid var(--gold);
+      border-radius: 5px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+    .panel.sage-panel { border-left-color: var(--sage); }
+
+    .party-row { display: flex; align-items: flex-start; margin-bottom: 10px; }
+    .party-row:last-child { margin-bottom: 0; }
+    .party-marker {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt; font-weight: 500; color: var(--gold);
+      min-width: 22px; padding-right: 8px; padding-top: 1px;
+    }
+    .party-detail { font-size: 9.5pt; line-height: 1.65; color: var(--ink-soft); }
+    .party-detail strong { color: var(--ink); font-weight: 400; }
+
+    /* ---- Clause style ---- */
+    .clause { margin-bottom: 18px; }
+    .clause-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt; font-weight: 600; color: var(--ink);
+      margin-bottom: 5px; letter-spacing: .02em;
+    }
+    .clause-text { font-size: 9.5pt; line-height: 1.7; color: var(--ink-soft); }
+    .clause-text p { margin-bottom: 7px; }
+    .clause-text p:last-child { margin-bottom: 0; }
+    .clause-list { list-style: none; margin: 6px 0 6px 14px; }
+    .clause-list li {
+      position: relative; padding-left: 16px; margin-bottom: 5px;
+      color: var(--ink-soft); font-size: 9.5pt; line-height: 1.65;
+    }
+    .clause-list li::before { content: '—'; position: absolute; left: 0; color: var(--gold-lt); }
+
+    .divider { height: 1px; background: var(--ivory); margin: 16px 0; }
+    .gold-divider { height: 1px; background: rgba(160,133,88,0.3); margin: 18px 0; }
+
+    /* ---- Fill-in fields ---- */
+    .field { margin-bottom: 10px; }
+    .field .flabel {
+      font-size: 8pt; color: var(--ink-mute); letter-spacing: .04em;
+      margin-bottom: 3px; text-transform: uppercase; font-weight: 500;
+    }
+    .fill-line { border-bottom: 1px solid var(--ink-mute); height: 18px; }
+
+    /* ---- Page breaks ---- */
+    .pagebreak { break-before: page; }
+
+    /* ---- ROPA Table ---- */
+    .ropa-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+      margin-bottom: 14px;
+    }
+    .ropa-table th {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--ivory);
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .ropa-table td {
+      padding: 9px 10px;
+      border: 1px solid var(--ivory);
+      color: var(--ink-soft);
+      line-height: 1.55;
+      vertical-align: top;
+    }
+    .ropa-table tr:nth-child(even) td { background: rgba(244,239,228,0.35); }
+    .ropa-table td strong { color: var(--ink); font-weight: 500; }
+    .ropa-table td .ref { font-size: 8pt; color: var(--gold); font-weight: 500; }
+
+    /* ---- Checkboxes ---- */
+    .chk-list { margin-bottom: 10px; }
+    .chk {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 9px;
+    }
+    .chk-box {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--ink-soft);
+      background: #fff;
+      vertical-align: middle;
+      flex-shrink: 0;
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+    .chk-text { font-size: 9.5pt; color: var(--ink-soft); line-height: 1.55; }
+    .chk-text strong { color: var(--ink); font-weight: 500; }
+
+    /* ---- Data Flow Diagram ---- */
+    .flow-wrap {
+      margin: 14px 0;
+      overflow: hidden;
+    }
+    .flow-row {
+      display: flex;
+      align-items: center;
+    }
+    .flow-box {
+      background: var(--cream);
+      border: 1.5px solid var(--gold-lt);
+      border-radius: 5px;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 8.5pt;
+      color: var(--ink);
+      line-height: 1.45;
+      flex: 1;
+    }
+    .flow-box .flow-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 7pt;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+    .flow-box .flow-detail {
+      font-size: 8pt;
+      color: var(--ink-mute);
+    }
+    .flow-arrow {
+      font-size: 16pt;
+      color: var(--gold-lt);
+      text-align: center;
+      padding: 0 6px;
+      flex-shrink: 0;
+    }
+    .flow-box.highlight {
+      border-color: var(--sage);
+      border-width: 2px;
+    }
+    .flow-box.highlight .flow-label { color: var(--sage); }
+    .flow-box.delete-box {
+      border-color: rgba(160,133,88,0.4);
+      border-style: dashed;
+    }
+
+    /* ---- Signature block ---- */
+    .sig-section { margin-top: 22px; }
+    .sign-grid {
+      display: flex;
+      margin-top: 10px;
+    }
+    .sign-col {
+      flex: 1;
+    }
+    .sign-col:first-child {
+      padding-right: 20px;
+      border-right: 1px solid var(--ivory);
+      margin-right: 20px;
+    }
+    .sig-party {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt; font-weight: 500; color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .sig-role {
+      font-size: 8.5pt; color: var(--ink-mute); letter-spacing: .05em;
+      margin-bottom: 20px;
+    }
+    .sig-line { border-bottom: 1.4px solid var(--ink-soft); height: 36px; margin-bottom: 5px; }
+    .sig-cap {
+      font-size: 7.5pt; color: var(--ink-mute);
+      text-transform: uppercase; letter-spacing: .07em; margin-bottom: 14px;
+    }
+    .stamp-box {
+      border: 1.4px dashed var(--ink-mute);
+      border-radius: 5px; height: 80px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ink-mute); font-size: 8pt;
+      letter-spacing: .08em; text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .kv { display: flex; font-size: 9pt; margin: 3px 0; }
+    .kv .k { color: var(--ink-mute); min-width: 110px; flex-shrink: 0; }
+    .kv .v { color: var(--ink); font-weight: 400; }
+
+    .note {
+      font-size: 8.5pt; color: var(--ink-mute); line-height: 1.55;
+    }
+    .note strong { color: var(--ink-soft); }
+
+    .footer-legal {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--ivory);
+      font-size: 8pt;
+      color: var(--ink-mute);
+      line-height: 1.6;
+      text-align: center;
+    }
+    .footer-legal .governing { color: var(--ink-soft); font-style: italic; }
+
+    .intro-text {
+      font-size: 9.5pt; line-height: 1.7; color: var(--ink-soft); margin-bottom: 16px;
+    }
+
+    .tag-pill {
+      display: inline-block;
+      background: rgba(160,133,88,0.1);
+      border: 1px solid rgba(160,133,88,0.3);
+      border-radius: 3px;
+      padding: 1px 7px;
+      font-size: 8pt;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: .05em;
+      margin-right: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================================
+     PAGE 1 — COVER + DATA PROCESSING AGREEMENT
+     ================================================================ -->
+
+<div class="masthead">
+  <div class="brand">
+    <span class="mark"></span>
+    <span class="name">HealthLedger AI</span>
+  </div>
+  <span class="doc-badge">GDPR Documentation · Confidential · 2026</span>
+</div>
+
+<div class="doc-title-block">
+  <p class="doc-eyebrow">Data Processing Agreement / Auftragsverarbeitungsvertrag</p>
+  <h1 class="doc-title">Data Processing Agreement</h1>
+  <p class="doc-sub">GDPR Pilot Documentation Package — Research Data Access</p>
+</div>
+
+<div class="section">
+  <p class="sec-label">The Parties</p>
+  <div class="panel">
+    <div class="party-row">
+      <span class="party-marker">(1)</span>
+      <div class="party-detail">
+        <strong>Controller / Data Controller:</strong> <strong>Maria Polychroniadou</strong>, PhD Candidate and Founder, HealthLedgerAI — conducting doctoral research on AI-assisted billing compliance in private healthcare in Cyprus and Greece. Contact: info@healthledgerai.com (hereinafter "<strong>the Controller</strong>").
+      </div>
+    </div>
+    <div class="party-row">
+      <span class="party-marker">(2)</span>
+      <div class="party-detail">
+        <strong>Processor / Data Processor:</strong>
+        <span style="display:inline-block; min-width:200px; border-bottom:1px solid var(--ink-mute); height:16px; vertical-align:bottom; margin-left:4px; margin-right:4px;"></span>
+        (Hospital name — full legal name and registered address to be completed by the hospital representative before signing) (hereinafter "<strong>the Hospital</strong>" or "<strong>the Processor</strong>").
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="intro-text">
+  This Data Processing Agreement (the "<strong>Agreement</strong>") is entered into between the Controller and the Processor as of the date last signed below (the "<strong>Effective Date</strong>"). The parties agree that personal data shall be processed strictly under the terms set out herein, and exclusively for the purpose of enabling the Controller to conduct a research validation pilot of the HealthLedgerAI billing-compliance prototype on the Hospital's operational billing records.
+</p>
+
+<div class="gold-divider"></div>
+
+<div class="clause">
+  <p class="clause-number">1. Purpose and Scope of Processing</p>
+  <div class="clause-text">
+    <p>The Hospital grants the Controller temporary, read-only access to a pseudonymised extract of its billing records for the sole purpose of validating and evaluating the HealthLedgerAI prototype as part of the Controller's doctoral research programme. Specifically:</p>
+    <ul class="clause-list">
+      <li>Purpose: PhD research validation — testing the accuracy of the HealthLedgerAI AI-assisted billing-compliance detection system against real hospital billing data;</li>
+      <li>Strictly no commercial use of any data, records, or outputs derived therefrom;</li>
+      <li>The pilot forms part of the Controller's doctoral research record and supports evidence submitted for the European Innovation Council (EIC) Pre-Accelerator programme;</li>
+      <li>No data shall be published, monetised, or shared with any third party beyond what the EIC application process and doctoral examination strictly require, and only in fully anonymised, aggregate form.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="clause">
+  <p class="clause-number">2. Legal Basis for Processing</p>
+  <div class="clause-text">
+    <p>The processing of personal data under this Agreement is grounded on the following legal bases under Regulation (EU) 2016/679 (GDPR):</p>
+    <ul class="clause-list">
+      <li><span class="tag-pill">Art. 6(1)(f)</span> <strong>Legitimate interest</strong> — the Controller's legitimate interest in conducting academic research into billing compliance in private healthcare, balanced against the data subjects' rights by the pseudonymisation and strict access controls applied;</li>
+      <li><span class="tag-pill">Art. 9(3)</span> <strong>Health data — academic research exemption</strong> — processing of special category data (health-related billing records) is permitted where it is necessary for scientific research purposes under Union or Member State law and subject to appropriate safeguards;</li>
+      <li>Any applicable national research exemptions under Greek Law 4624/2019 and the Cyprus Commissioner for Personal Data Protection Act Cap. 138.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="clause">
+  <p class="clause-number">3. Duration and Data Deletion</p>
+  <div class="clause-text">
+    <p>This Agreement is effective from the Effective Date and continues for the duration of the pilot visit only. The Controller undertakes to:</p>
+    <ul class="clause-list">
+      <li>Delete all data received from the Hospital within <strong>thirty (30) days</strong> of the conclusion of the pilot visit;</li>
+      <li>Certify in writing to the Hospital upon deletion;</li>
+      <li>Retain no copies, extracts, or derivatives of the Hospital's data beyond the above period, except as required by law or for the doctoral examination record in fully anonymised form.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="clause">
+  <p class="clause-number">4. Sub-Processors</p>
+  <div class="clause-text">
+    <p>The Controller shall engage <strong>no sub-processors</strong> in connection with this Agreement. All data shall be processed locally on the Controller's device only and shall <strong>never be uploaded to any external server, cloud platform, or third-party service</strong>. No internet transfer of Hospital data shall take place under any circumstances.</p>
+  </div>
+</div>
+
+<div class="clause">
+  <p class="clause-number">5. Data Subject Rights</p>
+  <div class="clause-text">
+    <p>The Hospital retains full control of its data and its patients' rights at all times. The Controller commits to:</p>
+    <ul class="clause-list">
+      <li>Supporting the Hospital in responding to any data subject request (access, rectification, erasure, restriction) within the legally required timeframes;</li>
+      <li>Immediately informing the Hospital if any data subject rights request is received by the Controller that relates to the Hospital's data;</li>
+      <li>Not acting on any data subject request without the Hospital's prior written authorisation.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="clause">
+  <p class="clause-number">6. Confidentiality and Security</p>
+  <div class="clause-text">
+    <p>The Controller shall maintain strict confidentiality over all Hospital data and shall implement technical and organisational measures (detailed in Page 3 of this package). Data access shall be limited strictly to the Controller personally and shall not be shared with any other individual. A separate Non-Disclosure Agreement is to be signed prior to any data access.</p>
+  </div>
+</div>
+
+
+<!-- ================================================================
+     PAGE 2 — ARTICLE 30 ROPA
+     ================================================================ -->
+
+<div class="pagebreak">
+
+  <div class="masthead">
+    <div class="brand">
+      <span class="mark"></span>
+      <span class="name">HealthLedger AI</span>
+    </div>
+    <span class="doc-badge">GDPR Art. 30 ROPA · Confidential</span>
+  </div>
+
+  <div class="doc-title-block">
+    <p class="doc-eyebrow">Article 30 GDPR — Record of Processing Activities</p>
+    <h1 class="doc-title" style="font-size:22pt;">Record of Processing Activities</h1>
+    <p class="doc-sub">ROPA — Maintained by Controller pursuant to Art. 30(1) GDPR</p>
+  </div>
+
+  <div class="section">
+    <p class="sec-label">Processing Activity Record</p>
+    <p class="intro-text" style="margin-bottom:14px;">
+      This Record of Processing Activities is maintained by the Controller in accordance with Article 30(1) of Regulation (EU) 2016/679 (GDPR). It documents the single processing activity carried out under this pilot agreement.
+    </p>
+
+    <table class="ropa-table">
+      <thead>
+        <tr>
+          <th style="width:28%;">Field</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Controller</strong></td>
+          <td>
+            <strong>Maria Polychroniadou</strong><br>
+            PhD Candidate &amp; Founder, HealthLedgerAI<br>
+            <span style="color:var(--ink-mute); font-size:8.5pt;">Contact: info@healthledgerai.com</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Processing Activity Name</strong></td>
+          <td>HealthLedgerAI Billing Compliance Research Pilot</td>
+        </tr>
+        <tr>
+          <td><strong>Purpose of Processing</strong></td>
+          <td>
+            AI-assisted billing compliance research (PhD doctoral programme). Validation of the HealthLedgerAI prototype against real hospital billing records to assess detection accuracy.
+            <br><span class="ref">Strictly non-commercial academic research purpose only.</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Legal Basis</strong></td>
+          <td>
+            <span class="tag-pill">Art. 6(1)(f)</span> Legitimate interest — scientific research<br>
+            <span class="tag-pill">Art. 9(3)</span> Health data — academic research exemption<br>
+            <span style="font-size:8.5pt; color:var(--ink-mute);">Greek Law 4624/2019 · Cyprus Cap. 138</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Categories of Data Subjects</strong></td>
+          <td>Hospital patients (identifiable only by internal billing ID — no name, address, or national ID number accessed or processed)</td>
+        </tr>
+        <tr>
+          <td><strong>Categories of Personal Data</strong></td>
+          <td>
+            Billing records: procedure codes, service dates, billed amounts, insurance codes, internal patient reference IDs. <strong>No direct patient identifiers</strong> (name, date of birth, national ID, contact details) are accessed or processed.
+            <br><span class="ref">Data classified as special category (health-related) per Art. 9 GDPR.</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Recipients of Data</strong></td>
+          <td>
+            <strong>None.</strong> Data processed locally on the Controller's device only. No transmission to any third party, external server, or cloud platform.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Transfers to Third Countries</strong></td>
+          <td>None. No international data transfers.</td>
+        </tr>
+        <tr>
+          <td><strong>Retention Period</strong></td>
+          <td>
+            <strong>30 days</strong> post pilot-visit conclusion. All data deleted and deletion certified in writing upon expiry.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Technical &amp; Organisational Measures</strong></td>
+          <td>
+            Local processing only · Encrypted storage (device full-disk encryption) · No cloud upload · Pseudonymised dataset used · Analysis outputs contain no direct identifiers · NDA signed prior to data access · Device password-protected
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Data Processor(s)</strong></td>
+          <td>The Hospital (name to be completed — see Page 1). Acts as the originating data holder; the Controller accesses data on-site under supervision.</td>
+        </tr>
+        <tr>
+          <td><strong>Date Record Created</strong></td>
+          <td>June 2026</td>
+        </tr>
+        <tr>
+          <td><strong>Last Updated</strong></td>
+          <td style="display:flex; align-items:center; padding:9px 10px;">
+            <span style="display:inline-block; min-width:140px; border-bottom:1px solid var(--ink-mute); height:16px; vertical-align:bottom;"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel sage-panel">
+    <p class="sec-label" style="margin-bottom:6px;">Lawfulness Assessment Note</p>
+    <p style="font-size:9pt; color:var(--ink-soft); line-height:1.6;">
+      The Controller has conducted a Legitimate Interest Assessment (LIA) confirming that: (a) the research purpose is genuine and documented within a doctoral programme; (b) the processing is necessary — no equally effective alternative using only synthetic data is available at the pilot stage; (c) the data subjects' interests are protected by pseudonymisation, strict local-only processing, 30-day deletion, and the absence of any commercial motive. The balancing test favours processing.
+    </p>
+  </div>
+
+</div>
+
+
+<!-- ================================================================
+     PAGE 3 — TECHNICAL & ORGANISATIONAL MEASURES + DATA FLOW
+     ================================================================ -->
+
+<div class="pagebreak">
+
+  <div class="masthead">
+    <div class="brand">
+      <span class="mark"></span>
+      <span class="name">HealthLedger AI</span>
+    </div>
+    <span class="doc-badge">TOMs + Data Flow · Confidential</span>
+  </div>
+
+  <div class="doc-title-block">
+    <p class="doc-eyebrow">Technical &amp; Organisational Measures</p>
+    <h1 class="doc-title" style="font-size:22pt;">Technical &amp; Organisational Measures</h1>
+    <p class="doc-sub">Security safeguards implemented for the HealthLedgerAI pilot — per Art. 32 GDPR</p>
+  </div>
+
+  <div class="section">
+    <p class="sec-label">Security Measures Checklist (TOMs)</p>
+    <p class="intro-text" style="margin-bottom:12px;">
+      The following technical and organisational measures are applied by the Controller for the duration of the pilot and for the 30-day retention period thereafter. The Hospital representative is invited to verify these measures during the pilot visit.
+    </p>
+
+    <div class="chk-list">
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Local processing only.</strong> All Hospital data is processed exclusively on the Controller's personal research laptop. No data leaves the device during or after analysis.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>No cloud or external transmission.</strong> Data is not uploaded to, stored in, or transmitted via any external server, cloud platform (including Google Drive, Dropbox, OneDrive, AWS, Azure, or equivalent), or third-party service of any kind.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Anonymisation / pseudonymisation applied before analysis.</strong> The dataset provided by the Hospital is pseudonymised — direct patient identifiers (name, date of birth, national ID) are stripped or replaced with internal reference codes before the analysis is performed.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Analysis outputs contain no direct patient identifiers.</strong> All reports and outputs generated by the HealthLedgerAI prototype reference only procedure codes, date ranges, and statistical aggregates. No output identifies a specific individual patient.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Encrypted storage at rest.</strong> The Controller's device uses full-disk encryption. The data export file is additionally stored in an encrypted, password-protected container for the duration of the retention period.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Data deleted within 30 days of pilot visit.</strong> All data — including the original export, working files, and any derivative files — is securely deleted within 30 calendar days of the pilot visit. Written deletion confirmation is provided to the Hospital.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Non-Disclosure Agreement signed separately before data access.</strong> A Mutual NDA covering the Hospital's confidential and patient data is signed by both parties prior to any data export or access. A copy is retained by both parties.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Access restricted to the Controller only.</strong> No other individual — including research supervisors, colleagues, or collaborators — accesses the Hospital's data. The Controller is the sole person processing the data.</span>
+      </div>
+      <div class="chk">
+        <span class="chk-box"></span>
+        <span class="chk-text"><strong>Device physically secured.</strong> The researcher's device is password-protected, kept in the researcher's physical possession at all times during the pilot, and not left unattended in a publicly accessible space.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="gold-divider"></div>
+
+  <div class="section">
+    <p class="sec-label">Data Flow Description</p>
+    <p class="intro-text" style="margin-bottom:12px;">
+      The following diagram illustrates the complete data lifecycle from export to deletion. At no stage does data leave the Hospital premises in unencrypted form or travel over a network connection.
+    </p>
+
+    <div class="flow-wrap">
+      <div class="flow-row">
+        <div class="flow-box">
+          <div class="flow-label">Step 1</div>
+          <div style="font-size:9pt; color:var(--ink); font-weight:500; margin-bottom:3px;">Hospital ERP / Billing System</div>
+          <div class="flow-detail">Data export prepared by hospital IT staff on hospital premises</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+        <div class="flow-box">
+          <div class="flow-label">Step 2</div>
+          <div style="font-size:9pt; color:var(--ink); font-weight:500; margin-bottom:3px;">Export &amp; Pseudonymisation</div>
+          <div class="flow-detail">Hospital removes / masks direct identifiers. File transferred via encrypted USB on hospital premises</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+        <div class="flow-box highlight">
+          <div class="flow-label">Step 3</div>
+          <div style="font-size:9pt; color:var(--ink); font-weight:500; margin-bottom:3px;">Researcher Laptop</div>
+          <div class="flow-detail">Local analysis only — HealthLedgerAI prototype run offline. No network connection during analysis</div>
+        </div>
+      </div>
+      <div class="flow-row" style="margin-top:8px;">
+        <div class="flow-box" style="flex:1; max-width:45%;">
+          <div class="flow-label">Step 4</div>
+          <div style="font-size:9pt; color:var(--ink); font-weight:500; margin-bottom:3px;">Anonymised Output</div>
+          <div class="flow-detail">Aggregate compliance report (no patient IDs) shared with hospital as feedback</div>
+        </div>
+        <div class="flow-arrow">&#8594;</div>
+        <div class="flow-box delete-box" style="flex:1; max-width:45%;">
+          <div class="flow-label">Step 5 · &#x2264;30 days</div>
+          <div style="font-size:9pt; color:var(--ink); font-weight:500; margin-bottom:3px;">Secure Deletion</div>
+          <div class="flow-detail">All source data, working files, and exports securely deleted. Written confirmation issued.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:10px;">
+    <p class="note">
+      <strong style="color:var(--ink-soft);">Data minimisation.</strong> The Controller requests only the minimum data fields necessary to validate the prototype's billing-compliance detection. The Hospital is encouraged to provide an extract rather than a full billing database, covering only the period and record types required for the pilot (to be agreed in writing before the visit).
+    </p>
+  </div>
+
+</div>
+
+
+<!-- ================================================================
+     PAGE 4 — SIGNATURE BLOCK
+     ================================================================ -->
+
+<div class="pagebreak">
+
+  <div class="masthead">
+    <div class="brand">
+      <span class="mark"></span>
+      <span class="name">HealthLedger AI</span>
+    </div>
+    <span class="doc-badge">Signatures · Confidential</span>
+  </div>
+
+  <div class="doc-title-block">
+    <p class="doc-eyebrow">Execution &amp; Signature Block</p>
+    <h1 class="doc-title" style="font-size:22pt;">Agreement Signatures</h1>
+    <p class="doc-sub">Both parties confirm acceptance of the terms set out in this GDPR Pilot Documentation Package</p>
+  </div>
+
+  <p class="intro-text">
+    By signing below, both parties confirm that they have read, understood, and agree to be bound by all terms set out in this Data Processing Agreement (Pages 1–4), including the Record of Processing Activities (ROPA) and the Technical &amp; Organisational Measures (TOMs). This Agreement shall be effective from the date of the later signature below.
+  </p>
+
+  <div class="gold-divider"></div>
+
+  <div class="sig-section">
+    <p class="sec-label">Signatures</p>
+
+    <div class="sign-grid">
+
+      <!-- LEFT COL: Controller -->
+      <div class="sign-col">
+        <p class="sig-party">Maria Polychroniadou</p>
+        <p class="sig-role">Controller / Data Controller · HealthLedgerAI</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-cap">Signature</p>
+
+        <div class="field">
+          <div class="flabel">Full name (printed)</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">Role / Title</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">Date (DD / MM / YYYY)</div>
+          <div class="fill-line"></div>
+        </div>
+
+        <div class="panel sage-panel" style="margin-top:14px; padding:10px 14px;">
+          <div class="kv"><span class="k">Organisation</span><span class="v">HealthLedgerAI</span></div>
+          <div class="kv"><span class="k">Capacity</span><span class="v">PhD Researcher &amp; Founder</span></div>
+          <div class="kv"><span class="k">Contact</span><span class="v">info@healthledgerai.com</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT COL: Processor / Hospital -->
+      <div class="sign-col" style="padding-right:0; border-right:none; margin-right:0;">
+        <p class="sig-party">Hospital Representative</p>
+        <p class="sig-role">Data Controller · Authorised Signatory</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-cap">Signature</p>
+
+        <div class="field">
+          <div class="flabel">Full name (printed)</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">Role / Title</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">Date (DD / MM / YYYY)</div>
+          <div class="fill-line"></div>
+        </div>
+
+        <div class="stamp-box">Official Stamp of the Hospital</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gold-divider" style="margin-top:24px;"></div>
+
+  <div class="section">
+    <p class="sec-label">Hospital Details (to be completed by Hospital Representative)</p>
+    <div style="display:flex;">
+      <div style="flex:1; padding-right:16px;">
+        <div class="field">
+          <div class="flabel">Hospital / Organisation full legal name</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">Registered address</div>
+          <div class="fill-line"></div>
+        </div>
+      </div>
+      <div style="flex:1; padding-left:16px;">
+        <div class="field">
+          <div class="flabel">Data Protection Officer (if applicable)</div>
+          <div class="fill-line"></div>
+        </div>
+        <div class="field">
+          <div class="flabel">DPO contact email / phone</div>
+          <div class="fill-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="footer-legal">
+    <p class="governing">
+      This agreement is governed by EU Regulation 2016/679 (GDPR), the Greek Law 4624/2019 (ΔΠΑ — Νόμος για την Προστασία Δεδομένων Προσωπικού Χαρακτήρα), and the Cyprus Commissioner for Personal Data Protection Act Cap. 138.
+    </p>
+    <p style="margin-top:8px;">
+      This document forms part of the doctoral research record. A copy will be retained by both parties. Both parties are advised to have this document reviewed by their respective legal counsel or Data Protection Officer before signing.
+    </p>
+    <p style="margin-top:6px;">
+      Questions regarding this agreement: <strong>info@healthledgerai.com</strong> · healthledgerai.com
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
