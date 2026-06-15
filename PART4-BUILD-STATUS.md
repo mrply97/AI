@@ -12,9 +12,9 @@ systems) versus what needs API keys, real ERP access, or a Greek legal corpus.
 | 1 | Greek NLP pipeline (multilingual LLM + RAG) | ✅ **Built** | `healthledgerai_nlp.py`, `healthledgerai_nlp_demo.py`, `healthledgerai_eimc_demo.py` |
 | 2 | Document ingestion (OCR + Greek PDF extraction) | ✅ **Built** | `healthledgerai_ingest.py` |
 | 3 | EOPYY claim pre-validation module | ✅ **Built** | `healthledgerai_eopyy_validator.py`, `healthledgerai_eopyy_run.py` |
-| 4 | GESY/HIO integration (Cyprus) | ✅ **Built (stub — awaiting HIO credentials)** | `healthledgerai_gesy_connector.py` |
+| 4 | GESY/HIO integration (Cyprus) | ✅ **Built (stub — not for AMC; future expansion only)** | `healthledgerai_gesy_connector.py` |
 | 5 | Basic compliance rules engine | ✅ **Built** | `healthledgerai_rules_engine.py`, `rules_config.json`, `healthledgerai_engine_run.py` |
-| 6 | SAP connector (confirmed at AMC) | ✅ **Built (stub — awaiting AMC credentials)** | `healthledgerai_sap_connector.py` |
+| 6 | SAP connector (AMC-specific) | ✅ **Built (stub — blocked until AMC grants access, October 2026)** | `healthledgerai_sap_connector.py` |
 | 7 | Audit trail module (immutable log of all AI decisions) | ✅ **Built** | `healthledgerai_audit.py`, `healthledgerai_demo_audited.py` |
 | 8 | GDPR/AVV documentation for hospital pilots | ✅ **Built** | `GDPR-PILOT-PACKAGE.html`, `GDPR-PILOT-PACKAGE.pdf` |
 
@@ -72,8 +72,10 @@ conn.connect(
     credentials={"client_id": "...", "client_secret": "...", "cert_path": "..."},
 )
 ```
-Note: AMC Cyprus is outside GESY. This module targets future Cyprus hospital
-expansion (Apollonion, Aretaeio, Limassol General, etc.).
+**⚠ Not for AMC.** AMC Cyprus is deliberately outside GESY — this connector
+will never be used with AMC. It exists for future expansion to other Cyprus
+private hospitals that ARE on GESY (e.g. Apollonion, Aretaeio, Limassol
+General). Lower priority than everything else for now.
 
 ### #6 — SAP FI/CO connector stub
 `healthledgerai_sap_connector.py`
@@ -95,6 +97,12 @@ conn.connect(
     credentials={"username": "HLAI_SERVICE", "password": "...", "client": "100"},
 )
 ```
+**⚠ AMC-specific and blocked until October 2026.** SAP FI/CO is confirmed at
+AMC Cyprus (from 3 active job postings requiring SAP FI knowledge). It is NOT
+confirmed at EIMC — Greek private hospitals typically run SingularLogic or a
+custom ERP, so this connector does not apply to EIMC. The stub is ready; AMC
+needs to provide a test endpoint and service-user credentials when the pilot
+starts in October.
 
 ---
 
