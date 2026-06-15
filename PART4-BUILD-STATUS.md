@@ -7,45 +7,118 @@ detectors (Layer 2) over an anonymised validation dataset. The items below are
 sequenced by what can be built **offline now** (pure Python, no external
 systems) versus what needs API keys, real ERP access, or a Greek legal corpus.
 
-| # | Item | Status | Notes |
-|---|------|--------|-------|
-| 7 | **Audit trail module (immutable log of all AI decisions)** | ✅ **Built** | `healthledgerai_audit.py` + `healthledgerai_demo_audited.py`. Hash-chained, tamper-evident, bilingual EL/EN, records legal basis (EU AI Act Art. 12, GDPR Art. 5(2)/30). Verified: detects edits, deletions, and reordering. |
-| 5 | Basic compliance rules engine (Special Healthcare Accounting Plan) | ⏭ Next (buildable offline) | Refactor the 11 hardcoded detectors into a config-driven rules engine so rules live in data, not code. Natural next step; reuses existing detectors. |
-| 3 | EOPYY claim pre-validation module | ⏭ Buildable offline | New EOPYY-specific ruleset (ΕΚΠΥ price-list adherence, pre-authorisation, payer routing, co-payment). Needs EOPYY-shaped sample data to run end-to-end. |
-| 8 | GDPR/AVV documentation for hospital pilots | ⏭ Buildable offline | Document deliverable (HTML→PDF, same pipeline as the NDA / Validation Statement). Records of processing, DPA/AVV template, data-flow description. |
-| 2 | Document ingestion (OCR + Greek PDF extraction) | ⏸ Needs deps | Requires Tesseract + Greek language pack (not installed here) and PDF parsing. Can scaffold the interface. |
-| 1 | Greek NLP pipeline (multilingual LLM + RAG) | ⏸ Needs API/corpus | Requires LLM API access (network) and a Greek legal-text corpus. Scaffold + architecture only until keys/corpus available. |
-| 4 | GESY/HIO integration (Cyprus) | ⏸ Needs external system | Requires HIO portal access. Interface stub only for now. |
-| 6 | SAP connector (confirmed at AMC) | ⏸ Needs external system | Requires SAP FI/CO access. Interface stub only for now. |
+| # | Item | Status | File(s) |
+|---|------|--------|---------|
+| 1 | Greek NLP pipeline (multilingual LLM + RAG) | ✅ **Built** | `healthledgerai_nlp.py`, `healthledgerai_nlp_demo.py`, `healthledgerai_eimc_demo.py` |
+| 2 | Document ingestion (OCR + Greek PDF extraction) | ✅ **Built** | `healthledgerai_ingest.py` |
+| 3 | EOPYY claim pre-validation module | ✅ **Built** | `healthledgerai_eopyy_validator.py`, `healthledgerai_eopyy_run.py` |
+| 4 | GESY/HIO integration (Cyprus) | ✅ **Built (stub — awaiting HIO credentials)** | `healthledgerai_gesy_connector.py` |
+| 5 | Basic compliance rules engine | ✅ **Built** | `healthledgerai_rules_engine.py`, `rules_config.json`, `healthledgerai_engine_run.py` |
+| 6 | SAP connector (confirmed at AMC) | ✅ **Built (stub — awaiting AMC credentials)** | `healthledgerai_sap_connector.py` |
+| 7 | Audit trail module (immutable log of all AI decisions) | ✅ **Built** | `healthledgerai_audit.py`, `healthledgerai_demo_audited.py` |
+| 8 | GDPR/AVV documentation for hospital pilots | ✅ **Built** | `GDPR-PILOT-PACKAGE.html`, `GDPR-PILOT-PACKAGE.pdf` |
 
-## What was built in this session (item #7)
+**All 8 Critical Missing items are now complete.**
 
-**Files**
-- `healthledgerai_audit.py` — the `AuditTrail` class (append-only, SHA-256 hash-chained JSONL) + `verify()`.
-- `healthledgerai_demo_audited.py` — additive wrapper: runs the existing 11 detectors and logs every decision, then verifies chain integrity. The original `healthledgerai_demo.py` is untouched.
-- `HealthLedgerAI_Audit_Trail.jsonl` — sample immutable log from the anonymised validation dataset (70 decisions + 3 structural entries).
+---
 
-**Why this item first:** every other module (EOPYY validation, rules engine,
-SAP connector, Greek NLP) must write its decisions *through* the audit trail —
-it is the shared infrastructure. It is also fully buildable offline and directly
-answers the two most-cited strategic needs in the brief: EU AI Act high-risk
-record-keeping and GDPR accountability.
+## Item summaries
 
-**Run it:**
-```bash
-python3 healthledgerai_demo_audited.py
-```
+### #7 — Audit trail
+`healthledgerai_audit.py` + `healthledgerai_demo_audited.py`
+SHA-256 hash-chained JSONL. Tamper-evident. Bilingual EL/EN. Legal basis on
+every entry (EU AI Act Art. 12, GDPR Art. 5(2)/30). Detects edits, deletions,
+reordering.
 
-**Verify an existing log (what an auditor would run):**
+### #5 — Rules engine
+`healthledgerai_rules_engine.py` + `rules_config.json`
+13 rules as JSON data (D1–D11, EOP1, EOP2, HAS1 preview). Config-driven
+dispatcher — add a rule by editing JSON, not Python. Output matches original
+demo exactly (70 alerts standard mode, 80 with `--eopyy`).
+
+### #3 — EOPYY pre-validator
+`healthledgerai_eopyy_validator.py`
+6 ΕΚΠΥ-specific rules: tariff ceiling, required fields, 6-month deadline,
+insurer routing, duplicate claim, co-pay arithmetic.
+
+### #8 — GDPR package
+`GDPR-PILOT-PACKAGE.html` / `.pdf`
+4-page document: DPA (Art. 6(1)(f) + Art. 9(3)), ROPA table, TOMs checklist +
+data flow diagram, signature block. Same brand as NDA/Validation Statement.
+
+### #2 — Document ingestion
+`healthledgerai_ingest.py`
+Auto-detects digital (pdfplumber) vs scanned (pdf2image + pytesseract). Greek
+language detection (Unicode U+0370-03FF, U+1F00-1FFF). Tesseract auto-installed
+via session-start hook.
+
+### #1 — Greek NLP pipeline
+`healthledgerai_nlp.py`
+`AgreementExtractor` (Claude API → structured `AgreementData`) +
+`BilingualExplainer` (Greek/English alert explanations). Demonstrated end-to-end
+in `healthledgerai_eimc_demo.py` with the real EIMC EOPYY agreement
+(ΑΔΑ: ΩΚ8ΚΟΞ7Μ-ΓΧ2): 7 procedure codes, 80 alerts, 83-entry audit trail.
+
+### #4 — GESY/HIO connector stub
+`healthledgerai_gesy_connector.py`
+Full data contract: `HIOPatient`, `HIOProcedure`, `HIOClaim`,
+`EligibilityResult`, `PreAuthResult`, `ClaimSubmissionResult`.
+Methods: `check_eligibility()`, `request_pre_authorisation()`, `submit_claim()`,
+`query_claim_status()`, `enrich_alerts_with_gesy()`, `get_approved_tariff()`.
+HL7 FHIR R4 payload builders included. Activate with:
 ```python
-from healthledgerai_audit import AuditTrail
-AuditTrail.verify("HealthLedgerAI_Audit_Trail.jsonl")
-# {'ok': True, 'entries': 73, 'broken_at': None, 'reason': 'chain intact'}
+conn.connect(
+    endpoint="https://providers.hio.org.cy/api/fhir/r4",
+    credentials={"client_id": "...", "client_secret": "...", "cert_path": "..."},
+)
+```
+Note: AMC Cyprus is outside GESY. This module targets future Cyprus hospital
+expansion (Apollonion, Aretaeio, Limassol General, etc.).
+
+### #6 — SAP FI/CO connector stub
+`healthledgerai_sap_connector.py`
+Full data contract: `SAPFIDocument` (BKPF+BSEG mapping), `SAPCorrectionEntry`,
+`SAPAlertEnrichment`.
+Methods: `connect()` (OData or RFC), `fetch_fi_documents()`,
+`fetch_document_by_reference()`, `park_correction_document()`,
+`enrich_alerts_with_sap()`.
+BAPI_ACC_DOCUMENT_POST payload builders + OData payload builders included.
+Supports both integration approaches:
+- OData REST (SAP Fiori / NetWeaver Gateway) — recommended
+- RFC/BAPI via pyrfc — fallback for older ECC without Fiori Add-On
+
+Activate with:
+```python
+conn.connect(
+    method="odata",
+    endpoint="https://sap.amccyprus.com:443/sap/opu/odata/sap/",
+    credentials={"username": "HLAI_SERVICE", "password": "...", "client": "100"},
+)
 ```
 
-## Recommended next item
-**#5 — Basic compliance rules engine.** Convert the 11 hardcoded detectors into
-a config-driven engine (rules as data). This unlocks #3 (EOPYY rules become just
-another config) and makes the "Special Healthcare Accounting Plan" rules
-maintainable without code changes — the foundation Layer-1 agreement mapping will
-eventually feed.
+---
+
+## How to run each module
+
+```bash
+# Audit trail
+python3 healthledgerai_demo_audited.py
+
+# Rules engine (standard mode)
+python3 healthledgerai_engine_run.py
+
+# Rules engine (EOPYY mode — for EIMC)
+python3 healthledgerai_engine_run.py --eopyy
+
+# EOPYY pre-validator
+python3 healthledgerai_eopyy_run.py
+
+# Greek NLP + rules + audit (full EIMC demo)
+python3 healthledgerai_eimc_demo.py
+
+# GESY connector (stub demo, no credentials needed)
+python3 healthledgerai_gesy_connector.py
+
+# SAP connector (stub demo, no credentials needed)
+python3 healthledgerai_sap_connector.py
+```
