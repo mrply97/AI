@@ -1,0 +1,65 @@
+{
+  "@anthropic-ai/sdk": {
+    "current": "0.100.1",
+    "wanted": "0.100.1",
+    "latest": "0.104.1",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/@anthropic-ai/sdk"
+  },
+  "@types/node": {
+    "current": "20.19.41",
+    "wanted": "20.19.43",
+    "latest": "25.9.3",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/@types/node"
+  },
+  "@types/react": {
+    "current": "18.3.29",
+    "wanted": "18.3.31",
+    "latest": "19.2.17",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/@types/react"
+  },
+  "@types/react-dom": {
+    "current": "18.3.7",
+    "wanted": "18.3.7",
+    "latest": "19.2.3",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/@types/react-dom"
+  },
+  "framer-motion": {
+    "current": "11.18.2",
+    "wanted": "11.18.2",
+    "latest": "12.40.0",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/framer-motion"
+  },
+  "next": {
+    "current": "14.2.29",
+    "wanted": "14.2.29",
+    "latest": "16.2.9",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/next"
+  },
+  "react": {
+    "current": "18.3.1",
+    "wanted": "18.3.1",
+    "latest": "19.2.7",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/react"
+  },
+  "react-dom": {
+    "current": "18.3.1",
+    "wanted": "18.3.1",
+    "latest": "19.2.7",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/react-dom"
+  },
+  "typescript": {
+    "current": "5.9.3",
+    "wanted": "5.9.3",
+    "latest": "6.0.3",
+    "dependent": "AI",
+    "location": "/home/runner/work/AI/AI/node_modules/typescript"
+  }
+}
