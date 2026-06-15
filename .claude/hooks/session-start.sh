@@ -18,3 +18,11 @@ if ! command -v tesseract &>/dev/null; then
   apt-get install -y -q tesseract-ocr tesseract-ocr-ell tesseract-ocr-eng 2>/dev/null
   echo "Tesseract ready: $(tesseract --version 2>&1 | head -1)"
 fi
+
+# Ensure PDF ingestion Python libraries are available.
+python3 -c "import pdfplumber, pdf2image, pytesseract, PIL" 2>/dev/null || \
+  pip install pdfplumber pdf2image pytesseract Pillow -q 2>/dev/null
+
+# Ensure Anthropic SDK is available.
+python3 -c "import anthropic" 2>/dev/null || \
+  pip install anthropic -q 2>/dev/null
