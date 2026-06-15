@@ -1,0 +1,209 @@
+
+
+  ██╗  ██╗███████╗ █████╗ ██╗  ████████╗██╗  ██╗██╗     ███████╗██████╗  █████╗ ██╗
+  ██║  ██║██╔════╝██╔══██╗██║  ╚══██╔══╝██║  ██║██║     ██╔════╝██╔══██╗██╔══██╗██║
+  ███████║█████╗  ███████║██║     ██║   ███████║██║     █████╗  ██║  ██║███████║██║
+  ██╔══██║██╔══╝  ██╔══██║██║     ██║   ██╔══██║██║     ██╔══╝  ██║  ██║██╔══██║██║
+  ██║  ██║███████╗██║  ██║███████╗██║   ██║  ██║███████╗███████╗██████╔╝██║  ██║██║
+  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝
+
+  Billing Compliance Intelligence for Private Healthcare
+  Demonstration for: Ιατρικό Διαβαλκανικό Θεσσαλονίκης (EIMC)
+  Run date: 15 June 2026  09:34
+  CONFIDENTIAL · RESEARCH PROTOTYPE · PhD Research — Maria Polychroniadou
+
+══════════════════════════════════════════════════════════════════════
+  STEP 1 — Cooperation Agreement Analysis (AI-Powered, Greek)
+══════════════════════════════════════════════════════════════════════
+  Reading EIMC's EOPYY cooperation agreement...
+  Extracting structure via Claude API...
+
+  Agreement type   : eopyy_contract
+  Valid period     : 2016-01-15 → 2027-01-15
+  Extraction       : high confidence
+
+  Parties identified:
+    · ΕΟΠΥΥ — Εθνικός Οργανισμός Παροχής Υπηρεσιών Υγείας  [payer]
+    · ΙΑΤΡΙΚΟ ΔΙΑΒΑΛΚΑΝΙΚΟ ΘΕΣΣΑΛΟΝΙΚΗΣ Α.Ε.  [provider]
+
+  Procedure tariffs extracted (7 codes):
+    · ONC001     Χημειοθεραπεία — κύκλος τυπικός                max €2,800
+    · ONC002     Χημειοθεραπεία — βιολογικοί παράγοντες         max €5,500
+    · RAD001     Ακτινοθεραπεία IMRT/IGRT — σύνεδρο             max €450
+    · CARD001    Καρδιολογική εξέταση + ΗΚΓ                     max €85
+    · SURG001    Χειρουργική επέμβαση — μέτριας πολυπλοκότητας  max €3,200
+    · LAB001     Εργαστηριακές εξετάσεις — πακέτο               max €320
+    · CONS001    Ιατρική επίσκεψη                               max €45
+
+  Co-payment rule  : 15%
+  Absorption cap   : €1,000/νοσηλεία (combined EOPYY + private)
+  Exemptions       : Chronic renal patients on haemodialysis; Haemophilia patients
+
+  Pre-auth required: ONC001, ONC002, RAD001, SURG001
+  Billing deadline : 180 days / 6 months after service
+
+  Key obligations extracted (10):
+    1. Provider must accept EOPYY-insured patients without discrimination.
+    2. Billing must be exclusively within EKPY (Unified Healthcare Benefits Regulation) limits; exceeding maximum rates is prohibited.
+    3. Claims must be submitted electronically via the EOPYY e-platform (e-EOPYY).
+    4. Patient medical records must be retained for a minimum of 15 years.
+    5. Quarterly quality reports must be submitted (JCI compliance — effective from December 2025).
+    6. Provider must immediately inform patients of any service not covered by EOPYY.
+    7. For international patients, bilateral social security agreements must be applied (Bulgaria, Romania — EU; Serbia, North Macedonia — bilateral agreements).
+    8. EOPYY must respond to pre-authorisation requests within 5 working days.
+    9. All patient data must be protected in accordance with GDPR (EU 2016/679) and Greek Law 4624/2019; a Data Protection Officer (DPO) must be appointed.
+    10. In combined coverage scenarios, the primary claim must be submitted to EOPYY first; the co-payment remainder may then be claimed from the private insurer; double-claiming is prohibited.
+
+══════════════════════════════════════════════════════════════════════
+  STEP 2 — Billing Compliance Analysis (506 Invoices · 120 Patients)
+══════════════════════════════════════════════════════════════════════
+  Running all detectors including EOPYY-specific rules...
+
+  Dataset fingerprint (SHA-256): ba275937b00312abd11c62e9272377d7…
+  Audit trail: HealthLedgerAI_EIMC_Audit.jsonl
+
+  Rule      Description                                    Alerts  Risk
+  ──────────────────────────────────────────────────────────────────
+  D1        Duplicate Invoice                                  19  🔴 HIGH
+  D2        Upcoding                                           10  🔴 HIGH
+  D4        Phantom Billing                                     8  🔴 HIGH
+  D5        Unbundling                                          3  🔴 HIGH
+  D6        Unregistered Doctor                                10  🔴 HIGH
+  D7        Credit Balance Accumulation                         8  🟡 MEDIUM
+  D8        Patient Identity Collision                          3  🔴 HIGH
+  D11       Repeated Same-Day Procedure                         9  🟡 MEDIUM
+  EOP1      Price Outside EOPYY Tariff (ΕΚΠΥ)                  10  🔴 HIGH
+  ──────────────────────────────────────────────────────────────────
+  TOTAL                                                        80
+
+  🔴 HIGH    :  63 alerts — immediate action required
+  🟡 MEDIUM  :  17 alerts — review within 48 hours
+  🔒 Audit   : 83 entries · chain ✓ INTACT
+
+══════════════════════════════════════════════════════════════════════
+  STEP 3 — Αναλυτική Εξήγηση Ευρημάτων (Greek Explanations)
+══════════════════════════════════════════════════════════════════════
+  Generating Greek explanations grounded in the EIMC/EOPYY agreement...
+
+  ────────────────────────────────────────────────────────────────────
+  🔴 D1 · Duplicate Invoice
+  Εύρημα   : Vendor 'Surgery Dept' | Amount €39.0 | Date 2026-05-02
+  Νομική βάση : Ν. 4254/2014, άρθρο 66 (αδικαιολόγητος πλουτισμός / anti-corruption)
+
+  🇬🇷 Εξήγηση για το τμήμα λογιστηρίου:
+     Ειδοποίηση Συμμόρφωσης Χρέωσης — Κανόνας D1: Διπλότυπο Τιμολόγιο
+     Κίνδυνος: ΥΨΗΛΟΣ**
+     Εντοπίστηκε πιθανό διπλότυπο τιμολόγιο από τον προμηθευτή **«Surgery Dept»**, ύψους **€39,00**, με ημερομηνία **02/05/2026**, γεγονός που συνιστά παράβαση του **Γενικού Άρθρου 4 του ΕΚΠΥ**, το οποίο απαγορεύει ρητώς την υπέρβαση ή διπλή χρέωση εντός των ορίων του Ενιαίου Κανονισμού Παροχών Υγείας. Η εξόφληση διπλότυπου παραστατικού ενδέχεται να στοιχειοθετεί **
+
+  🇬🇧 Explanation for management / audit:
+     Billing Compliance Alert — Duplicate Invoice (Rule D1) | HIGH RISK
+     A duplicate invoice has been detected for vendor **'Surgery Dept'** in the amount of **€39.00**, dated **2 May 2026**, indicating that the same charge has been submitted more than once for the same service event. Under the ΕΟΠΥΥ Cooperation Agreement (effective 15/01/2016) and **ΕΚΠΥ General Article 4**, all claims must be submitted exclusively within approved reimbursement limits via the e-ΕΟΠΥΥ electronic platform, and duplicate submissions constitute a direct violation of these billing obligations. Processing this payment would expose the hospital to liability under **Ν. 4254/2014, Article 66** (αδικαιολόγητος πλουτισμός / unjust enrichment), with potential consequences including claim rejection, financial penalties, and reputational risk with ΕΟΠΥΥ. **Immediate action required:** the Accounts Payable team must place this invoice on hold, verify with the Surgery Department whether a prior payment has already been processed or posted, and formally reject the duplicate entry before any disbursement is authorised.
+
+  ────────────────────────────────────────────────────────────────────
+  🔴 D2 · Upcoding
+  Εύρημα   : Procedure P005 ('CT scan abdomen') billed at €4728.14 — max allowed €900
+  Νομική βάση : ΕΚΠΥ — Ενιαίος Κανονισμός Παροχών Υγείας, Παράρτημα Α (μέγιστες αποδοτές αξίες)
+
+  🇬🇷 Εξήγηση για το τμήμα λογιστηρίου:
+     ΕΙΔΟΠΟΙΗΣΗ ΣΥΜΜΟΡΦΩΣΗΣ ΧΡΕΩΣΕΩΝ — ΚΑΝΟΝΑΣ D2 (UPCODING) | ΥΨΗΛΟΣ ΚΙΝΔΥΝΟΣ**
+     Εντοπίστηκε σοβαρή παρατυπία τιμολόγησης για την πράξη P005 («CT σκάνο κοιλίας»), η οποία χρεώθηκε προς τον ΕΟΠΥΥ στο ποσό των **€4.728,14**, ενώ η μέγιστη αποδεκτή αξία βάσει του **Ενιαίου Κανονισμού Παροχών Υγείας (ΕΚΠΥ), Παράρτημα Α**, ανέρχεται σε **€900,00** — υπέρβαση της τάξης του **425%**, η οποία συνιστά ενδεχόμενη παραβίαση του άρθρου **Ν. 4238/2014
+
+  🇬🇧 Explanation for management / audit:
+     Billing Compliance Alert — Rule D2 (Upcoding) | HIGH RISK
+     A critical upcoding discrepancy has been identified on claim for Procedure P005 (*CT scan abdomen*), billed at **€4,728.14** against a maximum allowable reimbursement of **€900.00** — representing an overcharge of **€3,828.14 (425%)**, in direct violation of the ΕΚΠΥ Παράρτημα Α tariff schedule and Article 21 of Ν. 4238/2014, which prohibits billing beyond ΕΟΠΥΥ-approved ceiling rates under the cooperation agreement effective 15/01/2016. This constitutes a material breach of the provider's contractual obligation to bill exclusively within ΕΚΠΥ limits, and may additionally engage liability under ΠΔ 84/2001 governing private clinic invoicing practices. **Immediate action required:** withhold payment on this claim and formally request written clinical justification and supporting documentation (*ιατρική τεκμηρίωση*) from the treating physician before any further processing. If no adequate justification is provided, the claim must be rejected, the invoice (*τιμολόγιο*) revised to the maximum allowable amount of **€900.00**,
+
+  ────────────────────────────────────────────────────────────────────
+  🔴 D4 · Phantom Billing
+  Εύρημα   : No appointment found for patient P023 on 2026-06-23
+  Νομική βάση : Ν. 4254/2014, άρθρο 66 (αδικαιολόγητη αξίωση)
+
+  🇬🇷 Εξήγηση για το τμήμα λογιστηρίου:
+     Ειδοποίηση Συμμόρφωσης Χρέωσης — Κανόνας D4 · Phantom Billing | Υψηλός Κίνδυνος**
+     Εντοπίστηκε χρέωση για τον ασθενή **P023** με ημερομηνία **23/06/2026**, για την οποία **δεν υφίσταται καταχωρημένο ραντεβού ή τεκμηρίωση φυσικής παρουσίας** στο σύστημα, γεγονός που εγείρει σοβαρή υπόνοια εικονικής τιμολόγησης (phantom billing) κατά παράβαση του **άρθρου 66 του Ν. 4254/2014** περί αδικαιολόγητης αξίωσης και της υποχρέωσης τεκμηρίωσης παροχής υπηρεσίας που ορίζει ο **ΕΚΠΥ**
+
+  🇬🇧 Explanation for management / audit:
+     ⚠️ Billing Compliance Alert — Rule D4: Phantom Billing | HIGH RISK
+     A HIGH-risk phantom billing flag has been triggered for patient P023, as no appointment record exists in the system for the claimed service date of 23 June 2026, rendering the associated claim unsupported by any documentation of actual service delivery. Under **Ν. 4254/2014, άρθρο 66**, submission of an unjustified claim (αδικαιολόγητη αξίωση) constitutes a serious compliance violation, and the **ΕΚΠΥ** explicitly requires full documentary evidence of service provision prior to any reimbursement request being submitted via the **e-ΕΟΠΥΥ platform**. Furthermore, processing this claim without verified supporting records would breach **GDPR Art. 5(1)(a)**, which mandates the accuracy of all personal data processed, and could expose the hospital to financial penalties and reputational risk under our ΕΟΠΥΥ cooperation agreement (effective 2016-01-15). **Immediate action required:** the accounting team must suspend this claim, obtain written confirmation of the patient's physical presence from the treating department (e.g., signed attendance record, clinical notes, or scheduling log), and must not authorise payment or submit the claim electronically until documentary proof
+
+  ────────────────────────────────────────────────────────────────────
+  🔴 D5 · Unbundling
+  Εύρημα   : Bundle 'APPENDECTOMY (single code, max 800)' — components ['P010', 'P011', 'P012'] billed separately on 2026-04-30
+  Νομική βάση : ΕΚΠΥ — κανόνες δέσμευσης κωδικών (bundle rules)
+
+  🇬🇷 Εξήγηση για το τμήμα λογιστηρίου:
+     Ειδοποίηση Συμμόρφωσης Χρέωσης — Κανόνας D5 · Unbundling | Υψηλός Κίνδυνος**
+     Στις 30/04/2026, οι κωδικοί P010, P011 και P012 τιμολογήθηκαν μεμονωμένα, ενώ αποτελούν συστατικά μέρη της δέσμης «ΣΚΩΛΗΚΟΕΙΔΕΚΤΟΜΗ» (ενιαίος κωδικός, ανώτατο όριο 800 €), κατά παράβαση των κανόνων δέσμευσης κωδικών του ΕΚΠΥ και του άρθρου 4238/2014 (ΕΟΠΥΥ), που επιβάλλει υποχρεωτική χρήση σύνθετου κωδικού. Η πρακτική αυτή συνιστά αδικαιολόγητη κατάτμηση χρ
+
+  🇬🇧 Explanation for management / audit:
+     Billing Compliance Alert — Rule D5 · Unbundling | HIGH RISK
+     A high-risk unbundling violation has been identified on the claim dated **30 April 2026**, whereby procedure components **P010, P011, and P012** (constituting the composite *Appendectomy* procedure) were billed as separate line items rather than under the single bundled code capped at **€800**, in direct contravention of the **ΕΚΠΥ bundle rules** and **Ν. 4238/2014 (Article on σύνθετος κωδικός)**, which mandate the exclusive use of the composite code when all component procedures form part of a recognised bundle. This practice constitutes improper unbundling (*αδικαιολόγητη ανάλυση δέσμης*), artificially inflating the reimbursement claim beyond the contractually permitted maximum rate, in breach of the hospital's cooperation agreement with **ΕΟΠΥΥ** (effective 15/01/2016), which explicitly prohibits billing outside ΕΚΠΥ limits. The accounting team must **immediately reject the individual component claims**, **rebill the episode as a single bundled code** not exceeding €800, and resubmit electronically via the **e-ΕΟΠΥΥ platform
+
+  ────────────────────────────────────────────────────────────────────
+  🔴 D6 · Unregistered Doctor
+  Εύρημα   : Doctor D17 (Doctor 17) not registered with INS-2
+  Νομική βάση : ΠΔ 84/2001 (ιδιωτικές κλινικές — συμβεβλημένοι ιατροί)
+
+  🇬🇷 Εξήγηση για το τμήμα λογιστηρίου:
+     Ειδοποίηση Συμμόρφωσης Χρέωσης — Κανόνας D6: Μη Εγγεγραμμένος Ιατρός**
+     Εντοπίστηκε υψηλού κινδύνου παραβίαση: ο Ιατρός D17 δεν είναι εγγεγραμμένος ως συμβεβλημένος πάροχος στον ΕΟΠΥΥ (ΙΝS-2), κατά παράβαση των υποχρεώσεων που απορρέουν από το ΠΔ 84/2001 περί ιδιωτικών κλινικών και των συμβατικών όρων της από 15.01.2016 Σύμβασης Συνεργασίας μεταξύ ΕΟΠΥΥ και ΙΑΤΡΙΚΟΥ ΔΙΑΒΑΛΚΑΝΙΚΟΥ ΘΕΣΣΑΛΟΝΙΚΗΣ Α.Ε. Η υποβολή απαίτησ
+
+  🇬🇧 Explanation for management / audit:
+     Billing Compliance Alert — Rule D6: Unregistered Doctor (HIGH RISK)
+     A claim has been submitted involving Doctor D17, who is **not registered as a contracted provider with ΕΟΠΥΥ (INS-2)**, in direct violation of the hospital's ΕΟΠΥΥ Cooperation Agreement (effective 15/01/2016) and the obligations established under **ΠΔ 84/2001** governing contracted physicians in private clinics. Under the ΕΟΠΥΥ contract terms, all claims submitted via the e-ΕΟΠΥΥ platform must relate exclusively to registered, eligible providers — billing for services rendered by an unregistered physician renders the **απαίτηση (claim) άκυρη και μη αποζημιώσιμη (invalid and non-reimbursable)**. The Accounting Department must **immediately suspend submission of this claim**, notify ΕΟΠΥΥ of the irregularity in writing, and escalate to the Medical Director to investigate the referral and credentialing pathway for Doctor D17. Failure to act promptly may expose the hospital to **reimbursement clawback, contractual penalties, and regulatory scrutiny** under the ΕΟΠΥΥ agreement and applicable healthcare billing regulations.
+
+
+══════════════════════════════════════════════════════════════════════
+  STEP 4 — Executive Summary for EIMC Finance Team
+══════════════════════════════════════════════════════════════════════
+
+  Dataset analysed  : 506 invoices · 120 patients · 498 appointments
+  Analysis date     : 15 June 2026
+  Rules applied     : 12 (11 standard + 1 EOPYY tariff rule)
+  Agreement basis   : EIMC/ΕΟΠΥΥ ΑΔΑ: ΩΚ8ΚΟΞ7Μ-ΓΧ2 + Eurolife FFH + Interamerican
+
+  FINDINGS SUMMARY
+  ────────────────────────────────────────────────────────────────────
+  🔴  63 HIGH-risk alerts  — payment must be withheld pending review
+  🟡  17 MEDIUM-risk alerts — accounting review required within 48h
+
+  TOP RISK CATEGORIES
+  ────────────────────────────────────────────────────────────────────
+  · 19x Duplicate Invoice
+  · 10x Upcoding
+  · 10x Unregistered Doctor
+  · 10x Price Outside EOPYY Tariff (ΕΚΠΥ)
+  ·  8x Phantom Billing
+  ·  3x Unbundling
+  ·  3x Patient Identity Collision
+
+  WHAT THIS MEANS FOR EIMC
+  ────────────────────────────────────────────────────────────────────
+  · 8 phantom billing alerts → risk of ΕΟΠΥΥ audit recovery claim
+  · 19 duplicate invoices     → direct cash leakage if paid
+  · 10 upcoding flags         → ΕΚΠΥ tariff violations → ΕΟΠΥΥ rejection
+  · 3 patient ID collisions  → GDPR / JCI documentation breach
+
+  AUDIT TRAIL
+  ────────────────────────────────────────────────────────────────────
+  Every decision above is logged in an immutable, hash-chained audit
+  trail (HealthLedgerAI_EIMC_Audit.jsonl). Any edit or deletion of a past decision
+  breaks the chain — satisfying EU AI Act Art. 12 record-keeping and
+  GDPR Art. 5(2) accountability requirements.
+
+  JCI RELEVANCE (EIMC Gold Seal, December 2025)
+  ────────────────────────────────────────────────────────────────────
+  JCI Standard ACC.1: patient identification documentation
+  JCI Standard FMS.4: financial record accuracy
+  JCI Standard GLD.7: billing integrity
+  HealthLedgerAI's audit trail directly supports continuous JCI compliance.
+
+  ────────────────────────────────────────────────────────────────────
+  This analysis was produced by HealthLedgerAI — a pre-launch research
+  prototype. All data is anonymised. This demonstration uses a synthetic
+  dataset; production deployment runs on the hospital's own billing data,
+  processed locally (never uploaded to any cloud service).
+
+  Contact: Maria Polychroniadou | info@healthledgerai.com
+           PhD Researcher · EUC · Erasmus for Young Entrepreneurs 2026
+  ────────────────────────────────────────────────────────────────────
+
