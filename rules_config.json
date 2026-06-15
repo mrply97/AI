@@ -1,0 +1,296 @@
+{
+  "_meta": {
+    "description": "HealthLedgerAI — Compliance Rules Registry",
+    "version": "0.1",
+    "language": "bilingual (el/en)",
+    "notes": [
+      "Rules are data, not code. Add a new rule here; the engine runs it automatically.",
+      "type field maps to a generic detector in healthledgerai_rules_engine.py.",
+      "legal_ref is recorded verbatim in every audit-trail entry.",
+      "eopyy_specific: true marks rules that only apply to EOPYY-contracted hospitals (e.g. EIMC).",
+      "gesy_specific: true marks rules that only apply to GESY-contracted hospitals (Cyprus)."
+    ]
+  },
+  "rules": [
+
+    {
+      "id": "D1",
+      "type": "duplicate_rows",
+      "risk": "HIGH",
+      "name": { "el": "Διπλοεγγραφή Τιμολογίου", "en": "Duplicate Invoice" },
+      "legal_ref": [
+        "Ν. 4254/2014, άρθρο 66 (αδικαιολόγητος πλουτισμός / anti-corruption)",
+        "ΕΚΠΥ — Ενιαίος Κανονισμός Παροχών Υγείας, Γεν. Άρθρο 4"
+      ],
+      "params": {
+        "source": "invoices",
+        "on_columns": ["vendor", "amount", "date"]
+      },
+      "finding_template": "Vendor '{vendor}' | Amount €{amount} | Date {date}",
+      "action": "Verify with vendor — reject duplicate before payment."
+    },
+
+    {
+      "id": "D2",
+      "type": "value_vs_reference",
+      "risk": "HIGH",
+      "name": { "el": "Υπερχρέωση (Upcoding)", "en": "Upcoding" },
+      "legal_ref": [
+        "ΕΚΠΥ — Ενιαίος Κανονισμός Παροχών Υγείας, Παράρτημα Α (μέγιστες αποδοτές αξίες)",
+        "Ν. 4238/2014 (ΕΟΠΥΥ / EOPYY enabling law)",
+        "ΠΔ 84/2001 (ιδιωτικές κλινικές — τιμολόγηση)"
+      ],
+      "params": {
+        "source": "invoices",
+        "reference": "procedure_rates",
+        "join_left": "procedure",
+        "join_right": "code",
+        "value_col": "amount",
+        "bound_col": "max_allowed",
+        "direction": "above"
+      },
+      "finding_template": "Procedure {procedure} ('{procedure_desc}') billed at €{amount} — max allowed €{max_allowed}",
+      "action": "Withhold payment. Request clinical justification."
+    },
+
+    {
+      "id": "D3",
+      "type": "value_vs_reference",
+      "risk": "MEDIUM",
+      "name": { "el": "Υποχρέωση (Undercoding)", "en": "Undercoding" },
+      "legal_ref": [
+        "ΕΚΠΥ — ελάχιστες επιτρεπτές αξίες",
+        "Ν. 3213/2003 (δήλωση περιουσιακής κατάστασης — άτυπες εκπτώσεις)",
+        "ΑΑΔΕ / ΣΔΟΕ — ενδείξεις ανεπίσημης έκπτωσης"
+      ],
+      "params": {
+        "source": "invoices",
+        "reference": "procedure_rates",
+        "join_left": "procedure",
+        "join_right": "code",
+        "value_col": "amount",
+        "bound_col": "min_allowed",
+        "direction": "below"
+      },
+      "finding_template": "Procedure {procedure} billed at €{amount} — min allowed €{min_allowed}",
+      "action": "Review — may indicate informal discount arrangement."
+    },
+
+    {
+      "id": "D4",
+      "type": "missing_foreign_event",
+      "risk": "HIGH",
+      "name": { "el": "Φαντομ Χρέωση", "en": "Phantom Billing" },
+      "legal_ref": [
+        "Ν. 4254/2014, άρθρο 66 (αδικαιολόγητη αξίωση)",
+        "ΕΚΠΥ — υποχρέωση τεκμηρίωσης παροχής υπηρεσίας",
+        "GDPR Art. 5(1)(a) — accuracy of data processed"
+      ],
+      "params": {
+        "source": "invoices",
+        "foreign": "appointments",
+        "match_on": { "patient_id": "patient_id", "date": "date" }
+      },
+      "finding_template": "No appointment found for patient {patient_id} on {date}",
+      "action": "Verify patient was physically present. Do not pay without confirmation."
+    },
+
+    {
+      "id": "D5",
+      "type": "bundle_component_split",
+      "risk": "HIGH",
+      "name": { "el": "Κατάτμηση Πακέτου (Unbundling)", "en": "Unbundling" },
+      "legal_ref": [
+        "ΕΚΠΥ — κανόνες δέσμευσης κωδικών (bundle rules)",
+        "Ν. 4238/2014 (EOPYY) — υποχρέωση χρήσης σύνθετου κωδικού"
+      ],
+      "params": {
+        "source": "invoices",
+        "bundle_ref": "bundle_rules"
+      },
+      "finding_template": "Bundle '{bundle}' — components {found} billed separately on {date}",
+      "action": "Rebill as single bundle code. Reject individual claims."
+    },
+
+    {
+      "id": "D6",
+      "type": "entity_not_in_set",
+      "risk": "HIGH",
+      "name": { "el": "Μη Εγγεγραμμένος Ιατρός", "en": "Unregistered Doctor" },
+      "legal_ref": [
+        "ΠΔ 84/2001 (ιδιωτικές κλινικές — συμβεβλημένοι ιατροί)",
+        "Συμβάσεις ΕΟΠΥΥ — υποχρέωση εγγεγραμμένου παρόχου"
+      ],
+      "params": {
+        "source": "invoices",
+        "network_ref": "insurance_networks",
+        "entity_col": "doctor_id",
+        "group_col": "insurer",
+        "network_entity_col": "registered_doctor_ids",
+        "network_group_col": "insurer"
+      },
+      "finding_template": "Doctor {doctor_id} ({doctor_name}) not registered with {insurer}",
+      "action": "Claim invalid. Notify insurer. Investigate referral pathway."
+    },
+
+    {
+      "id": "D7",
+      "type": "payment_exceeds_billed",
+      "risk": "MEDIUM",
+      "name": { "el": "Συσσώρευση Πιστωτικού Υπολοίπου", "en": "Credit Balance Accumulation" },
+      "legal_ref": [
+        "Ειδικό Λογιστικό Σχέδιο Μονάδων Υγείας — λογ. 33 (χρεώστες)",
+        "IFRS 15 — υποχρεώσεις επιστροφής"
+      ],
+      "params": {
+        "source": "invoices",
+        "billed_col": "amount",
+        "paid_col": "amount_paid"
+      },
+      "finding_template": "Overpaid by €{excess:.2f} (billed €{amount}, paid €{amount_paid})",
+      "action": "Issue refund or apply credit note. Log in ledger."
+    },
+
+    {
+      "id": "D8",
+      "type": "key_collision",
+      "risk": "HIGH",
+      "name": { "el": "Σύγκρουση Ταυτότητας Ασθενούς", "en": "Patient Identity Collision" },
+      "legal_ref": [
+        "GDPR Art. 5(1)(d) — accuracy of personal data",
+        "HDPA / Αρχή Προστασίας Δεδομένων — υποχρέωση ορθότητας",
+        "Ειδικό Λογιστικό Σχέδιο — αρχεία ασθενών"
+      ],
+      "params": {
+        "source": "patients",
+        "id_col": "id",
+        "key_cols": ["first", "last", "dob"],
+        "invoice_link": "invoices",
+        "invoice_patient_col": "patient_id"
+      },
+      "finding_template": "Patient IDs {ids} share identical name and DOB: {key}",
+      "action": "Freeze both accounts. Manual identity verification required."
+    },
+
+    {
+      "id": "D9",
+      "type": "cash_with_oop_exposure",
+      "risk": "HIGH",
+      "name": { "el": "Απρόοπτη Χρέωση (Surprise Billing)", "en": "Surprise Billing" },
+      "legal_ref": [
+        "Ν. 4238/2014 (ΕΟΠΥΥ) — υποχρέωση ενημέρωσης ασθενούς",
+        "GESY (Cyprus) — HIO Regulation 2019/2 Art. 14 (patient rights)",
+        "EU Directive 2011/24/EU — patient mobility rights"
+      ],
+      "params": {
+        "source": "invoices",
+        "payment_col": "payment_method",
+        "cash_values": ["cash", "card"],
+        "insurer_col": "insurer",
+        "network_ref": "insurance_networks",
+        "entity_col": "doctor_id",
+        "network_entity_col": "registered_doctor_ids",
+        "network_group_col": "insurer"
+      },
+      "finding_template": "Patient billed {payment_method} despite having {insurer} — doctor {doctor_id} out-of-network",
+      "action": "Patient must be notified. Possible regulatory violation."
+    },
+
+    {
+      "id": "D10",
+      "type": "field_date_mismatch",
+      "risk": "MEDIUM",
+      "name": { "el": "Αναντιστοιχία Ημερομηνίας", "en": "Procedure Date Mismatch" },
+      "legal_ref": [
+        "ΕΚΠΥ — ορθότητα ημερομηνίας υπηρεσίας στο τιμολόγιο",
+        "Ειδικό Λογιστικό Σχέδιο — χρόνος καταχώρισης"
+      ],
+      "params": {
+        "source": "invoices",
+        "date_col_a": "date",
+        "date_col_b": "appointment_date"
+      },
+      "finding_template": "Invoice date {date} ≠ appointment date {appointment_date}",
+      "action": "Verify correct date before submitting to insurer."
+    },
+
+    {
+      "id": "D11",
+      "type": "repeated_event",
+      "risk": "MEDIUM",
+      "name": { "el": "Επανειλημμένη Ίδια Πράξη Ημέρας", "en": "Repeated Same-Day Procedure" },
+      "legal_ref": [
+        "ΕΚΠΥ — ημερήσια όρια συχνότητας παροχών",
+        "Ν. 4254/2014 — κανόνες αποδεκτής συχνότητας"
+      ],
+      "params": {
+        "source": "invoices",
+        "group_cols": ["patient_id", "date", "procedure"],
+        "max_count": 1
+      },
+      "finding_template": "Procedure {procedure} billed {count}x on {date}",
+      "action": "Verify clinical notes confirm multiple administrations."
+    },
+
+    {
+      "_comment": "─── EOPYY-SPECIFIC RULES (item #3 preview) ─────────────────────────────────",
+      "id": "EOP1",
+      "type": "value_vs_reference",
+      "risk": "HIGH",
+      "name": { "el": "Τιμή Εκτός ΕΚΠΥ", "en": "Price Outside EOPYY Tariff (ΕΚΠΥ)" },
+      "legal_ref": [
+        "ΕΚΠΥ — Ενιαίος Κανονισμός Παροχών Υγείας (current edition)",
+        "Ν. 4238/2014, άρθρο 33 (αμοιβές παρόχων ΕΟΠΥΥ)"
+      ],
+      "eopyy_specific": true,
+      "params": {
+        "source": "invoices",
+        "reference": "procedure_rates",
+        "join_left": "procedure",
+        "join_right": "code",
+        "value_col": "amount",
+        "bound_col": "max_allowed",
+        "direction": "above"
+      },
+      "finding_template": "EOPYY claim €{amount} exceeds ΕΚΠΥ ceiling €{max_allowed} for {procedure}",
+      "action": "EOPYY will reject. Reduce to ΕΚΠΥ ceiling before submission."
+    },
+
+    {
+      "id": "EOP2",
+      "type": "missing_required_field",
+      "risk": "HIGH",
+      "name": { "el": "Ελλιπής Αίτηση ΕΟΠΥΥ", "en": "Incomplete EOPYY Claim" },
+      "legal_ref": [
+        "ΕΚΠΥ — υποχρεωτικά πεδία αίτησης εκκαθάρισης ΕΟΠΥΥ",
+        "Ν. 4238/2014, άρθρο 34 (τεκμηρίωση αίτησης)"
+      ],
+      "eopyy_specific": true,
+      "params": {
+        "source": "invoices",
+        "required_fields": ["doctor_id", "procedure", "insurer", "patient_id", "date"]
+      },
+      "finding_template": "Missing required EOPYY field(s): {missing_fields} on invoice {invoice_id}",
+      "action": "Complete missing fields before EOPYY submission. Claim will be auto-rejected."
+    },
+
+    {
+      "_comment": "─── SPECIAL HEALTHCARE ACCOUNTING PLAN — ΕΛΣΜΥ (item #5 preview) ──────────",
+      "id": "HAS1",
+      "type": "missing_required_field",
+      "risk": "MEDIUM",
+      "name": { "el": "Ελλιπές Λογιστικό Έγγραφο (ΕΛΣΜΥ)", "en": "Incomplete Accounting Document (Special Healthcare Plan)" },
+      "legal_ref": [
+        "Ειδικό Λογιστικό Σχέδιο Μονάδων Υγείας — ΚΥΑ 12500/2001",
+        "Ν. 4308/2014 (ΕΛΠ) — υποχρεωτικά στοιχεία παραστατικών"
+      ],
+      "params": {
+        "source": "invoices",
+        "required_fields": ["vendor", "amount", "date", "procedure", "patient_id"]
+      },
+      "finding_template": "Invoice {invoice_id} missing field(s) required under ΕΛΣΜΥ: {missing_fields}",
+      "action": "Accounting document is non-compliant. Correct before ledger posting."
+    }
+
+  ]
+}
