@@ -26,12 +26,11 @@ interface Particle {
   sparkleSpeed: number
 }
 
-// Explosion timeline, ms — starts the moment the user scrolls
-const BURST_END = 2600 // dense swarm tears outward, slowly
-const HOLD_END = 3400 // scattered glitter lingers on the dark backdrop
-const FADE_END = 4600 // only then does the dark overlay dissolve into the page
-
-const SCROLL_TRIGGER_PX = 12
+// Full timeline, ms — plays automatically on load
+const IDLE_END = 2600 // dense swarm sits and breathes before bursting
+const BURST_END = 5400 // it slowly tears outward
+const HOLD_END = 6400 // scattered glitter lingers on the dark backdrop
+const FADE_END = 7800 // only then does the dark overlay dissolve into the page
 
 export default function IntroOverlay() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -81,19 +80,6 @@ export default function IntroOverlay() {
     const easeInQuad = (t: number) => t * t
 
     let raf: number
-    let exploding = false
-    let explodeStart = 0
-    const idleScrollY = window.scrollY
-
-    const onScroll = () => {
-      if (exploding) return
-      if (Math.abs(window.scrollY - idleScrollY) > SCROLL_TRIGGER_PX) {
-        exploding = true
-        explodeStart = performance.now()
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-
     const start = performance.now()
 
     const render = (now: number) => {
@@ -110,15 +96,16 @@ export default function IntroOverlay() {
       const cosX = Math.cos(rotX)
       const sinX = Math.sin(rotX)
 
+      const exploding = idleElapsed > IDLE_END
       let burstEase = 0
       let fadeT = 0
       let elapsed = 0
       if (exploding) {
-        elapsed = Math.max(0, now - explodeStart)
-        const burstT = Math.max(0, Math.min(1, elapsed / BURST_END))
+        elapsed = idleElapsed - IDLE_END
+        const burstT = Math.max(0, Math.min(1, elapsed / (BURST_END - IDLE_END)))
         burstEase = easeInOutCubic(burstT)
         // the dark backdrop holds solid through the burst and the lingering glitter, fading out only at the very end
-        fadeT = elapsed > HOLD_END ? Math.max(0, Math.min(1, (elapsed - HOLD_END) / (FADE_END - HOLD_END))) : 0
+        fadeT = idleElapsed > HOLD_END ? Math.max(0, Math.min(1, (idleElapsed - HOLD_END) / (FADE_END - HOLD_END))) : 0
         root.style.opacity = String(1 - easeInQuad(fadeT))
       } else {
         root.style.opacity = '1'
@@ -175,7 +162,7 @@ export default function IntroOverlay() {
       ctx.arc(cx, cy, Math.max(1, glowR), 0, Math.PI * 2)
       ctx.fill()
 
-      if (!exploding || elapsed < FADE_END) {
+      if (idleElapsed < FADE_END) {
         raf = requestAnimationFrame(render)
       } else {
         setDone(true)
@@ -183,10 +170,7 @@ export default function IntroOverlay() {
     }
 
     raf = requestAnimationFrame(render)
-    return () => {
-      cancelAnimationFrame(raf)
-      window.removeEventListener('scroll', onScroll)
-    }
+    return () => cancelAnimationFrame(raf)
   }, [])
 
   if (done) return null
@@ -204,18 +188,6 @@ export default function IntroOverlay() {
       }}
     >
       <canvas ref={canvasRef} />
-      <div
-        className="scroll-hint"
-        style={{
-          position: 'absolute',
-          left: '50%',
-          bottom: '8%',
-          transform: 'translateX(-50%)',
-        }}
-      >
-        <span className="scroll-hint-label" style={{ color: 'rgba(228,234,242,0.55)' }}>Scroll</span>
-        <span className="scroll-hint-bar" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.6), transparent)' }} />
-      </div>
     </div>
   )
 }
