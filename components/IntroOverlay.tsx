@@ -27,8 +27,9 @@ interface Particle {
 }
 
 // Explosion timeline, ms — starts the moment the user scrolls
-const BURST_END = 1100 // dense swarm tears outward
-const FADE_END = 1900 // overlay dissolves into the page
+const BURST_END = 2600 // dense swarm tears outward, slowly
+const HOLD_END = 3400 // scattered glitter lingers on the dark backdrop
+const FADE_END = 4600 // only then does the dark overlay dissolve into the page
 
 const SCROLL_TRIGGER_PX = 12
 
@@ -76,7 +77,7 @@ export default function IntroOverlay() {
       }
     })
 
-    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
+    const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
     const easeInQuad = (t: number) => t * t
 
     let raf: number
@@ -115,8 +116,9 @@ export default function IntroOverlay() {
       if (exploding) {
         elapsed = Math.max(0, now - explodeStart)
         const burstT = Math.max(0, Math.min(1, elapsed / BURST_END))
-        burstEase = easeOutCubic(burstT)
-        fadeT = elapsed > BURST_END ? Math.max(0, Math.min(1, (elapsed - BURST_END) / (FADE_END - BURST_END))) : 0
+        burstEase = easeInOutCubic(burstT)
+        // the dark backdrop holds solid through the burst and the lingering glitter, fading out only at the very end
+        fadeT = elapsed > HOLD_END ? Math.max(0, Math.min(1, (elapsed - HOLD_END) / (FADE_END - HOLD_END))) : 0
         root.style.opacity = String(1 - easeInQuad(fadeT))
       } else {
         root.style.opacity = '1'
