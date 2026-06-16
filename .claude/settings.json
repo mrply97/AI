@@ -62,6 +62,10 @@
     "higgsfield": {
       "type": "http",
       "url": "https://mcp.higgsfield.ai/mcp"
+    },
+    "pletor": {
+      "type": "http",
+      "url": "https://api.pletor.ai/mcp"
     }
   }
 }
