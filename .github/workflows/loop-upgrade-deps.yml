@@ -65,7 +65,8 @@ jobs:
              Write an updated package.json that bumps only the vulnerable packages to their patched versions. \
              Do not change any other versions. \
              Write a summary of changes to loop-state/deps-$(date +%Y-%m-%d).md." \
-            --allowedTools "Read,Write,Glob,Grep"
+            --allowedTools "Read,Write,Glob,Grep" \
+            --permission-mode bypassPermissions
 
       - name: Apply patch + open PR (trusted shell step, not agent)
         env:
@@ -79,9 +80,9 @@ jobs:
           git add package.json package-lock.json loop-state/ || true
           git diff --staged --quiet && echo "No changes" && exit 0
           git commit -m "fix(deps): security patch $(date +%Y-%m-%d)"
-          git push -u origin "$BRANCH"
+          git push -u origin "$BRANCH" --force
           gh pr create \
             --title "fix(deps): automated security patch $(date +%Y-%m-%d)" \
             --body "$(cat loop-state/deps-$(date +%Y-%m-%d).md 2>/dev/null || echo 'Automated dependency security patch.')" \
             --base main \
-            --head "$BRANCH"
+            --head "$BRANCH" || echo "PR already exists for $BRANCH, skipping create"
