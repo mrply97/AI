@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import ProblemHook from '@/components/ProblemHook'
+import IntroOverlay from '@/components/IntroOverlay'
 import Botanical from '@/components/Botanical'
 import HeroScene from '@/components/HeroScene'
 import FloatingOrbs from '@/components/FloatingOrbs'
@@ -55,6 +56,7 @@ export default function Home() {
 
   return (
     <>
+      <IntroOverlay />
       <CustomCursor />
       <ParticleField />
 
