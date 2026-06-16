@@ -18,7 +18,7 @@ export const SlideHeader: React.FC<SlideHeaderProps> = ({
   labelColor = COLORS.gold,
   title,
   subtitle,
-  dark = false,
+  dark = true,
   titleSize = 56,
   marginBottom = 36,
 }) => {
@@ -54,12 +54,13 @@ export const SlideHeader: React.FC<SlideHeaderProps> = ({
 
       <h2
         style={{
-          fontFamily: FONTS.serif,
+          fontFamily: FONTS.sans,
           fontSize: titleSize,
-          fontWeight: 300,
+          fontWeight: 650,
+          letterSpacing: "-0.015em",
           color: dark ? COLORS.cream : COLORS.ink,
           margin: 0,
-          lineHeight: 1.08,
+          lineHeight: 1.04,
           transform: `translateY(${titleY}px)`,
           opacity: titleOpacity,
         }}

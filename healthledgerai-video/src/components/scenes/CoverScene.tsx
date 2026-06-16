@@ -9,7 +9,7 @@ import {
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { SPRING_BOUNCY, SPRING_SNAPPY } from "../../constants/timing";
-import { ShaderBG } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { LiquidLogo } from "../shared/LiquidLogo";
 import { GrainOverlay } from "../shared/GrainOverlay";
 
@@ -46,7 +46,15 @@ export const CoverScene: React.FC = () => {
         flexDirection: "column",
       }}
     >
-      <ShaderBG color1="#C9AA7C" color2="#1E1A14" color3="#4A6B5A" intensity={0.7} speed={0.8} />
+      <ParticleVortex
+        colorA={COLORS.goldLt}
+        colorB={COLORS.sageLt}
+        focalX={50}
+        focalY={42}
+        maxRadius={42}
+        count={110}
+        speed={0.7}
+      />
       <GrainOverlay opacity={0.04} />
 
       {/* Logo + wordmark */}
@@ -110,13 +118,13 @@ export const CoverScene: React.FC = () => {
       >
         <h1
           style={{
-            fontFamily: FONTS.serif,
-            fontSize: 92,
-            fontWeight: 400,
+            fontFamily: FONTS.sans,
+            fontSize: 88,
+            fontWeight: 650,
             color: COLORS.cream,
             margin: 0,
-            lineHeight: 1.04,
-            letterSpacing: "-0.01em",
+            lineHeight: 1.02,
+            letterSpacing: "-0.02em",
           }}
         >
           Billing Compliance

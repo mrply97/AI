@@ -8,7 +8,7 @@ import {
 } from "remotion";
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
-import { ShaderBGLight } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { SlideHeader } from "../shared/SlideHeader";
 import { DetailBullet } from "../shared/DetailBullet";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -46,24 +46,34 @@ export const RelevanceScene: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
+        background: COLORS.ink,
         padding: "72px 110px",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      <ShaderBGLight opacity={0.12} />
-      <GrainOverlay opacity={0.035} />
+      <ParticleVortex
+        colorA={COLORS.blush}
+        colorB={COLORS.sageLt}
+        focalX={75}
+        focalY={75}
+        maxRadius={36}
+        count={75}
+        speed={0.6}
+        opacity={0.6}
+      />
+      <GrainOverlay opacity={0.04} />
 
       <SlideHeader
         label="Relevance to Embryolab"
         labelColor={COLORS.blush}
+        dark
         titleSize={56}
         marginBottom={24}
         title={
           <>
             Why fertility clinics are a{" "}
-            <span style={{ color: COLORS.sage, fontWeight: 600 }}>natural fit</span>
+            <span style={{ color: COLORS.sageLt, fontWeight: 700 }}>natural fit</span>
           </>
         }
       />
@@ -73,7 +83,7 @@ export const RelevanceScene: React.FC = () => {
         style={{
           fontFamily: FONTS.sans,
           fontSize: 21,
-          color: COLORS.inkSoft,
+          color: `${COLORS.cream}C0`,
           margin: "0 0 32px",
           lineHeight: 1.6,
           maxWidth: 1120,
@@ -94,7 +104,8 @@ export const RelevanceScene: React.FC = () => {
             term={b.term}
             description={b.description}
             delay={42 + i * 18}
-            accentColor={COLORS.sage}
+            accentColor={COLORS.sageLt}
+            dark
           />
         ))}
       </div>

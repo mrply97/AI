@@ -9,7 +9,7 @@ import {
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { SPRING_SNAPPY } from "../../constants/timing";
-import { ShaderBG } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { LiquidLogo } from "../shared/LiquidLogo";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -101,7 +101,16 @@ export const AboutScene: React.FC = () => {
         justifyContent: "center",
       }}
     >
-      <ShaderBG color1="#C9AA7C" color2="#1E1A14" color3="#7A9E8A" intensity={0.6} speed={0.5} />
+      <ParticleVortex
+        colorA={COLORS.goldLt}
+        colorB={COLORS.sageLt}
+        focalX={20}
+        focalY={20}
+        maxRadius={30}
+        count={60}
+        speed={0.5}
+        opacity={0.5}
+      />
       <GrainOverlay opacity={0.04} />
 
       {/* Header */}

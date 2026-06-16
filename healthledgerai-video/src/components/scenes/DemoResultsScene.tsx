@@ -9,7 +9,7 @@ import {
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { SPRING_SNAPPY } from "../../constants/timing";
-import { ShaderBGLight } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { SlideHeader } from "../shared/SlideHeader";
 import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -55,18 +55,28 @@ export const DemoResultsScene: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
+        background: COLORS.ink,
         padding: "60px 90px",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      <ShaderBGLight opacity={0.1} />
-      <GrainOverlay opacity={0.035} />
+      <ParticleVortex
+        colorA={COLORS.goldLt}
+        colorB="#E0594A"
+        focalX={50}
+        focalY={18}
+        maxRadius={30}
+        count={60}
+        speed={0.55}
+        opacity={0.5}
+      />
+      <GrainOverlay opacity={0.04} />
 
       <SlideHeader
         label="Live Demo Results"
-        labelColor="#C0392B"
+        labelColor="#E0594A"
+        dark
         titleSize={56}
         marginBottom={28}
         title={<>What the output looks like</>}
@@ -89,6 +99,7 @@ export const DemoResultsScene: React.FC = () => {
           return (
             <div key={a.code} style={{ transform: `translateY(${y}px)`, opacity }}>
               <LiquidGlassCard
+                dark
                 accentColor={a.color}
                 style={{
                   borderLeft: `5px solid ${a.color}`,
@@ -103,7 +114,7 @@ export const DemoResultsScene: React.FC = () => {
                       fontFamily: FONTS.sans,
                       fontSize: 15,
                       fontWeight: 700,
-                      color: COLORS.ink,
+                      color: COLORS.cream,
                       letterSpacing: "0.04em",
                     }}
                   >
@@ -128,7 +139,7 @@ export const DemoResultsScene: React.FC = () => {
                   style={{
                     fontFamily: FONTS.sans,
                     fontSize: 17,
-                    color: COLORS.inkSoft,
+                    color: `${COLORS.cream}B0`,
                     margin: "0 0 12px",
                     lineHeight: 1.45,
                     fontWeight: 300,
@@ -150,7 +161,7 @@ export const DemoResultsScene: React.FC = () => {
                     style={{
                       fontFamily: FONTS.sans,
                       fontSize: 15,
-                      color: COLORS.inkMute,
+                      color: `${COLORS.cream}80`,
                       lineHeight: 1.4,
                       fontWeight: 300,
                     }}
@@ -169,7 +180,7 @@ export const DemoResultsScene: React.FC = () => {
         style={{
           fontFamily: FONTS.sans,
           fontSize: 18,
-          color: COLORS.inkMute,
+          color: `${COLORS.cream}90`,
           margin: 0,
           textAlign: "center",
           fontWeight: 300,
@@ -177,7 +188,7 @@ export const DemoResultsScene: React.FC = () => {
         }}
       >
         All 70 alerts available in the full Excel report ·{" "}
-        <span style={{ color: "#C0392B", fontWeight: 600 }}>53 HIGH priority</span> ·{" "}
+        <span style={{ color: "#E0594A", fontWeight: 600 }}>53 HIGH priority</span> ·{" "}
         <span style={{ color: "#D4A017", fontWeight: 600 }}>17 MEDIUM priority</span>
       </p>
     </AbsoluteFill>

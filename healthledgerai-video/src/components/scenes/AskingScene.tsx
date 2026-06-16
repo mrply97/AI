@@ -9,7 +9,7 @@ import {
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { SPRING_SNAPPY } from "../../constants/timing";
-import { ShaderBG } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { SlideHeader } from "../shared/SlideHeader";
 import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -40,7 +40,16 @@ export const AskingScene: React.FC = () => {
         justifyContent: "center",
       }}
     >
-      <ShaderBG color1="#A08558" color2="#1E1A14" color3="#4A6B5A" intensity={0.55} speed={0.5} />
+      <ParticleVortex
+        colorA={COLORS.goldLt}
+        colorB={COLORS.sageLt}
+        focalX={50}
+        focalY={28}
+        maxRadius={32}
+        count={65}
+        speed={0.5}
+        opacity={0.55}
+      />
       <GrainOverlay opacity={0.04} />
 
       <SlideHeader

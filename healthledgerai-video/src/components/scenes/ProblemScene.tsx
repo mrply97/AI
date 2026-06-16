@@ -8,7 +8,7 @@ import {
 } from "remotion";
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
-import { ShaderBGLight } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { SlideHeader } from "../shared/SlideHeader";
 import { DetailBullet } from "../shared/DetailBullet";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -49,25 +49,35 @@ export const ProblemScene: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
+        background: COLORS.ink,
         padding: "72px 110px",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      <ShaderBGLight opacity={0.12} />
-      <GrainOverlay opacity={0.035} />
+      <ParticleVortex
+        colorA="#C0392B"
+        colorB={COLORS.goldLt}
+        focalX={78}
+        focalY={30}
+        maxRadius={34}
+        count={70}
+        speed={0.6}
+        opacity={0.6}
+      />
+      <GrainOverlay opacity={0.04} />
 
       <SlideHeader
         label="The Problem"
-        labelColor="#C0392B"
+        labelColor="#E0594A"
+        dark
         titleSize={54}
         marginBottom={24}
         title={
           <>
             Private clinics lose money on billing
             <br />
-            errors <span style={{ color: "#C0392B", fontWeight: 600 }}>they cannot see</span>
+            errors <span style={{ color: "#E0594A", fontWeight: 700 }}>they cannot see</span>
           </>
         }
       />
@@ -77,7 +87,7 @@ export const ProblemScene: React.FC = () => {
         style={{
           fontFamily: FONTS.sans,
           fontSize: 21,
-          color: COLORS.inkSoft,
+          color: `${COLORS.cream}C0`,
           margin: "0 0 32px",
           lineHeight: 1.6,
           maxWidth: 1100,
@@ -98,7 +108,8 @@ export const ProblemScene: React.FC = () => {
             term={b.term}
             description={b.description}
             delay={42 + i * 18}
-            accentColor="#C0392B"
+            accentColor="#E0594A"
+            dark
           />
         ))}
       </div>
@@ -108,7 +119,7 @@ export const ProblemScene: React.FC = () => {
         style={{
           fontFamily: FONTS.sans,
           fontSize: 19,
-          color: COLORS.inkMute,
+          color: `${COLORS.cream}90`,
           margin: 0,
           lineHeight: 1.5,
           fontWeight: 300,
@@ -116,9 +127,9 @@ export const ProblemScene: React.FC = () => {
         }}
       >
         These are not hypothetical. In a dataset of{" "}
-        <span style={{ color: COLORS.ink, fontWeight: 600 }}>506 invoices</span> modelled on private
+        <span style={{ color: COLORS.cream, fontWeight: 600 }}>506 invoices</span> modelled on private
         clinic billing data, the prototype detected{" "}
-        <span style={{ color: "#C0392B", fontWeight: 600 }}>70 alerts across 8 error types.</span>
+        <span style={{ color: "#E0594A", fontWeight: 600 }}>70 alerts across 8 error types.</span>
       </p>
     </AbsoluteFill>
   );

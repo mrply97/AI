@@ -9,7 +9,7 @@ import {
 import { COLORS } from "../../constants/colors";
 import { FONTS } from "../../constants/fonts";
 import { SPRING_BOUNCY } from "../../constants/timing";
-import { ShaderBGLight } from "../shared/ShaderBG";
+import { ParticleVortex } from "../shared/ParticleVortex";
 import { SlideHeader } from "../shared/SlideHeader";
 import { LiquidGlassCard } from "../shared/LiquidGlassCard";
 import { GrainOverlay } from "../shared/GrainOverlay";
@@ -34,21 +34,31 @@ export const SolutionScene: React.FC = () => {
   return (
     <AbsoluteFill
       style={{
-        background: `linear-gradient(160deg, ${COLORS.cream} 0%, ${COLORS.ivory} 100%)`,
+        background: COLORS.ink,
         padding: "72px 110px",
         flexDirection: "column",
         justifyContent: "center",
       }}
     >
-      <ShaderBGLight opacity={0.12} />
-      <GrainOverlay opacity={0.035} />
+      <ParticleVortex
+        colorA={COLORS.sageLt}
+        colorB={COLORS.goldLt}
+        focalX={22}
+        focalY={70}
+        maxRadius={36}
+        count={80}
+        speed={0.6}
+        opacity={0.6}
+      />
+      <GrainOverlay opacity={0.04} />
 
       <SlideHeader
         label="The Solution"
-        labelColor={COLORS.sage}
+        labelColor={COLORS.sageLt}
+        dark
         titleSize={64}
         marginBottom={18}
-        title={<span style={{ fontWeight: 600 }}>HealthLedgerAI</span>}
+        title={<span style={{ fontWeight: 700 }}>HealthLedgerAI</span>}
         subtitle="Automated billing compliance detection — in seconds, not weeks"
       />
 
@@ -57,7 +67,7 @@ export const SolutionScene: React.FC = () => {
         style={{
           fontFamily: FONTS.sans,
           fontSize: 21,
-          color: COLORS.inkSoft,
+          color: `${COLORS.cream}C0`,
           margin: "0 0 36px",
           lineHeight: 1.6,
           maxWidth: 1120,
@@ -78,13 +88,13 @@ export const SolutionScene: React.FC = () => {
           const opacity = interpolate(sp, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
           return (
             <div key={s.value} style={{ flex: 1, transform: `scale(${scale})`, opacity }}>
-              <LiquidGlassCard accentColor={COLORS.sage} style={{ textAlign: "center", padding: "32px 24px" }}>
+              <LiquidGlassCard dark accentColor={COLORS.sageLt} style={{ textAlign: "center", padding: "32px 24px" }}>
                 <div
                   style={{
-                    fontFamily: FONTS.serif,
+                    fontFamily: FONTS.sans,
                     fontSize: 76,
                     fontWeight: 700,
-                    color: COLORS.sage,
+                    color: COLORS.sageLt,
                     lineHeight: 1,
                     marginBottom: 12,
                   }}
@@ -95,7 +105,7 @@ export const SolutionScene: React.FC = () => {
                   style={{
                     fontFamily: FONTS.sans,
                     fontSize: 15,
-                    color: COLORS.inkSoft,
+                    color: `${COLORS.cream}B0`,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
                     lineHeight: 1.4,
@@ -132,12 +142,12 @@ export const SolutionScene: React.FC = () => {
           },
         ].map((c) => (
           <div key={c.title} style={{ flex: 1 }}>
-            <LiquidGlassCard accentColor={COLORS.gold} style={{ padding: "26px 30px", height: "100%" }}>
+            <LiquidGlassCard dark accentColor={COLORS.gold} style={{ padding: "26px 30px", height: "100%" }}>
               <h3
                 style={{
-                  fontFamily: FONTS.serif,
-                  fontSize: 25,
-                  color: COLORS.ink,
+                  fontFamily: FONTS.sans,
+                  fontSize: 23,
+                  color: COLORS.cream,
                   margin: "0 0 12px",
                   fontWeight: 600,
                 }}
@@ -148,7 +158,7 @@ export const SolutionScene: React.FC = () => {
                 style={{
                   fontFamily: FONTS.sans,
                   fontSize: 18,
-                  color: COLORS.inkSoft,
+                  color: `${COLORS.cream}B0`,
                   margin: 0,
                   lineHeight: 1.55,
                   fontWeight: 300,
