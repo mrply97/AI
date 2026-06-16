@@ -2,30 +2,31 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+// Warm beige/stone tones — kept darker than the cream backdrop for contrast
 const PALETTE: [number, number, number][] = [
   [160, 133, 88], // gold
   [201, 170, 124], // gold-lt
-  [122, 158, 138], // sage-lt
-  [212, 169, 160], // blush
-  [244, 239, 228], // cream
+  [138, 128, 112], // ink-mute (stone grey-beige)
+  [191, 169, 128], // warm stone tan
+  [122, 158, 138], // sage-lt, used sparingly
 ]
 
 interface Particle {
   x: number
   y: number
-  startX: number
-  startY: number
   angle: number
   dist: number
   size: number
   color: [number, number, number]
   delay: number
+  twinklePhase: number
+  twinkleSpeed: number
+  isGlint: boolean
 }
 
-// Phase timings, ms
-const STORM_END = 1100
-const CONVERGE_END = 2200
-const HOLD_END = 2550
+// Phase timings, ms — bloom grows from a point, holds with glitter, then fades to reveal the page
+const GROW_END = 1700
+const HOLD_END = 2500
 const FADE_END = 3400
 
 export default function IntroOverlay() {
@@ -52,25 +53,20 @@ export default function IntroOverlay() {
 
     const cx = w / 2
     const cy = h / 2
-    const count = Math.min(Math.floor((w * h) / 6000), 220)
+    const count = Math.min(Math.floor((w * h) / 5500), 240)
 
-    const particles: Particle[] = Array.from({ length: count }, () => {
-      const angle = Math.random() * Math.PI * 2
-      const dist = Math.random() * Math.max(w, h) * 0.6
-      const startAngle = Math.random() * Math.PI * 2
-      const startDist = Math.max(w, h) * (0.5 + Math.random() * 0.6)
-      return {
-        x: cx + Math.cos(startAngle) * startDist,
-        y: cy + Math.sin(startAngle) * startDist,
-        startX: cx + Math.cos(startAngle) * startDist,
-        startY: cy + Math.sin(startAngle) * startDist,
-        angle,
-        dist,
-        size: 1 + Math.random() * 2.2,
-        color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
-        delay: Math.random() * 250,
-      }
-    })
+    const particles: Particle[] = Array.from({ length: count }, () => ({
+      x: cx,
+      y: cy,
+      angle: Math.random() * Math.PI * 2,
+      dist: Math.random() * Math.max(w, h) * 0.62,
+      size: 1.2 + Math.random() * 2.6,
+      color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
+      delay: Math.random() * 500,
+      twinklePhase: Math.random() * Math.PI * 2,
+      twinkleSpeed: 0.004 + Math.random() * 0.006,
+      isGlint: Math.random() < 0.12,
+    }))
 
     const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
     const easeInOutQuad = (t: number) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2)
@@ -82,8 +78,7 @@ export default function IntroOverlay() {
       const elapsed = now - start
       ctx.clearRect(0, 0, w, h)
 
-      // ink backdrop with faint ambient glow at center
-      ctx.fillStyle = '#1E1A14'
+      ctx.fillStyle = '#F4EFE4'
       ctx.fillRect(0, 0, w, h)
 
       let overlayOpacity = 1
@@ -92,58 +87,63 @@ export default function IntroOverlay() {
       }
       root.style.opacity = String(overlayOpacity)
 
-      // converge progress, per-particle staggered
+      const growT = easeOutCubic(Math.min(1, Math.max(0, elapsed - 0) / GROW_END))
+
       for (const p of particles) {
-        let t: number
-        if (elapsed < STORM_END) {
-          // storming — drift loosely near start position
-          const local = Math.max(0, elapsed - p.delay) / STORM_END
-          const wobble = Math.sin((elapsed + p.delay) * 0.01) * 14
-          p.x = p.startX + wobble
-          p.y = p.startY + Math.cos((elapsed + p.delay) * 0.012) * 14
-          t = 0
-          void local
-        } else if (elapsed < CONVERGE_END) {
-          t = easeOutCubic(Math.min(1, (elapsed - STORM_END) / (CONVERGE_END - STORM_END)))
-          const targetX = cx + Math.cos(p.angle) * p.dist * 0.06
-          const targetY = cy + Math.sin(p.angle) * p.dist * 0.06
-          p.x = p.startX + (targetX - p.startX) * t
-          p.y = p.startY + (targetY - p.startY) * t
-        } else {
-          const breathe = Math.sin(elapsed * 0.006 + p.angle) * 3
-          p.x = cx + Math.cos(p.angle) * (p.dist * 0.06 + breathe)
-          p.y = cy + Math.sin(p.angle) * (p.dist * 0.06 + breathe)
-        }
+        const local = Math.max(0, Math.min(1, (elapsed - p.delay) / (GROW_END - p.delay)))
+        const eased = easeOutCubic(local)
+        const r = p.dist * eased
+        const wobble = Math.sin(elapsed * 0.003 + p.angle * 3) * 4 * eased
+        p.x = cx + Math.cos(p.angle) * r + wobble
+        p.y = cy + Math.sin(p.angle) * r + Math.cos(elapsed * 0.0026 + p.angle * 3) * 4 * eased
 
-        const [r, g, b] = p.color
-        const alpha = elapsed < STORM_END ? 0.35 : 0.7
+        const sizeT = 0.15 + 0.85 * eased
+        const twinkle = 0.55 + 0.45 * Math.sin(elapsed * p.twinkleSpeed + p.twinklePhase)
+        const alpha = Math.max(0, eased) * twinkle * 0.85
+
+        const [cr, cg, cb] = p.color
         ctx.beginPath()
-        ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(${cr},${cg},${cb},${alpha})`
+        ctx.shadowColor = `rgba(${cr},${cg},${cb},${alpha * 0.5})`
+        ctx.shadowBlur = p.isGlint ? 6 : 2
+        ctx.arc(p.x, p.y, p.size * sizeT, 0, Math.PI * 2)
         ctx.fill()
-      }
 
-      // central glow that blooms as particles converge
-      const bloomT = easeInOutQuad(
-        Math.min(1, Math.max(0, (elapsed - STORM_END) / (CONVERGE_END - STORM_END)))
-      )
-      if (bloomT > 0) {
-        const radius = 8 + bloomT * 70
+        if (p.isGlint && eased > 0.4) {
+          const glintAlpha = (twinkle - 0.6) * 1.6 * eased
+          if (glintAlpha > 0) {
+            ctx.strokeStyle = `rgba(244,239,228,${Math.min(0.9, glintAlpha)})`
+            ctx.lineWidth = 0.6
+            const gs = p.size * sizeT * 2.6
+            ctx.beginPath()
+            ctx.moveTo(p.x - gs, p.y)
+            ctx.lineTo(p.x + gs, p.y)
+            ctx.moveTo(p.x, p.y - gs)
+            ctx.lineTo(p.x, p.y + gs)
+            ctx.stroke()
+          }
+        }
+      }
+      ctx.shadowBlur = 0
+
+      // central stone-toned bloom that grows from a point
+      if (growT > 0) {
+        const radius = 6 + growT * 64
         const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius)
-        glow.addColorStop(0, `rgba(201,170,124,${0.55 * bloomT})`)
-        glow.addColorStop(0.5, `rgba(122,158,138,${0.18 * bloomT})`)
-        glow.addColorStop(1, 'rgba(122,158,138,0)')
+        glow.addColorStop(0, `rgba(160,133,88,${0.4 * growT})`)
+        glow.addColorStop(0.55, `rgba(191,169,128,${0.16 * growT})`)
+        glow.addColorStop(1, 'rgba(191,169,128,0)')
         ctx.fillStyle = glow
         ctx.beginPath()
         ctx.arc(cx, cy, radius, 0, Math.PI * 2)
         ctx.fill()
 
-        // thin rotating diamond ring, echoing the brand's divider motif
+        const bloomT = easeInOutQuad(growT)
         const ringSize = 6 + bloomT * 5
         ctx.save()
         ctx.translate(cx, cy)
         ctx.rotate(elapsed * 0.0006 + Math.PI / 4)
-        ctx.strokeStyle = `rgba(244,239,228,${0.8 * bloomT})`
+        ctx.strokeStyle = `rgba(160,133,88,${0.75 * bloomT})`
         ctx.lineWidth = 1
         ctx.strokeRect(-ringSize, -ringSize, ringSize * 2, ringSize * 2)
         ctx.restore()
@@ -171,7 +171,7 @@ export default function IntroOverlay() {
         inset: 0,
         zIndex: 10000,
         pointerEvents: 'none',
-        background: 'var(--ink)',
+        background: 'var(--cream)',
       }}
     >
       <canvas ref={canvasRef} />
