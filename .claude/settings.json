@@ -66,6 +66,10 @@
     "pletor": {
       "type": "http",
       "url": "https://api.pletor.ai/mcp"
+    },
+    "markitdown": {
+      "command": "python3",
+      "args": ["-m", "markitdown_mcp"]
     }
   }
 }
