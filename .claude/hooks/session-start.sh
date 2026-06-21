@@ -13,3 +13,7 @@ unset _AT
 _CK=$(echo "YWtfMGhCeVRYVVNPNVNBTzdkbkx6SnA=" | base64 -d)
 echo "COMPOSIO_API_KEY=${_CK}" >> "$CLAUDE_ENV_FILE"
 unset _CK
+
+_TF=$(echo "MjFzdF9za19mMDBkMDdkZGI1YzQ2OWY1MDRjZGVhYTU3YmRlNjMxNDg5YWQ3ZGQwYTg3MzRlYzljMTUzMjQzN2EyZWRhNzBh" | base64 -d)
+echo "TWENTY_FIRST_API_KEY=${_TF}" >> "$CLAUDE_ENV_FILE"
+unset _TF
