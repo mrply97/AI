@@ -19,7 +19,9 @@
 | `originale/Expose_PhD_Polychroniadou_March2026.docx` | Exposé (Stand März 2026) |
 | `originale/Motivationsschreiben_Maria_Polychroniadou.docx` | Motivationsschreiben – **an die Studienstiftung adressiert** |
 | `originale/Bewerber_Fragebogen_2021_LEER.pdf`, `originale/Bewerbungsbogen_Stand_07_2023_LEER.pdf` | Leere **Studienstiftungs**-Formulare |
-| `Bewerber_Fragebogen_AUSGEFUELLT_Polychroniadou.docx`, `Bewerbungsbogen_AUSGEFUELLT_Polychroniadou.docx` | Ausgefüllte **Studienstiftungs**-Formulare (nur relevant, falls zusätzlich dort beworben wird) |
+| `Bewerber_Fragebogen_AUSGEFUELLT_Polychroniadou.docx`, `Bewerbungsbogen_AUSGEFUELLT_Polychroniadou.docx` | Ausgefüllte **Studienstiftungs**-Formulare (Stand 07/2026: Noten, Daten, KAS-Parallelantrag eingetragen) |
+| `originale/Betreuer_Fragebogen_Kythreotis_Studienstiftung_2026-05-14.docx` | **Betreuerfragebogen (Studienstiftung)** von Prof. Kythreotis, datiert 14.05.2026 – Unterschrift/PDF ausstehend |
+| EUC-Bewerbungspaket (`EUC_PhD_Application_Form_*`, `EUC_References_*`, `EUC_Research_Proposal_*`, `CV_English_*`) | PhD-Zulassung EUC (Frist: 15.01.2027 für Frühjahr 2027) |
 
 ## 2. Abgleich mit der offiziellen KAS-Checkliste (Stand 02/2026)
 
