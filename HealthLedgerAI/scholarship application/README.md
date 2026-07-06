@@ -28,8 +28,8 @@
 | 1 | **Online-Bewerbungsfragebogen** (campus.kas.de) | 🔄 wird gemeinsam online ausgefüllt |
 | 2 | **Ausformulierter Lebenslauf** (3–5 Seiten, deutsch, ohne Foto, mit persönlicher Entwicklung und wissenschaftlichem Werdegang) | ✅ vorhanden – Seitenzahl beim finalen Layout prüfen (3–5 Seiten) |
 | 3 | **Tabellarischer Lebenslauf** (deutsch, ohne Foto) | ✅ vorhanden |
-| 4 | **Hochschulzugangsberechtigung** (Scan, unbeglaubigt) | ❌ **Abiturzeugnis-Scan fehlt** |
-| 5 | **Promotionsberechtigendes Masterzeugnis** – falls noch nicht vorliegend: **aktuelle Notenübersicht** | ❌ Master läuft noch → **aktuelles EUC-Transcript (Notenübersicht) besorgen und hochladen** |
+| 4 | **Hochschulzugangsberechtigung** (Scan, unbeglaubigt) | ✅ Abiturzeugnis liegt vor (`originale/Abiturzeugnis_2015.pdf`, Durchschnittsnote 3,1) |
+| 5 | **Promotionsberechtigendes Masterzeugnis** – falls noch nicht vorliegend: **aktuelle Notenübersicht** | ✅ Master läuft noch → EUC-Notenübersichten Semester 1 (F2025: 96/A, 96/A, 85/B+) und Semester 2 (S2026: 98/A, 100/A, 93/A) liegen vor; zusätzlich Bachelor-Transcript (Abschluss 29.10.2024, Gesamtnote **2,5 „good"**, 180 ECTS, Thesis „Unleashing the Potential of ChatGPT…", Betreuer Dr. Björn Sauerhammer) |
 | 6 | **Zwei formlose Hochschullehrergutachten** (habilitiert bzw. promotionsberechtigt; eines vom Doktorvater; max. 6 Monate alt; direkt an campus.pf@kas.de oder Upload im Portal) | ⚠️ **Nur eines vorhanden** (Winnewisser, 20.05.2026 – gültig bis ca. 20.11.2026). **Gutachten von Prof. Kythreotis (Doktorvater) fehlt** – der für die Studienstiftung ausgefüllte Betreuerfragebogen ersetzt es nicht; die KAS verlangt ein formloses Gutachten. ⚠️ Zusätzlich prüfen: Prof. Winnewisser lehrt an einer Hochschule für angewandte Wissenschaften – ist er habilitiert bzw. promotionsberechtigt? Falls nein, wird ein zweites Gutachten einer habilitierten/promotionsberechtigten Lehrkraft benötigt. |
 | 7 | Bei ausländischer Staatsangehörigkeit: Deutsch-C1-Zertifikat | ✅ entfällt (deutsche Staatsangehörigkeit; zusätzlich griechische) |
 | 8 | **Bei ausländischen Studienabschlüssen und FH-Absolvent/innen: Nachweis über Anerkennung des Examens und Zugang zur Promotion durch die Hochschule** | ❌ **Trifft doppelt zu** (Bachelor an der HS Niederrhein = HAW/FH; Master an der EUC = ausländischer Abschluss). **Bestätigung der EUC über den Zugang zur Promotion (inkl. ggf. Zusatzleistungen) anfordern.** |
@@ -40,12 +40,12 @@
 ## 3. Vor dem Absenden zu besorgen (Kurzliste)
 
 1. **Gutachten von Prof. Kythreotis** (formlos, deutsch oder englisch, max. 6 Monate alt) → direkt an campus.pf@kas.de oder als Upload
-2. **Abiturzeugnis** (Scan)
-3. **Aktuelle EUC-Notenübersicht** (Master-Transcript, Scan)
-4. **EUC-Bestätigung über Zugang zur Promotion** / Anerkennung der Abschlüsse (Scan)
-5. **Exposé ergänzen:** Gliederung der Dissertation + Erstbetreuer im ersten Absatz + Format (1½-zeilig, 12 pt, 5–10 Seiten)
-6. Klären: Ist Prof. Winnewisser habilitiert/promotionsberechtigt? Sonst zweites Gutachten anderweitig einholen
-7. Optional: Zeugnisse/Bescheinigungen für freiwillige Uploads scannen
+2. **EUC-Bestätigung über Zugang zur Promotion** / Anerkennung der Abschlüsse (Scan) – lt. Maria ist das Department informiert; schriftliche Bestätigung anfordern
+3. **Exposé ergänzen:** Gliederung der Dissertation + Erstbetreuer im ersten Absatz + Format (1½-zeilig, 12 pt, 5–10 Seiten)
+4. Klären: Ist Prof. Winnewisser habilitiert/promotionsberechtigt? Sonst zweites Gutachten anderweitig einholen
+5. Optional: Zeugnisse/Bescheinigungen für freiwillige Uploads scannen
+
+**Erledigt:** Abiturzeugnis ✅ · Bachelor-Transcript ✅ · EUC-Notenübersichten (beide Semester) ✅ – Online-Bewerbung auf campus.kas.de am 06.07.2026 begonnen.
 
 **Fristen-Hinweis:** Beide Gutachten dürfen bei Einreichung nicht älter als 6 Monate sein – das Winnewisser-Gutachten (20.05.2026) ist bis ca. **20.11.2026** verwendbar.
 
