@@ -1,84 +1,54 @@
-# Bewerbung Promotionsstipendium – Studienstiftung des deutschen Volkes
+# Bewerbung Promotionsstipendium – Maria Polychroniadou
 
-**Bewerberin:** Maria Polychroniadou
 **Vorhaben:** AI-Driven Transformation of Accounting Processes in Healthcare Organizations – Evidence from Cyprus and Greece (European University Cyprus, Betreuer: Prof. Alexios Kythreotis)
-**Geplante Bewerbung:** Herbst 2026 · Geplanter Promotionsbeginn: Frühjahr 2027
+
+> **⚠️ Wichtiger Hinweis – zwei Stiftungen in den Unterlagen:**
+> Die eingereichte **Checkliste (Stand 02/2026)** und das **Gutachten von Prof. Winnewisser (20.05.2026)** gehören zur **Konrad-Adenauer-Stiftung (KAS)** – Bewerbung online über <https://campus.kas.de/>.
+> Das **Motivationsschreiben** und die beiden ausgefüllten Formulare (Bewerber-Fragebogen, Bewerbungsbogen) gehören dagegen zur **Studienstiftung des deutschen Volkes**. Für die KAS-Bewerbung werden diese Formulare **nicht** verwendet (die KAS nutzt einen Online-Fragebogen); das Motivationsschreiben müsste für die KAS umadressiert und inhaltlich angepasst werden (aktuell nimmt es ausdrücklich auf das Leitbild der Studienstiftung Bezug). Parallele Anträge bei mehreren Begabtenförderungswerken müssen im jeweiligen Verfahren angegeben werden; eine Doppelförderung ist ausgeschlossen.
 
 ---
 
 ## 1. Inhalt dieses Ordners
 
-| Datei | Status |
+| Datei | Zweck |
 |---|---|
-| `originale/Motivationsschreiben_Maria_Polychroniadou.docx` | ✅ fertig |
-| `originale/Lebenslauf_ausformuliert_Maria_Polychroniadou.docx` | ✅ fertig (ausformulierter Lebenslauf, wie von der Studienstiftung gefordert) |
-| `originale/Expose_PhD_Polychroniadou_March2026.docx` | ✅ fertig (inkl. Zeitplan und Literaturverzeichnis) |
-| `originale/Bewerber_Fragebogen_2021_LEER.pdf` | Leere Vorlage (Stand Mai 2021) |
-| `originale/Bewerbungsbogen_Stand_07_2023_LEER.pdf` | Leere Vorlage (Stand Juli 2023) |
-| `Bewerber_Fragebogen_AUSGEFUELLT_Polychroniadou.docx` | ✳️ Ausgefüllt – **offene Felder mit [BITTE ERGÄNZEN/PRÜFEN] markiert** |
-| `Bewerbungsbogen_AUSGEFUELLT_Polychroniadou.docx` | ✳️ Ausgefüllt – **offene Felder mit [BITTE ERGÄNZEN/PRÜFEN] markiert** |
-| Betreuerfragebogen (Prof. Alexios Kythreotis) | ✅ liegt ausgefüllt und unterschrieben vor (nicht in diesem Ordner – bitte ergänzen) |
+| `originale/KAS_Checkliste_Promotionsfoerderung_Stand_02-2026.pdf` | **Offizielle KAS-Checkliste** (Grundlage der Prüfung unten) |
+| `originale/Gutachten_Winnewisser_KAS_20-05-2026.pdf` | Hochschullehrergutachten Nr. 1 (Prof. Dr. Christian Winnewisser, HS Niederrhein, an die KAS adressiert) |
+| `originale/Lebenslauf_ausformuliert_Maria_Polychroniadou.docx` | Ausformulierter Lebenslauf (KAS: 3–5 Seiten, deutsch, ohne Foto) |
+| `originale/Lebenslauf_tabellarisch_Maria_Polychroniadou.docx` | Tabellarischer Lebenslauf (KAS: deutsch, ohne Foto) |
+| `originale/Expose_PhD_Polychroniadou_March2026.docx` | Exposé (Stand März 2026) |
+| `originale/Motivationsschreiben_Maria_Polychroniadou.docx` | Motivationsschreiben – **an die Studienstiftung adressiert** |
+| `originale/Bewerber_Fragebogen_2021_LEER.pdf`, `originale/Bewerbungsbogen_Stand_07_2023_LEER.pdf` | Leere **Studienstiftungs**-Formulare |
+| `Bewerber_Fragebogen_AUSGEFUELLT_Polychroniadou.docx`, `Bewerbungsbogen_AUSGEFUELLT_Polychroniadou.docx` | Ausgefüllte **Studienstiftungs**-Formulare (nur relevant, falls zusätzlich dort beworben wird) |
 
-## 2. Abgleich mit den Anforderungen der Studienstiftung (Website/Checkliste)
+## 2. Abgleich mit der offiziellen KAS-Checkliste (Stand 02/2026)
 
-Hinweis: Der direkte Zugriff auf studienstiftung.de war aus dieser Arbeitsumgebung netzwerkseitig gesperrt; die folgenden Punkte wurden über die Websuche (Studienstiftung-Seiten, DAAD-Stipendiendatenbank) verifiziert. Bitte vor Einreichung die aktuelle Checkliste aus dem zentralen Downloadbereich der Studienstiftung gegenprüfen: <https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung/auf-einen-blick-zentraler-downloadbereich>
+| # | Checklisten-Punkt | Status |
+|---|---|---|
+| 1 | **Online-Bewerbungsfragebogen** (campus.kas.de) | 🔄 wird gemeinsam online ausgefüllt |
+| 2 | **Ausformulierter Lebenslauf** (3–5 Seiten, deutsch, ohne Foto, mit persönlicher Entwicklung und wissenschaftlichem Werdegang) | ✅ vorhanden – Seitenzahl beim finalen Layout prüfen (3–5 Seiten) |
+| 3 | **Tabellarischer Lebenslauf** (deutsch, ohne Foto) | ✅ vorhanden |
+| 4 | **Hochschulzugangsberechtigung** (Scan, unbeglaubigt) | ❌ **Abiturzeugnis-Scan fehlt** |
+| 5 | **Promotionsberechtigendes Masterzeugnis** – falls noch nicht vorliegend: **aktuelle Notenübersicht** | ❌ Master läuft noch → **aktuelles EUC-Transcript (Notenübersicht) besorgen und hochladen** |
+| 6 | **Zwei formlose Hochschullehrergutachten** (habilitiert bzw. promotionsberechtigt; eines vom Doktorvater; max. 6 Monate alt; direkt an campus.pf@kas.de oder Upload im Portal) | ⚠️ **Nur eines vorhanden** (Winnewisser, 20.05.2026 – gültig bis ca. 20.11.2026). **Gutachten von Prof. Kythreotis (Doktorvater) fehlt** – der für die Studienstiftung ausgefüllte Betreuerfragebogen ersetzt es nicht; die KAS verlangt ein formloses Gutachten. ⚠️ Zusätzlich prüfen: Prof. Winnewisser lehrt an einer Hochschule für angewandte Wissenschaften – ist er habilitiert bzw. promotionsberechtigt? Falls nein, wird ein zweites Gutachten einer habilitierten/promotionsberechtigten Lehrkraft benötigt. |
+| 7 | Bei ausländischer Staatsangehörigkeit: Deutsch-C1-Zertifikat | ✅ entfällt (deutsche Staatsangehörigkeit; zusätzlich griechische) |
+| 8 | **Bei ausländischen Studienabschlüssen und FH-Absolvent/innen: Nachweis über Anerkennung des Examens und Zugang zur Promotion durch die Hochschule** | ❌ **Trifft doppelt zu** (Bachelor an der HS Niederrhein = HAW/FH; Master an der EUC = ausländischer Abschluss). **Bestätigung der EUC über den Zugang zur Promotion (inkl. ggf. Zusatzleistungen) anfordern.** |
+| 9 | **Exposé** (deutsch oder englisch; Motivation der Themenwahl, Problemaufriss, Lösungsansatz, Methoden/Verfahren, Arbeits- und Zeitplan **sowie aktuelle Gliederung**; 5–10 Seiten zzgl. Literaturverzeichnis; 1½-zeilig, Schriftgröße 12) | ⚠️ Inhaltlich weitgehend erfüllt (englisch ✓, Motivation/Problem/Methoden/Zeitplan ✓). **Es fehlt eine explizite Gliederung (Kapitelübersicht) der Dissertation** – ergänzen. **Erstbetreuer im ersten Absatz des Exposés nennen** (aktuell erst am Ende des zweiten Absatzes bzw. auf dem Titelblatt). Formatierung (1½-zeilig, Größe 12, 5–10 Seiten) beim Finalisieren prüfen. |
+| 10 | Nur Promotionskollegs: Motivationsschreiben (max. 1 Seite) | ➖ entfällt (keine Kolleg-Bewerbung) – falls doch: vorhandenes Schreiben ist an die Studienstiftung gerichtet und müsste neu geschrieben werden |
+| 11 | Freiwillige Uploads: Ausbildungs-/Praktikumszeugnisse, Ehrenamt-Bescheinigungen, Referenzen | 💡 empfohlen: Praktikumszeugnis Deutsche Telekom, Bescheinigungen Terre des Hommes / Kirchengemeinde, ggf. Referenz Prof. Dr. Karsten Bredemeier |
 
-### Zulassungsvoraussetzungen – Prüfergebnis
+## 3. Vor dem Absenden zu besorgen (Kurzliste)
 
-| Anforderung | Status |
-|---|---|
-| Weit überdurchschnittlicher Studienabschluss | ⚠️ Bachelorarbeit + Kolloquium 1,0 sind dokumentiert; die **Gesamtnote des Bachelors** fehlt in den Unterlagen und ist für die Vorauswahl zentral. Master läuft noch („hervorragende Leistungen" – Transcript beilegen). |
-| Letzter Studienabschluss max. 4 Jahre vor Bewerbung | ✅ Bachelor 2024, Bewerbung Herbst 2026 – erfüllt. Master voraussichtlich 2027. |
-| Bewerbung ab dem letzten Studiensemester möglich | ✅ Bewerbung Herbst 2026 im laufenden Master mit Promotionsbeginn Frühjahr 2027 passt. |
-| Projekt in 3 Jahren Förderdauer abschließbar | ✅ Zeitplan im Exposé: 2027–2030, 3 Jahre – erfüllt. |
-| Auslandspromotion: deutsche Staatsbürgerschaft **oder** deutsche Hochschulzugangsberechtigung | ✅ Beides erfüllt (Einbürgerung nach 2015; Abitur 2015 in Jülich). |
-| Auslandspromotion: überzeugende Begründung (ca. 1 Seite), warum das Vorhaben am ausländischen Standort am besten angesiedelt ist | ✳️ **War bisher nicht vorhanden – jetzt als Abschnitt 3 im ausgefüllten Bewerber-Fragebogen entworfen** (Feldzugang über EUC-Partnerkliniken, Betreuungspassung, regionale Forschungslücke, methodische Kontinuität). Bitte prüfen und ggf. anpassen. |
-| Bewerbungsaufrufe („Calls"): max. 300 vollständige Bewerbungen pro Call, Schließung bei Erreichen | ⚠️ **Früh im Call bewerben** – die Runde kann vorzeitig schließen. Call-Termine für Herbst 2026 auf der Website beobachten. |
+1. **Gutachten von Prof. Kythreotis** (formlos, deutsch oder englisch, max. 6 Monate alt) → direkt an campus.pf@kas.de oder als Upload
+2. **Abiturzeugnis** (Scan)
+3. **Aktuelle EUC-Notenübersicht** (Master-Transcript, Scan)
+4. **EUC-Bestätigung über Zugang zur Promotion** / Anerkennung der Abschlüsse (Scan)
+5. **Exposé ergänzen:** Gliederung der Dissertation + Erstbetreuer im ersten Absatz + Format (1½-zeilig, 12 pt, 5–10 Seiten)
+6. Klären: Ist Prof. Winnewisser habilitiert/promotionsberechtigt? Sonst zweites Gutachten anderweitig einholen
+7. Optional: Zeugnisse/Bescheinigungen für freiwillige Uploads scannen
 
-### Unterlagen-Checkliste – was vorhanden ist und was fehlt
+**Fristen-Hinweis:** Beide Gutachten dürfen bei Einreichung nicht älter als 6 Monate sein – das Winnewisser-Gutachten (20.05.2026) ist bis ca. **20.11.2026** verwendbar.
 
-| Unterlage | Status |
-|---|---|
-| Bewerbungsbogen | ✳️ Entwurf ausgefüllt (offene Felder s. u.) |
-| Fragebogen für Bewerber/-innen | ✳️ Entwurf ausgefüllt (offene Felder s. u.) |
-| Fragebogen für Betreuer/-innen | ✅ von Prof. Kythreotis ausgefüllt und unterschrieben – **bitte Datei/Scan in diesen Ordner legen** |
-| Ausführlicher Lebenslauf (Fließtext) | ✅ vorhanden |
-| Exposé inkl. Zeitplan und Literaturverzeichnis | ✅ vorhanden – Umfang gegen die im aktuellen Call genannte Seitenobergrenze prüfen (üblich ca. 10 Seiten zzgl. Literatur) |
-| Begründung Auslandspromotion (ca. 1 Seite) | ✳️ Entwurf erstellt (Abschnitt 3 des Fragebogens) |
-| Abiturzeugnis (Kopie) | ❌ **fehlt in den Unterlagen** |
-| Bachelorzeugnis + Transcript (Hochschule Niederrhein) | ❌ **fehlt in den Unterlagen** |
-| Aktuelles Master-Transcript (EUC) | ❌ **fehlt in den Unterlagen** |
-| Nachweis der Annahme als Doktorandin / Zulassung zur Promotion an der EUC (bzw. Stand des Zulassungsverfahrens) | ❌ **fehlt** – da der Promotionsbeginn erst Frühjahr 2027 geplant ist, den aktuellen Stand des Zulassungsverfahrens angeben und den Nachweis nachreichen |
-| Motivationsschreiben | ✅ vorhanden (wird von der Studienstiftung nicht ausdrücklich verlangt, schadet aber nicht; Kerninhalte sind auch im Fragebogen Abschnitt 7/8 verarbeitet) |
-| Passfoto (falls im aktuellen Bewerbungsbogen gefordert) | ❌ bereithalten |
+## 4. Frühere Analyse (Studienstiftung des deutschen Volkes)
 
-### Wichtige Hinweise zum Verfahren
-
-1. **Online-Portal:** Die Bewerbung läuft über das Online-Bewerbungsportal der Studienstiftung (<https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung/bewerbung>). Die hier ausgefüllten Dokumente sind Arbeitsgrundlage – die Inhalte müssen in die **aktuellen Formulare/das Portal** übertragen werden.
-2. **Formularstände prüfen:** Der vorliegende Bewerber-Fragebogen ist Stand **Mai 2021**, der Bewerbungsbogen Stand **Juli 2023**. Vor Einreichung im Downloadbereich prüfen, ob neuere Versionen existieren.
-3. **Auswahlverfahren:** Vorauswahl durch die Geschäftsstelle (formale Prüfung + Unterlagen), danach Hauptauswahl mit externem Fachgutachten und Auswahlgespräch.
-4. **Meldepflicht:** Förderzusagen anderer Geldgeber für dasselbe Projekt müssen der Studienstiftung unverzüglich mitgeteilt werden (Erklärung ist Teil des Fragebogens).
-
-## 3. Offene Felder in den ausgefüllten Formularen (bitte ergänzen)
-
-- **Bachelor-Gesamtnote** und genauer Abschlussmonat (Hochschule Niederrhein)
-- **Abiturnote** (falls im aktuellen Formular gefordert)
-- Genaue **Studienzeiträume** FOM (MM/2017–MM/2019) und HS Niederrhein (MM/2019–MM/2024)
-- **Regelstudienzeiten** (Bachelor HSNR, Master EUC) sowie Studien-/Fachsemester gesamt
-- **Voraussichtlicher Masterabschluss** (Monat/Jahr)
-- **Beginn der Arbeit an der Dissertation** inkl. Vorarbeiten (Monat/Jahr – z. B. Beginn der Exposé-Erstellung)
-- **Familienstand/Kinder**, **Reserve-E-Mail**, ggf. alternative Anschrift
-- **Nationalität:** nur deutsch oder deutsch + griechisch? (im Bewerbungsbogen entsprechend angeben)
-- **Zeitlicher Umfang** des Ehrenamts (Terre des Hommes, Kirchengemeinde) in Std./Monat
-- Telekom-Praktikum: war es **studienobligatorisch**? (aktuell mit „ja" vorausgefüllt)
-- Läuft oder plant sie **parallele Stipendienanträge** bei anderen Institutionen? (aktuell „keine")
-- Wird das EUC-Masterstudium **vor Ort in Nikosia** oder überwiegend digital absolviert? (relevant für „Auslandsaufenthalte")
-
-## 4. Quellen
-
-- [Studienstiftung – Bewerbung Promotionsförderung](https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung/bewerbung)
-- [Studienstiftung – Promotionsförderung Übersicht](https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung)
-- [Studienstiftung – Zentraler Downloadbereich](https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung/auf-einen-blick-zentraler-downloadbereich)
-- [Studienstiftung – Checkliste Bewerbung (PDF)](https://www.studienstiftung.de/pool/sdv/public/documents/STIPENDIUM/Promotionsfoerderung/studienstiftung_promotionsfoerderung_bewerbung_checkliste_2020.pdf)
-- [Studienstiftung – FAQ Promotionsförderung](https://www.studienstiftung.de/infos-fuer-promovierende/promotionsfoerderung-der-studienstiftung/haeufig-gestellte-fragen)
-- [DAAD-Stipendiendatenbank – Studienstiftung Promotionsförderung](https://www2.daad.de/deutschland/stipendium/datenbank/de/21148-stipendiendatenbank/?detail=10000406)
+Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderungen der Studienstiftung des deutschen Volkes (siehe Git-Historie, Commit „Add Studienstiftung scholarship application folder…"). Die dort ausgefüllten Formulare bleiben im Ordner erhalten, falls zusätzlich eine Bewerbung bei der Studienstiftung geplant ist. In diesem Fall gilt: Parallelanträge im jeweiligen Fragebogen angeben (Abschnitt „Bei anderen Institutionen laufende oder geplante Anträge").
