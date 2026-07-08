@@ -51,6 +51,20 @@
 
 **Fristen-Hinweis:** Beide Gutachten dürfen bei Einreichung nicht älter als 6 Monate sein – das Winnewisser-Gutachten (20.05.2026) ist bis ca. **20.11.2026** verwendbar.
 
-## 4. Frühere Analyse (Studienstiftung des deutschen Volkes)
+## 4. Analyse Hans-Böckler-Stiftung (Promotionsstipendium) – Stand 07/2026
+
+**Ergebnis: Bewerbung derzeit nicht aussichtsreich – drei strukturelle Hürden.**
+
+| # | Anforderung der HBS | Marias Situation |
+|---|---|---|
+| 1 | Promotion an einer **staatlichen/staatlich anerkannten deutschen Hochschule**; vollständige Auslandspromotionen werden grundsätzlich **nicht** gefördert (nur eng begründete Ausnahmefälle) | ❌ Promotion vollständig an der European University Cyprus geplant |
+| 2 | **Gewerkschaftliches oder gesellschaftspolitisches Engagement** zwingend erwartet („ohne ein solches Engagement ist eine Bewerbung nicht aussichtsreich"); Gewerkschaftsmitglieder mit Referenzschreiben ihrer Gliederung haben deutlich bessere Chancen (DGB-nahe Stiftung) | ⚠️ Engagement vorhanden (Terre des Hommes, Kirchengemeinde), aber kein gewerkschaftlicher Bezug; Profil (Soziale Marktwirtschaft/Erhard im KAS-Antrag) passt eher zu anderen Stiftungen |
+| 3 | **Offizieller Nachweis des Abschlusses** des zur Promotion berechtigenden Studiums bei Bewerbung | ❌ Master (promotionsberechtigend an der EUC) erst 2027 abgeschlossen; Bewerbungsfenster 15.08.–02.11.2026 |
+| 4 | Unterlagen: tabell. Lebenslauf; Abschlussnachweis; Exposé max. 10 Seiten inkl. Gliederungsentwurf, **tabellarischem Arbeits-/Zeitplan**, Literaturverzeichnis; **Stellungnahme des Betreuers** (offizieller Briefkopf, nach HBS-Leitfaden); **Promotionsordnung** (oder Link); Engagement-Nachweise (optional); Online-Bewerbung | ✅ wäre größtenteils aus vorhandenen Dokumenten ableitbar – ändert aber nichts an Hürden 1–3 |
+| 5 | Fristen: 15.01.–02.05.2026 (Förderbeginn Okt. 2026–Jan. 2027, **verstrichen**); 15.08.–02.11.2026 (Förderbeginn Juni–Sept. 2027) | Fenster 2 läge zeitlich passend zum Promotionsbeginn Frühjahr 2027 |
+
+Hinweis: boeckler.de war aus dieser Umgebung netzwerkseitig gesperrt; Analyse basiert auf Websuche (HBS-Seiten, DAAD, StipendiumPlus, myStipendium). Vor einer endgültigen Entscheidung ggf. per E-Mail an bewerbung@boeckler.de klären, ob eine EUC-Promotion überhaupt förderfähig wäre.
+
+## 5. Frühere Analyse (Studienstiftung des deutschen Volkes)
 
 Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderungen der Studienstiftung des deutschen Volkes (siehe Git-Historie, Commit „Add Studienstiftung scholarship application folder…"). Die dort ausgefüllten Formulare bleiben im Ordner erhalten, falls zusätzlich eine Bewerbung bei der Studienstiftung geplant ist. In diesem Fall gilt: Parallelanträge im jeweiligen Fragebogen angeben (Abschnitt „Bei anderen Institutionen laufende oder geplante Anträge").
