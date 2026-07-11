@@ -47,7 +47,7 @@
 4. Klären: Ist Prof. Winnewisser habilitiert/promotionsberechtigt? Sonst zweites Gutachten anderweitig einholen
 5. Optional: Zeugnisse/Bescheinigungen für freiwillige Uploads scannen
 
-**Erledigt:** Abiturzeugnis ✅ · Bachelor-Transcript ✅ · EUC-Notenübersichten (beide Semester) ✅ – Online-Bewerbung auf campus.kas.de am 06.07.2026 begonnen.
+**Erledigt:** Abiturzeugnis ✅ · Bachelor-Transcript ✅ · EUC-Notenübersichten (beide Semester) ✅ – KAS-Bewerbung **eingereicht** – Eingangsbestätigung der KAS-Begabtenförderung erhalten (07/2026). Nachzureichen: signiertes Kythreotis-Gutachten an campus.pf@kas.de + Betreuer-Bestätigung; Studienstiftungs-Antrag nach Einreichung bei der KAS via „Mitteilung zur Änderung von Stammdaten“ melden.
 
 **Fristen-Hinweis:** Beide Gutachten dürfen bei Einreichung nicht älter als 6 Monate sein – das Winnewisser-Gutachten (20.05.2026) ist bis ca. **20.11.2026** verwendbar.
 
