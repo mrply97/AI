@@ -68,3 +68,15 @@ Hinweis: boeckler.de war aus dieser Umgebung netzwerkseitig gesperrt; Analyse ba
 ## 5. Frühere Analyse (Studienstiftung des deutschen Volkes)
 
 Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderungen der Studienstiftung des deutschen Volkes (siehe Git-Historie, Commit „Add Studienstiftung scholarship application folder…"). Die dort ausgefüllten Formulare bleiben im Ordner erhalten, falls zusätzlich eine Bewerbung bei der Studienstiftung geplant ist. In diesem Fall gilt: Parallelanträge im jeweiligen Fragebogen angeben (Abschnitt „Bei anderen Institutionen laufende oder geplante Anträge").
+
+## 6. Weitere Stipendienoptionen (Kurzanalyse, Stand 07/2026)
+
+| Option | Fit | Anmerkung |
+|---|---|---|
+| **Onassis Foundation** (griech. Staatsbürgerschaft) | 🟢 prüfenswert | Promotionsstipendien 9–36 Monate, auch vollständig im Ausland; nächster Call ca. Dez. 2026 (Frist ~Feb. 2027) für 2027/28 – passt zum Promotionsbeginn. ⚠️ Zulassungsdetails prüfen (ältere Calls verlangten teils Wohnsitz in Griechenland oder griechischen Abschluss). |
+| **A. G. Leventis Foundation** | 🟡 prüfenswert | Stipendien für griechische/zypriotische Studierende, Zypern-Bezug; jährliche Calls (~Januar). |
+| **Friedrich-Naumann-Stiftung** | 🟡 möglich | Begabtenförderungswerk (wie KAS/Studienstiftung – nur eines kann fördern, Parallelanträge überall angeben); EU-Promotion möglich; Profil (Erhard/Soziale Marktwirtschaft) passt. Aufwand vs. Ertrag abwägen. |
+| Google PhD Fellowship / Microsoft Research EMEA PhD Fellowship | 🟡 später | „AI-spezifisch", aber: Nominierung durch die Universität, CS-forschungslastig, Bewerbung sinnvoll erst im 1.–2. Promotionsjahr mit Publikationen. |
+| DAAD | 🔴 entfällt | Doktorandenprogramme setzen Annahme an einer **deutschen** Hochschule voraus (nur Auslandsaufenthalte während deutscher Promotion, max. 18 Monate). |
+| KI-Programme in Deutschland (Zuse Schools, ELIZA etc.) | 🔴 entfällt | An deutsche Hochschulen gebunden. |
+| Projektmittel: Cyprus Research & Innovation Foundation, EIT Health, MSCA | 🟢 über EUC | Keine persönlichen Stipendien, aber realistische Finanzierung über Prof. Kythreotis' Projektanträge (EIT-Health-Bezug in seinem Betreuerfragebogen erwähnt). |
