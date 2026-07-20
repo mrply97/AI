@@ -80,3 +80,19 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 | DAAD | 🔴 entfällt | Doktorandenprogramme setzen Annahme an einer **deutschen** Hochschule voraus (nur Auslandsaufenthalte während deutscher Promotion, max. 18 Monate). |
 | KI-Programme in Deutschland (Zuse Schools, ELIZA etc.) | 🔴 entfällt | An deutsche Hochschulen gebunden. |
 | Projektmittel: Cyprus Research & Innovation Foundation, EIT Health, MSCA | 🟢 über EUC | Keine persönlichen Stipendien, aber realistische Finanzierung über Prof. Kythreotis' Projektanträge (EIT-Health-Bezug in seinem Betreuerfragebogen erwähnt). |
+
+
+## 7. Onassis Foundation — Stand nach Rückmeldung (Juli 2026)
+
+**Antwort des Ίδρυμα Ωνάση (Scholarships Department, Athen) auf Marias Zulassungsanfrage:**
+- Stipendien für Master/Promotion, die **ganz oder teilweise im Ausland** stattfinden → Standort Zypern ist **kein** Ausschlussgrund. ✅
+- Förderung nur für **bestimmte, jährlich in der Προκήρυξη festgelegte Fachgebiete/Spezialisierungen** → offen, ob Accounting/AI-in-Healthcare im relevanten Call gelistet ist.
+- **Προκήρυξη 2027/28 wird ~Mitte Dezember 2026 veröffentlicht** (passt zum Promotionsbeginn Frühjahr 2027). Bewerbung dann, „sofern alle Bedingungen erfüllt sind".
+- Empfehlung: Newsletter abonnieren (Link in der E-Mail).
+
+**Eigene Recherche zur Zulassung (mehrdeutig, programmabhängig):**
+- ⚠️ RISIKO: Hauptprogramm „für Griech:innen" verlangt in der Standardformulierung **legalen Wohnsitz in Griechenland** – Maria wohnt in Deutschland.
+- 🟢 CHANCE: Diaspora-Regelung für Griech:innen, die **>15 Jahre dauerhaft im Ausland** leben, Schulabschluss und Studienabschluss im Ausland erworben haben und im Ausland promovieren. Maria erfüllt dieses Profil (Griechin, seit 1999 in Deutschland = 27 Jahre, Abitur + Bachelor in Deutschland, Promotion in Zypern).
+- FAZIT: Weder klares Ja noch Nein → **Watch-Item bis Dezember 2026**. Sobald die Προκήρυξη 2027/28 vorliegt, Eligibility-Abschnitt + Fächerliste prüfen (Haupt- vs. Diaspora-Pfad).
+
+**Kontakt:** scholarships@onassis.org · +30 210 3713052 · Αισχίνου 4, 105 58 Αθήνα · www.onassis.org
