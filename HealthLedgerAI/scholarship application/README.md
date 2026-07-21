@@ -105,3 +105,6 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 - ✅ Promotion: 36 Monate + ggf. 12 Monate Verlängerung (passt zum 3-Jahres-Plan). Beginn i. d. R. 1. Oktober.
 - Andere Förderungen sind anzugeben; keine Doppelförderung. Board entscheidet nach freiem Ermessen, kein Widerspruch.
 - **Offene Kernfrage vor allem anderen:** EUC-Promotion on-campus oder remote?
+
+- ✅ **GEKLÄRT (EUC-Website): EUC-Promotion Business Administration (PhD) ist „Mode of Study: On Campus", Campus Nikosia, 3 Jahre, Englisch.** → erfüllt die Onassis-Bedingung „full-time students studying on campus". Größte Hürde ausgeräumt. Da On-Campus-Präsenz in Nikosia ohnehin Relocation bedeutet, entfällt auch der Konflikt mit der Selbstständigkeit. Einzige verbleibende Onassis-Frage: Zulassung (Wohnsitz/Staatsangehörigkeit) → Announcement Dez. 2026.
+- ⚠️ **Intake prüfen:** EUC-Website zeigt „Next Intake: October 2026". Alle Unterlagen/Betreuerfragebogen gehen von **Frühjahr 2027** (Bewerbung bis 15.01.2027) aus. Mit Michalis/Prof. Kythreotis klären, welcher Intake gilt – wirkt sich auf alle Zeitpläne (Onassis-Start 1. Okt., KAS/Studienstiftung-Förderbeginn) aus.
