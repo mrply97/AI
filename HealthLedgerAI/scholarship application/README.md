@@ -96,3 +96,12 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 - FAZIT: Weder klares Ja noch Nein → **Watch-Item bis Dezember 2026**. Sobald die Προκήρυξη 2027/28 vorliegt, Eligibility-Abschnitt + Fächerliste prüfen (Haupt- vs. Diaspora-Pfad).
 
 **Kontakt:** scholarships@onassis.org · +30 210 3713052 · Αισχίνου 4, 105 58 Αθήνα · www.onassis.org
+
+### Onassis — Auswertung der Scholarships' Regulation 2023 (von Maria hochgeladen)
+
+- **Zulassung (Staatsangehörigkeit/Wohnsitz/Fächer/Alter) steht NICHT in der Regulation** – wird laut Dokument ausschließlich in der jährlichen **Announcement (Προκήρυξη)** festgelegt. → endgültige Eligibility-Klärung erst mit dem 2027/28-Call (Mitte Dez. 2026). Bestätigt, dass die Foundation die Frage zu Recht vertagt hat.
+- ⚠️ **„Full-time students studying on campus"**: Fernstudium wird nur bei „force majeure / public health" akzeptiert (und dann reduzierter Betrag). Marias EUC-Master ist Online; **entscheidend ist, ob die EUC-Promotion Präsenz in Nikosia erfordert oder remote möglich ist.** → mit Prof. Kythreotis klären. Möglicherweise größere Hürde als die Staatsangehörigkeit.
+- ⚠️ **Kein Vollzeit-Erwerb während des Stipendiums** (außer studienbezogene Uni-Tätigkeit). Maria finanziert sich bisher über ihre Selbstständigkeit → müsste aufgegeben werden.
+- ✅ Promotion: 36 Monate + ggf. 12 Monate Verlängerung (passt zum 3-Jahres-Plan). Beginn i. d. R. 1. Oktober.
+- Andere Förderungen sind anzugeben; keine Doppelförderung. Board entscheidet nach freiem Ermessen, kein Widerspruch.
+- **Offene Kernfrage vor allem anderen:** EUC-Promotion on-campus oder remote?
