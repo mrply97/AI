@@ -78,6 +78,10 @@
       "type": "http",
       "url": "https://api.pletor.ai/mcp"
     },
+    "apify": {
+      "type": "http",
+      "url": "https://mcp.apify.com"
+    },
     "markitdown": {
       "command": "markitdown-mcp",
       "args": []

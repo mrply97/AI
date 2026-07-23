@@ -20,3 +20,10 @@ unset _TF
 
 # Document auto-conversion happens via the PostToolUse/Write hook (auto-convert-doc.sh),
 # not here — scanning arbitrary binaries at session start is a parser-exploit surface.
+
+# Ensure ffmpeg is available (required by the re-walkthrough-pro skill for
+# stitching video clips). Ephemeral remote containers ship without it.
+if ! command -v ffmpeg &>/dev/null; then
+  (apt-get update && apt-get install -y --no-install-recommends ffmpeg) \
+    >/dev/null 2>&1 || true
+fi
