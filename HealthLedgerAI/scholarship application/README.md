@@ -108,3 +108,33 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 
 - ✅ **GEKLÄRT (EUC-Website): EUC-Promotion Business Administration (PhD) ist „Mode of Study: On Campus", Campus Nikosia, 3 Jahre, Englisch.** → erfüllt die Onassis-Bedingung „full-time students studying on campus". Größte Hürde ausgeräumt. Da On-Campus-Präsenz in Nikosia ohnehin Relocation bedeutet, entfällt auch der Konflikt mit der Selbstständigkeit. Einzige verbleibende Onassis-Frage: Zulassung (Wohnsitz/Staatsangehörigkeit) → Announcement Dez. 2026.
 - ⚠️ **Intake prüfen:** EUC-Website zeigt „Next Intake: October 2026". Alle Unterlagen/Betreuerfragebogen gehen von **Frühjahr 2027** (Bewerbung bis 15.01.2027) aus. Mit Michalis/Prof. Kythreotis klären, welcher Intake gilt – wirkt sich auf alle Zeitpläne (Onassis-Start 1. Okt., KAS/Studienstiftung-Förderbeginn) aus.
+
+## 8. Rosa-Luxemburg-Stiftung (Studienwerk) — Analyse, Stand 08/2026
+
+**Ergebnis: machbar und beim persönlichen Profil sogar bevorzugt — aber Zielrunde ist April/Mai 2027, nicht Oktober 2026.**
+
+### Passung
+- ✅ **Auslandspromotion in der EU zulässig**: Zulassung an staatlicher/staatlich anerkannter Hochschule in Deutschland, **einem EU-Staat** oder der Schweiz. Zypern/EUC qualifiziert (anders als Hans-Böckler).
+- ✅ Alle Fächer außer Medizin.
+- ✅ **Explizit bevorzugte Gruppen laut Imagefolder** („bei vergleichbaren Leistungen"): Frauen · Migrationshintergrund · nicht-akademischer Bildungshintergrund · Fachhochschul-Herkunft. **Maria erfüllt alle vier.**
+- ✅ Kriterium ist „politisches **bzw.** gesellschaftliches Engagement im Sinne der RLS" (Demokratie, soziale Gerechtigkeit, Solidarität, Ausgleich sozialer/geschlechts-/ethnisch bedingter Benachteiligung) — **gesellschaftliches Engagement genügt**, keine Parteimitgliedschaft nötig.
+- ⚠️ Bachelor 2,5; „sehr gute Studienleistungen" gefordert → Master-A-Bilanz (93–100/100) ist das tragende Argument.
+
+### Erforderliche Unterlagen (Recherchestand — auf rosalux.de gegenprüfen, Seite aus dieser Umgebung gesperrt)
+1. **Zulassung zur Promotion** (Bestätigung des Promotionsausschusses) — ❌ liegt erst nach EUC-Bewerbung (Frist 15.01.2027) vor
+2. Tabellarischer Lebenslauf (dt./engl.) — ✅ vorhanden
+3. **Abschlusszeugnis des Studiums** — ⚠️ Master erst 2027
+4. **Nachweise über gesellschaftliches Engagement**, mind. der letzten ~10 Monate (NGOs, Parteien, Gewerkschaften, Vereine, Hochschulgremien) — ⚠️ **schriftliche Bescheinigungen fehlen noch** (Terre des Hommes, Kirchengemeinde, HSNR-Arbeit mit internationalen Studierenden)
+5. **Gutachten des Doktorvaters** (formlos) — Prof. Kythreotis
+6. **Weiteres Gutachten einer Professorin/eines Professors** — ⚠️ **hier NICHT das Winnewisser-Gutachten verwenden** (nennt explizit „liberale Positionen im Geiste Ludwig Erhards") → besser Dr. Sauerhammer (rein fachlich)
+7. Alles als PDF im Portal; Selbstbewerbung; mehrstufiges Verfahren mit Gesprächen bei Vertrauensdozent*innen
+
+### Fristen
+- 01.04.–01.05.2026 (verstrichen)
+- Mitte August – **01.10.2026** → **nicht machbar** (Promotionszulassung + Abschlusszeugnis fehlen)
+- **Zielrunde: April/Mai 2027** — dann liegen EUC-Zulassung (Start Frühjahr 2027) und ggf. Masterzeugnis vor
+
+### Jetzt vorzubereiten
+- Schriftliche **Engagement-Bescheinigungen** einholen (Terre des Hommes, Kirchengemeinde, HSNR) — brauchen Vorlauf
+- RLS-spezifische **Selbstdarstellung** aus der eigenen Biografie (nicht aus dem KAS-Schreiben übernehmen)
+- Parallelanträge überall angeben; nur ein Begabtenförderungswerk kann fördern
