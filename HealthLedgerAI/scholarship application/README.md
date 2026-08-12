@@ -138,3 +138,11 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 - Schriftliche **Engagement-Bescheinigungen** einholen (Terre des Hommes, Kirchengemeinde, HSNR) — brauchen Vorlauf
 - RLS-spezifische **Selbstdarstellung** aus der eigenen Biografie (nicht aus dem KAS-Schreiben übernehmen)
 - Parallelanträge überall angeben; nur ein Begabtenförderungswerk kann fördern
+
+## 9. EUC-eigenes Promotionsstipendium (Financial Aid Office) — Stand 08/2026
+
+- **Intake bestätigt (phdportal/EUC): Bewerbung Januar 2027, Studienbeginn Februar 2027, Nikosia, 3 Jahre, Englisch, Studiengebühr 4.800 EUR/Jahr.** → Die frühere Unklarheit („Next Intake October 2026") ist damit ausgeräumt; alle Unterlagen mit Frühjahr 2027 sind korrekt.
+- EUC vergibt **pro Semester eine begrenzte Zahl von „full tuition PhD scholarships"** für alle Promotionsprogramme (Kontakt laut Programmseite: Office of Admissions; Financial Aid Office: Andreas Kounoupis, A.Kounoupis@euc.ac.cy, +357-22713086; Sotia Agathocleous, S.Agathocleous@euc.ac.cy, +357-22713100).
+- ⚠️ EUC-Regel: Bei Bewerbung um zwei oder mehr EUC-Stipendien zählt **nur das mit dem höchsten Prozentsatz**.
+- Anfrage-E-Mail: `Email_EUC_PhD_Tuition_Scholarship_Kounoupis.md` (Anhang: EUC-Notenübersicht Sem. 1+2).
+- ⚠️ **Meldepflicht beachten:** Ein EUC-Vollstipendium (Studiengebührenerlass) ist gegenüber KAS und Studienstiftung anzugeben; umgekehrt ist die EUC über Zusagen der Stiftungen zu informieren.
