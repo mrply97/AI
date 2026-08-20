@@ -47,14 +47,14 @@ Wahrheitsgemäß auswählen (z. B. „Internetrecherche“ / „Stipendiendatenb
 ## Weitere Mitteilungen (max. 1000 Zeichen)
 
 ```
-Zur Promotionszulassung: Meine Promotion findet an der European University Cyprus in Nikosia statt – einer staatlich anerkannten Universität in einem EU-Mitgliedstaat. Da diese Hochschule im Auswahlfeld nicht gelistet ist, musste ich „KEINE UNI/FH" wählen. Betreuer ist Prof. Alexios Kythreotis; das Zulassungsverfahren läuft, die formale Bewerbung erfolgt im Januar 2027 für den Studienbeginn im Februar 2027. Eine Bestätigung meines Betreuers reiche ich nach.
+Zur Promotionszulassung: Meine Promotion findet an der European University Cyprus in Nikosia statt – einer staatlich anerkannten Universität in einem EU-Mitgliedstaat. Da sie im Auswahlfeld nicht gelistet ist, musste ich „KEINE UNI/FH" wählen. Mein Masterstudium (18 Monate) schließe ich Ende Januar 2027 ab; die Promotionsbewerbung erfolgt im Januar 2027, der Studienbeginn im Februar 2027. Betreuer ist Prof. Alexios Kythreotis; eine Bestätigung von ihm reiche ich nach.
 
-Ich gehöre mehreren der von der Stiftung genannten Zielgruppen an: Frau, Erstakademikerin (beide Eltern ohne Hochschulabschluss), Migrationsgeschichte (1997 in Thessaloniki geboren, seit 1999 in Deutschland) und Fachhochschulabsolventin (Hochschule Niederrhein). Bachelor- und laufendes Masterstudium habe ich vollständig aus eigenen Mitteln finanziert – durch meine seit 2018 ausgeübte Selbstständigkeit.
+Ich gehöre mehreren der von der Stiftung genannten Zielgruppen an: Frau, Erstakademikerin (beide Eltern ohne Hochschulabschluss), Migrationsgeschichte (1997 in Thessaloniki geboren, seit 1999 in Deutschland) und Fachhochschulabsolventin (Hochschule Niederrhein). Bachelor- und Masterstudium habe ich vollständig aus eigenen Mitteln finanziert – durch meine seit 2018 ausgeübte Selbstständigkeit.
 
 Während der Promotion möchte ich Erstakademikerinnen und Studierende mit Migrationsgeschichte als Mentorin begleiten.
 ```
 
-*(987 Zeichen)*
+*(988 Zeichen)*
 
 ## Checkboxen
 
@@ -85,9 +85,9 @@ Während der Promotion möchte ich Erstakademikerinnen und Studierende mit Migra
 - Regelstudienzeit: `6` ⚠️ **in der Prüfungsordnung der HS Niederrhein prüfen — 6 oder 7 Semester**
 
 **Eintrag 2 — Master (geplanter Abschluss)**
-- von: `01.10.2025` · bis: `30.09.2027` (voraussichtlich)
+- von: `01.10.2025` · bis: `31.01.2027` (Ende des 3. Semesters; 18-Monats-Programm)
 - Studienfach: Data Analytics in Accounting and Finance (bzw. „Wirtschaftswissenschaften" / „andere Fachrichtung")
-- Abschluss: Master of Science (geplant)
+- Abschluss: Master of Science (geplant, Abschluss Ende Januar 2027)
 - Abschlussnote: `laufend, Durchschnitt bisher 94,7/100 (A)` — falls nur Zahlen erlaubt: `1,0` **nicht** eintragen, sondern Feld mit dem Notenschnitt füllen und im Freitext erläutern
 - Regelstudienzeit: `3` (18 Monate)
 
