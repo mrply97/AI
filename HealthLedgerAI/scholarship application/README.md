@@ -146,3 +146,21 @@ Die vorherige Version dieser README prüfte die Unterlagen gegen die Anforderung
 - ⚠️ EUC-Regel: Bei Bewerbung um zwei oder mehr EUC-Stipendien zählt **nur das mit dem höchsten Prozentsatz**.
 - Anfrage-E-Mail: `Email_EUC_PhD_Tuition_Scholarship_Kounoupis.md` (Anhang: EUC-Notenübersicht Sem. 1+2).
 - ⚠️ **Meldepflicht beachten:** Ein EUC-Vollstipendium (Studiengebührenerlass) ist gegenüber KAS und Studienstiftung anzugeben; umgekehrt ist die EUC über Zusagen der Stiftungen zu informieren.
+
+### RLS — Entscheidung: Bewerbung zur Frist 01.10.2026 (Stand 08/2026)
+
+Maria bewirbt sich in der laufenden Runde (Portal schließt 01.10.2026), nicht erst April/Mai 2027.
+
+**Offene Formalie:** Zulassung zur Promotion + Abschlusszeugnis liegen bis zur Frist nicht vor.
+→ Direkt bei der RLS klären, ob eine **Betreuer-Bestätigung über das laufende Zulassungsverfahren** genügt
+(Entwurf liegt vor: `DRAFT_Confirmation_Supervisor_Kythreotis.docx`).
+
+**Kritischer Pfad (kommt von Dritten, daher sofort anfragen):**
+1. Gutachten Prof. Kythreotis (Pflicht, Doktorvater) + unterschriebene Zulassungs-Bestätigung
+2. Zweites Gutachten Dr. Sauerhammer (NICHT Winnewisser — Erhard-Formulierung)
+3. Engagement-Bescheinigung Terre des Hommes (mind. letzte ~10 Monate)
+4. Engagement-Bescheinigung Kirchengemeinde
+5. Optional: HSNR-Bestätigung (internationale Studiengänge)
+
+Anfragetexte + Zeitplan: `RLS_Anfragen_Gutachten_und_Nachweise.md`
+Portal-Antworten: `RLS_Portal_Antworten_Motivation.md`
