@@ -18,7 +18,21 @@ Ich möchte offen sein: Ich komme nicht aus einem parteipolitisch geprägten Elt
 
 ## Interesse an Themen/Veranstaltungen der Stiftung* (max. 2000 Zeichen)
 
-**⚠️ Dieses Feld kann ich nicht für dich erfinden.** Gefragt ist, mit welchen Themen/Veranstaltungen der RLS du dich **bereits** auseinandergesetzt hast. Bis April/Mai 2027 ist Zeit, das echt zu machen: auf rosalux.de Studien zu Gesundheitspolitik/Kommerzialisierung des Gesundheitswesens, Digitalisierung und Bildungsgerechtigkeit lesen und mindestens eine (Online-)Veranstaltung besuchen. Danach hier konkret benennen: Titel, Datum, was du mitgenommen hast, und wie es sich zu deiner Arbeit verhält.
+```
+Ja. Besonders auseinandergesetzt habe ich mich mit der Analyse „Platzt die KI-Blase? Wie die Branche von der perfekten Legende zum Pulverfass mutierte" von Frédéric Lordon (rosalux.de, 29.07.2026) – der deutschen Erstveröffentlichung eines Textes aus der New Left Review.
+
+Der Text trifft mein Fachgebiet unmittelbar. Lordon hält fest, dass der rechtliche Status und vor allem die bilanzielle Erfassung der milliardenschweren KI-„Verpflichtungen" höchst unklar sind, und zeigt am Konstrukt „Big Sky", wie Verbindlichkeiten über Leasing außerhalb der Bilanz gehalten werden – bei geschätzt 1,8 Billionen Dollar außerbilanzieller Verpflichtungen der Hyperscaler. Das ist eine Rechnungslegungsfrage mit systemischer Sprengkraft. Ich belege im Master das Modul Advanced International Financial Reporting und promoviere zu KI-gestützter Rechnungslegung im Gesundheitswesen; dass fehlende bilanzielle Transparenz hier zum Risiko für das gesamte Finanzsystem wird, war für mich der stärkste Punkt des Textes.
+
+Zwei Aspekte haben meine eigene Arbeit verändert. Erstens beschreibt Lordon, wie Finanzabteilungen mit KI-Kosten konfrontiert werden, die sich erst im Nachhinein beziffern lassen, während die Produktivitätsgewinne unbeständig und undurchsichtig bleiben. Genau diese Lücke will meine Dissertation empirisch schließen: Sie misst, ob KI in der Krankenhausbuchhaltung tatsächlich Fehler reduziert und Kosten senkt. Zweitens der Wechsel von Pauschal- auf tokenbasierte Abrechnung: Krankenhäuser sind typische Organisationen, die unter Pauschalversprechen einsteigen und später nutzungsabhängige Kosten tragen – ein Risiko, das ich ohne diesen Text nicht als eigene Variable mitgedacht hätte.
+
+Daraus folgt die Frage, die mich seither beschäftigt: Was bedeutet es für ein solidarisch finanziertes Gesundheitswesen, wenn seine Verwaltung von einer Infrastruktur abhängig wird, deren Finanzierung derart fragil ist? Die Arbeit der Stiftung zu Digitalisierung und Gesundheitspolitik verfolge ich weiter.
+```
+
+*(1997 Zeichen)*
+
+**Grundlage:** Frédéric Lordon, Platzt die KI-Blase?, rosalux.de, Analyse vom 29.07.2026, https://www.rosalux.de/news/id/55075/platzt-die-ki-blase (dt. Erstveroeffentlichung von Awaiting the Crash?, New Left Review).
+
+**Hinweis:** Weitere gelesene Texte oder besuchte (Online-)Veranstaltungen hier ergaenzen. Falls du Lordons Schlussfolgerungen teilweise nicht teilst, benenne das ruhig - eigenstaendiges Urteil zaehlt hier mehr als Zustimmung.
 
 ## Wie haben Sie von der RLS erfahren?* (Dropdown)
 
