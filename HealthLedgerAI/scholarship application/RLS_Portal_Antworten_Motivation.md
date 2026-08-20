@@ -104,3 +104,70 @@ bsmsenglish@gmail.com · +49 170 2988348
 ⚠️ **Vorher fragen, ob er eine Hochschul-E-Mail-Adresse angeben möchte** — Stiftungen prüfen Gutachtende, eine institutionelle Adresse wirkt belastbarer als eine private.
 
 ⚠️ Beide **vorab um Zustimmung bitten**, bevor du sie einträgst — das Portal versendet in der Regel automatisch eine Aufforderung.
+
+---
+
+# Abschnitt BERUFE — Feldwerte
+
+## Berufswunsch und Perspektive* (max. 500 Zeichen)
+
+```
+Ich möchte in der Wissenschaft bleiben und an der Schnittstelle von Rechnungswesen, KI und Gesundheitspolitik forschen.
+
+Schritte: Masterabschluss Januar 2027, ab Februar 2027 Promotion an der EUC. Jahr 1: Literaturarbeit, Fragebogen, Datenzugang zu den Partnerkliniken. Jahr 2: Erhebung, SEM-Auswertung, Konferenzen. Jahr 3: Fertigstellung, zwei Fachartikel, Verteidigung.
+
+Danach strebe ich eine Postdoc-Stelle an und will meine Ergebnisse in die gesundheitspolitische Debatte tragen.
+```
+
+*(486 Zeichen)*
+
+## Interessen, Hobbies (max. 500 Zeichen)
+
+```
+Klavier – seit 2025 erfülle ich mir einen Kindheitswunsch, der aus finanziellen Gründen lange nicht möglich war, finanziert aus eigenen Ersparnissen.
+
+Sprachen und Literatur: Griechisch und Deutsch als Muttersprachen, Englisch, Französisch; ich lese Kahneman und Kazantzakis mit gleicher Neugier. Kahnemans Arbeiten zu kognitiver Überlastung waren der Anlass, Python zu lernen.
+
+Außerdem reise ich gern und mache regelmäßig Pilates.
+```
+
+*(432 Zeichen)*
+
+## Tätigkeiten — 4 Einträge
+
+| von – bis | Arbeitgeber | Funktion |
+|---|---|---|
+| 08/2018 – heute | Selbstständig; Auftraggeber: Management Circle AG, seit 2022 auch Fachseminare von Fürstenberg und Verlag Dr. Otto Schmidt | Seminarassistentin (Organisation, Technik, Dolmetschen GR–DE) |
+| 01/2025 – 05/2025 | Fachseminare von Fürstenberg GmbH & Co. KG, Köln | Mitarbeiterin Seminarorganisation (Festanstellung) |
+| 03/2018 – 04/2019 | Capita Customer Service GmbH, Aachen | Kundenberaterin |
+| 02/2016 – 02/2018 | Offergeld Logistik, Aldenhoven (über ZAQUENSIS GmbH, Düren) | Lagerhilfskraft – zur Selbstfinanzierung der Einbürgerung |
+
+## Praktika — 1 Eintrag
+
+- 07/2024 – 11/2024 · Deutsche Telekom AG, Bonn – Geschäftskundenmarketing, DIGITAL X · Praktikantin (freiwilliges Praktikum)
+
+## Auslandsaufenthalte — 2 Einträge
+
+- 24.06.2026 – 21.08.2026 · Thessaloniki, Griechenland · Forschungsbezogene Hospitanz im EU-Programm Erasmus for Young Entrepreneurs (RLT264649); Vorbereitung des griechischen Forschungskontexts
+- Herbst 2026 (geplant) · Nikosia, Zypern · Vorbereitender Aufenthalt an der EUC vor Promotionsbeginn
+
+## Sprachkenntnisse — 4 Einträge
+
+| Sprache | Niveau | Nachweis |
+|---|---|---|
+| Griechisch | Muttersprache | – |
+| Deutsch | Muttersprache | Abitur 2015 |
+| Englisch | verhandlungssicher (C1+) | Abitur B2/C1; Masterstudium vollständig auf Englisch |
+| Französisch | Grundkenntnisse (A2) | DELF A2 (2011) |
+
+## Stipendien — 1 Eintrag
+
+- 06/2026 – 08/2026 · Erasmus for Young Entrepreneurs (EU-Mobilitätsprogramm), Fördernummer RLT264649
+
+## Nicht ausfüllen (0 Einträge)
+
+- **Abgeschlossene Berufsausbildung** — keine (Abitur → Erwerbstätigkeit → Studium)
+- **Lehrtätigkeiten** — keine
+- **Weiterbildungen** — nur eintragen, wenn ein Zertifikat vorliegt
+- **Zivil-, Wehr-, Freiwilligendienst** — ⚠️ **leer lassen.** Gemeint ist ein formeller Dienst (FSJ/BFD/Zivildienst). Terre des Hommes und die Gemeinde sind Ehrenamt und gehören in den Engagement-Abschnitt.
+- **Preise** — keine (die Note 1,0 der Bachelorarbeit ist eine Note, kein Preis)
