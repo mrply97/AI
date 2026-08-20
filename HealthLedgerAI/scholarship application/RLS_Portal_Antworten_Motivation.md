@@ -47,16 +47,60 @@ Wahrheitsgemäß auswählen (z. B. „Internetrecherche“ / „Stipendiendatenb
 ## Weitere Mitteilungen (max. 1000 Zeichen)
 
 ```
-Ich bewerbe mich als Angehörige mehrerer der von der Stiftung genannten Zielgruppen: als Frau, als Erstakademikerin (beide Eltern ohne Hochschulabschluss), mit Migrationsgeschichte (1997 in Thessaloniki geboren, seit 1999 in Deutschland) und als Absolventin einer Fachhochschule (Hochschule Niederrhein).
+Zur Promotionszulassung: Meine Promotion findet an der European University Cyprus in Nikosia statt – einer staatlich anerkannten Universität in einem EU-Mitgliedstaat. Da diese Hochschule im Auswahlfeld nicht gelistet ist, musste ich „KEINE UNI/FH" wählen. Betreuer ist Prof. Alexios Kythreotis; das Zulassungsverfahren läuft, die formale Bewerbung erfolgt im Januar 2027 für den Studienbeginn im Februar 2027. Eine Bestätigung meines Betreuers reiche ich nach.
 
-Mein Bachelorstudium und mein laufendes Masterstudium habe ich vollständig aus eigenen Mitteln finanziert – durch meine seit 2018 ausgeübte selbstständige Tätigkeit als Seminarassistentin. Die Kosten meiner Einbürgerung habe ich nach dem Abitur durch Arbeit in der Lagerlogistik selbst getragen.
+Ich gehöre mehreren der von der Stiftung genannten Zielgruppen an: Frau, Erstakademikerin (beide Eltern ohne Hochschulabschluss), Migrationsgeschichte (1997 in Thessaloniki geboren, seit 1999 in Deutschland) und Fachhochschulabsolventin (Hochschule Niederrhein). Bachelor- und laufendes Masterstudium habe ich vollständig aus eigenen Mitteln finanziert – durch meine seit 2018 ausgeübte Selbstständigkeit.
 
-Meine Erwartung an die Stiftung: Ich möchte die ideelle Förderung nicht als Beiwerk verstehen, sondern als den Teil, der mich politisch bildet. Während der Promotion möchte ich Erstakademikerinnen und Studierende mit Migrationsgeschichte als Mentorin begleiten.
+Während der Promotion möchte ich Erstakademikerinnen und Studierende mit Migrationsgeschichte als Mentorin begleiten.
 ```
 
-*(864 Zeichen)*
+*(987 Zeichen)*
 
 ## Checkboxen
 
 - **Zweite Bewerbung:** ☐ nicht ankreuzen (erste Bewerbung bei der RLS)
 - **Ich wurde bereits durch die RLS gefördert:** ☐ nicht ankreuzen
+
+---
+
+# Abschnitt STAMMDATEN / PROMOTION — Feldwerte
+
+| Feld | Eintrag |
+|---|---|
+| Hochschulzugangsberechtigung | allgemeine Hochschulreife ✔ (bereits gesetzt) |
+| Derzeit bin ich | Student*in ✔ |
+| Promotionsfach | Business Administration ✔ |
+| **Thema Promotion** | `AI-Driven Transformation of Accounting Processes in Healthcare Organizations: Error Reduction, Process Control, and Cost Efficiency – Evidence from Cyprus and Greece` (falls das Feld zu kurz ist: `KI-gestützte Transformation von Rechnungslegungsprozessen in Krankenhäusern – Evidenz aus Zypern und Griechenland`) |
+| **Beginn Promotion** | `01.02.2027` (EUC-Intake Februar 2027) |
+| Promotionszulassung an Hochschule | KEINE UNI/FH ✔ — korrekt, da EUC nicht gelistet; **Erklärung steht in „Weitere Mitteilungen"** |
+| **Preförderung** | keine Einträge (nie zuvor gefördert) |
+
+## Bisherige Hochschulabschlüsse — Einträge
+
+**Eintrag 1 — Bachelor (abgeschlossen)**
+- von: `01.09.2019` · bis: `29.10.2024`
+- Studienfach: Betriebswirtschaftslehre (bzw. nächstliegender Listeneintrag, z. B. „Wirtschaftswissenschaften")
+- Abschluss: Bachelor of Arts
+- Abschlussnote: `2,5`
+- Regelstudienzeit: `6` ⚠️ **in der Prüfungsordnung der HS Niederrhein prüfen — 6 oder 7 Semester**
+
+**Eintrag 2 — Master (geplanter Abschluss)**
+- von: `01.10.2025` · bis: `30.09.2027` (voraussichtlich)
+- Studienfach: Data Analytics in Accounting and Finance (bzw. „Wirtschaftswissenschaften" / „andere Fachrichtung")
+- Abschluss: Master of Science (geplant)
+- Abschlussnote: `laufend, Durchschnitt bisher 94,7/100 (A)` — falls nur Zahlen erlaubt: `1,0` **nicht** eintragen, sondern Feld mit dem Notenschnitt füllen und im Freitext erläutern
+- Regelstudienzeit: `3` (18 Monate)
+
+*FOM Aachen (2017–2019) hier nicht eintragen — kein Abschluss erworben; steht im Lebenslauf.*
+
+## Gutachter*innen — Einträge (Pflicht)
+
+**1. Prof. Alexios Kythreotis** (Doktorvater)
+European University Cyprus, School of Business Administration
+a.kythreotis@euc.ac.cy · +357 22713000
+
+**2. Dr. Björn Sauerhammer** (Betreuer der Bachelorarbeit)
+bsmsenglish@gmail.com · +49 170 2988348
+⚠️ **Vorher fragen, ob er eine Hochschul-E-Mail-Adresse angeben möchte** — Stiftungen prüfen Gutachtende, eine institutionelle Adresse wirkt belastbarer als eine private.
+
+⚠️ Beide **vorab um Zustimmung bitten**, bevor du sie einträgst — das Portal versendet in der Regel automatisch eine Aufforderung.
