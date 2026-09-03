@@ -164,3 +164,13 @@ Maria bewirbt sich in der laufenden Runde (Portal schließt 01.10.2026), nicht e
 
 Anfragetexte + Zeitplan: `RLS_Anfragen_Gutachten_und_Nachweise.md`
 Portal-Antworten: `RLS_Portal_Antworten_Motivation.md`
+
+## 10. Zyprische Fördermöglichkeiten — Analyse, Stand 09/2026
+
+Quelle: Übersichtsseite des zyprischen Bildungsministeriums (`originale/Cyprus_MoESY_Scholarships_Overview_2026-09.pdf`) + Websuche (leventisscholarships.org, gov.cy und cyscholarships.gov.cy waren aus dieser Umgebung gesperrt → Angaben gegenprüfen).
+
+| Option | Fit | Befund |
+|---|---|---|
+| **A. G. Leventis Foundation** (Zypern-Büro: 40 Gladstone Street, 1095 Nicosia, +357 22 667706, info@leventis.org.cy) | 🟢 **prüfenswert** | Fördert Postgraduierten- **und Doktorandenstudien**; keine Fachbeschränkung; **Bewerbungsfenster jährlich 1.–31. März** (→ März 2027 für 2027/28); Teilstipendium (Höhe je nach Studienland), bis max. 3 Jahre kumulativ; Auswahl nach akademischer Leistung **und wirtschaftlicher Situation** (Marias Selbstfinanzierung/Erstakademikerin passt); Erfolgsquote ca. 1 von 8. Geforderte Unterlagen (CV, Schulabschluss, Transcripts, Ausweis, Referenzschreiben, Forschungsprojekt) **liegen alle bereits vor**. ⚠️ **Offen: Staatsangehörigkeits-/Wohnsitzbedingung** (Griechin mit Wohnsitz Deutschland, Promotion in Zypern) → Anfrage-E-Mail: `Email_Leventis_Eligibility_Inquiry_GR.md`. |
+| **Cyprus State Scholarship Foundation (ΙΚΥΚ)** | 🔴 **entfällt** | PhD (3. Zyklus) bis 4.000 €/Jahr, private zyprische Hochschulen grundsätzlich möglich — **aber EU-Bürger:innen nur bei ≥30 Monaten durchgehendem Wohnsitz in Zypern in den 3 Jahren vor Studienbeginn** und Wohnsitz in Zypern zum Bewerbungszeitpunkt. Maria wohnt in Deutschland → nicht erfüllbar bis Feb. 2027. (Wohnsitzdauer ggf. verifizieren; Grundprinzip „Wohnsitz Zypern" steht fest.) |
+| Übrige Einträge der Ministeriumsseite (College of Europe, Schweizer Exzellenzstipendien, Mailand, Thailand, Libanon) | 🔴 irrelevant | Andere Studienländer oder andere Zielgruppen. |
