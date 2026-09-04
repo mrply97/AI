@@ -477,6 +477,6 @@ Quelle: `originale/Leventis_Antwort_Papazoglou_2026-09.pdf`, Antwort von **Ελ�
 
 **Wertung.** Bei Studiengebühren von 4.320 € pro Jahr nach dem 10-%-Alumni-Nachlass deckt eine Chorigia von 3.000 € rund **69 % eines Studienjahres**. Über drei Jahre wären das bis zu **9.000 € von 12.960 €** — die mit Abstand größte konkret erreichbare Einzelposition im gesamten Portfolio, deutlich mehr als der Alumni-Nachlass. Damit rückt Leventis von „prüfenswert" auf **Rang A** vor.
 
-**Offen und materiell:** Ob die Chorigia für 2028/29 und 2029/30 **verlängerbar** ist. Einmalig 3.000 € oder dreimal 3.000 € ist ein Unterschied um den Faktor drei. Frau Papazoglou hat ausdrücklich zu Rückfragen eingeladen; Entwurf: `Email_Leventis_Nachfrage_Verlaengerung_GR.md`.
+**Offen und materiell:** Ob die Chorigia für 2028/29 und 2029/30 **verlängerbar** ist. Einmalig 3.000 € oder dreimal 3.000 € ist ein Unterschied um den Faktor drei. Frau Papazoglou hat ausdrücklich zu Rückfragen eingeladen; die Nachfrage wurde von Maria am **04.09.2026 gesendet** (`Email_Leventis_Nachfrage_Verlaengerung_GR.md`), Antwort steht aus.
 
 **Zu beachten bei der Bewerbung im März 2027:** Die Auswahl erfolgt nach Leistung **und wirtschaftlicher Lage**. Marias vollständige Eigenfinanzierung und ihr Status als Erstakademikerin sind daher nicht nur Kontext, sondern **bewertungsrelevant** und sollten im Antrag klar dargestellt werden.
