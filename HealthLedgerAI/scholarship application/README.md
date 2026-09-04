@@ -416,3 +416,28 @@ Wortlaut: „Λογικά θα έρθει πρόσκληση για υποβολ
 
 - **Der Zeitpunkt der Ausschreibung.** Er weiß ihn nicht. Die Fall-2026-Runde endete am 04.09.2026; falls es nur Herbstrunden gibt, käme die nächste um August/September 2027 — also **nach** Marias Promotionsbeginn im Februar 2027, was mit der Bedingung „exclusively for new doctoral students" kollidieren könnte. Diese Frage steht bereits im Antwortentwurf an das Zulassungsbüro und sollte dort nachgehalten werden.
 - **Keine weitere Aktion gegenüber Kythreotis nötig.** Er meldet sich. Bei der ohnehin anstehenden Gutachtenanfrage für die RLS kann Maria den Punkt beiläufig mitführen.
+
+## 19. Rosa-Luxemburg-Stiftung: von Maria abgesagt — 04.09.2026
+
+**Maria hat entschieden, sich nicht bei der Rosa-Luxemburg-Stiftung zu bewerben.** Die Schiene ist geschlossen; weder die Herbstrunde 2026 noch die Frühjahrsrunde 2027 werden verfolgt.
+
+**Gelöschte Arbeitsdateien:**
+
+- `Selbstdarstellung_RLS_Polychroniadou_ENTWURF.docx`
+- `RLS_Portal_Antworten_Motivation.md`
+- `RLS_Anfragen_Gutachten_und_Nachweise.md`
+- `Email_RLS_Anfrage_Auslandspromotion.md`
+
+Die Dateien sind über die Git-Historie weiterhin abrufbar, falls die Entscheidung je revidiert werden sollte (Commit vor dieser Löschung: `82f83d1`).
+
+**Die Abschnitte 14 bis 18 bleiben unverändert stehen**, weil dort Erkenntnisse dokumentiert sind, die über die RLS hinaus gelten — insbesondere die Regeln der Werke zur **Auslandspromotion** und zur **Erstattung von Studiengebühren** (Abschnitt 14) sowie die Klärung der **Staatsangehörigkeit** (Abschnitt 17), die für KAS und Studienstiftung unmittelbar relevant ist.
+
+**Verbleibende Förderschienen:** KAS (eingereicht), Studienstiftung (Papierpaket fertig), EUC-Zulassung (Frist 15.01.2027), EUC-Stipendienthema über Prof. Kythreotis (er meldet sich, sobald die Ausschreibung kommt), Leventis (Fenster 01.–31.03.2027), Onassis (Announcement Dezember 2026). Zurückgestellt: RIF „PhD in Industry".
+
+## 20. Agenda Cyprus Summit — Einladung an Prof. Kythreotis
+
+Maria möchte Prof. Kythreotis fragen, ob er ebenfalls zum **Agenda Cyprus Summit am 14.10.2026** kommt und ob sie gemeinsam hingehen. Ihre Universität unterstützt die Veranstaltung, sie erhält eine kostenlose Eintrittskarte. Ziel ist Begleitung und fachliche Orientierung vor Ort — welche Themen und Vorträge für die Dissertation relevant sind.
+
+Korrigierte griechische Fassung in zwei Registern (förmlich mit „σας", vertraut mit „σου") samt Fehlerübersicht: `Email_Kythreotis_Agenda_Cyprus_Summit_GR.md`.
+
+**Einordnung:** sinnvoller Schritt. Kythreotis ist Deputy Dean und kennt die zyprische Wirtschafts- und Politiklandschaft; in seiner Begleitung wären die in Abschnitt 12 genannten Gespräche — insbesondere mit Vize-Minister Damianou und Komiteevorsitzendem Kokkinos — erheblich leichter zu führen als allein.
