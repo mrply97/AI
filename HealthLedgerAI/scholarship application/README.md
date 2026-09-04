@@ -477,7 +477,7 @@ Quelle: `originale/Leventis_Antwort_Papazoglou_2026-09.pdf`, Antwort von **Ελ�
 
 **Wertung.** Bei Studiengebühren von 4.320 € pro Jahr nach dem 10-%-Alumni-Nachlass deckt eine Chorigia von 3.000 € rund **69 % eines Studienjahres**. Über drei Jahre wären das bis zu **9.000 € von 12.960 €** — die mit Abstand größte konkret erreichbare Einzelposition im gesamten Portfolio, deutlich mehr als der Alumni-Nachlass. Damit rückt Leventis von „prüfenswert" auf **Rang A** vor.
 
-**Offen und materiell:** Ob die Chorigia für 2028/29 und 2029/30 **verlängerbar** ist. Einmalig 3.000 € oder dreimal 3.000 € ist ein Unterschied um den Faktor drei. Frau Papazoglou hat ausdrücklich zu Rückfragen eingeladen; die Nachfrage wurde von Maria am **04.09.2026 gesendet** (`Email_Leventis_Nachfrage_Verlaengerung_GR.md`), Antwort steht aus.
+**Verlängerbarkeit: geklärt und bestätigt** — siehe Abschnitt 22.3.
 
 **Zu beachten bei der Bewerbung im März 2027:** Die Auswahl erfolgt nach Leistung **und wirtschaftlicher Lage**. Marias vollständige Eigenfinanzierung und ihr Status als Erstakademikerin sind daher nicht nur Kontext, sondern **bewertungsrelevant** und sollten im Antrag klar dargestellt werden.
 
@@ -492,3 +492,33 @@ Quelle: `originale/Leventis_Antwort_Papazoglou_2026-09.pdf`, Antwort von **Ελ�
 | 31.03.2027 | **Letzter Tag der Bewerbung** | 14, 7 und 2 Tage vorher |
 
 Jeder Termin enthält im Beschreibungsfeld das Portal (www.leventisscholarships.org), Fenster und Bezugsjahr, die Förderhöhe von bis zu 3.000 € jährlich, den Hinweis auf die fehlende Rückwirkung, die Kontaktdaten von Eleni Papazoglou und die Erinnerung, Eigenfinanzierung und Erstakademikerin-Status darzustellen, weil die wirtschaftliche Lage mitbewertet wird.
+
+### 22.3 Verlängerung bestätigt — bis zu 9.000 € insgesamt
+
+Quelle: `originale/Leventis_Antwort_Verlaengerung_2026-09-04.png`. Marias Nachfrage ging am 04.09.2026 um 11:30 raus, die Antwort von **Ελένη Παπάζογλου** kam am selben Tag.
+
+**Zusage:** Bei Auswahl kann Maria **im März 2028 und im März 2029 einen Verlängerungsantrag** stellen. Damit ist die Förderung auf **drei Jahre** angelegt: Erstantrag März 2027 plus zwei Verlängerungen — **bis zu 3 × 3.000 € = 9.000 €**. Gegen Studiengebühren von 12.960 € nach dem Alumni-Nachlass entspricht das rund **70 % der gesamten Gebühren**. Leventis ist damit die **wertvollste konkret erreichbare Position im gesamten Portfolio**.
+
+**Bedingungen der Verlängerung:**
+
+1. Fortsetzung **desselben Studienprogramms**.
+2. **Zufriedenstellende akademische Leistung.**
+3. Einreichung des Verlängerungsantrags **innerhalb der Frist**, mit allen geforderten Unterlagen. Unterlagenliste auf www.leventisscholarships.org.
+
+**Kleine Unstimmigkeit in der Antwort, ohne praktische Folgen:** Die Mail ordnet die Verlängerungsanträge vom März 2028 und März 2029 den akademischen Jahren 2027–2028 und 2028–2029 zu. Nach der Logik der ersten Antwort (Antrag März 2027 → Jahr 2027/28) müssten es die Jahre 2028/29 und 2029/30 sein. Vermutlich ein Verschreiber; entscheidend ist die Substanz — **zwei Verlängerungen, drei Förderjahre**. Bei der Antragstellung im März 2027 beiläufig verifizieren.
+
+### 22.4 Kalenderdatei aktualisiert
+
+`Leventis_Bewerbung_2027.ics` enthält jetzt **sieben** ganztägige Termine. Wer die frühere Fassung bereits importiert hat, kann die Datei erneut öffnen — die UIDs sind unverändert, die drei ursprünglichen Termine werden aktualisiert statt verdoppelt.
+
+| Datum | Termin | Erinnerungen |
+|---|---|---|
+| 15.02.2027 | Bewerbung vorbereiten | 1 Tag |
+| 01.03.2027 | Bewerbungsfenster öffnet | 1 Tag |
+| 31.03.2027 | **Letzter Tag Erstbewerbung** | 14, 7, 2 Tage |
+| 01.03.2028 | Verlängerung beantragen | 14, 1 Tag |
+| 31.03.2028 | **Letzter Tag Verlängerung** | 7, 2 Tage |
+| 01.03.2029 | Verlängerung beantragen | 14, 1 Tag |
+| 31.03.2029 | **Letzter Tag Verlängerung** | 7, 2 Tage |
+
+Die Verlängerungstermine führen die drei Bedingungen im Beschreibungsfeld mit.
