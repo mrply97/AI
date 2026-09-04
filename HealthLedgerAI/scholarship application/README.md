@@ -290,3 +290,40 @@ Ausgeschriebene Themen für Fall 2026:
 - **Einziger echter Hebel: Prof. Kythreotis.** Nur ein Fakultätsmitglied kann ein Thema in die Ausschreibung bringen. Nachricht auf Griechisch (informell, mit deutscher Übersetzung): `Email_Kythreotis_EUC_Stipendienthema_GR.md`. **Jetzt senden**, nicht im Dezember — eine etwaige Frühjahrsfrist läge Anfang Januar 2027 und damit zeitgleich mit der Promotionsbewerbung am 15.01.2027.
 - **Antwort an das Zulassungsbüro** mit fünf Fragen (Herbst-only?, Nachrücken in Fall 2027?, Herkunft der Themen und Einreichfrist, Mechanik des Nachlasses, exakte Gebühren): `Email_EUC_Reply_Georgiou_Scholarship_FollowUp.md`, in Kopie an Stefanos Theodosiou.
 - **Offene Prüfaufgabe für mich:** Bei KAS, Studienstiftung und RLS klären, ob und in welcher Höhe **Studiengebühren für eine Promotion im EU-Ausland** erstattet werden. Bei einer Deckung von 12.960 € würde die EUC-Frage ihre Schärfe verlieren.
+
+## 14. Studiengebühren und Auslandspromotion bei den deutschen Werken — Recherche, Stand 04.09.2026
+
+Anlass: Da die EUC die Gebühren voraussichtlich nicht übernimmt (Abschnitt 13), wurde geprüft, ob KAS, Studienstiftung oder RLS eine **Promotion an einer Hochschule im EU-Ausland** überhaupt fördern und ob sie **Studiengebühren** erstatten. Quellen: Websuche (studienstiftung.de, kas.de, rosalux.de teils gesperrt → Sekundärquellen, vor Verwendung gegenprüfen).
+
+### 14.1 Grundsatzfrage: Wird eine Promotion in Zypern überhaupt gefördert?
+
+| Werk | Auslandspromotion in der EU | Bewertung für Maria |
+|---|---|---|
+| **Studienstiftung** | „In begründeten Fällen" möglich. Voraussetzung: **deutsche Staatsangehörigkeit ODER eine in Deutschland erworbene Hochschulzugangsberechtigung.** | 🟢 **Maria erfüllt die zweite Bedingung** — sie hat das **Abitur 2015 in Deutschland** abgelegt. Das Abiturzeugnis ist damit ein Schlüsseldokument der Bewerbung, nicht nur ein Anhang. |
+| **KAS** | „In besonders begründeten Einzelfällen" kann die Promotion **vollständig im europäischen Ausland (EU, Schweiz)** gefördert werden, dann aber **zu Inlandskonditionen**. | 🟡 Möglich, aber als **Ausnahme mit Begründungspflicht**. Marias Begründung ist stark: Betreuer mit einschlägiger Expertise, empirischer Zugang zu Cypern und Griechenland, laufendes Masterstudium an derselben Universität. Bewerbung ist eingereicht; auf Rückfragen dazu vorbereitet sein. |
+| **RLS** | Sekundärquellen: Immatrikulation an einer **deutschen** Hochschule erforderlich; Promotion in der EU oder der Schweiz nur bei **deutscher Staatsangehörigkeit**. | 🔴 **Ernstes Risiko.** Maria ist griechische Staatsangehörige. Träfe das zu, wäre die gesamte RLS-Bewerbung gegenstandslos. rosalux.de war gesperrt, die Angabe ist **nicht von der Stiftung selbst bestätigt**. **Vor dem 01.10.2026 klären:** `Email_RLS_Anfrage_Auslandspromotion.md`. |
+
+### 14.2 Studiengebühren
+
+| Werk | Regelung | Für Maria |
+|---|---|---|
+| **Studienstiftung** | Promovierende erhalten bei Auslandsaufenthalten auf Antrag Zuschüsse zu Reise- und Lebenshaltungskosten **sowie zu Studiengebühren**. | 🟡 Die Regelung ist für **Forschungsaufenthalte** formuliert. Ob sie auf eine vollständige Auslandspromotion übertragbar ist, muss bei promotion@studienstiftung.de erfragt werden. |
+| **KAS** | Studiengebühren an der Hochschule **bis zu 500 € pro Semester** erstattungsfähig; anerkannt werden nur Kosten für Kurse, die mit dem Promotionsvorhaben zusammenhängen. | 🟡 Bei 6 Semestern wären das **bis zu 3.000 €** von 12.960 €. Die Regelung stammt jedoch aus der Auslandsförderung der Studienförderung; für eine vollständige Auslandspromotion „zu Inlandskonditionen" ist sie **nicht bestätigt**. Direkt erfragen. |
+| **RLS** | Keine Angabe zu Studiengebühren auffindbar. | ⚪ Erst relevant, wenn 14.1 positiv geklärt ist. |
+
+### 14.3 Stipendienhöhen (alle BMBF-finanziert, daher weitgehend einheitlich)
+
+| Werk | Monatlich | Forschungskostenpauschale |
+|---|---|---|
+| Studienstiftung | 1.650 € | bis 100 € |
+| RLS | 1.650 € | 100 € |
+| KAS | 1.550 € (Quelle ggf. nicht aktuell) | 100 € |
+
+Regelförderzeit drei Jahre, Verlängerung um bis zu sechs Monate möglich. Zuschüsse für Krankenversicherung sowie Familien- und Betreuungszuschläge kommen hinzu.
+
+### 14.4 Nächste Schritte
+
+1. **RLS-Anfrage sofort senden** — sie entscheidet, ob die Arbeit an der RLS-Bewerbung überhaupt sinnvoll ist. Entwurf: `Email_RLS_Anfrage_Auslandspromotion.md`.
+2. **Studienstiftung** (promotion@studienstiftung.de): Auslandspromotion und Gebührenerstattung zusammen mit der ohnehin offenen Frage nach Einreichungsweg und Fachgutachter-Vorschlagsformular klären.
+3. **KAS:** auf die Rückfrage zur Auslandspromotion vorbereitet sein; Gebührenerstattung erfragen, sobald eine Entscheidung vorliegt.
+4. **Abiturzeugnis 2015** in allen Bewerbungen mitschicken — es begründet bei der Studienstiftung die Förderfähigkeit der Auslandspromotion.
