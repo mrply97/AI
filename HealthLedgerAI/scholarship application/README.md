@@ -258,3 +258,35 @@ Ablauf: Marias Anfrage vom 12.08.2026 an Andreas Kounoupis (Financial Aid Adviso
 - Antwortentwurf mit fünf Nachfragen (Spring-2027-Liste, Herkunft der Themen, Mechanik des 10-%-Nachlasses, weitere Programme, exakte Gebühren und Zahlungsplan): `Email_EUC_Reply_Georgiou_Scholarship_FollowUp.md`.
 - **Konsequenz für die Gesamtstrategie:** Die Studiengebühren sind vorerst **nicht gedeckt**. Damit gewinnen Leventis (Teilstipendium, März 2027) und vor allem die deutschen Begabtenförderungswerke, die zusätzlich zum Lebensunterhalt eine **Studiengebührenpauschale** zahlen können, weiter an Gewicht. Bei KAS, Studienstiftung und RLS ist gezielt zu prüfen, ob und in welcher Höhe Gebühren für eine Promotion im EU-Ausland erstattungsfähig sind.
 - **Noch hochzuladen:** die Anlage `Scholarships for Doctoral Studies (Fall Semester 2026) EN.pdf`.
+
+### 13.1 Die Ausschreibung selbst — was sie belegt (Anlage vom 18.08.2026)
+
+Quelle: `originale/EUC_Scholarships_Doctoral_Studies_Fall_2026.pdf`
+
+**Mechanik des Programms, jetzt belegt statt vermutet:** Die Stipendien decken die Studiengebühren **vollständig**, gelten **ausschließlich für neu eintretende Promovierende** und sind jeweils an **eine konkrete thematische Ausrichtung mit namentlich genanntem betreuendem EUC-Mitglied** gebunden. Es gibt also **keinen offenen Topf**, auf den man sich mit eigenem Thema bewerben könnte.
+
+Ausgeschriebene Themen für Fall 2026:
+
+| Nr. | PhD-Programm | Thema | Betreuer:in |
+|---|---|---|---|
+| 1 | Medical Sciences | Geospatial Determinants of Incident Malignancy in Patients Developing Postoperative Atrial Fibrillation Following Cardiac Surgery | Georgios Panayi Georghiou |
+| 2 | Exercise, Health and Nutrition | Dose-response effects of hybrid multicomponent exercise training before and after bariatric surgery | Alexios Batrakoulis |
+| 3 | Medical Sciences | Mapping the Soil Mycobiome of Cyprus | Charalampos Filippou |
+| 4 | Physiotherapy | Neurological Physiotherapy | Christos Karayiannis |
+| 5 | Law | Intellectual property law | Philippe Jougleux |
+| G1 | Medical Sciences (**Gender Equality Plan**) | Gender and Aging Shape Insula-Dependent Predictive Immune Regulation of Neurodegenerative Vulnerability | Iva D. Tzvetanova |
+
+**Verfahren:** Antrag über ein eigenes Formular, dazu ein Forschungsexposé; Auswahl nach Qualifikation und persönlichem Interview. **Frist Fall 2026: 04.09.2026** — also rund fünf Wochen vor Semesterbeginn. Ansprechpartner: die genannten Betreuenden oder **Stefanos Theodosiou, Admissions Office, +357 22713000, s.theodossiou@euc.ac.cy**.
+
+**Drei Schlussfolgerungen:**
+
+1. **Das Fach ist das Problem, nicht die Note.** Fünf von sechs Themen liegen in den Gesundheitswissenschaften, eines im Recht. Betriebswirtschaft, Rechnungswesen und Finanzen kommen nicht vor. Marias Ausschluss hat nichts mit ihrer Leistung zu tun.
+2. **Auch das Gender-Equality-Stipendium ist themengebunden** (Neurodegeneration) und damit für Maria ebenfalls nicht zugänglich. Die in Abschnitt 11.1 geäußerte Hoffnung darauf ist damit erledigt.
+3. **⚠️ Vermutlich nur Herbstrunden.** Sämtliche auffindbaren Ausschreibungen (Fall 2023, 2024, 2025, 2026) betreffen das **Herbstsemester**; eine Frühjahrsausschreibung ließ sich nicht nachweisen. Sollte das Programm tatsächlich nur zum Herbst laufen, wäre Maria mit einem Start im **Februar 2027 strukturell ausgeschlossen** — und ein Nachrücken in die Runde Fall 2027 scheitert an der Bedingung „exclusively for new doctoral students". Das ist die wichtigste offene Frage und steht als Frage 1 und 2 im Antwortentwurf.
+
+### 13.2 Konsequenz und nächste Schritte
+
+- **Realistische Erwartung: Die EUC wird die Studiengebühren nicht übernehmen.** Es bleiben die **10 % Alumni-Nachlass** (1.440 €), zu zahlen 12.960 €. Alles andere hängt an einer Bedingung, die derzeit nicht erfüllt ist.
+- **Einziger echter Hebel: Prof. Kythreotis.** Nur ein Fakultätsmitglied kann ein Thema in die Ausschreibung bringen. Nachricht auf Griechisch (informell, mit deutscher Übersetzung): `Email_Kythreotis_EUC_Stipendienthema_GR.md`. **Jetzt senden**, nicht im Dezember — eine etwaige Frühjahrsfrist läge Anfang Januar 2027 und damit zeitgleich mit der Promotionsbewerbung am 15.01.2027.
+- **Antwort an das Zulassungsbüro** mit fünf Fragen (Herbst-only?, Nachrücken in Fall 2027?, Herkunft der Themen und Einreichfrist, Mechanik des Nachlasses, exakte Gebühren): `Email_EUC_Reply_Georgiou_Scholarship_FollowUp.md`, in Kopie an Stefanos Theodosiou.
+- **Offene Prüfaufgabe für mich:** Bei KAS, Studienstiftung und RLS klären, ob und in welcher Höhe **Studiengebühren für eine Promotion im EU-Ausland** erstattet werden. Bei einer Deckung von 12.960 € würde die EUC-Frage ihre Schärfe verlieren.
