@@ -341,3 +341,37 @@ Bewertet werden unter anderem die **Forschungsleistungen der Doktorandin** (Publ
 **Anfrage-Entwurf:** `Email_RIF_PhD_in_Industry_Anfrage.md` — sieben Fragen zu aktuellem Rahmenprogramm und nächster Frist, Anstellungszeitpunkt, Staatsangehörigkeit und Wohnsitz, Immatrikulationsstatus, Zulässigkeit privater Universitäten, Fachoffenheit und Vermittlung von Partnerunternehmen.
 
 **⚠️ Ehrliche Einordnung.** Antragsteller ist das **Unternehmen**, nicht Maria. Ohne zyprischen Arbeitgeber gibt es keinen Antrag, und die wahrscheinlichste Antwort der RIF lautet „Sie brauchen zuerst ein Unternehmen." Hinzu kommt: Der Screenshot stammt aus dem **abgelaufenen Rahmen RESTART 2016–2020**; die letzte auffindbare Ausschreibung war „PHD IN INDUSTRY/1124" mit Frist 27.03.2025 und einem Volumen von 1,25 Mio. €. Die Anfrage lohnt dennoch, weil sie klärt, ob der Weg grundsätzlich offensteht, bevor Maria Zeit in die Unternehmenssuche investiert. Anknüpfungspunkt vor Ort: **Kyriakos Kokkinos** (ex IBM Europe, ex PwC) beim Agenda Cyprus Summit am 14.10.2026, siehe Abschnitt 12.
+
+## 16. Statusänderung RLS und Priorisierung — Stand 04.10.2026
+
+**⚠️ Datumshinweis:** Die Arbeitsumgebung dieser Sitzung zeigt den **04.09.2026**, Maria nennt den **04.10.2026**. Maßgeblich ist Marias Angabe. Falls doch September ist, gilt Abschnitt 14.4 unverändert und die RLS-Herbstrunde ist noch offen.
+
+### 16.1 RLS — Herbstrunde 2026 verstrichen
+
+Die RLS-Bewerbungsrunden laufen **20.08.–01.10.** (Förderbeginn im folgenden Sommersemester) und **01.04.–01.05.** Die Herbstrunde 2026 ist damit vorbei; die nächste Gelegenheit ist die **Frühjahrsrunde 01.04.–01.05.2027**.
+
+**Bewertung: kein großer Verlust, eher ein Vorteil.** Der Schwachpunkt der Oktoberbewerbung war, dass zum Stichtag weder die Promotionszulassung noch das Masterzeugnis vorlagen; beides musste über eine Betreuerbestätigung und eine Erläuterung im Feld „Weitere Mitteilungen" aufgefangen werden. Zum **01.05.2027** liegen **beide Dokumente vor**. Preis ist ein späterer Förderbeginn, voraussichtlich Herbst 2027 statt Frühjahr 2027; die ersten Promotionsmonate ab Februar 2027 sind anderweitig zu überbrücken.
+
+**Weiterhin ungeklärt und vorrangig:** die Förderfähigkeit einer Auslandspromotion bei ausländischer Staatsangehörigkeit (Abschnitt 14.1). Die Anfrage `Email_RLS_Anfrage_Auslandspromotion.md` wurde entsprechend **von „dringend vor dem 01.10." auf „grundsätzliche Klärung vor der Frühjahrsrunde" umgestellt** und um die Frage nach Förderbeginn und Bewerbungsrunde ergänzt.
+
+**Gutachtenanfragen gestoppt.** Kythreotis und Sauerhammer werden vorerst nicht angefragt. Gutachten dürfen höchstens sechs Monate alt sein — für den 01.05.2027 wären sie ab **November 2026** einzuholen, und erst nach positiver Antwort der Stiftung.
+
+### 16.2 Marias Entscheidungen
+
+- **RIF „PhD in Industry": vorerst nicht anfragen.** Entwurf `Email_RIF_PhD_in_Industry_Anfrage.md` bleibt unversendet im Ordner liegen, falls sich in Zypern ein Unternehmenskontakt ergibt.
+- **Nächster Schritt ist die Antwort von Prof. Kythreotis** auf `Email_Kythreotis_EUC_Stipendienthema_GR.md` (Stipendienthema der EUC). Danach entscheidet Maria über das weitere Vorgehen.
+- **Aufenthalt in Zypern im Oktober 2026**, unter anderem Agenda Cyprus Summit am 14.10. (Abschnitt 12) — Gelegenheiten vor Ort abwarten und nutzen.
+
+### 16.3 Aktueller Stand aller Schienen
+
+| Schiene | Status | Nächster Termin |
+|---|---|---|
+| KAS | eingereicht, Eingangsbestätigung liegt vor | Rückmeldung abwarten; auf Rückfrage zur Auslandspromotion vorbereitet sein |
+| Studienstiftung | Papierpaket fertig | Einreichungsweg, Fachgutachter-Vorschlagsformular und Gebührenerstattung bei promotion@studienstiftung.de klären |
+| EUC Zulassung | Paket fertig | **Bewerbungsschluss 15.01.2027** |
+| EUC Stipendium | kein Thema in BWL ausgeschrieben; 10 % Alumni-Nachlass zugesagt | Antwort von Kythreotis abwarten |
+| RLS | Herbstrunde verpasst; Förderfähigkeit ungeklärt | Anfrage senden; Frühjahrsrunde 01.04.–01.05.2027 |
+| Leventis | Anfrage-E-Mail liegt vor | Bewerbungsfenster 01.–31.03.2027 |
+| Onassis | Beobachtung | Announcement Dezember 2026 |
+| RIF PhD in Industry | zurückgestellt | nur bei Unternehmenskontakt in Zypern |
+| Cyprus Institute, IKYK, Big 4, MSCA, Bodossaki, Sylvia Ioannou | ausgeschlossen bzw. unwahrscheinlich | — |
