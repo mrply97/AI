@@ -441,3 +441,9 @@ Maria möchte Prof. Kythreotis fragen, ob er ebenfalls zum **Agenda Cyprus Summi
 Korrigierte griechische Fassung in zwei Registern (förmlich mit „σας", vertraut mit „σου") samt Fehlerübersicht: `Email_Kythreotis_Agenda_Cyprus_Summit_GR.md`.
 
 **Einordnung:** sinnvoller Schritt. Kythreotis ist Deputy Dean und kennt die zyprische Wirtschafts- und Politiklandschaft; in seiner Begleitung wären die in Abschnitt 12 genannten Gespräche — insbesondere mit Vize-Minister Damianou und Komiteevorsitzendem Kokkinos — erheblich leichter zu führen als allein.
+
+## 21. Arbeitsweise mit Maria
+
+- **Texte immer direkt in den Chat schreiben, nicht als Datei schicken.** Entwürfe für E-Mails, Formulierungen und Korrekturen gehören in die Antwort selbst.
+- **Trotzdem jede Fassung im Ordner speichern** und committen — der Chat ist die Lieferung, der Ordner das Archiv.
+- **Dateien nur auf ausdrückliche Anforderung senden**, und dann als **PDF**. Maria sagt Bescheid, wenn sie eine braucht.
