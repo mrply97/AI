@@ -237,3 +237,24 @@ Quelle: `originale/Agenda_Cyprus_Summit_2026-10-14.pdf` (agenda.cy, Stand 04.09.
 4. **Kokkinos:** als Komiteevorsitzendem für die Einladung danken und nach zyprischen Unternehmen im Bereich Finanz-/Gesundheits-IT fragen, die Forschungskooperationen eingehen.
 5. **Namen und Funktionen aller neu bekanntgegebenen Sprecher:innen** vor dem 14.10. prüfen; besonders auf zyprische Klinikgruppen, Buchhaltungssoftware-Häuser und Prüfungsgesellschaften achten.
 6. **Innerhalb von 48 Stunden nachfassen** — kurze E-Mail mit Bezug auf das Gespräch, ein Absatz zum Vorhaben, keine Anlagen. Prof. Kythreotis vorab informieren, dass sie dort auftritt.
+
+## 13. EUC-Antwort zum Promotionsstipendium — Stand 18.08.2026
+
+Quelle: `originale/EUC_Antwort_Georgiou_PhD_Stipendium_2026-08-18.pdf` (Vorgangsnummer 2026031658).
+
+Ablauf: Marias Anfrage vom 12.08.2026 an Andreas Kounoupis (Financial Aid Advisor) wurde am 17.08. an **Michalis Georgiou Matheou, Coordinator Conventional Programs, Office of Admissions** (Mi.Georgiou@euc.ac.cy, +357 22713175) weitergeleitet, der am 18.08.2026 antwortete.
+
+**Kernaussagen der Antwort:**
+
+1. **Für den PhD in Business Administration gibt es derzeit kein Stipendium.** Beigefügt war die Liste `Scholarships for Doctoral Studies (Fall Semester 2026) EN.pdf` — eine Aufstellung der **Themen**, für die Promotionsstipendien ausgeschrieben sind.
+2. **Als EUC-Alumna beim Übergang vom Master in die Promotion erhält Maria 10 % Nachlass auf die gesamten Studiengebühren.** Rechnerisch: 4.800 € × 3 = 14.400 €; Nachlass 1.440 €; verbleibend 12.960 €.
+
+**Korrektur zu Abschnitt 11.1:** Die EUC-Promotionsstipendien sind **kein allgemeiner Topf, auf den man sich mit beliebigem Thema bewerben kann**, sondern **themengebundene Ausschreibungen je Semester**. Für BWL war im Fall 2026 nichts dabei. Damit ist die in 11.1 als „wichtigste und wahrscheinlichste Quelle" bezeichnete Schiene deutlich schwächer als angenommen.
+
+**Was daraus folgt:**
+
+- Die Antwort bezieht sich auf die **Fall-2026-Liste**. Ob für das **Spring Semester 2027** (Marias Beginn) eine neue Themenliste erscheint und ob BWL darin vorkommt, ist **offen** und die entscheidende Frage.
+- Der wirkliche Hebel liegt vermutlich **nicht beim Zulassungsbüro, sondern bei der Fakultät**: Wenn die Themen von den Schools vorgeschlagen werden, entscheidet die School of Business Administration, ob ein Thema in Marias Feld ausgeschrieben wird. **Prof. Kythreotis ist deshalb parallel und informell anzusprechen.**
+- Antwortentwurf mit fünf Nachfragen (Spring-2027-Liste, Herkunft der Themen, Mechanik des 10-%-Nachlasses, weitere Programme, exakte Gebühren und Zahlungsplan): `Email_EUC_Reply_Georgiou_Scholarship_FollowUp.md`.
+- **Konsequenz für die Gesamtstrategie:** Die Studiengebühren sind vorerst **nicht gedeckt**. Damit gewinnen Leventis (Teilstipendium, März 2027) und vor allem die deutschen Begabtenförderungswerke, die zusätzlich zum Lebensunterhalt eine **Studiengebührenpauschale** zahlen können, weiter an Gewicht. Bei KAS, Studienstiftung und RLS ist gezielt zu prüfen, ob und in welcher Höhe Gebühren für eine Promotion im EU-Ausland erstattungsfähig sind.
+- **Noch hochzuladen:** die Anlage `Scholarships for Doctoral Studies (Fall Semester 2026) EN.pdf`.
