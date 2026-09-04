@@ -389,3 +389,30 @@ Die RLS-Bewerbungsrunden laufen **20.08.–01.10.** (Förderbeginn im folgenden 
 | **IKYK** | ⚪ Unverändert ausgeschlossen — dort entscheidet der **Wohnsitz** in Zypern, nicht die Staatsangehörigkeit. |
 
 **⚠️ Offener Punkt mit Folgen: das Datum.** Die Arbeitsumgebung zeigt den **04.09.2026**, Maria nennt den **04.10.2026**. Ist tatsächlich noch September, dann ist die **RLS-Herbstrunde bis zum 01.10.2026 offen** — und da die Staatsangehörigkeitsfrage geklärt ist, wäre eine Bewerbung in dieser Runde möglich und lohnend. Fehlend wären nur die beiden Gutachten und die Engagement-Nachweise. Maria muss das anhand ihres eigenen Kalenders entscheiden.
+
+## 18. Antwort von Prof. Kythreotis und Datumsklärung — 04.09.2026
+
+Quelle: `originale/Kythreotis_Antwort_EUC_Stipendienthema_2026-09-04.pdf`
+
+### 18.1 Das Datum ist geklärt: 04.09.2026
+
+Marias Nachricht an Prof. Kythreotis trägt den Zeitstempel **Fr. 04.09.2026, 05:08**, seine Antwort **Fr. 04.09.2026, 09:19**. Der in Abschnitt 16 vermerkte Widerspruch ist damit aufgelöst — es ist **September, nicht Oktober**. Die Datumsangaben in Abschnitt 16 und 17 („Stand 04.10.2026") sind entsprechend als 04.09.2026 zu lesen.
+
+**Wichtigste Folge: Die RLS-Herbstrunde ist offen.** Frist **01.10.2026, 23:59**, also noch 27 Tage. In Verbindung mit der geklärten Staatsangehörigkeitsfrage (Abschnitt 17) ist eine Bewerbung in dieser Runde möglich und lohnend. Der Zeitplan in `RLS_Anfragen_Gutachten_und_Nachweise.md` wurde auf dieses Datum ausgerichtet.
+
+### 18.2 Kythreotis' Antwort zum EUC-Stipendienthema
+
+Wortlaut: „Λογικά θα έρθει πρόσκληση για υποβολή προτάσεων σχετικά με τις υποτροφίες σε κάποια φάση. Τώρα δεν ξέρω ακριβώς πότε μέσα στη χρονιά. Μόλις έρθει θα σε ενημερώσω για να **υποβάλουμε τη πρόταση σου**."
+
+Übersetzung: „Voraussichtlich kommt irgendwann eine Aufforderung zur Einreichung von Vorschlägen für die Stipendien. Ich weiß derzeit nicht genau, wann im Jahr. Sobald sie kommt, informiere ich dich, damit **wir deinen Vorschlag einreichen**."
+
+**Bewertung: das bestmögliche Ergebnis dieser Anfrage.** Er bestätigt (1) dass es eine **Aufforderung zur Einreichung von Vorschlägen** gibt — die Themen kommen also tatsächlich aus der Fakultät, wie in Abschnitt 13.1 vermutet; (2) dass er **Maria informieren** wird, sobald sie kommt; und (3) dass er **ihren Vorschlag einreichen** will. Damit ist der in Abschnitt 13.2 benannte einzige Hebel aktiviert.
+
+**Institutionelles Gewicht:** Seiner Signatur zufolge ist Kythreotis **Deputy Dean der School of Business Administration and Digital Technologies** sowie Mitglied des Department of Accounting, Economics and Finance und des **PEAK Innovation Center** der EUC. Ein Vorschlag aus der Hand eines stellvertretenden Dekans hat innerhalb der Fakultät erhebliches Gewicht. Kontakt: Tower Building, Block C, 1. OG, Raum 9, +357 22 713265.
+
+**Nebenbefund:** Das **PEAK Innovation Center** ist die Schnittstelle der EUC zu Unternehmen und Innovationsprojekten. Sollte die RIF-Schiene „PhD in Industry" später doch verfolgt werden (Abschnitt 15), wäre PEAK der naheliegende interne Ansprechpartner — und Kythreotis ist bereits dort verortet.
+
+### 18.3 Offen bleibt
+
+- **Der Zeitpunkt der Ausschreibung.** Er weiß ihn nicht. Die Fall-2026-Runde endete am 04.09.2026; falls es nur Herbstrunden gibt, käme die nächste um August/September 2027 — also **nach** Marias Promotionsbeginn im Februar 2027, was mit der Bedingung „exclusively for new doctoral students" kollidieren könnte. Diese Frage steht bereits im Antwortentwurf an das Zulassungsbüro und sollte dort nachgehalten werden.
+- **Keine weitere Aktion gegenüber Kythreotis nötig.** Er meldet sich. Bei der ohnehin anstehenden Gutachtenanfrage für die RLS kann Maria den Punkt beiläufig mitführen.

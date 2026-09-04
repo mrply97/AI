@@ -1,5 +1,14 @@
 # RLS-Bewerbung bis 01.10.2026 — Anfragen, die heute rausgehen müssen
 
+**Stand 04.09.2026: Runde ist offen, 27 Tage bleiben.** Das Datum ist durch Marias eigenen
+E-Mail-Verkehr belegt (ihre Nachricht an Prof. Kythreotis vom **Fr. 04.09.2026, 05:08**, seine
+Antwort um 09:19). Die Frist der Herbstrunde ist der **01.10.2026, 23:59**, Bewerbung über das
+Online-Portal.
+
+**Förderfähigkeit geklärt:** Maria besitzt die **deutsche Staatsangehörigkeit**, und die
+RLS-Regel lässt eine Promotion in der EU genau bei deutscher Staatsangehörigkeit zu. Die
+Auslandspromotion an der EUC ist damit kein Hindernis mehr (Abschnitt 17 der README).
+
 Kritischer Pfad: **2 Gutachten + Engagement-Nachweise + Betreuer-Bestätigung.** Alle kommen von anderen Menschen.
 
 ---
@@ -91,8 +100,11 @@ Falls kurzfristig erreichbar: Bestätigung des Fachbereichs über die Mitwirkung
 
 | Wann | Was |
 |---|---|
-| **heute** | Anfragen 1–4 verschicken; RLS kontaktieren wegen Zulassungs-Frage |
-| **bis ca. 10.09.** | Gutachten + Bescheinigungen nachfassen |
-| **bis ca. 20.09.** | Portal vollständig ausfüllen, alle PDFs hochladen |
-| **bis 28.09.** | Puffer: fehlende Dokumente klären, Gesamtdurchsicht |
-| **01.10.** | Einreichung (nicht auf den letzten Tag legen) |
+| **heute, 04.09.** | Anfragen 1–4 verschicken. Anfrage 1 an Prof. Kythreotis geht direkt im Anschluss an seine heutige Antwort — der Kontakt ist warm, er hat innerhalb von vier Stunden geantwortet. Parallel die Bestätigungsanfrage an die RLS (`Email_RLS_Anfrage_Auslandspromotion.md`) senden; sie blockiert nichts. |
+| **bis 11.09.** | Erste Rückmeldungen einsammeln; wer nicht geantwortet hat, freundlich erinnern. |
+| **bis 18.09.** | Gutachten und Bescheinigungen sollten vorliegen. Portal-Stammdaten und alle Textfelder aus `RLS_Portal_Antworten_Motivation.md` eintragen. |
+| **bis 25.09.** | Selbstdarstellung finalisieren, alle PDFs hochladen, Gesamtdurchsicht. |
+| **bis 29.09.** | Puffer für Fehlendes. |
+| **30.09.** | **Einreichen.** Nicht den 01.10. abwarten — das Portal schließt um 23:59 und Serverlast am letzten Tag ist ein vermeidbares Risiko. |
+
+**Wenn ein Gutachten nicht rechtzeitig kommt:** lieber vollständig zur Frühjahrsrunde (01.04.–01.05.2027) bewerben als unvollständig jetzt. Zu diesem Termin lägen zudem Promotionszulassung und Masterzeugnis vor. Die Herbstrunde ist der Versuch, nicht der einzige Weg.
