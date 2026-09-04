@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Scholarship Application//Leventis//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:leventis-prep-2027@polychroniadou
+DTSTAMP:20260904T120000Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Leventis-Stipendium: Bewerbung vorbereiten
+DESCRIPTION:Vorbereitungstermin. In zwei Wochen oeffnet das Bewerbungsfen
+ ster.\n\nA. G. Leventis Foundation - Bewerbungsportal: https://www.leven
+ tisscholarships.org\nBewerbungsfenster: 1.-31. Maerz 2027\, fuer das aka
+ demische Jahr 2027/28.\nHoehe: bis 3.000 EUR pro Jahr fuer ein Studium i
+ n Zypern\, Auszahlung auf das eigene Konto.\nKeine rueckwirkende Foerder
+ ung - das Fruehjahrssemester 2027 bleibt ungedeckt.\nAuswahl nach Leistu
+ ng UND wirtschaftlicher Lage: Eigenfinanzierung und Erstakademikerin-Sta
+ tus ausdruecklich darstellen.\nKontakt: Eleni Papazoglou\, info@leventis
+ .org.cy\, +357 22667706\, 12 Gladstone Street\, 1095 Nicosia.\nUnterlage
+ n liegen vor: CV\, Expose\, Transcripts\, Abiturzeugnis\, Betreuerbestae
+ tigung Kythreotis.
+LOCATION:https://www.leventisscholarships.org
+URL:https://www.leventisscholarships.org
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leventis-Stipendium: Bewerbung vorbereiten
+TRIGGER;RELATED=START:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:leventis-open-2027@polychroniadou
+DTSTAMP:20260904T120000Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+SUMMARY:Leventis-Stipendium: Bewerbungsfenster oeffnet
+DESCRIPTION:Ab heute kann die Bewerbung eingereicht werden.\n\nA. G. Leve
+ ntis Foundation - Bewerbungsportal: https://www.leventisscholarships.org
+ \nBewerbungsfenster: 1.-31. Maerz 2027\, fuer das akademische Jahr 2027/
+ 28.\nHoehe: bis 3.000 EUR pro Jahr fuer ein Studium in Zypern\, Auszahlu
+ ng auf das eigene Konto.\nKeine rueckwirkende Foerderung - das Fruehjahr
+ ssemester 2027 bleibt ungedeckt.\nAuswahl nach Leistung UND wirtschaftli
+ cher Lage: Eigenfinanzierung und Erstakademikerin-Status ausdruecklich d
+ arstellen.\nKontakt: Eleni Papazoglou\, info@leventis.org.cy\, +357 2266
+ 7706\, 12 Gladstone Street\, 1095 Nicosia.\nUnterlagen liegen vor: CV\, 
+ Expose\, Transcripts\, Abiturzeugnis\, Betreuerbestaetigung Kythreotis.
+LOCATION:https://www.leventisscholarships.org
+URL:https://www.leventisscholarships.org
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leventis-Stipendium: Bewerbungsfenster oeffnet
+TRIGGER;RELATED=START:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:leventis-deadline-2027@polychroniadou
+DTSTAMP:20260904T120000Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Leventis-Stipendium: LETZTER TAG der Bewerbung
+DESCRIPTION:Letzter Tag des Bewerbungsfensters. Nicht bis heute warten.\n
+ \nA. G. Leventis Foundation - Bewerbungsportal: https://www.leventisscho
+ larships.org\nBewerbungsfenster: 1.-31. Maerz 2027\, fuer das akademisch
+ e Jahr 2027/28.\nHoehe: bis 3.000 EUR pro Jahr fuer ein Studium in Zyper
+ n\, Auszahlung auf das eigene Konto.\nKeine rueckwirkende Foerderung - d
+ as Fruehjahrssemester 2027 bleibt ungedeckt.\nAuswahl nach Leistung UND 
+ wirtschaftlicher Lage: Eigenfinanzierung und Erstakademikerin-Status aus
+ druecklich darstellen.\nKontakt: Eleni Papazoglou\, info@leventis.org.cy
+ \, +357 22667706\, 12 Gladstone Street\, 1095 Nicosia.\nUnterlagen liege
+ n vor: CV\, Expose\, Transcripts\, Abiturzeugnis\, Betreuerbestaetigung 
+ Kythreotis.
+LOCATION:https://www.leventisscholarships.org
+URL:https://www.leventisscholarships.org
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leventis-Stipendium: LETZTER TAG der Bewerbung
+TRIGGER;RELATED=START:-P14D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leventis-Stipendium: LETZTER TAG der Bewerbung
+TRIGGER;RELATED=START:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Leventis-Stipendium: LETZTER TAG der Bewerbung
+TRIGGER;RELATED=START:-P2D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

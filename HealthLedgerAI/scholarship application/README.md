@@ -480,3 +480,15 @@ Quelle: `originale/Leventis_Antwort_Papazoglou_2026-09.pdf`, Antwort von **Ελ�
 **Offen und materiell:** Ob die Chorigia für 2028/29 und 2029/30 **verlängerbar** ist. Einmalig 3.000 € oder dreimal 3.000 € ist ein Unterschied um den Faktor drei. Frau Papazoglou hat ausdrücklich zu Rückfragen eingeladen; die Nachfrage wurde von Maria am **04.09.2026 gesendet** (`Email_Leventis_Nachfrage_Verlaengerung_GR.md`), Antwort steht aus.
 
 **Zu beachten bei der Bewerbung im März 2027:** Die Auswahl erfolgt nach Leistung **und wirtschaftlicher Lage**. Marias vollständige Eigenfinanzierung und ihr Status als Erstakademikerin sind daher nicht nur Kontext, sondern **bewertungsrelevant** und sollten im Antrag klar dargestellt werden.
+
+### 22.2 Kalendererinnerung
+
+`Leventis_Bewerbung_2027.ics` — importierbare Kalenderdatei mit drei ganztägigen Terminen:
+
+| Datum | Termin | Erinnerungen |
+|---|---|---|
+| 15.02.2027 | Bewerbung vorbereiten | 1 Tag vorher |
+| 01.03.2027 | Bewerbungsfenster öffnet | 1 Tag vorher |
+| 31.03.2027 | **Letzter Tag der Bewerbung** | 14, 7 und 2 Tage vorher |
+
+Jeder Termin enthält im Beschreibungsfeld das Portal (www.leventisscholarships.org), Fenster und Bezugsjahr, die Förderhöhe von bis zu 3.000 € jährlich, den Hinweis auf die fehlende Rückwirkung, die Kontaktdaten von Eleni Papazoglou und die Erinnerung, Eigenfinanzierung und Erstakademikerin-Status darzustellen, weil die wirtschaftliche Lage mitbewertet wird.
