@@ -461,3 +461,22 @@ Antwort von **Demetra Antonara, Administrator, Foundation „Anastasios G. Leven
 **Nächster Schritt:** abwarten. Wenn bis **Ende September 2026** keine inhaltliche Antwort kommt, kurz und höflich nachfassen. Zeitdruck besteht nicht, das Bewerbungsfenster ist der **01.–31.03.2027**.
 
 **In der Anfrage offengelegte Angaben** (für spätere Konsistenz aller Bewerbungen festgehalten): geboren 1997 in Thessaloniki; seit 1999 dauerhaft in Deutschland; griechische **und** deutsche Staatsangehörigkeit; Masterabschluss Januar 2027, bisher ausschließlich A-Noten; Promotionsbeginn Februar 2027, Vollzeit, Präsenz in Nikosia; vollständige Eigenfinanzierung; Erstakademikerin. Als kooperierende Einrichtungen der empirischen Erhebung wurden das **American Medical Center Nikosia** und das **European Interbalkan Medical Center Thessaloniki** genannt — konsistent mit Exposé, Motivationsschreiben, EUC Research Proposal und den Studienstiftung-Fragebögen.
+
+### 22.1 Inhaltliche Antwort der Leventis-Stiftung — alle vier Fragen beantwortet
+
+Quelle: `originale/Leventis_Antwort_Papazoglou_2026-09.pdf`, Antwort von **Ελένη Παπάζογλου (Eleni Papazoglou), Ίδρυμα Α. Γ. Λεβέντη**.
+
+| Frage | Antwort |
+|---|---|
+| 1. Griechische **und** deutsche Staatsangehörigkeit, Wohnsitz Deutschland, Promotion in Zypern — zulässig? | 🟢 **Implizit ja.** „Είστε ευπρόσδεκτη να υποβάλετε την αίτησή σας" — Maria ist eingeladen, den Antrag zu stellen. Die Stiftung hatte alle Angaben vor sich und hat **keinen Einwand** erhoben. Das ist keine förmliche Eignungszusage, aber ein klares Signal. |
+| 2. Private Universität in Zypern (EUC)? | 🟢 **Implizit ja**, ebenfalls kein Einwand. |
+| 3. Zeitfenster März 2027 bei Promotionsbeginn Februar 2027? | 🟡 **Antrag betrifft das akademische Jahr 2027/28.** Ausdrücklich: **„δεν χορηγούνται αναδρομικά"** — keine rückwirkende Förderung. Das Frühjahrssemester 2027 (Februar bis Sommer) bleibt damit **ungedeckt**. |
+| 4. Höhe? | 🟢 **Bis zu 3.000 € jährlich für Studien in Zypern.** Auszahlung auf das persönliche Konto der Stipendiatin. Ausdrücklich als **finanzielle Unterstützung** gedacht, **nicht** zur Deckung sämtlicher Studien- und Nebenkosten. |
+
+**Antragsportal:** www.leventisscholarships.org, Einreichung **01.–31.03.2027**.
+
+**Wertung.** Bei Studiengebühren von 4.320 € pro Jahr nach dem 10-%-Alumni-Nachlass deckt eine Chorigia von 3.000 € rund **69 % eines Studienjahres**. Über drei Jahre wären das bis zu **9.000 € von 12.960 €** — die mit Abstand größte konkret erreichbare Einzelposition im gesamten Portfolio, deutlich mehr als der Alumni-Nachlass. Damit rückt Leventis von „prüfenswert" auf **Rang A** vor.
+
+**Offen und materiell:** Ob die Chorigia für 2028/29 und 2029/30 **verlängerbar** ist. Einmalig 3.000 € oder dreimal 3.000 € ist ein Unterschied um den Faktor drei. Frau Papazoglou hat ausdrücklich zu Rückfragen eingeladen; Entwurf: `Email_Leventis_Nachfrage_Verlaengerung_GR.md`.
+
+**Zu beachten bei der Bewerbung im März 2027:** Die Auswahl erfolgt nach Leistung **und wirtschaftlicher Lage**. Marias vollständige Eigenfinanzierung und ihr Status als Erstakademikerin sind daher nicht nur Kontext, sondern **bewertungsrelevant** und sollten im Antrag klar dargestellt werden.
