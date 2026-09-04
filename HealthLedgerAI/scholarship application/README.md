@@ -327,3 +327,17 @@ Regelförderzeit drei Jahre, Verlängerung um bis zu sechs Monate möglich. Zusc
 2. **Studienstiftung** (promotion@studienstiftung.de): Auslandspromotion und Gebührenerstattung zusammen mit der ohnehin offenen Frage nach Einreichungsweg und Fachgutachter-Vorschlagsformular klären.
 3. **KAS:** auf die Rückfrage zur Auslandspromotion vorbereitet sein; Gebührenerstattung erfragen, sobald eine Entscheidung vorliegt.
 4. **Abiturzeugnis 2015** in allen Bewerbungen mitschicken — es begründet bei der Studienstiftung die Förderfähigkeit der Auslandspromotion.
+
+## 15. RIF „PhD in Industry" — Kontakt und Anfrage, Stand 04.09.2026
+
+Quelle: Screenshot der RIF-Ausschreibung (`originale/RIF_PhD_in_Industry_Auswahl_und_Kontakt.png`, Rahmenprogramm **RESTART 2016–2020**, research.org.cy).
+
+**Kontakt:** RIF Support Service, **support@research.org.cy**, **+357 22205000**.
+
+**Zwei Auswahlregeln aus dem Screenshot, die die Partnerwahl bestimmen.** Die bestbewerteten förderfähigen Anträge werden in dieser Reihenfolge ausgewählt: zuerst Anträge mit **Unternehmen, die seit 2016 keine Förderung von der RIF oder aus „Horizon Europe"/„Horizon 2020" erhalten haben** (Programme unter 15.000 € ausgenommen), danach Anträge mit **mittleren oder großen Unternehmen** als Host Organisation, anschließend bis zur Erschöpfung des Budgets je Kategorie und zuletzt bis zur Erschöpfung des Gesamtbudgets kategorieübergreifend. **Der aussichtsreichste Partner ist also ein mittleres oder großes zyprisches Unternehmen ohne bisherige Förderhistorie.**
+
+Bewertet werden unter anderem die **Forschungsleistungen der Doktorandin** (Publikationen, eingeladene Vorträge, Preise, eingeworbene Mittel), die Passung des Projekts zu den Forschungsinteressen der Beteiligten und zu den Aktivitäten der beteiligten Organisationen sowie Koordination, Risikobehandlung und Contingency-Plan.
+
+**Anfrage-Entwurf:** `Email_RIF_PhD_in_Industry_Anfrage.md` — sieben Fragen zu aktuellem Rahmenprogramm und nächster Frist, Anstellungszeitpunkt, Staatsangehörigkeit und Wohnsitz, Immatrikulationsstatus, Zulässigkeit privater Universitäten, Fachoffenheit und Vermittlung von Partnerunternehmen.
+
+**⚠️ Ehrliche Einordnung.** Antragsteller ist das **Unternehmen**, nicht Maria. Ohne zyprischen Arbeitgeber gibt es keinen Antrag, und die wahrscheinlichste Antwort der RIF lautet „Sie brauchen zuerst ein Unternehmen." Hinzu kommt: Der Screenshot stammt aus dem **abgelaufenen Rahmen RESTART 2016–2020**; die letzte auffindbare Ausschreibung war „PHD IN INDUSTRY/1124" mit Frist 27.03.2025 und einem Volumen von 1,25 Mio. €. Die Anfrage lohnt dennoch, weil sie klärt, ob der Weg grundsätzlich offensteht, bevor Maria Zeit in die Unternehmenssuche investiert. Anknüpfungspunkt vor Ort: **Kyriakos Kokkinos** (ex IBM Europe, ex PwC) beim Agenda Cyprus Summit am 14.10.2026, siehe Abschnitt 12.
