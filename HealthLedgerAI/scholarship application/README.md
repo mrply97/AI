@@ -301,7 +301,7 @@ Anlass: Da die EUC die Gebühren voraussichtlich nicht übernimmt (Abschnitt 13)
 |---|---|---|
 | **Studienstiftung** | „In begründeten Fällen" möglich. Voraussetzung: **deutsche Staatsangehörigkeit ODER eine in Deutschland erworbene Hochschulzugangsberechtigung.** | 🟢 **Maria erfüllt die zweite Bedingung** — sie hat das **Abitur 2015 in Deutschland** abgelegt. Das Abiturzeugnis ist damit ein Schlüsseldokument der Bewerbung, nicht nur ein Anhang. |
 | **KAS** | „In besonders begründeten Einzelfällen" kann die Promotion **vollständig im europäischen Ausland (EU, Schweiz)** gefördert werden, dann aber **zu Inlandskonditionen**. | 🟡 Möglich, aber als **Ausnahme mit Begründungspflicht**. Marias Begründung ist stark: Betreuer mit einschlägiger Expertise, empirischer Zugang zu Cypern und Griechenland, laufendes Masterstudium an derselben Universität. Bewerbung ist eingereicht; auf Rückfragen dazu vorbereitet sein. |
-| **RLS** | Sekundärquellen: Immatrikulation an einer **deutschen** Hochschule erforderlich; Promotion in der EU oder der Schweiz nur bei **deutscher Staatsangehörigkeit**. | 🔴 **Ernstes Risiko.** Maria ist griechische Staatsangehörige. Träfe das zu, wäre die gesamte RLS-Bewerbung gegenstandslos. rosalux.de war gesperrt, die Angabe ist **nicht von der Stiftung selbst bestätigt**. **Vor dem 01.10.2026 klären:** `Email_RLS_Anfrage_Auslandspromotion.md`. |
+| **RLS** | Sekundärquellen: Immatrikulation an einer **deutschen** Hochschule erforderlich; Promotion in der EU oder der Schweiz **bei deutscher Staatsangehörigkeit** möglich. | 🟢 **Kein Hindernis — Korrektur vom 04.10.2026.** Maria besitzt die **deutsche Staatsangehörigkeit** (zusätzlich die griechische), wie in Abschnitt 1, Zeile 7 der KAS-Checkliste bereits festgehalten. Die zuvor an dieser Stelle notierte Annahme, sie sei ausschließlich griechische Staatsangehörige, war falsch. Die Ausnahmeregelung greift damit **zu ihren Gunsten**: Eine Promotion an der EUC in Zypern ist förderfähig. Rest-Klärungsbedarf nur noch dazu, ob eine **private, staatlich akkreditierte** Universität im EU-Ausland genügt. |
 
 ### 14.2 Studiengebühren
 
@@ -352,7 +352,7 @@ Die RLS-Bewerbungsrunden laufen **20.08.–01.10.** (Förderbeginn im folgenden 
 
 **Bewertung: kein großer Verlust, eher ein Vorteil.** Der Schwachpunkt der Oktoberbewerbung war, dass zum Stichtag weder die Promotionszulassung noch das Masterzeugnis vorlagen; beides musste über eine Betreuerbestätigung und eine Erläuterung im Feld „Weitere Mitteilungen" aufgefangen werden. Zum **01.05.2027** liegen **beide Dokumente vor**. Preis ist ein späterer Förderbeginn, voraussichtlich Herbst 2027 statt Frühjahr 2027; die ersten Promotionsmonate ab Februar 2027 sind anderweitig zu überbrücken.
 
-**Weiterhin ungeklärt und vorrangig:** die Förderfähigkeit einer Auslandspromotion bei ausländischer Staatsangehörigkeit (Abschnitt 14.1). Die Anfrage `Email_RLS_Anfrage_Auslandspromotion.md` wurde entsprechend **von „dringend vor dem 01.10." auf „grundsätzliche Klärung vor der Frühjahrsrunde" umgestellt** und um die Frage nach Förderbeginn und Bewerbungsrunde ergänzt.
+**Erledigt statt ungeklärt:** Die Frage der Förderfähigkeit einer Auslandspromotion ist **positiv beantwortet** — Maria besitzt die deutsche Staatsangehörigkeit, und genau daran knüpft die RLS-Ausnahme für Promotionen in der EU an (Korrektur in Abschnitt 14.1). Die Anfrage `Email_RLS_Anfrage_Auslandspromotion.md` ist damit **kein Blocker mehr**, sondern eine kurze Bestätigungsanfrage zu zwei Restpunkten: private, staatlich akkreditierte Universität im EU-Ausland sowie Bewerbungsrunde und Förderbeginn.
 
 **Gutachtenanfragen gestoppt.** Kythreotis und Sauerhammer werden vorerst nicht angefragt. Gutachten dürfen höchstens sechs Monate alt sein — für den 01.05.2027 wären sie ab **November 2026** einzuholen, und erst nach positiver Antwort der Stiftung.
 
@@ -375,3 +375,17 @@ Die RLS-Bewerbungsrunden laufen **20.08.–01.10.** (Förderbeginn im folgenden 
 | Onassis | Beobachtung | Announcement Dezember 2026 |
 | RIF PhD in Industry | zurückgestellt | nur bei Unternehmenskontakt in Zypern |
 | Cyprus Institute, IKYK, Big 4, MSCA, Bodossaki, Sylvia Ioannou | ausgeschlossen bzw. unwahrscheinlich | — |
+
+## 17. Korrektur Staatsangehörigkeit — Stand 04.10.2026
+
+**Maria besitzt die deutsche Staatsangehörigkeit**, zusätzlich die griechische. In Abschnitt 1 (KAS-Checkliste, Zeile 7) war das bereits korrekt vermerkt; in Abschnitt 14.1 wurde sie irrtümlich als ausschließlich griechische Staatsangehörige geführt. **Fehler korrigiert.** Auswirkungen:
+
+| Schiene | Auswirkung |
+|---|---|
+| **RLS** | 🟢 **Aus Risiko wird Vorteil.** Die Regel „Promotion in der EU oder der Schweiz bei deutscher Staatsangehörigkeit" greift zu Marias Gunsten. Die Promotion an der EUC ist förderfähig. Die Anfrage ist zur **Bestätigungsanfrage** herabgestuft (private, staatlich akkreditierte Universität; Wahl der Runde). |
+| **Studienstiftung** | 🟢 Unverändert positiv, jetzt doppelt abgesichert: deutsche Staatsangehörigkeit **und** in Deutschland erworbene Hochschulzugangsberechtigung (Abitur 2015). |
+| **KAS** | 🟢 Nationalitätsfrage entfällt; es bleibt die Einordnung als „besonders begründeter Einzelfall" für eine vollständige Auslandspromotion zu Inlandskonditionen. |
+| **Onassis, Leventis, Sylvia Ioannou, Bodossaki** | ⚪ Unverändert — dort zählt die **griechische** Staatsangehörigkeit, die Maria ebenfalls besitzt. Die jeweiligen Ausschlussgründe (Wohnsitz, Notenschnitt, Herkunftshochschule, Altersgrenze) bleiben davon unberührt. |
+| **IKYK** | ⚪ Unverändert ausgeschlossen — dort entscheidet der **Wohnsitz** in Zypern, nicht die Staatsangehörigkeit. |
+
+**⚠️ Offener Punkt mit Folgen: das Datum.** Die Arbeitsumgebung zeigt den **04.09.2026**, Maria nennt den **04.10.2026**. Ist tatsächlich noch September, dann ist die **RLS-Herbstrunde bis zum 01.10.2026 offen** — und da die Staatsangehörigkeitsfrage geklärt ist, wäre eine Bewerbung in dieser Runde möglich und lohnend. Fehlend wären nur die beiden Gutachten und die Engagement-Nachweise. Maria muss das anhand ihres eigenen Kalenders entscheiden.
