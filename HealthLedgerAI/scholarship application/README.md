@@ -544,3 +544,31 @@ Quelle: `originale/Sylvia_Ioannou_Terms_and_Procedures_2026-09.pdf` (offizielle 
 Falls Maria dennoch Gewissheit möchte, genügt eine kurze Anfrage an **scholarships@sylviaioannoufoundation.org** mit der einen Frage, ob ein deutscher Bachelor bei griechischer Staatsangehörigkeit zulässig ist. Nach dem Wortlaut ist die Antwort absehbar.
 
 **Aufwand vergleichen:** Der Höchstbetrag ist ein Festbetrag ohne öffentlich genannte Höhe; Leventis dagegen ist bestätigt, zulässig und bringt bis zu 9.000 € (Abschnitt 22.3). Die Energie gehört dorthin und zur EUC-Bewerbung.
+
+### 23.1 Anfrage dennoch gestellt
+
+Maria möchte die Sache verbindlich klären, weil ihr **Master und ihre Promotion an einer zyprischen Universität** stattfinden, auch wenn der Bachelor deutsch ist, und weil das Programm ausdrücklich auch **Promotionen** fördert. Das ist berechtigt — der Wortlaut von Bedingung III bezieht sich mit dem Klammerzusatz „(undergraduate studies)" zwar eindeutig auf das Erststudium, aber eine E-Mail kostet nichts und schafft Gewissheit. Entwurf: `Email_Sylvia_Ioannou_Anfrage_GR.md` (Griechisch, vier Fragen: Erststudium im Ausland bei kyprischem Master und Promotion, Notenumrechnung, Auslegung der Cyprus-Fokus-Klausel, nächstes Bewerbungsfenster).
+
+## 24. Kleinere Stiftungen — Recherche, Stand 05.09.2026
+
+Frage: Gibt es weitere **kleine** Stiftungen wie Leventis, auch aus Deutschland, die nach Potenzial fördern statt nach dem Muster der großen Begabtenförderungswerke?
+
+**Strukturbefund, der fast alles erklärt:** Deutsche Stiftungen setzen für Promotionsförderung nahezu durchgängig die **Immatrikulation an einer deutschen Hochschule** voraus. Griechische Stiftungen wiederum verlangen ein **Erststudium an einer griechischen Hochschule** und arbeiten mit **Altersgrenzen**, die Maria überschritten hat. Genau deshalb funktioniert Leventis: dort zählen Staatsangehörigkeit und wirtschaftliche Lage, nicht die Herkunft des Bachelors, und es gibt keine Altersgrenze.
+
+| Stiftung | Ergebnis |
+|---|---|
+| **Heinrich-Hertz-Stiftung NRW** | 🔴 „Promotionsvorhaben werden grundsätzlich nicht gefördert"; nur kurz vor Abschluss, max. 6 Monate, 1.500 €/Monat. Zudem kann der **Antrag nicht selbst gestellt werden**, sondern nur durch in NRW tätige Professor:innen. |
+| **FAZIT-Stiftung** | 🔴 Setzt **Zulassung an einer deutschen Hochschule** voraus und **Höchstalter 28** bei Promotionsbeginn. Maria ist bei Beginn 29/30 und promoviert in Zypern. (Bis 1.250 €/Monat, max. 24 Monate, jederzeit Antrag, Bedürftigkeit vorausgesetzt.) |
+| **Ίδρυμα Λίλιαν Βουδούρη** | 🔴 Nur **Master** (MASTER, DEA, MPhil), Geburtsjahrgang **ab 2000**, Notenschwelle 8,50. Maria Jahrgang 1997. |
+| **Bodossaki** | 🔴 Altersgrenze 26 (28 bei Ärzt:innen) — siehe 11.2. |
+| **Sylvia Ioannou** | 🔴 siehe Abschnitt 23; Anfrage läuft. |
+
+**Was tatsächlich noch offensteht:**
+
+- **Onassis Foundation** — die eigentliche zweite Leventis. Griechische Stiftung, fördert Promotionen im Ausland, keine Bindung an eine griechische Erstuniversität. Announcement Dezember 2026 abwarten (Abschnitt zur Onassis-Analyse weiter oben).
+- **Regionale und lokale Stiftungen in NRW** (Stadt Jülich, Kreis Düren, Sparkassenstiftungen). Klein, bedarfsorientiert, oft ohne große Ausschreibung — der klassische Ort für „kleine Stiftungen". **Noch nicht geprüft**, weil ortsspezifisch.
+- **Fachlich passende Stiftungen des Rechnungswesens** (z. B. Stiftungen im Umfeld von DATEV, IDW, Schmalenbach-Gesellschaft), die Forschung zur Digitalisierung von Rechnungswesen und Prüfung fördern. **Noch nicht geprüft.**
+- **Frauenspezifische Programme** (Zonta, Soroptimist, Deutscher Akademikerinnenbund). Meist kleinere Beträge, oft auf Bachelor/Master beschränkt. **Noch nicht geprüft.**
+- **Systematische Suche** über die Stiftungssuche des Bundesverbandes Deutscher Stiftungen und den **Stipendienlotsen des BMBF**, dort gefiltert nach Promotion und Ausland. Das ist der richtige Weg, um den langen Schwanz kleiner Stiftungen zu erfassen.
+
+**Ehrliche Priorisierung:** Wegen der Auslandspromotion ist der Erwartungswert der Kleinstiftungssuche gering. Die größten Hebel bleiben **Leventis** (bestätigt, bis 9.000 €), das **EUC-Stipendienthema** über Prof. Kythreotis, die **Entscheidungen von KAS und Studienstiftung** und **Onassis** im Dezember.
