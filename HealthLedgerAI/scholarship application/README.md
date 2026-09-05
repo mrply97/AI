@@ -572,3 +572,34 @@ Frage: Gibt es weitere **kleine** Stiftungen wie Leventis, auch aus Deutschland,
 - **Systematische Suche** über die Stiftungssuche des Bundesverbandes Deutscher Stiftungen und den **Stipendienlotsen des BMBF**, dort gefiltert nach Promotion und Ausland. Das ist der richtige Weg, um den langen Schwanz kleiner Stiftungen zu erfassen.
 
 **Ehrliche Priorisierung:** Wegen der Auslandspromotion ist der Erwartungswert der Kleinstiftungssuche gering. Die größten Hebel bleiben **Leventis** (bestätigt, bis 9.000 €), das **EUC-Stipendienthema** über Prof. Kythreotis, die **Entscheidungen von KAS und Studienstiftung** und **Onassis** im Dezember.
+
+## 25. Gesundheits- und KI-Förderung in Zypern und Griechenland — Recherche, Stand 05.09.2026
+
+Frage: Gibt es Krankenhäuser, Gesundheitsstiftungen oder KI-Förderer in Zypern und Griechenland, die Marias Vorhaben finanzieren könnten — insbesondere die beiden Partnerkliniken?
+
+**Grundbefund:** Es gibt in diesem Feld **keine Stiftung, die einzelnen Promovierenden ein Stipendium gibt**. Geld für Gesundheit und KI ist in beiden Ländern **Projektgeld**, das an Institutionen und Unternehmen fließt, nicht an Personen. Der Zugang führt deshalb nicht über eine Bewerbung, sondern über eine **Organisation, die Maria beschäftigt oder in ein Konsortium aufnimmt**.
+
+| Geldgeber | Befund |
+|---|---|
+| **ΕΛΙΔΕΚ / HFRI** (Ελληνικό Ίδρυμα Έρευνας και Καινοτομίας) | 🔴 Der zentrale griechische Forschungsförderer mit einem eigenen Programm für Promovierende (zuletzt 500 Stipendien, 8,5 Mio. €). **Ausschluss:** Gefördert wird die Promotion an einem **griechischen** AEI; wer im Ausland promoviert, muss von einem griechischen AEI aufgenommen worden sein, **um die Dissertation in Griechenland abzuschließen**. Für Marias Promotion an der EUC nicht nutzbar, es sei denn, sie verlegte das Verfahren nach Griechenland — das würde Betreuung und Zeitplan sprengen. |
+| **EIT Health** (EU-Wissens- und Innovationsgemeinschaft Gesundheit) | 🟡 Fördert **Konsortien**, nicht Einzelpersonen: Accelerators, Flagships, Fellowships, Micro-Credentials für Master- und Promotionsstudierende. **Zypern und Griechenland sind über das Regional Innovation Scheme begünstigt** (reduzierter Eigenanteil von 25 % statt 35 %); Hub für beide Länder ist das **EKT in Athen**. Kein Weg für eine Einzelbewerbung — wohl aber, wenn die EUC oder eine Klinik in ein Projekt einsteigt. Ansprechpartner intern: **PEAK Innovation Center** der EUC, wo Prof. Kythreotis verortet ist. |
+| **Cyprus Cancer Research Institute (CCRI)** | 🔴 Onkologische Grundlagen- und klinische Forschung (u. a. ERC Synergy Grant). Kein Bezug zu Rechnungswesen oder Verwaltungsprozessen. |
+| **fundingprogrammesportal.gov.cy** | 🟡 Zyprisches Förderportal mit laufenden Calls, darunter „Advanced Digital Skills for AI Uptake in Health" und „Micro-credentials for Entrepreneurship and Innovation in Healthcare 2027". Durchweg **Konsortialprojekte und Trainingsformate**, keine Promotionsstipendien. Als Beobachtungsquelle sinnvoll. |
+| **Private Kliniken als Stipendiengeber** | 🔴 Weder in Zypern noch in Griechenland betreiben private Klinikgruppen Promotionsstipendienprogramme. Eine Anfrage „Finanzieren Sie meine Promotion?" führt ins Leere. |
+
+### 25.1 Der eigentliche Fund: das American Medical Center kann Antragsteller sein
+
+**Das American Medical Center in Nikosia ist ein privates Unternehmen in Zypern — und genau das verlangt RIF „PhD in Industry" als Host Organisation** (Abschnitt 15). Die Konstellation, die dort als Hindernis notiert war („Maria hat kein zyprisches Unternehmen im Rücken"), besteht möglicherweise gar nicht: Sie hat bereits eine Forschungsbeziehung zu genau so einem Unternehmen.
+
+Damit ändert sich die Bewertung der RIF-Schiene. Sie bleibt anspruchsvoll — das Unternehmen stellt den Antrag, Maria müsste dort angestellt sein, und die Bewerbung erfordert Vorlauf —, aber sie ist nicht mehr hypothetisch. Fördervolumen bis 150.000 € über drei Jahre.
+
+**Das European Interbalkan Medical Center in Thessaloniki kommt dafür nicht in Frage:** RIF verlangt ein **zyprisches** Unternehmen; ausländische Einrichtungen sind als Partner ausgeschlossen. Es bleibt Erhebungsfeld, nicht Geldgeber.
+
+### 25.2 Konkrete nächste Schritte
+
+1. **Beim ohnehin anstehenden Gespräch mit dem American Medical Center** über den Datenzugang eine zusätzliche Frage stellen: ob das Haus grundsätzlich bereit wäre, als Host Organisation einer RIF-Bewerbung „PhD in Industry" aufzutreten. Kein Antrag, nur die Frage nach der Bereitschaft.
+2. **Prof. Kythreotis einbeziehen** — er ist Deputy Dean und im PEAK Innovation Center, also der EUC-Einheit, die Unternehmenskooperationen und Konsortialprojekte betreut. Er kennt sowohl den RIF-Apparat als auch EIT-Health-Strukturen besser als jede externe Recherche.
+3. **research.org.cy und fundingprogrammesportal.gov.cy beobachten** — dort erscheinen die RIF-Calls und die gesundheitsbezogenen KI-Ausschreibungen.
+4. **Die RIF-Anfrage** (`Email_RIF_PhD_in_Industry_Anfrage.md`, bislang zurückgestellt) gewinnt damit an Sinn: Die Fragen 2, 3 und 4 — Zeitpunkt der Anstellung, Staatsangehörigkeit und Wohnsitz, Immatrikulationsstatus — entscheiden, ob der Weg über das AMC überhaupt gangbar ist.
+
+**Ehrliche Einordnung:** Das ist kein Stipendium, sondern eine Anstellung mit Promotionsanteil, und sie setzt einen Umzug nach Zypern voraus. Ob das zu Marias Lebensplanung passt, ist eine andere Frage als die der Förderfähigkeit. Aber es ist die einzige Konstruktion in diesem Feld, die drei Jahre trägt statt einen Zuschuss zu geben.
