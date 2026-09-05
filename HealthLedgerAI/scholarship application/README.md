@@ -193,7 +193,7 @@ Alle Angaben aus Websuche (euc.ac.cy, gov.cy, highereducation.ac.cy, cyprus-mail
 
 | Geldgeber | Leistung | Befund |
 |---|---|---|
-| **Sylvia Ioannou Foundation** (Zypern/Griechenland, sylviaioannoufoundation.org) | Festbetrag unabhängig von Gebühren/Hochschule, jährlich verlängerbar, max. 3 Jahre | Fördert **Master- UND Promotionsstudien in jedem Fachgebiet**. ⚠️ Drei harte Bedingungen: (1) **Zypern muss das zentrale Thema der Dissertation sein** — Marias Thema ist „Evidence from **Cyprus and Greece**", Zypern also nur zur Hälfte → Auslegungsfrage, ehrlich anzusprechen; (2) Bachelorabschluss **einer griechischen oder zyprischen Universität mit Note ≥ 8/10** — Marias Bachelor ist von der HS Niederrhein (Note 2,5) → **wahrscheinlicher Ausschlussgrund**; (3) **Höchstalter 33** → erfüllt. Bewerbungsschluss zuletzt 30. April. Verdikt: unwahrscheinlich, aber eine kurze E-Mail-Anfrage kostet nichts. |
+| **Sylvia Ioannou Foundation** (Zypern/Griechenland, sylviaioannoufoundation.org) | Festbetrag, jährlich verlängerbar | 🔴 **Ausgeschlossen — geprüft am 05.09.2026 anhand der offiziellen „Terms & Procedures" (`originale/Sylvia_Ioannou_Terms_and_Procedures_2026-09.pdf`).** Details in Abschnitt 23. |
 | **RIF (Research & Innovation Foundation) — „PhD in Industry"** | bis **150.000 € über 3 Jahre** (Beschäftigung + Projekt) | Das ist die einzige echte **„Unternehmen finanziert Promotion"**-Schiene in Zypern: gefördert wird ein:e Forscher:in, die **in einem zyprischen Unternehmen angestellt** ist und **gleichzeitig an einer zyprischen Universität promoviert**. Antragsteller ist das **Unternehmen** (Host Organisation), die Universität muss Partner sein; ausländische Forschungseinrichtungen sind nicht zugelassen. Marias Thema (KI in Rechnungswesen-/Controllingprozessen von Gesundheitsorganisationen) passt fachlich hervorragend zu zyprischen Buchhaltungssoftware-Häusern, Klinikgruppen oder Prüfungsgesellschaften. ⚠️ **Voraussetzung: Anstellung in Zypern** → nur realistisch, wenn Maria nach Zypern zieht bzw. dort angestellt wird. Calls laufen über das IRIS-Portal (research.org.cy), zuletzt Volumen 1,25 Mio. €. |
 | **Bodossaki-Stiftung** (Griechenland) | Postgraduierten- und Postdoc-Stipendien im Ausland | Für **griechische Staatsangehörige**, 64 Stipendien im Jahrgang 2026. ⚠️ **Altersgrenze 26 Jahre** (28 bei Ärzt:innen) und fachlicher Schwerpunkt auf Natur-/Lebens-/Ingenieurwissenschaften; BWL nur am Rand. Maria ist darüber → **voraussichtlich ausgeschlossen**, aktuelle Ausschreibung dennoch einmal gegenprüfen. |
 | **CIMA General Charitable Trust** (AICPA & CIMA) | Forschungsförderung Management Accounting | Kein Promotionsstipendium, sondern **Forschungsgelder für early-career academics weltweit** in genau Marias Fachgebiet. Erst **nach Immatrikulation** relevant, dann aber als Drittmittel für die empirische Erhebung interessant. |
@@ -522,3 +522,25 @@ Quelle: `originale/Leventis_Antwort_Verlaengerung_2026-09-04.png`. Marias Nachfr
 | 31.03.2029 | **Letzter Tag Verlängerung** | 7, 2 Tage |
 
 Die Verlängerungstermine führen die drei Bedingungen im Beschreibungsfeld mit.
+
+## 23. Sylvia Ioannou Foundation — geprüft und ausgeschlossen, Stand 05.09.2026
+
+Quelle: `originale/Sylvia_Ioannou_Terms_and_Procedures_2026-09.pdf` (offizielle „Terms & Procedures", 14. Stipendienprogramm, akademisches Jahr 2026–2027, Einreichung 01.03.–30.04.2026; das Fenster für 2027/28 läge entsprechend im **März/April 2027**).
+
+**Ergebnis: Maria ist nicht bewerbungsberechtigt.** Die frühere Einschätzung „unwahrscheinlich, aber eine Anfrage kostet nichts" (Abschnitt 11.2) ist damit überholt — der Ausschluss steht wörtlich in der Ausschreibung.
+
+| Bedingung der Stiftung | Marias Situation | |
+|---|---|---|
+| **III. „Candidates should be Greek or Cypriot graduates of Greek or Cypriot Universities (undergraduate studies)."** | Bachelor von der **Hochschule Niederrhein, Deutschland** | 🔴 **Harter Ausschluss.** Die Staatsangehörigkeit stimmt, die **Herkunftshochschule des Erststudiums** nicht. Es gibt in den Bedingungen keine Ausnahme- oder Ermessensklausel dazu. |
+| **III. GPA mindestens 8,00 von 10** | Bachelor-Note **2,5** (deutsches System) | 🔴 Entspricht rechnerisch etwa 7,0–7,5/10 und liegt damit **unter der Schwelle**. |
+| **III. Abschluss höchstens 2 Jahre nach der Regelstudienzeit** | Studium 09/2019–10/2024, also gut **5 Jahre 2 Monate** | 🟡 Bei einer Regelstudienzeit von 6 Semestern (3 Jahre) wäre die Grenze 5 Jahre → **knapp überschritten**. Bei 7 Semestern wäre sie eingehalten. Die Regelstudienzeit ist weiterhin nicht verifiziert — hier aber ohnehin ohne Folgen. |
+| **II. „Applications that do not include subjects focused on Cyprus … will be automatically excluded."** | Thema: „Evidence from **Cyprus and Greece**", Partnerklinik in Nikosia | 🟡 **Auslegungsrisiko.** Zypern ist eines von zwei Erhebungsfeldern, nicht der alleinige Gegenstand. Ob das als „focused on Cyprus" durchginge, ist offen — und die Klausel führt zum **automatischen** Ausschluss. |
+| **I. Höchstalter 33 Jahre** | Jahrgang 1997 | 🟢 erfüllt |
+| **VII. Keine Teilzeit- oder Fernstudien** | Vollzeit, Präsenz in Nikosia | 🟢 erfüllt |
+| **XIV. Vermögenserklärung (E9) und Steuerbescheid des Vorjahres — auch der Eltern** | Wohnsitz Deutschland, griechische E9-Erklärungen liegen vermutlich nicht vor | 🟡 praktische Hürde, im Zweifel über Eigenerklärung lösbar |
+
+**Empfehlung: nicht weiterverfolgen.** Bedingung III ist eindeutig formuliert und trifft gleich doppelt zu — falsche Herkunftshochschule des Bachelors **und** Notenschwelle. Selbst wenn beides überwunden würde, bliebe die Cyprus-Fokus-Klausel mit automatischer Ausschlussfolge. Eine Bewerbung wäre vergebliche Arbeit, und die Vorbereitung ist aufwendig: Antrag auf Griechisch, CV auf Griechisch, Empfehlungsschreiben, Vermögens- und Steuerunterlagen der Eltern.
+
+Falls Maria dennoch Gewissheit möchte, genügt eine kurze Anfrage an **scholarships@sylviaioannoufoundation.org** mit der einen Frage, ob ein deutscher Bachelor bei griechischer Staatsangehörigkeit zulässig ist. Nach dem Wortlaut ist die Antwort absehbar.
+
+**Aufwand vergleichen:** Der Höchstbetrag ist ein Festbetrag ohne öffentlich genannte Höhe; Leventis dagegen ist bestätigt, zulässig und bringt bis zu 9.000 € (Abschnitt 22.3). Die Energie gehört dorthin und zur EUC-Bewerbung.
