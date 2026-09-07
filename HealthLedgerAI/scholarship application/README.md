@@ -603,3 +603,15 @@ Damit ändert sich die Bewertung der RIF-Schiene. Sie bleibt anspruchsvoll — d
 4. **Die RIF-Anfrage** (`Email_RIF_PhD_in_Industry_Anfrage.md`, bislang zurückgestellt) gewinnt damit an Sinn: Die Fragen 2, 3 und 4 — Zeitpunkt der Anstellung, Staatsangehörigkeit und Wohnsitz, Immatrikulationsstatus — entscheiden, ob der Weg über das AMC überhaupt gangbar ist.
 
 **Ehrliche Einordnung:** Das ist kein Stipendium, sondern eine Anstellung mit Promotionsanteil, und sie setzt einen Umzug nach Zypern voraus. Ob das zu Marias Lebensplanung passt, ist eine andere Frage als die der Förderfähigkeit. Aber es ist die einzige Konstruktion in diesem Feld, die drei Jahre trägt statt einen Zuschuss zu geben.
+
+### 23.2 Absage der Stiftung — endgültig geklärt, 07.09.2026
+
+Quelle: `originale/Sylvia_Ioannou_Absage_2026-09-07.pdf`. Marias Anfrage ging am 05.09.2026 um 07:14 raus; die Antwort kam von **Λευτέρης Κελαϊδίτης, Γραμματεία Υποτροφιών**.
+
+**Wortlaut der Bedingungen laut Stiftung:** Das Programm wird jährlich ausgeschrieben und richtet sich **ausschließlich an Zyprer:innen und Griech:innen** (mit entsprechendem Personalausweis) und **ausschließlich an Absolvent:innen des Erststudiums an griechischen oder zyprischen Hochschulen (ΑΕΙ)**, für Master- **und Promotionsstudien**, bei denen **Zypern das zentrale Thema** der Abschlussarbeit oder Dissertation ist.
+
+**Entscheidung:** „Δεδομένου ότι οι προπτυχιακές σπουδές σας έχουν ολοκληρωθεί στο Hochschule Niederrhein της Γερμανίας και όχι σε ΑΕΙ της Ελλάδας ή της Κύπρου, δεν καλύπτεται μία από τις βασικές προϋποθέσεις του Προγράμματος Υποτροφιών. Συνεπώς, δεν είναι δυνατή η συμμετοχή σας στο Πρόγραμμα." — Eine Teilnahme ist **nicht möglich**.
+
+**Einordnung:** Die Auslegung in Abschnitt 23 wird damit bestätigt; der deutsche Bachelor ist der Ausschlussgrund, nicht die Note und nicht das Thema. Maria lag mit ihrem Einwand richtig, dass das Programm auch **Promotionen** fördert — das bestätigt die Stiftung ausdrücklich. Der zyprische Master hilft jedoch nicht, weil die Bedingung ausdrücklich am **Erststudium** hängt. Die Anfrage war die richtige Entscheidung: Sie hat für zwei Minuten Aufwand endgültige Gewissheit gebracht, statt eine aufwendige Bewerbung ins Leere laufen zu lassen.
+
+**Status: 🔴 abgeschlossen, keine weitere Aktion.**
