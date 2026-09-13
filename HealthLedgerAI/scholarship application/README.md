@@ -653,3 +653,39 @@ Dr. Hauschild hatte auch den DAAD genannt. **Die DAAD-Forschungsstipendien für 
 ### 26.5 Hinweis zur Arbeitsumgebung
 
 Am 13.09.2026 war der lokale Arbeitsordner nach einem Container-Reset erneut leer; der Stand wurde über `git merge origin/claude/scholarship-application-review-qa4250` vollständig wiederhergestellt. **Alle Dateien liegen sicher im Remote-Branch** — lokale Verluste sind dadurch folgenlos.
+
+## 27. American Medical Center — Strategie für das Gespräch mit der Geschäftsführung
+
+Marias Überlegung: Der CEO des American Medical Center in Nikosia sei die einzige Person, die sie finanzieren könnte; sie will ihn überzeugen und dann fragen, ob das Haus ihre Promotion unterstützt — mit Nutzen für beide Seiten.
+
+**Die Grundüberlegung ist richtig.** Das AMC ist der stärkste realistische Privatgeldgeber: bestehende Forschungsbeziehung, das Problem liegt bei ihnen, und es ist ein **zyprisches Unternehmen** und damit als Host Organisation für RIF „PhD in Industry" qualifiziert (Abschnitt 25.1).
+
+### 27.1 Die wichtigste taktische Regel: Zugang und Geld trennen
+
+**Zuerst den Datenzugang sichern, das Geld später ansprechen.** Werden beide Anliegen in einem Gespräch gebündelt, kann ein Nein zur Finanzierung den Feldzugang mitreißen, den Maria für die Dissertation zwingend braucht. Der Zugang ist unverzichtbar, das Geld wäre ein Zusatz. Erst das Unverzichtbare absichern.
+
+### 27.2 Nicht um ein Stipendium bitten — drei konkrete Optionen anbieten
+
+Krankenhausgeschäftsführungen vergeben keine Stipendien. Sie entscheiden über Projekte mit Nutzen. Deshalb keine Bitte um Förderung, sondern ein Vorschlag mit drei Varianten:
+
+1. **RIF „PhD in Industry" — die mit Abstand beste Variante.** Maria bittet nicht um Geld des Hauses, sondern **bringt bis zu 150.000 € öffentliche Förderung mit**. Das AMC stellt den Antrag als Host Organisation, die EUC ist Partnerin, Maria wird dort angestellt und promoviert parallel. Für das Haus ein weitgehend fremdfinanziertes F&E-Projekt. Das dreht die Gesprächsrichtung um: kein Bittsteller, sondern eine Fördermittelbringerin.
+2. **Forschungspartnerschaft mit Zuschuss** — anonymisierter Datenzugang plus ein überschaubarer Beitrag zu Gebühren oder Lebenshaltung, im Gegenzug Auswertungen und Handlungsempfehlungen für das Haus.
+3. **Teilzeitanstellung** im Finanz- oder Controllingbereich mit vertraglich zugesicherter Promotionszeit.
+
+### 27.3 Was vor dem Gespräch vorliegen muss
+
+- **Eine Seite in ihrer Sprache, nicht in akademischer.** Nicht „KI-gestützte Transformation von Rechnungslegungsprozessen", sondern: fehlerhafte Abrechnungen, Nacharbeitszeit, abgelehnte Kostenträgerforderungen, Außenstandsdauer, Prüfungsfeststellungen. Was kostet der Status quo, was soll das Projekt liefern, was kostet es das Haus, was bekommt es dafür.
+- **Fragen statt Behauptungen zu ihren Zahlen.** Maria kennt die internen Fehlerquoten des AMC nicht. Fragen wirken kompetenter als geschätzte Zahlen und liefern zugleich das Material für den Business Case.
+- **RIF in zwei Sätzen erklären können** — Volumen, Laufzeit, wer Antragsteller ist, welcher Aufwand für das Haus entsteht.
+- **Prof. Kythreotis sichtbar machen.** Ein stellvertretender Dekan und die EUC als institutionelle Partnerin nehmen dem Vorhaben das Risiko des Einzelprojekts. **Eine Einführung über ihn ist stärker als ein direkter Vorstoß bei der Geschäftsführung.** Er kennt die Landschaft und möglicherweise das Haus.
+- **Eine Antwort zum Datenschutz.** Die erste Sorge einer Klinikleitung ist nicht das Geld, sondern DSGVO, Patientendaten und Datenweitergabe. Wer hier nicht vorbereitet ist, verliert das Gespräch, bevor es um Inhalte geht. Vorzubereiten: Anonymisierung bzw. Pseudonymisierung, Verbleib der Daten im Haus, Auftragsverarbeitung, Ethikvotum der EUC.
+
+### 27.4 Was nicht zu tun ist
+
+- **Nicht mit dem eigenen Bedarf beginnen.** „Damit ich meine Promotion finanzieren kann" ist kein Argument für ein Krankenhaus. Der Nutzen des Hauses gehört an den Anfang, das eigene Anliegen ans Ende.
+- **Nicht alles auf eine Person setzen.** Sagt der CEO nein, muss die Forschung trotzdem stattfinden. Deshalb Abschnitt 27.1.
+- **Keine NDA-Forderung vorab** (Abschnitt 26.2). Bei einer späteren Datenweitergabe wird ohnehin ein Vertrag geschlossen — dann durch die Universität, nicht durch Maria persönlich.
+
+### 27.5 Zeitpunkt
+
+Maria ist im Oktober 2026 in Zypern (Agenda Cyprus Summit am 14.10.). Das ist der natürliche Anlass für ein Treffen vor Ort. Vorher mit Prof. Kythreotis abstimmen.
