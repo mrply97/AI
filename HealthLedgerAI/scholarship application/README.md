@@ -615,3 +615,41 @@ Quelle: `originale/Sylvia_Ioannou_Absage_2026-09-07.pdf`. Marias Anfrage ging am
 **Einordnung:** Die Auslegung in Abschnitt 23 wird damit bestätigt; der deutsche Bachelor ist der Ausschlussgrund, nicht die Note und nicht das Thema. Maria lag mit ihrem Einwand richtig, dass das Programm auch **Promotionen** fördert — das bestätigt die Stiftung ausdrücklich. Der zyprische Master hilft jedoch nicht, weil die Bedingung ausdrücklich am **Erststudium** hängt. Die Anfrage war die richtige Entscheidung: Sie hat für zwei Minuten Aufwand endgültige Gewissheit gebracht, statt eine aufwendige Bewerbung ins Leere laufen zu lassen.
 
 **Status: 🔴 abgeschlossen, keine weitere Aktion.**
+
+## 26. Private Unternehmensförderung — Bewertung, Stand 13.09.2026
+
+Anlass: Dr. Luise Hauschild hat Maria am 12.09.2026 geraten, sich neben Stiftungen auch **initiativ bei Unternehmen** zu bewerben, da das Thema so praxisrelevant sei, und ausdrücklich nach den **großen WP-Gesellschaften (PwC, KPMG)** gefragt (`originale/Hauschild_Korrespondenz_2026-09-12.pdf`). Maria hat daraufhin **Main Capital Partners** gefunden (`originale/Main_Capital_Partners_Website_2026-09.pdf`, main.nl) und fragt, ob sie dort schreiben soll — mit der Sorge, ihre Idee könne gestohlen werden, weshalb sie vor jeder Präsentation eine NDA unterzeichnen lassen möchte.
+
+### 26.1 Main Capital Partners — 🔴 falscher Adressat
+
+Main Capital Partners ist eine **Private-Equity-Gesellschaft** mit Sitz in Den Haag (gegründet 2003), spezialisiert auf **Buyouts profitabler Enterprise-Software-Unternehmen** in Nordwesteuropa und Nordamerika; über 50 Portfoliounternehmen, mehr als 15.000 Beschäftigte, Healthcare-Software ist eines ihrer Segmente. Sie **kaufen Unternehmensanteile gegen Rendite** — sie vergeben keine Stipendien, keine Forschungsförderung und keine Spenden. Eine Anfrage um Promotionsförderung liefe ins Leere, weil sie nicht zum Geschäftsmodell gehört.
+
+**Ein Nebengedanke trägt aber:** Die **Portfoliounternehmen** von Main im Bereich Healthcare-Software und Financial Administration sind genau die Firmen, deren Kundschaft Marias Problem hat. Nicht Main ist der Ansprechpartner, sondern einzelne dieser Unternehmen — als Praxispartner, Datengeber oder Sponsor.
+
+### 26.2 Zur Sorge vor Ideendiebstahl — ehrliche Einordnung
+
+Der Instinkt ist verständlich, führt hier aber in die falsche Richtung.
+
+1. **Eine Promotionsfrage ist kein Geschäftsgeheimnis.** Marias Beitrag ist nicht die Idee „KI zur Fehlerreduktion in Krankenhausabrechnungen" — daran arbeiten Anbieter und Forschungsgruppen längst. Ihr Beitrag sind der **Feldzugang zu zwei konkreten Kliniken**, die **Methodik**, die **Daten** und drei Jahre Arbeit. Nichts davon lässt sich durch das Lesen einer zweiseitigen Zusammenfassung übernehmen.
+2. **Das Exposé zirkuliert bereits** — bei KAS, der Studienstiftung, der EUC, bei Prof. Kythreotis, bei Dr. Hauschild und bei Stiftungen. Eine NDA-Forderung wäre jetzt weder wirksam noch konsistent.
+3. **Unternehmen unterschreiben keine NDA für ein unaufgefordertes Pitch.** PE-Häuser und Konzerne lehnen das aus Prinzip ab, weil sie ständig ähnliche Vorschläge erhalten. Eine NDA-Forderung als Erstkontakt beendet das Gespräch, bevor es beginnt, und wirkt unerfahren.
+4. **Was tatsächlich schützt:** dokumentierte Priorität über Exposé, Betreuung und Publikationen; die Universität als institutioneller Zeuge; und — falls später ein konkretes Software-Artefakt entsteht — der reguläre Weg über die Technologietransferstelle. An der EUC ist das das **PEAK Innovation Center**, in dem Prof. Kythreotis verortet ist. Das ist der Moment für Verträge, nicht der Erstkontakt.
+5. **Zu viel Schutz ist selbst ein Risiko.** Niemand finanziert, was er nicht verstehen darf.
+
+**Praktische Lösung:** eine **einseitige Kurzfassung für Praxispartner** — Problem, Zielsetzung, Nutzen für den Partner, erwarteter Beitrag. Ohne methodische Details. Diese Seite geht raus; die Methodik bleibt dem persönlichen Gespräch vorbehalten.
+
+### 26.3 Die besseren Adressaten
+
+| Adressat | Warum |
+|---|---|
+| **WP-Gesellschaften (PwC, KPMG, Deloitte, EY)** — Hauschilds eigentlicher Hinweis | Budgets für angewandte Forschung, Thought Leadership und Promotionsförderung; Rechnungswesen ist ihr Kerngeschäft. Anknüpfungspunkt: Maria hatte auf einer Otto-Schmidt-Konferenz KPMG-Teilnehmende, ohne sich zu vernetzen. **Besserer Anknüpfungspunkt: Kyriakos Kokkinos** (ex PwC, ex IBM Europe), Vorsitzender des Organisationskomitees des Agenda Cyprus Summit am 14.10.2026 (Abschnitt 12). |
+| **Anbieter von Buchhaltungs-, ERP- und Krankenhausinformationssystemen** | Unmittelbares fachliches Interesse; potenzielle Daten- und Praxispartner. |
+| **American Medical Center Nikosia** | Bereits Partner und zugleich zyprisches Unternehmen — möglicher Host für RIF „PhD in Industry" (Abschnitt 25.1). |
+
+### 26.4 DAAD — geprüft, trifft nicht zu
+
+Dr. Hauschild hatte auch den DAAD genannt. **Die DAAD-Forschungsstipendien für Doktorandinnen und Doktoranden setzen eine Promotion an einer deutschen Hochschule voraus** (oder eine kooperative Promotion mit einer promotionsberechtigten deutschen Hochschule) und fördern **Auslandsaufenthalte von 1 bis 12 Monaten**, nicht eine vollständige Auslandspromotion. Das Programm „Promotionen in Deutschland" richtet sich an ausländische Promovierende **in** Deutschland. Ergänzend: Wer von einem Begabtenförderungswerk gefördert wird, kann keine DAAD-Auslandsförderung beantragen.
+
+### 26.5 Hinweis zur Arbeitsumgebung
+
+Am 13.09.2026 war der lokale Arbeitsordner nach einem Container-Reset erneut leer; der Stand wurde über `git merge origin/claude/scholarship-application-review-qa4250` vollständig wiederhergestellt. **Alle Dateien liegen sicher im Remote-Branch** — lokale Verluste sind dadurch folgenlos.
