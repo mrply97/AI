@@ -689,3 +689,15 @@ Krankenhausgeschäftsführungen vergeben keine Stipendien. Sie entscheiden über
 ### 27.5 Zeitpunkt
 
 Maria ist im Oktober 2026 in Zypern (Agenda Cyprus Summit am 14.10.). Das ist der natürliche Anlass für ein Treffen vor Ort. Vorher mit Prof. Kythreotis abstimmen.
+
+### 27.6 Gesprächsunterlage erstellt
+
+`AMC_Onepager_Research_Partnership_EN.md` — Einseiter auf Englisch für die Geschäftsführung des AMC. Aufbau: Problem in Krankenhaussprache, dreiphasiges Projekt, Nutzen für das Haus, Gegenleistung des Hauses, Datenschutz, Finanzierungsweg über RIF „PhD in Industry", Kurzprofil, nächster Schritt.
+
+Drei bewusste Entscheidungen:
+
+1. **Der „Next step" fragt ausschließlich nach dem Datenzugang.** Die Finanzierung ist dargestellt, aber ausdrücklich als getrennte, spätere Frage — entsprechend Abschnitt 27.1.
+2. **Marias eigener Finanzierungsbedarf kommt im Text nicht vor.** Ein Krankenhaus finanziert die Lösung seines Problems, nicht eine Laufbahn.
+3. **Die RIF-Angaben stehen unter Vorbehalt** („would be confirmed with the Foundation"), weil die Anfrage an support@research.org.cy noch nicht gesendet ist. Erst nach Antwort belastbar präsentieren.
+
+Vor Versand mit Prof. Kythreotis abstimmen — sein Name steht auf dem Papier.
