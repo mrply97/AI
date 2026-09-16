@@ -736,3 +736,15 @@ Quelle: `originale/Hadjiphanis_Korrespondenz_2026-04.pdf`
 Maria möchte ihn im Oktober persönlich treffen, damit er sie kennt, bevor er später mit ihrer Arbeit befasst ist. Als Koordinator des Promotionsprogramms ist er neben Prof. Kythreotis die zweite fachlich relevante Person an der EUC — und eine sinnvolle Quelle für die Frage, wann die Stipendienthemen des Frühjahrssemesters 2027 ausgeschrieben werden.
 
 Entwurf: `Email_Hadjiphanis_Terminanfrage_GR.md`. Bewusst sehr kurz gehalten und mit einem **Zeitfenster (12. und 13.10.2026)** statt eines festen Termins, weil er Zeiten selbst vorschlägt. Bei Kollision mit dem Termin bei Herrn Georgiou am Montagvormittag hat Hadjiphanis Vorrang. **Der 14.10. entfaellt** — an diesem Tag besucht Maria den Agenda Cyprus Summit.
+
+### 28.3 Prof. Kythreotis ist während des Zypern-Aufenthalts abwesend
+
+Stand 16.09.2026: Prof. Kythreotis hat mitgeteilt, dass er während Marias Aufenthalt (12.–14.10.2026) nicht vor Ort ist. Er bittet darum, laufend informiert zu werden.
+
+**Folgen für die Planung:**
+
+1. **Der Vorstoß beim American Medical Center sollte verschoben werden.** Abschnitt 27.3 sieht eine Einführung über Prof. Kythreotis vor, weil ein stellvertretender Dekan dem Vorhaben institutionelles Gewicht gibt. Ohne ihn wäre ein Gespräch mit der Geschäftsführung schwächer. Falls sich vor Ort dennoch ein Kontakt ergibt, nur als **unverbindliches Kennenlernen** führen, nicht als Pitch — der Einseiter bleibt in der Tasche.
+2. **Vor der Reise bei ihm anfragen**, ob er eine schriftliche Einführung zum AMC geben würde, auch aus der Ferne, und ob er zu bestimmten Punkten Rückmeldung wünscht.
+3. **Seine Bitte um Updates ist eine Chance.** Ein kurzer, gut strukturierter Bericht nach der Reise zeigt Verlässlichkeit und hält ihn im Verfahren aktiv — besonders wichtig, weil er Marias Vorschlag für die Stipendienausschreibung einreichen will (Abschnitt 18.2).
+
+**Notizen vor Ort** sind für alle Termine sowie für den Agenda Cyprus Summit am 14.10. vorgesehen (agenda.cy; Maria hat eine kostenlose Karte über die EUC als Partnerin der Veranstaltung). Struktur je Termin: Gesprächspartner:in und Funktion, Kernaussagen, Zusagen, offene Punkte, Fristen, Kontaktdaten. Daraus entsteht anschließend der Bericht an Prof. Kythreotis.
