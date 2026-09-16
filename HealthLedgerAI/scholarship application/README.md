@@ -735,4 +735,4 @@ Quelle: `originale/Hadjiphanis_Korrespondenz_2026-04.pdf`
 
 Maria möchte ihn im Oktober persönlich treffen, damit er sie kennt, bevor er später mit ihrer Arbeit befasst ist. Als Koordinator des Promotionsprogramms ist er neben Prof. Kythreotis die zweite fachlich relevante Person an der EUC — und eine sinnvolle Quelle für die Frage, wann die Stipendienthemen des Frühjahrssemesters 2027 ausgeschrieben werden.
 
-Entwurf: `Email_Hadjiphanis_Terminanfrage_GR.md`. Bewusst sehr kurz gehalten und mit einem **Zeitfenster (12.–14.10.2026)** statt eines festen Termins, weil er Zeiten selbst vorschlägt. Bei Kollision mit dem Termin bei Herrn Georgiou am Montagvormittag hat Hadjiphanis Vorrang.
+Entwurf: `Email_Hadjiphanis_Terminanfrage_GR.md`. Bewusst sehr kurz gehalten und mit einem **Zeitfenster (12. und 13.10.2026)** statt eines festen Termins, weil er Zeiten selbst vorschlägt. Bei Kollision mit dem Termin bei Herrn Georgiou am Montagvormittag hat Hadjiphanis Vorrang. **Der 14.10. entfaellt** — an diesem Tag besucht Maria den Agenda Cyprus Summit.

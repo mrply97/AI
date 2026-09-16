@@ -17,7 +17,7 @@ die Mail ein **Zeitfenster** und überlässt ihm die Wahl.
 
 Ετοιμάζω την αίτησή μου για το διδακτορικό πρόγραμμα με εισδοχή τον Φεβρουάριο 2027, με επιβλέποντα τον καθ. Αλέξιο Κυθρεώτη.
 
-Θα βρίσκομαι στη **Λευκωσία από τη Δευτέρα 12 έως την Τετάρτη 14 Οκτωβρίου** και θα χαιρόμουν πολύ να σας συναντήσω από κοντά. Ποια ημέρα και ώρα θα σας εξυπηρετούσε;
+Θα βρίσκομαι στη **Λευκωσία τη Δευτέρα 12 και την Τρίτη 13 Οκτωβρίου** και θα χαιρόμουν πολύ να σας συναντήσω από κοντά. Ποια ημέρα και ώρα θα σας εξυπηρετούσε;
 
 Σας ευχαριστώ πολύ.
 
@@ -36,7 +36,7 @@ ich hoffe, es geht Ihnen gut.
 
 Ich bereite meine Bewerbung für das Promotionsprogramm zur Aufnahme im Februar 2027 vor, betreut von Prof. Alexios Kythreotis.
 
-Ich werde von Montag, dem 12., bis Mittwoch, dem 14. Oktober in Nikosia sein und würde mich sehr freuen, Sie persönlich zu treffen. Welcher Tag und welche Uhrzeit würden Ihnen passen?
+Ich werde am Montag, dem 12., und am Dienstag, dem 13. Oktober in Nikosia sein und würde mich sehr freuen, Sie persönlich zu treffen. Welcher Tag und welche Uhrzeit würden Ihnen passen?
 
 Vielen Dank.
 
@@ -47,7 +47,7 @@ Maria Polychroniadou
 
 ## Hinweise für Maria
 
-- **Reisedaten anpassen**, falls du nicht vom 12. bis 14. Oktober in Nikosia bist. Das Fenster ist aus dem Gipfeltermin am Mittwoch, 14.10., und deinem Terminvorschlag an Herrn Georgiou für Montagvormittag abgeleitet.
+- **Der 14.10. ist bewusst ausgenommen** — an diesem Tag besucht Maria den Agenda Cyprus Summit. Das Fenster umfasst daher nur **Montag, 12.10., und Dienstag, 13.10.**
 - **Terminkollision vermeiden:** Georgiou ist für Montagvormittag angefragt. Falls Hadjiphanis ebenfalls Montagvormittag vorschlägt, hat das Gespräch mit ihm Vorrang — er koordiniert das Promotionsprogramm, Georgiou ist Verwaltung und kann auch später.
 - **Den Zweck im Gespräch nicht so formulieren wie im Kopf.** „Damit Sie mich kennen, bevor Sie meine Arbeit bewerten" sagt man nicht. Es reicht völlig, über die Bewerbung, das Programm und deinen Forschungsplan zu sprechen — der Rest ergibt sich von selbst.
 - **Eine Frage, die sich lohnt:** wann die Stipendienthemen für das Frühjahrssemester 2027 ausgeschrieben werden. Die Ankündigung läuft über das Rektorat (Abschnitt 28), aber als Programmkoordinator kennt er den üblichen Zeitpunkt vermutlich.
