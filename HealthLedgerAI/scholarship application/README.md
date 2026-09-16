@@ -726,3 +726,13 @@ Quelle: `originale/EUC_Georgiou_Antworten_2026-09-08.pdf` (Michalis Georgiou, Of
 ### 28.1 Persönliches Treffen in Nikosia
 
 Herr Georgiou hatte Maria am Telefon ein persönliches Treffen angeboten. Sie ist im Oktober in Zypern (Agenda Cyprus Summit am Mittwoch, 14.10.2026) und möchte darauf zurückkommen. Terminvorschlag: **Montag, 12.10.2026, vormittags**. Entwurf auf Griechisch mit deutscher Übersetzung: `Email_Georgiou_Terminanfrage_GR.md`.
+
+### 28.2 Zweiter Termin in Nikosia: Dr. Lycourgos Hadjiphanis
+
+Quelle: `originale/Hadjiphanis_Korrespondenz_2026-04.pdf`
+
+**Dr. Lycourgos Hadjiphanis**, PhD/DBA Program Coordinator, Department of Management and Marketing, School of Business Administration, EUC. L.Hadjiphanis@euc.ac.cy, Mobil 99232424. Korrespondenz vom April 2026, sehr knapper Stil („Call me next week to explain to you", „1pm").
+
+Maria möchte ihn im Oktober persönlich treffen, damit er sie kennt, bevor er später mit ihrer Arbeit befasst ist. Als Koordinator des Promotionsprogramms ist er neben Prof. Kythreotis die zweite fachlich relevante Person an der EUC — und eine sinnvolle Quelle für die Frage, wann die Stipendienthemen des Frühjahrssemesters 2027 ausgeschrieben werden.
+
+Entwurf: `Email_Hadjiphanis_Terminanfrage_GR.md`. Bewusst sehr kurz gehalten und mit einem **Zeitfenster (12.–14.10.2026)** statt eines festen Termins, weil er Zeiten selbst vorschlägt. Bei Kollision mit dem Termin bei Herrn Georgiou am Montagvormittag hat Hadjiphanis Vorrang.
