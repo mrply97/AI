@@ -701,3 +701,28 @@ Drei bewusste Entscheidungen:
 3. **Die RIF-Angaben stehen unter Vorbehalt** („would be confirmed with the Foundation"), weil die Anfrage an support@research.org.cy noch nicht gesendet ist. Erst nach Antwort belastbar präsentieren.
 
 Vor Versand mit Prof. Kythreotis abstimmen — sein Name steht auf dem Papier.
+
+## 28. Vollständige Antwort des Zulassungsbüros — 08.09.2026
+
+Quelle: `originale/EUC_Georgiou_Antworten_2026-09-08.pdf` (Michalis Georgiou, Office of Admissions), Anlage `EUC - Cyprus Fees (2026-2027).pdf`.
+
+| Frage | Antwort |
+|---|---|
+| **1. Stipendienthemen Frühjahr 2027** | 🟢 **Es wird eine Frühjahrsrunde geben.** Die Themen werden bekanntgegeben, sobald sie festgelegt sind; Veröffentlichung über die Universitätswebsite, Bereich **Latest News**, der regelmäßig zu prüfen ist. |
+| **2. Herkunft der Themen** | Die Themen werden über das **Rektorat (Rector's Office)** in Abstimmung mit den beteiligten Stellen ausgeschrieben — nicht allein durch die Fakultät. Maria kann sich gleichwohl mit Prof. Kythreotis über Möglichkeiten und Hinweise aus der School of Business Administration abstimmen. |
+| **3. 10-%-Nachlass** | Wird wirksam **nach erfolgreichem Masterabschluss an der EUC und anschließender Zulassung zur Promotion**. Weitere Stipendien: nur die bereits genannten; das erwähnte Stipendium deckt **100 % der Studiengebühren**, vorbehaltlich seiner Bedingungen. |
+| **4. Sonstige Unterstützung** | Derzeit keine weiteren bekannt. |
+| **5. Gebühren und Zahlungsplan** | **Gesamtgebühr 14.400 €** für das gesamte Programm, gleichmäßig über drei Jahre verteilt. **Erstzahlung 580 €**, Restbetrag in **8 gleichen Raten**. Über die Academic Advisor ist ein Zahlungsplan mit **bis zu 12 Raten** möglich. **Zusätzlich 70 € Einschreibegebühr pro Semester**, nicht in den Gebühren enthalten. |
+
+**Zwei Korrekturen an früheren Annahmen:**
+
+1. **Die Sorge aus Abschnitt 13.1, das Stipendienprogramm laufe möglicherweise nur im Herbst, ist ausgeräumt.** Eine Frühjahrsausschreibung ist angekündigt. Damit ist Marias Start im Februar 2027 kein struktureller Ausschluss.
+2. **Der Hebel liegt nicht allein bei der Fakultät**, wie in Abschnitt 13.2 vermutet, sondern beim **Rektorat in Abstimmung mit den beteiligten Stellen**. Prof. Kythreotis bleibt der richtige Weg — er hat bereits zugesagt, Marias Vorschlag einzureichen (Abschnitt 18.2) —, aber die Entscheidung fällt eine Ebene höher.
+
+**Aktualisierte Kostenrechnung:** 14.400 € Gebühren, abzüglich 10 % Alumni-Nachlass = 12.960 €, zuzüglich 6 × 70 € Einschreibegebühr = **13.380 € über drei Jahre**. Eine Leventis-Chorigia von bis zu 9.000 € (Abschnitt 22.3) deckte davon rund **67 %**.
+
+**Zu beobachten:** die Rubrik **Latest News** auf euc.ac.cy, wegen der Ausschreibung der Frühjahrsthemen.
+
+### 28.1 Persönliches Treffen in Nikosia
+
+Herr Georgiou hatte Maria am Telefon ein persönliches Treffen angeboten. Sie ist im Oktober in Zypern (Agenda Cyprus Summit am Mittwoch, 14.10.2026) und möchte darauf zurückkommen. Terminvorschlag: **Montag, 12.10.2026, vormittags**. Entwurf auf Griechisch mit deutscher Übersetzung: `Email_Georgiou_Terminanfrage_GR.md`.
