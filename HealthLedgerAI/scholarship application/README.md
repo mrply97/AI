@@ -748,3 +748,23 @@ Stand 16.09.2026: Prof. Kythreotis hat mitgeteilt, dass er während Marias Aufen
 3. **Seine Bitte um Updates ist eine Chance.** Ein kurzer, gut strukturierter Bericht nach der Reise zeigt Verlässlichkeit und hält ihn im Verfahren aktiv — besonders wichtig, weil er Marias Vorschlag für die Stipendienausschreibung einreichen will (Abschnitt 18.2).
 
 **Notizen vor Ort** sind für alle Termine sowie für den Agenda Cyprus Summit am 14.10. vorgesehen (agenda.cy; Maria hat eine kostenlose Karte über die EUC als Partnerin der Veranstaltung). Struktur je Termin: Gesprächspartner:in und Funktion, Kernaussagen, Zusagen, offene Punkte, Fristen, Kontaktdaten. Daraus entsteht anschließend der Bericht an Prof. Kythreotis.
+
+## 29. AMC-Gespräch mit der Geschäftsführung — Stand der Planung, 16.09.2026
+
+Maria hat eigene Besprechungsnotizen erstellt. Daraus gehen mehrere Punkte hervor, die hier bisher nicht dokumentiert waren:
+
+- **Es existiert ein Prototyp: „HealthLedger AI"**, der in Daten von Krankenhausinformationssystemen **zwölf Arten von Abrechnungsfehlern** automatisch erkennt. Das ist ein reales Artefakt, kein bloßes Forschungsvorhaben — und damit ein schützenswertes Gut. **Die Einschätzung in Abschnitt 26.2 („eine Promotionsfrage ist kein Geschäftsgeheimnis") gilt für das Exposé, nicht für den Prototyp.**
+- **Eine NDA liegt vor**, erstellt von einer Patentanwältin bzw. einem Patentanwalt.
+- **Maria nimmt an einem EIT-Health-Programm teil** (Certified Innovation Paths, „Health Data Innovation"), das ein **Capstone-Projekt in einer realen Organisation** verlangt. EIT Health hat bestätigt, dass ein Mentor an der EUC zulässig ist — Bedingung ist nur die Zustimmung des Krankenhauses. Kontakt: **Melanie Blanchard**, EIT Health e.V., München, melanie.blanchard@eithealth.eu, Programm-Postfach certified.innovation.paths@eithealth.eu.
+- Weitere Programme auf ihrer Liste: **Cyprus Seeds** (cyprusseeds.com) und **Women TechEU** (womentecheurope.eu). **Noch nicht bewertet.**
+
+**Damit relativiert sich Abschnitt 26.4:** EIT Health war dort als reine Konsortialförderung eingeordnet, zu der Maria keinen Einzelzugang habe. Tatsächlich ist sie über das CIP-Programm bereits beteiligt.
+
+### 29.1 RIF im Gespräch — Zusatzblatt
+
+`AMC_CEO_Meeting_RIF_Zusatz.md`: RIF gehört **nicht als drittes Anliegen** in ein Erstgespräch, das bereits Forschungszugang und Capstone umfasst, sondern als **Schlussbemerkung ohne Bitte**. Es ist der einzige Punkt, bei dem Geld zum Krankenhaus fließt. Formulierungsvorschlag, zwei Ergänzungen zur Fragenliste (Datenschutzbeauftragte:r; Zweck des Letter of Support) und der Hinweis, dass die **RIF-Anfrage vor dem Gespräch gesendet werden muss** — sie liegt seit Anfang September unversendet im Ordner.
+
+### 29.2 Offene Punkte
+
+- **Cyprus Seeds und Women TechEU bewerten.** Cyprus Seeds fördert die Verwertung akademischer Forschung in Zypern und passt dem ersten Anschein nach zum Prototyp; Women TechEU richtet sich an von Frauen geführte Deep-Tech-Gründungen. Beides noch ungeprüft.
+- **Prof. Kythreotis ist während der Reise abwesend** (Abschnitt 28.3). Eine schriftliche Einführung aus der Ferne wäre der Ersatz für seine Anwesenheit.
