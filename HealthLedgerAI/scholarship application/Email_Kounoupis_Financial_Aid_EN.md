@@ -1,7 +1,7 @@
 # Anfrage an Andreas Kounoupis (Financial Aid Advisor, EUC) — bedarfsorientierte Unterstützung
 
 **An:** a.kounoupis@euc.ac.cy
-**Cc:** Mi.Georgiou@euc.ac.cy
+**Kein Cc** — siehe Begruendung unten.
 **Betreff:** Financial aid for the February 2027 doctoral intake — need-based support and payment arrangements
 
 **Warum diese Anfrage:** Die EUC unterscheidet zwischen **scholarships** (leistungsbezogen) und
@@ -47,3 +47,4 @@ MSc student, Data Analytics in Accounting and Finance (2025EUC2577)
 - **Frage 4 ist die wertvollste.** Eine bezahlte Stelle als Research oder Teaching Assistant löst das Liquiditätsproblem dauerhaft, nicht nur einmalig — und sie ist an einer Universität deutlich häufiger als Härtefallfonds. Die Frage wurde in der früheren Anfrage an Herrn Georgiou gestellt, aber nur allgemein beantwortet; bei Herrn Kounoupis gehört sie in die richtige Zuständigkeit.
 - **Die eigene Lage klar benennen, ohne zu klagen.** Eigenfinanzierung und Erstakademikerin sind bei bedarfsorientierter Förderung **bewertungsrelevante Tatsachen**, keine Entschuldigung. Der Text sagt das in zwei Sätzen und geht weiter.
 - **Nicht dieselbe Frage doppelt stellen.** Zu Stipendien hat Herr Georgiou abschließend geantwortet; diese Mail fragt ausdrücklich nach etwas anderem und verweist höflich darauf.
+- **Bewusst ohne Cc an Herrn Georgiou.** Drei Gruende: (1) Es geht um **bedarfsorientierte Foerderung**, die in Herrn Kounoupis' Zustaendigkeit faellt, nicht in seine. (2) Herr Georgiou hat zu Stipendien **abschliessend geantwortet** — ihn erneut einzubeziehen koennte wie Nachdruck wirken. (3) Am wichtigsten: Die Mail enthaelt **persoenliche Angaben zur finanziellen Lage**, die das Zulassungsbuero nicht braucht. Ein Zulassungsbuero bewertet unter anderem, ob Studierende die Gebuehren tragen koennen; diese Information gehoert dort nicht hin, waehrend gleichzeitig eine Terminanfrage laeuft. Herr Kounoupis kann intern weiterleiten, wenn er es fuer noetig haelt — das hat er beim ersten Mal auch getan.
