@@ -781,3 +781,16 @@ Entwurf: `Email_EUC_Housing_Office_EN.md` — sechs Fragen: Buchung ab Februar f
 
 1. **Formulierung bewusst korrekt gehalten** — „I am applying for the February 2027 intake", nicht „I have been admitted". Die Bewerbungsfrist ist der 15.01.2027.
 2. **Vorfrage an Maria selbst:** Die Promotion läuft drei Jahre in Präsenz. Bleibt sie über den Sommer 2027 hinaus in Nikosia, ist ein Zwölfmonatsvertrag ab Februar **die günstigere Lösung** (Laufzeit bis Januar 2028, deckt das erste Studienjahr vollständig). Auf kurzen Verträgen zu bestehen lohnt nur, wenn sie im Sommer tatsächlich nach Deutschland zurückkehren will — andernfalls gehen dadurch Angebote verloren.
+
+### 30.1 Liquiditätsproblem: Zahlung in drei Raten
+
+Die von Maria kontaktierten Anbieter verlangen die Jahresmiete in **drei Raten**. Das ist kein Kostenproblem, sondern ein **Liquiditätsproblem**: Einzelbeträge in dieser Höhe kann sie nicht aufbringen, familiäre Unterstützung besteht nicht.
+
+**Zwei Reaktionen:**
+
+1. **Die Housing-Anfrage wurde um Frage 5 ergänzt** — monatliche Zahlungsweise bei EUC-eigenen Einrichtungen, Anbieter mit monatlicher Zahlung, Höhe der Kaution.
+2. **Neue Anfrage an Andreas Kounoupis**, `Email_Kounoupis_Financial_Aid_EN.md`. Die EUC unterscheidet zwischen **scholarships** (leistungsbezogen) und **financial aid** (bedarfsbezogen). Bisher wurde ausschließlich nach Stipendien gefragt; Herr Kounoupis ist **Financial Aid Advisor**, und die bedarfsorientierte Schiene ist noch nie angesprochen worden. Fünf Fragen: bedarfsorientierte Förderung für Promovierende, Ratenzahlung auf zwölf Raten ab Programmbeginn, Härtefallfonds und Stundungen, **bezahlte Stellen als Research oder Teaching Assistant**, Zuschüsse zu Unterkunftskosten.
+
+**Wichtigster Punkt: die bezahlte Assistenzstelle.** Sie löst das Liquiditätsproblem dauerhaft statt einmalig und ist an einer Universität wahrscheinlicher als ein Härtefallfonds.
+
+**Strukturelles Risiko, offen benannt:** Für Februar 2027 ist derzeit **kein laufendes monatliches Einkommen gesichert**. KAS und Studienstiftung sind unentschieden; Leventis zahlt frühestens ab dem akademischen Jahr 2027/28 und deckt Gebühren, nicht den Lebensunterhalt. Das ist das größere Risiko als die Vertragslaufzeit einer Wohnung.

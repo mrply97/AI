@@ -27,7 +27,9 @@ I would be very grateful for your guidance on the following:
 
 4. What are the **typical monthly costs**, and what is included (utilities, internet, deposit)?
 
-5. Your website notes that June to September are the busiest months for viewing and booking. **When would you recommend that I book for a February start**, and is there an application form or waiting list I should complete in advance?
+5. **How is payment usually arranged?** The providers I contacted ask for the year to be paid in three instalments, which is difficult for me as I finance my studies myself. Are **EUC housing facilities** payable **monthly**? And do you know of off-campus providers who accept monthly payment? How large a **deposit** is normally required?
+
+6. Your website notes that June to September are the busiest months for viewing and booking. **When would you recommend that I book for a February start**, and is there an application form or waiting list I should complete in advance?
 
 One further question: I will be in **Nicosia on 12 and 13 October 2026** for meetings at the University. Would it be possible to **visit the Housing Office** during those two days, or to view accommodation while I am there?
 
