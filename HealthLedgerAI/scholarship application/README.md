@@ -768,3 +768,16 @@ Maria hat eigene Besprechungsnotizen erstellt. Daraus gehen mehrere Punkte hervo
 
 - **Cyprus Seeds und Women TechEU bewerten.** Cyprus Seeds fördert die Verwertung akademischer Forschung in Zypern und passt dem ersten Anschein nach zum Prototyp; Women TechEU richtet sich an von Frauen geführte Deep-Tech-Gründungen. Beides noch ungeprüft.
 - **Prof. Kythreotis ist während der Reise abwesend** (Abschnitt 28.3). Eine schriftliche Einführung aus der Ferne wäre der Ersatz für seine Anwesenheit.
+
+## 30. Unterkunft in Nikosia — Anfrage an das EUC Housing Office, 22.09.2026
+
+Maria hat Anbieter direkt kontaktiert; diese verlangen **Zwölfmonatsverträge**. Da die Promotion im **Februar 2027** und damit mitten im akademischen Jahr beginnt, sucht sie eine Lösung für ein einzelnes Semester und möchte, dass die Universität gegenüber Vermietern bestätigt, dass sie angehende Doktorandin ist.
+
+**Housing Office:** housing@euc.ac.cy, +357 22713279 / +357 22713152. Laut Website sind **Juni bis September** die nachfragestärksten Monate für Besichtigung und Buchung; das Büro vermittelt sowohl eigene Einrichtungen als auch Off-Campus-Unterkünfte.
+
+Entwurf: `Email_EUC_Housing_Office_EN.md` — sechs Fragen: Buchung ab Februar für ein Semester, Empfehlung flexibler Anbieter, **schriftliche Bestätigung des Housing Office gegenüber Vermietern**, Kosten und Nebenkosten, Buchungszeitpunkt und Warteliste, sowie ein Besuch des Büros am **12. oder 13.10.2026** während der Reise.
+
+**Zwei Hinweise:**
+
+1. **Formulierung bewusst korrekt gehalten** — „I am applying for the February 2027 intake", nicht „I have been admitted". Die Bewerbungsfrist ist der 15.01.2027.
+2. **Vorfrage an Maria selbst:** Die Promotion läuft drei Jahre in Präsenz. Bleibt sie über den Sommer 2027 hinaus in Nikosia, ist ein Zwölfmonatsvertrag ab Februar **die günstigere Lösung** (Laufzeit bis Januar 2028, deckt das erste Studienjahr vollständig). Auf kurzen Verträgen zu bestehen lohnt nur, wenn sie im Sommer tatsächlich nach Deutschland zurückkehren will — andernfalls gehen dadurch Angebote verloren.
