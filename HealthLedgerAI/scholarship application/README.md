@@ -794,3 +794,17 @@ Die von Maria kontaktierten Anbieter verlangen die Jahresmiete in **drei Raten**
 **Wichtigster Punkt: die bezahlte Assistenzstelle.** Sie löst das Liquiditätsproblem dauerhaft statt einmalig und ist an einer Universität wahrscheinlicher als ein Härtefallfonds.
 
 **Strukturelles Risiko, offen benannt:** Für Februar 2027 ist derzeit **kein laufendes monatliches Einkommen gesichert**. KAS und Studienstiftung sind unentschieden; Leventis zahlt frühestens ab dem akademischen Jahr 2027/28 und deckt Gebühren, nicht den Lebensunterhalt. Das ist das größere Risiko als die Vertragslaufzeit einer Wohnung.
+
+### 30.2 Antwort von Andreas Kounoupis — bedarfsorientierte Förderung: Fehlanzeige, 24.09.2026
+
+Quelle: `originale/EUC_Kounoupis_Antwort_2026-09-24.pdf`. Marias Anfrage ging am 22.09.2026 um 10:35 raus, die Antwort kam am 24.09. um 09:47.
+
+**Kernaussage:** „At this stage, there are **no additional financial aid schemes or funds** that I can suggest for you to apply for beyond the options already communicated to you." Die von Herrn Georgiou genannten Optionen sind abschließend. Er verweist für alle weiteren Fragen — Programm, Stipendien, Zahlungsmodalitäten, programmbezogene Möglichkeiten — an **Herrn Georgiou als Admissions Officer** und an die **Academic Advisor**. Ein Treffen am 12. oder 13. Oktober bietet er ausdrücklich an.
+
+**Bewertung:**
+
+- 🔴 **Die bedarfsorientierte Schiene an der EUC ist geschlossen.** Es gibt keinen Härtefallfonds für Promovierende. Damit ist diese Frage endgültig geklärt und muss nicht weiterverfolgt werden.
+- 🟡 **Frage 4 wurde nicht beantwortet.** Zu **bezahlten Stellen als Research oder Teaching Assistant** sagt er nichts Konkretes, sondern subsumiert sie unter „programme-related opportunities" und verweist weiter. Das ist nachvollziehbar: Solche Stellen vergibt nicht die Verwaltung, sondern das **Fachbereich**. Zuständig sind **Prof. Kythreotis** (Deputy Dean) und **Dr. Hadjiphanis** (PhD/DBA Program Coordinator) — beide ohnehin Gesprächspartner im Oktober. **Dort gehört die Frage hin, nicht ins Enrollment.**
+- **Zum Ton:** Die Antwort ist höflich, ausführlich und ohne jede Abwertung der Frage („Thank you for your email and for explaining your circumstances in detail", „I appreciate the careful planning you are undertaking"). Die Frage war also angemessen — die Antwort betrifft das Angebot der Universität, nicht Marias Person.
+
+**Priorisierung der Termine am 12./13.10.:** Dr. Hadjiphanis (Fachbereich, Assistenzstellen) vor Herrn Georgiou (Zulassung, bereits angefragt) vor dem Housing Office (konkretes Problem) vor Herrn Kounoupis — Letzterer hat inhaltlich nichts mehr beizutragen. Sinnvoll wäre eine kurze persönliche Begrüßung im Rahmen des Termins bei Herrn Georgiou, da beide im Bereich Enrollment sitzen.
