@@ -17,7 +17,7 @@ keine Rückfragen, nichts, was das Verfahren verzögern könnte.
 
 σας ευχαριστώ πολύ για το μήνυμά σας και κυρίως που προχωρείτε με την αίτηση για την υποτροφία.
 
-Σας επιβεβαιώνω: **ναι, προτίθεμαι να εγγραφώ στο διδακτορικό πρόγραμμα τον Φεβρουάριο του 2027.** Η πρόθεσή μου δεν έχει αλλάξει και ετοιμάζω ήδη την αίτησή μου για την προθεσμία της 15ης Ιανουαρίου 2027.
+Σας επιβεβαιώνω: **ναι, προτίθεμαι να εγγραφώ στο διδακτορικό πρόγραμμα τον Φεβρουάριο του 2027.** Η πρόθεσή μου δεν έχει αλλάξει — **έχω ήδη υποβάλει την πλήρη αίτησή μου στο Γραφείο Εισδοχών τον Ιούλιο του 2026.**
 
 Σας ευχαριστώ θερμά που αναλαμβάνετε αυτή τη διαδικασία. Ανεξάρτητα από το αποτέλεσμα, εκτιμώ πολύ τη στήριξή σας.
 
@@ -34,7 +34,7 @@ Lieber Herr Alexis,
 
 vielen Dank für Ihre Nachricht und vor allem dafür, dass Sie mit dem Stipendienantrag weitermachen.
 
-Ich bestätige Ihnen: **Ja, ich beabsichtige, mich im Februar 2027 in das Promotionsprogramm einzuschreiben.** Meine Absicht hat sich nicht geändert, und ich bereite meine Bewerbung für die Frist am 15. Januar 2027 bereits vor.
+Ich bestätige Ihnen: **Ja, ich beabsichtige, mich im Februar 2027 in das Promotionsprogramm einzuschreiben.** Meine Absicht hat sich nicht geändert — **ich habe meine vollständige Bewerbung bereits im Juli 2026 beim Zulassungsbüro eingereicht.**
 
 Herzlichen Dank, dass Sie dieses Verfahren übernehmen. Unabhängig vom Ergebnis weiß ich Ihre Unterstützung sehr zu schätzen.
 

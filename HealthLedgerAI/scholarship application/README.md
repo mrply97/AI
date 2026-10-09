@@ -820,3 +820,24 @@ Quelle: `originale/Kythreotis_Bestaetigungsanfrage_2026-10-09.png`
 **Antwort:** `Email_Kythreotis_Bestaetigung_Promotion_GR.md` — nur die Bestätigung, ohne jedes weitere Anliegen. **Noch am selben Tag zu senden**, da er darauf wartet, um den Antrag einzureichen.
 
 **Beobachten:** die Rubrik Latest News auf euc.ac.cy (Abschnitt 28), falls die Frühjahrsausschreibung dort öffentlich erscheint.
+
+### 31.1 Korrektur: Die EUC-Bewerbung ist bereits eingereicht — seit 06.07.2026
+
+Quelle: `originale/EUC_Bewerbung_eingereicht_2026-07-06.pdf`
+
+Maria hat ihre **vollständige Promotionsbewerbung bereits am 06.07.2026** an Michalis Georgiou gesendet, nicht erst zur Frist am 15.01.2027. Eingereicht wurden:
+
+1. Ausgefülltes Antragsformular (Spring Semester 2027)
+2. Forschungsvorschlag unter 1.000 Wörtern
+3. Bachelorzeugnis und Transcript (HS Niederrhein) samt Diploma Supplement
+4. Notenübersicht des Masters (EUC, Sem. 1 und 2)
+5. Abiturzeugnis
+6. Formular mit den Kontaktdaten zweier Gutachter
+7. Lebenslauf
+8. Passfoto
+
+In derselben Mail fragte sie nach der Begleichung der **Bewerbungsgebühr von 80 €** und bat um eine **Bestätigung des Zulassungsstands für die Konrad-Adenauer-Stiftung**.
+
+**Folge:** Die Antwort an Prof. Kythreotis wurde korrigiert — sie sagt nun, dass die Bewerbung **bereits eingereicht** ist, statt dass sie vorbereitet werde. Das ist für ihn die stärkere Auskunft: Er kann den Stipendienantrag auf eine laufende Bewerbung stützen.
+
+**Nebenbefund zur Anrede:** Mit Herrn Georgiou schreibt Maria auf Griechisch **vertraut** („Αγαπητέ Μιχάλη", „ελπίζω να είσαι καλά", „Σε ευχαριστώ", „Φιλικά"). Der förmliche Entwurf `Email_Georgiou_Terminanfrage_GR.md` („κύριε Γεωργίου", durchgehend „σας") passt dazu nicht. Falls noch nicht gesendet, auf das vertraute Register umstellen.
