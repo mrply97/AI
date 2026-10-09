@@ -50,3 +50,21 @@ Maria Polychroniadou
 - **Heute noch senden.** Er wartet auf diese Bestätigung, um den Antrag einzureichen. Jeder Tag Verzögerung ist ein Tag, den er nicht arbeiten kann.
 - **Nichts anderes anhängen.** Keine Frage zum AMC, keine Frage zu Assistenzstellen, keine Nachfrage zu Fristen. Er hat eine Frage gestellt; sie wird beantwortet. Alles Weitere nach der Reise, im Rahmen des zugesagten Berichts.
 - **Zur Anrede:** Er schreibt durchgehend vertraut („ελπίζω να είσαι καλά", „Σε ρωτώ", „Φιλικά"). Die obige Fassung bleibt bei deinem bisherigen „σας". Wenn du dich wohler fühlst, kannst du genauso gut spiegeln: „Αγαπητέ Αλέξη … σε ευχαριστώ … Φιλικά, Μαρία". Beides ist richtig — nur innerhalb einer Nachricht einheitlich bleiben.
+
+
+---
+
+## Endfassung im vertrauten Ton (von Maria gewählt, spiegelt seinen Stil)
+
+Αλέξη, καλησπέρα! Ελπίζω να είσαι καλά!
+
+Σε ευχαριστώ πολύ για το μήνυμά σου και κυρίως που προχωράς με την αίτηση για την υποτροφία.
+
+Ναι, σου επιβεβαιώνω ότι εξακολουθώ να προτίθεμαι να εγγραφώ στο διδακτορικό πρόγραμμα τον Φεβρουάριο του 2027. Την πλήρη αίτησή μου την έχω ήδη υποβάλει στο Γραφείο Εισδοχών τον Ιούλιο.
+
+Σε ευχαριστώ θερμά που το αναλαμβάνεις. Ό,τι κι αν γίνει, εκτιμώ πολύ τη στήριξή σου.
+
+Στις 12 και 13 Οκτωβρίου θα είμαι στη Λευκωσία για κάποιες συναντήσεις στο Πανεπιστήμιο και θα σε ενημερώσω για όλα όταν επιστρέψω.
+
+Φιλικά,
+Μαρία
