@@ -808,3 +808,15 @@ Quelle: `originale/EUC_Kounoupis_Antwort_2026-09-24.pdf`. Marias Anfrage ging am
 - **Zum Ton:** Die Antwort ist höflich, ausführlich und ohne jede Abwertung der Frage („Thank you for your email and for explaining your circumstances in detail", „I appreciate the careful planning you are undertaking"). Die Frage war also angemessen — die Antwort betrifft das Angebot der Universität, nicht Marias Person.
 
 **Priorisierung der Termine am 12./13.10.:** Dr. Hadjiphanis (Fachbereich, Assistenzstellen) vor Herrn Georgiou (Zulassung, bereits angefragt) vor dem Housing Office (konkretes Problem) vor Herrn Kounoupis — Letzterer hat inhaltlich nichts mehr beizutragen. Sinnvoll wäre eine kurze persönliche Begrüßung im Rahmen des Termins bei Herrn Georgiou, da beide im Bereich Enrollment sitzen.
+
+## 31. Prof. Kythreotis reicht den Stipendienantrag ein — 09.10.2026
+
+Quelle: `originale/Kythreotis_Bestaetigungsanfrage_2026-10-09.png`
+
+**Nachricht vom 09.10.2026, 14:02:** Er bittet um Bestätigung, dass Maria weiterhin beabsichtigt, sich im **Februar 2027** in das Promotionsprogramm einzuschreiben — ausdrücklich, „προκειμένου να προχωρήσω με την **αίτηση για υποτροφία** και τις υπόλοιπες σχετικές διαδικασίες". Seine eigene Einschätzung: „Δεν είναι σίγουρο ότι θα την πάρω αλλά έχω νομίζω **αρκετές πιθανότητες**" — Ausgang offen, Chancen aber durchaus gut.
+
+**Bedeutung:** Das ist die Einlösung seiner Zusage aus Abschnitt 18.2. Die Ausschreibung ist offenbar erschienen oder steht unmittelbar bevor, und er reicht **Marias Vorschlag** ein. Damit ist der in Abschnitt 13.2 identifizierte einzige Hebel auf das EUC-Stipendium tatsächlich in Bewegung — und es geht um die **vollständige Übernahme der Studiengebühren** (14.400 €), also mehr als Leventis und der Alumni-Nachlass zusammen.
+
+**Antwort:** `Email_Kythreotis_Bestaetigung_Promotion_GR.md` — nur die Bestätigung, ohne jedes weitere Anliegen. **Noch am selben Tag zu senden**, da er darauf wartet, um den Antrag einzureichen.
+
+**Beobachten:** die Rubrik Latest News auf euc.ac.cy (Abschnitt 28), falls die Frühjahrsausschreibung dort öffentlich erscheint.
