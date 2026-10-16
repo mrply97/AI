@@ -841,3 +841,7 @@ In derselben Mail fragte sie nach der Begleichung der **Bewerbungsgebühr von 80
 **Folge:** Die Antwort an Prof. Kythreotis wurde korrigiert — sie sagt nun, dass die Bewerbung **bereits eingereicht** ist, statt dass sie vorbereitet werde. Das ist für ihn die stärkere Auskunft: Er kann den Stipendienantrag auf eine laufende Bewerbung stützen.
 
 **Nebenbefund zur Anrede:** Mit Herrn Georgiou schreibt Maria auf Griechisch **vertraut** („Αγαπητέ Μιχάλη", „ελπίζω να είσαι καλά", „Σε ευχαριστώ", „Φιλικά"). Der förmliche Entwurf `Email_Georgiou_Terminanfrage_GR.md` („κύριε Γεωργίου", durchgehend „σας") passt dazu nicht. Falls noch nicht gesendet, auf das vertraute Register umstellen.
+
+## 32. Unterkunft: Kontakt im Housing Office, neues Gebäude — Oktober 2026
+
+Maria hat vor Ort mit **Andreas Pettemerides** gesprochen (Office of Student Affairs, Housing & Administrative Assistant; a.pettemerides@euc.ac.cy; +357 22713279; Visitenkarte: `originale/Visitenkarte_Pettemerides_Housing.jpg`). Bedarf: Wohnung **01.02.–31.08.2027**. Er bestätigte, dass im **neuen Gebäude** noch Einheiten frei sind, und fragt bei der zuständigen Person nach. Folge-E-Mail auf Griechisch: `Email_Pettemerides_Unterkunft_GR.md` (Verfügbarkeit, Miete und Nebenkosten, **monatliche Zahlung** und Kaution, nächste Schritte).
