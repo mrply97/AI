@@ -1,0 +1,174 @@
+Create a stunning, full-screen HTML presentation (single file, no external dependencies except Google Fonts) for a company called HealthLedgerAI pitching to Ιατρικό Διαβαλκανικό Θεσσαλονίκης (European Interbalkan Medical Center — EIMC) in Thessaloniki, Greece. This is a high-stakes executive pitch to the CEO of Athens Medical Group, one of Greece's largest listed healthcare companies.
+
+=== DESIGN SPECIFICATIONS ===
+Fonts: Import from Google Fonts — Cormorant Garamond (serif, for headlines) and Jost (sans-serif, for body). Use @import in the <style> tag.
+Color palette:
+  --cream: #F4EFE4  (background)
+  --gold: #A08558   (accents, dividers, highlights)
+  --gold-lt: #C9AA7C (lighter gold)
+  --sage: #4A6B5A   (secondary color, key points)
+  --ink: #1E1A14    (primary text)
+  --ink-soft: #4A4438 (body text)
+  --ink-mute: #8A8070 (labels, captions)
+  --ivory: #EDE7D8  (card backgrounds)
+  --warn: #8B3A2A   (financial alerts — use sparingly)
+
+Style: Luxury, understated, sophisticated. Premium consulting firm aesthetic. No bright gradients. Elegant whitespace. Serif headlines, clean body text. Where Greek text appears, it should feel natural and respected — not awkward.
+
+Layout: Full-screen slides (100vw × 100vh). One slide visible at a time. Navigation via left/right arrow keys AND clicking left/right sides of the screen. Show slide number (e.g. "3 / 12") bottom right. Show a smooth animated progress bar (3px, gold) at the very bottom.
+
+Animations: Subtle fadeIn (opacity 0→1, translateY 10px→0, 0.4s ease) on slide content when transitioning.
+
+Add a small HealthLedgerAI logo top-left every slide: sage dot (8px, pulsing) + "HealthLedger AI" in Cormorant Garamond 16px.
+
+=== SLIDE CONTENT — BUILD EXACTLY THESE 12 SLIDES ===
+
+--- SLIDE 1: TITLE ---
+Label (small, gold, uppercase): ΕΜΠΙΣΤΕΥΤΙΚΗ ΠΑΡΟΥΣΙΑΣΗ · CONFIDENTIAL EXECUTIVE BRIEF
+Main headline (large serif): "A New Intelligence for Ιατρικό Διαβαλκανικό"
+Subline (italic serif, sage): Λογιστική Συμμόρφωση · Συμφωνίες Συνεργασίας · AI Built for Your Hospital
+Bottom left: HealthLedgerAI · healthledgerai.com
+Bottom right: Presented to: Dr. Vassilis G. Apostolopoulos, CEO · Athens Medical Group · May 2026
+Background: cream with a very subtle right-side decorative element — a thin vertical gold line and a barely-visible botanical SVG (simple lily, sage stems, opacity 0.07)
+
+--- SLIDE 2: YOUR INVESTMENT ---
+Label: THE MOMENT WE ARE IN
+Headline (serif): "You have just made the biggest investment in EIMC's history."
+Body: "In 2023–2024, Athens Medical Group invested €45 million in EIMC Thessaloniki: €5 million for four new state-of-the-art operating rooms including the unique Hyperion Hybrid Robotic suite, and €40 million for the brand new International Oncology Center — the only passive-house certified healthcare building in Europe."
+Below: Three achievement chips in a horizontal row (gold border, small):
+  "120 Oncology Beds — Now Operational"
+  "Elekta Versa HD + PET/CT — Live"
+  "JCI Gold Seal — December 2025 — First in Northern Greece"
+Bottom line (sage italic serif): "The infrastructure is world-class. The question now is: is the revenue keeping pace?"
+
+--- SLIDE 3: THE BILLING CHALLENGE ---
+Label: THE COMPLEXITY BEHIND EVERY PATIENT
+Headline (serif): "Every EIMC patient involves at least two payers."
+Body: "EIMC operates EOPYY co-payment absorption — up to €1,000 per hospitalisation — when patients use both EOPYY and private insurance simultaneously. This means every single admission requires parallel reconciliation across two billing systems with different rules, timelines, and claim formats."
+A visual diagram (horizontal, clean):
+  [Patient Admitted] → splits into two paths:
+    Path 1 (gold): [EOPYY Claim] → "ΕΚΠΥ rate validation · Referral check · Diagnosis code alignment"
+    Path 2 (sage): [Private Insurance Claim] → "Insurer-specific fee schedule · Pre-authorisation · Claim format"
+  Both paths → [Manual Reconciliation] → [SAP / Accounting Entry]
+Below: "Multiplied across 10+ private insurers, 383 beds, and a dedicated 6-line EOPYY desk — this is thousands of dual-reconciliation events per month."
+
+--- SLIDE 4: THE ONCOLOGY BILLING EVENT ---
+Label: YOUR HIGHEST-COMPLEXITY BILLING CHALLENGE
+Headline (serif): "Oncology billing is the most complex in all of healthcare."
+Two columns:
+Left: Body text — "The new International Oncology Center introduces billing for: chemotherapy protocol administration (automated or manual), IMRT/IGRT/VMAT radiotherapy (session-by-session EOPYY codes), PET/CT imaging and nuclear medicine, multidisciplinary tumor board reviews, and inpatient oncology admissions across 120 new beds. Each of these has its own EOPYY billing code, its own ΕΚΠΥ rate, and its own private insurer approval process."
+Right: A stat box (warn-colored border):
+  Large number: "€40M"
+  Label: "Investment in the Oncology Center"
+  Separator line
+  Text in sage: "Every unclaimed or undercoded oncology procedure directly reduces the return on this investment. Optimised billing is not a back-office task — it is the financial justification for the build."
+
+--- SLIDE 5: THE FINANCIAL PICTURE ---
+Label: THE NUMBERS THAT MATTER
+Headline (serif): "Revenue is growing. Profitability is under pressure. Cash is tight."
+Financial grid — 6 cells, 3 columns × 2 rows:
+  Cell 1: "FY 2024 Revenue" / "€269.8M" (sage) / "+4.4% vs 2023"
+  Cell 2: "FY 2024 EBITDA" / "€32.0M" (warn) / "−16% — investment cycle"
+  Cell 3: "FY 2024 Net Profit" / "€1.9M" (warn) / "−77% vs FY2023"
+  Cell 4: "Working Capital" / "−€20.5M" (warn) / "June 2024 consolidated"
+  Cell 5: "Oncology Investment" / "€40M" / "€35M building + €5M integration"
+  Cell 6: "H1 2025 Net Profit" / "€1.2M" (warn) / "−84% vs H1 2024"
+Below: Body text — "The investment is correct and necessary. The path back to profitability runs through revenue optimisation — specifically: faster insurance collections, reduced EOPYY claim rejections, and accurate oncology billing from Day 1 in the new center."
+Source line: "Source: Athens Medical Group stock exchange announcements · Athens Stock Exchange (ΙΑΤΡ) · 2024–2025"
+
+--- SLIDE 6: THE BALKAN DIMENSION ---
+Label: 7,000 FOREIGN PATIENTS · 53 COUNTRIES · EVERY YEAR
+Headline (serif): "You are not a Greek hospital. You are the healthcare hub of the Balkans."
+Body: "EIMC was conceived in 1996 specifically to make Thessaloniki the reference point for healthcare across the Balkan region. Today, Athens Medical Group operates diagnostic referral centres in four Balkan countries that funnel patients directly to EIMC."
+A 4-country grid (2×2):
+  Bulgaria (Sofia): "EU Member · Cross-border directive billing · Bulgarian health fund reimbursement applies"
+  Romania (Bucharest): "EU Member · AMG-owned MEDSANA subsidiary · 4 diagnostic centres"
+  Serbia (Belgrade): "Non-EU · Bilateral health agreement Greece-Serbia · Direct patient billing"
+  N. Macedonia (Skopje): "Non-EU · Self-pay and bilateral agreement pathways"
+Bottom: "Four different countries. Four different billing pathways. Four different reimbursement rules. All managed manually today."
+
+--- SLIDE 7: COOPERATION AGREEMENT INTELLIGENCE ---
+Label: THE AGREEMENTS RUNNING YOUR HOSPITAL
+Headline (serif): "EIMC manages more cooperation agreements than almost any hospital in Greece."
+List format (elegant, with gold markers, two columns):
+Left column:
+  "Imperial College Healthcare NHS Trust (London) — March 2024 — First hospital group in Europe in Imperial College's international network"
+  "LAMDA Development / Ellinikon — April 2024 — 10-year Healthcare Park MOU"
+  "Clinerion (Switzerland) — Clinical trial patient network — ongoing data governance obligations"
+  "FIMS — International Federation of Sports Medicine — Collaborating Center designation"
+Right column:
+  "EOPYY — National payer contract since 2016 — 6 dedicated billing lines"
+  "10+ private insurance companies — Eurolife, Interamerican, Εθνική, Generali, Allianz, ERGO, NN Hellas, others"
+  "ΤΕΑΕΑΠΑΕ and union supplementary health funds"
+  "4 Balkan referral networks — Sofia, Belgrade, Bucharest, Skopje"
+Bottom sage line: "Each agreement has payment terms, compliance obligations, renewal dates, and accounting treatment requirements. How many are being monitored manually today?"
+
+--- SLIDE 8: JCI AND CONTINUOUS COMPLIANCE ---
+Label: THE JCI OBLIGATION
+Headline (serif): "December 2025. JCI Gold Seal. First in Northern Greece."
+Body: "This is a landmark achievement — and the beginning of a continuous obligation. JCI accreditation requires ongoing monitoring of over 1,000 measurable elements across all clinical and administrative functions. The accreditation cycle does not end; it restarts."
+Two-column layout:
+Left — three JCI compliance requirements:
+  "Continuous documentation of processes and outcomes"
+  "Immutable audit trails for all administrative and financial decisions"
+  "Regular internal audits demonstrating compliance against each measurable element"
+Right — the HealthLedgerAI connection (sage box):
+  Title: "AI-Assisted JCI Compliance"
+  Text: "HealthLedgerAI generates a complete, timestamped audit trail for every compliance decision, every agreement review, and every accounting entry validation. JCI auditors receive not just the outcome — but the documented reasoning chain that produced it."
+
+--- SLIDE 9: WHAT HEALTHLEDGER AI DOES ---
+Label: THE SOLUTION
+Headline (serif): "AI that reads your agreements and keeps your accounting compliant."
+Center: A clean horizontal flow (styled as connected nodes):
+  [Cooperation Agreements in Greek & English] → [AI Document Extraction] → [Compliance Rules Engine] → [Accounting Validation] → [Audit Trail & Reporting]
+Below: Four feature cards in a 2×2 grid:
+  Card 1 — "Agreement Intelligence": "Reads every cooperation agreement (PDF, Word, scanned Greek documents). Extracts payment terms, compliance obligations, renewal triggers. Works natively in Greek."
+  Card 2 — "EOPYY Claim Pre-Validation": "Validates claims against ΕΚΠΥ rates and EOPYY rules before submission. Reduces rejections. Accelerates collection."
+  Card 3 — "Dual-Payer Reconciliation": "Automates the EOPYY + private insurance reconciliation per patient. Eliminates manual dual-entry."
+  Card 4 — "Compliance Explainability": "Every AI output cites the specific regulation it applied. No black box. Full JCI and regulatory audit support."
+
+--- SLIDE 10: BUILT ON DOCTORAL RESEARCH ---
+Label: THE FOUNDATION
+Headline (serif): "Not a product adapted for healthcare. Built from inside it."
+Two columns:
+Left: Body text — "HealthLedgerAI is grounded in doctoral research conducted through on-site immersion in hospital accounting departments across Cyprus and Greece. The research specifically examined cooperation agreement structures, accounting compliance patterns, and the real operational processes of hospital finance teams. This means the AI understands the exact agreements EIMC signs, the exact compliance obligations they create, and the exact accounting treatment they require under the Greek Special Healthcare Accounting Plan."
+Right: Three credential stacked cards:
+  "PhD Research — Cyprus & Greece hospital cooperation agreements · Academic rigour, not consultancy guesswork"
+  "On-Site Methodology — Built through immersion in hospital accounting departments · We know the process from the inside"
+  "Greek Expertise — AI trained on Greek-language agreements and Greek healthcare law · No translation layer"
+Bottom (gold italic serif): "Athens Medical Group aligned with Imperial College Healthcare to signal world-class standards. HealthLedgerAI brings that same academic rigour to your accounting compliance."
+
+--- SLIDE 11: PROPOSED PILOT ---
+Label: THE PROPOSAL
+Headline (serif): "A four-month paid pilot. Measurable outcomes. No long-term commitment required."
+Three milestone cards horizontal:
+  Card 1 — Month 1: "Discovery & Immersion" (gold border). "On-site with EIMC accounting team. Map all active cooperation agreements. Identify EOPYY claim rejection patterns. Define pilot scope with CFO."
+  Card 2 — Month 2–3: "Live Pilot" (sage border). "HealthLedgerAI live on: all new Oncology Center billing · EOPYY claim pre-validation for one department · Dual-payer reconciliation for defined patient cohort."
+  Card 3 — Month 4: "Results & Decision" (gold border). "Full analysis: rejection rate reduction · Time saved · Revenue recovered · Working capital impact. Decision on full deployment."
+Below: A financial argument box (sage left border): "If HealthLedgerAI reduces EOPYY rejection rates by 10% and accelerates average insurance collection by 15 days — at AMG's revenue scale — the working capital improvement alone is estimated at several million euros annually. The pilot will produce the exact number for EIMC specifically."
+
+--- SLIDE 12: CLOSING ---
+Label: HEALTHLEDGER AI
+Headline (serif, large, centered): "The intelligence Ιατρικό Διαβαλκανικό has been waiting for."
+Subline (italic serif, sage, centered): "Doctoral research. Greek expertise. Built from the inside of healthcare accounting."
+Center: Contact block:
+  "info@healthledgerai.com"
+  "healthledgerai.com"
+Quiet line in ink-mute at bottom: "All information in this presentation is shared under a signed Confidentiality Agreement. HealthLedgerAI · © 2026"
+Right-side botanical SVG (same as slide 1, opacity 0.06).
+
+=== TECHNICAL REQUIREMENTS ===
+- Single HTML file, fully self-contained
+- Google Fonts imported via @import in CSS (Cormorant Garamond + Jost)
+- Keyboard navigation: ArrowLeft / ArrowRight
+- Click navigation: clicking left 30% of screen goes back, right 30% goes forward
+- Slide counter bottom-right: "X / 12" in small gold text
+- Progress bar: 3px bar at very bottom, gold fill, transitions smoothly
+- Each slide fades in when shown (opacity 0→1, translateY 10px→0, 0.4s ease)
+- Financial figures shown in the financial grid should have a subtle animation (count up from 0 to their value when the slide appears)
+- All content must fit without scrolling at 1280×800 minimum viewport
+- Print-friendly: @media print shows all slides stacked, one per page
+- NO external CSS, NO external JS, NO external images — inline SVG only
+- Greek characters must render correctly (UTF-8 charset)
+
+Make it genuinely beautiful and authoritative. This is a presentation to the CEO of a €270M publicly listed healthcare group. It must feel like it belongs in the same room as the Imperial College Healthcare partnership announcement.
