@@ -198,8 +198,8 @@ The organisers want you to meet potential customers, stakeholders and experts. C
    - What would make you trust an alert, and what would make you ignore it?
    - What happens after EOPYY or an insurer rejects a claim?
 2. **Your Erasmus host** (20 min, the accountant's view). Do their clinic clients make the same errors? Would an accounting firm implement or resell a tool like this?
-3. **One contact at a private hospital in Qatar** (20 min). Not a sales call: ask how billing errors are caught there, and who would decide on a tool. That turns "which market is next" into evidence.
-4. **The organisers' matched meetings.** Before Mon 9 Nov, tell them whom you need: a hospital CFO or billing lead (any EU country), a health-data-protection expert, and someone who has sold software to hospitals.
+3. **Your doctor in Qatar, the plastic surgeon** (15 min, 14:00–18:00 Qatar time). Not a sales call: ask how billing works in a private hospital there and where it goes wrong, and whether he could later introduce you to the hospital's finance office. If Thursday doesn't work for him, it can wait until after the bootcamp.
+4. **The organisers' matched meetings.** Before Mon 9 Nov, ask for the three advisory roles from your business plan (SWOT outline): a hospital CFO, a partner at an audit firm with healthcare clients, and a data-protection specialist. Someone from a hospital-software (ERP) company or a hospital association would also help.
 
 Afterwards, write one page: three things you heard, what surprised you, and which assumption you changed. That page is your Proof Room material on Thursday and your "what changed this week" line on Friday.
 
