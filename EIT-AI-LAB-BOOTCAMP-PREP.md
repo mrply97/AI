@@ -51,7 +51,7 @@ Sources for "already established": the EIT Jumpstarter application (April 2026),
 5. **Wrong price, too small, too local?**
    - The Jumpstarter application prices the licence at €3–8K a year, which gives €120K revenue in year 3 from 15 hospitals.
    - The ROI story, meanwhile, claims millions in working-capital impact for a single hospital group. Both can't be right: either the value claim is too big, or the price is far too low.
-   - Have a one-line answer for why Cyprus and Greece come first, and which market is next.
+   - Have a one-line answer for why Cyprus and Greece come first, and which market is next. Yours: private hospitals in the Gulf, starting with Qatar, where you already have contacts.
 6. **Who owns it?**
    - Your CV says a patent disclosure is prepared, and the product will be validated inside your PhD at EUC's partner hospitals. Expect the question "Does the university own this?"
    - You built it in March 2026, self-funded, before the PhD. Have that answer ready, and know what EUC's IP policy says.
@@ -171,7 +171,7 @@ To "no customer, no company" your honest answer is already strong: *"The company
    - Tell the ethics committee and the hospitals openly that you are both the researcher and the founder.
    - Expect "Aren't you evaluating your own product?" Your answer: the research question stays independent, and the pilot is separate and disclosed.
    - If your EIT Health capstone is still running (it needs a real organisation and the hospital's consent), it could be the right vehicle for the first demo.
-4. **Timing.** Results on real data are a year or more away. Name a concrete first milestone (for example, a first demo at AMC in spring 2027), but only if it is realistic.
+4. **Timing.** Results on real data are a year or more away. Your first milestone is already set: you've contacted both CEOs, and you meet them in February 2027, when your PhD starts. Say it exactly like that.
 
 ### Bring to the Proof Room (strongest first)
 
@@ -181,9 +181,27 @@ To "no customer, no company" your honest answer is already strong: *"The company
    - HealthLedger AI is the prototype behind the research's translational part.
 
    The letter should not claim the hospitals have agreed to a pilot.
-2. **Your Erasmus for Young Entrepreneurs certificate**, as a scan on your laptop.
-3. **The AMC one-pager**, shown as your plan. Don't hand it out.
-4. **Your friend at EIMC.** Valuable, but **don't ask for anything in writing**: it could expose your friend at work.
+2. **The CEOs' replies agreeing to meet in February**, if you have them in writing. Bring screenshots with names covered, and show them privately to mentors, never on stage.
+3. **Your Erasmus for Young Entrepreneurs certificate**, as a scan on your laptop.
+4. **The AMC one-pager**, shown as your plan. Don't hand it out.
+5. **Your notes from Thursday's discovery calls** (see below).
+6. **Your friend at EIMC.** Valuable, but **don't ask for anything in writing**: it could expose your friend at work.
+
+### Thursday 12 Nov, 12:00–16:00: discovery calls
+
+The organisers want you to meet potential customers, stakeholders and experts. Customer discovery means testing your assumptions; it is not selling. Leave the two hospitals alone until February, and fill the window with short video calls instead:
+
+1. **Your friend in EIMC's accounting department** (30 min, the user's view). No names, no hospital data. Five questions:
+   - Which billing error costs you the most time or money?
+   - How do you find it today, and how late?
+   - Who decides whether the hospital buys a tool like this?
+   - What would make you trust an alert, and what would make you ignore it?
+   - What happens after EOPYY or an insurer rejects a claim?
+2. **Your Erasmus host** (20 min, the accountant's view). Do their clinic clients make the same errors? Would an accounting firm implement or resell a tool like this?
+3. **One contact at a private hospital in Qatar** (20 min). Not a sales call: ask how billing errors are caught there, and who would decide on a tool. That turns "which market is next" into evidence.
+4. **The organisers' matched meetings.** Before Mon 9 Nov, tell them whom you need: a hospital CFO or billing lead (any EU country), a health-data-protection expert, and someone who has sold software to hospitals.
+
+Afterwards, write one page: three things you heard, what surprised you, and which assumption you changed. That page is your Proof Room material on Thursday and your "what changed this week" line on Friday.
 
 ### Also
 
@@ -251,24 +269,25 @@ To "no customer, no company" your honest answer is already strong: *"The company
 
 ---
 
-## Ten-day countdown
+## Last four days (from Thu 5 Nov)
 
 | When | What |
 |---|---|
-| Thu 29 – Fri 30 Oct | Send Prof. Kythreotis an update on the bootcamp and ask for the short letter. Scan your Erasmus certificate. Ask your patent attorney about filing before 9 Nov. |
-| Sat 31 Oct – Sun 1 Nov | Write the assumptions page. Fix one canonical feature list. Measure precision and recall against the answer key. |
-| Mon 2 – Wed 4 Nov | Build the access slide: two partner hospitals, what's agreed versus planned, and the 2027 timeline. Write pitch v1 (3 min + 1 min). Record the demo video. |
-| Thu 5 – Fri 6 Nov | Deck, Q&A rehearsal, offline demo test, and a check that no hospital is named on stage. Book travel once confirmed. |
+| Thu 5 Nov | Email the organisers whom you need for the Day 4 matched meetings. Book Thursday's calls: your friend, your Erasmus host, your Qatar contact. If the patent question or Prof. Kythreotis's letter is still open, chase it today. |
+| Fri 6 Nov | Fill in the three canvases. Finish the deck, rehearse the Q&A, and test the demo offline. Check that no hospital is named on stage. |
+| Sat 7 Nov | Rehearse the 3-minute and 1-minute pitch. Pack the laptop, charger, adapters, demo video and the Erasmus certificate scan. |
 | Sun 8 Nov | In Paris by 17:00. |
 
-## Status as of 29 October 2026
+## Status as of 5 November 2026
 
 - **Bootcamp place:** confirmed.
 - **Erasmus for Young Entrepreneurs:** completed, certificate received.
 - **EIT Jumpstarter:** not accepted (outside its focus).
 - **Company:** to be registered in Cyprus in February 2027, when the PhD starts.
 - **Nicosia, October:** online meeting with Prof. Kythreotis (he was abroad), and an invitation to his webinar with women entrepreneurs.
-- **First pilot sites:** AMC Nicosia and EIMC Thessaloniki, through the PhD. Embryolab is no longer on the path.
+- **First pilot sites:** AMC Nicosia and EIMC Thessaloniki, through the PhD. Both CEOs contacted; meetings in February 2027. Embryolab is no longer on the path.
+- **Next market after the pilots:** private hospitals in Qatar (existing contacts).
+- **Day 4 (Thu 12 Nov):** discovery calls 12:00–16:00; the organisers announce matched meetings on Mon 9 Nov.
 
 ---
 
