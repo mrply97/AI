@@ -136,7 +136,38 @@ Sources for "already established": the EIT Jumpstarter application (April 2026),
 ### Prepare
 
 - Two slides: **Where the AI is (now / next / later)** and **Trust by design**.
-- Two questions for the policy and legal experts.
+- Questions for each speaker: below.
+
+### Speaker questions (Wed 11 Nov, from the agenda)
+
+**Dr. Lucilla Sioli, Director, European AI Office** (10:00 Apply AI Future; 10:15 Meet the Lab Cohort)
+- Your 20-second intro: "I'm Maria Polychroniadou, founder of HealthLedger AI. Clinical AI gets the attention, but hospital accounting departments still check billing by hand. HealthLedger AI catches billing errors before payment. First pilots are planned for 2027 with partner hospitals of my university in Cyprus and Greece."
+- "Most AI support in health targets clinical care. Where does the Apply AI Strategy see hospital administration (billing, accounting, claims), and is there support for AI in that back office?"
+- "For a startup in smaller markets like Cyprus and Greece, what's the most direct route from the AI Office's initiatives to a first hospital test?"
+
+**Elaine Zaunseder, Europe's AI Innovation Ecosystem** (10:30)
+- "My prototype works on synthetic data. Which part of the EU ecosystem helps a founder run a first test on real hospital data safely: testing facilities for health AI, digital innovation hubs, or something else?"
+- "Are there programmes that connect AI startups with hospitals across borders, for a founder working in both Cyprus and Greece?"
+
+**Gerasimos Mylonas, Navigating the EU AI Act** (10:50)
+- "Today my system is a deterministic rules engine that flags hospital billing errors. Is that an 'AI system' under the AI Act at all, and does that change once it learns each hospital's own patterns?"
+- "A human always makes the final decision. Does that keep billing-error detection out of high-risk, and what would move it in, for example an insurer using it on individual patients' claims?"
+- "One check flags possible patient mix-ups (same name and date of birth). Because it affects individuals, what should I build in now?"
+- "Is there an AI regulatory sandbox in Cyprus or Greece that a startup can join?"
+
+**Marie Wall, DG RTD, EIC Funding for Startups** (11:10)
+- "My prototype is tested on synthetic data, and real-data pilots come in 2027. At that stage, which EIC route is realistic: the Accelerator, or a step before it such as Women TechEU?"
+- "My company will be registered in Cyprus in February 2027. Can I start an application before incorporation, and which 2027 cut-off should I aim for?"
+- "The 2027 Work Programme promises more support for pilot testing. Could a startup use it to set up a first hospital pilot?"
+- "I'm a solo founder and will also be a PhD candidate. How do evaluators see that: strength or risk?"
+
+**Founders × AI Office Exchange** (11:30): use your strongest question, either the back-office one or "is a rules engine an AI system?".
+
+**Afternoon: Trust as Value**
+- **Trust Your Team** (14:15): be ready for "who's your team?". Solo founder, Prof. Kythreotis as academic mentor, and three advisors you're recruiting: a hospital CFO, a healthcare audit partner, a data-protection specialist.
+- **Clinic III** (15:45): bring one concrete problem, for example "How do I present access through my PhD in tomorrow's Proof Room without overclaiming?"
+- **George Panagiotakopoulos and Orestis Trasanidis** (16:20; they run tomorrow's Proof Room): "My first customers come through a research partnership, and the CEO meetings are in February. What evidence would convince you tomorrow?"
+- **Dinner:** ask any speaker the questions the sessions didn't answer.
 
 ---
 
@@ -229,7 +260,7 @@ Afterwards, write one page: three things you heard, what surprised you, and whic
 
 ### Still to face
 
-1. **The format is unknown.** Ask on Day 1. Build a 3-minute version and a 1-minute version. For the 3 minutes:
+1. **The format:** 11 pitches in two blocks at AI House Amsterdam, and you pitch second. The jury is Bas Jansen, Rens Dommerholt, Mat Albrecht and Thomas Hannes (LUMO Labs), with up to five €10,000 awards. Ask for the exact pitch length. Build a 3-minute version and a 1-minute version. For the 3 minutes:
 
    | Part | Time |
    |---|---|
