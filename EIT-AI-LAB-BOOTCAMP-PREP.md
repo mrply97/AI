@@ -259,6 +259,7 @@ Afterwards, write one page: three things you heard, what surprised you, and whic
 - **Your unfair advantage, in one line:** "I met a founder whose app never got into a hospital because she was an outsider. I go in as a doctoral researcher, with my university's partner hospitals."
 - **Your own closing line:** "find out, in a room full of people who will tell me the truth, whether anyone will actually pay for it." By Friday you will have spent four days in that room.
 - **Brand and site:** healthledgerai.com.
+- **Pitch deck:** `HealthLedgerAI_EIT_Pitch.pptx` (15 slides, talk track in the speaker notes). Slides 4, 9 and 11 are optional for a 3-minute slot. Rebuild with `python3 build_eit_pitch.py`.
 
 ### Still to face
 
@@ -283,12 +284,7 @@ Afterwards, write one page: three things you heard, what surprised you, and whic
    - **Patent:** in Europe, a public disclosure before filing can kill a patent, and there is no general grace period. Before 9 Nov, either file, or pitch *what it does* rather than *how it works*. Ask the patent attorney who drafted your NDA this week.
    - **Don't name the hospitals on stage.** Say "two private hospitals in Cyprus and Greece that partner with my university". They haven't agreed to appear in a startup pitch, and you need their goodwill for data access.
    - **Never link the founding story to a hospital you'll work with.** The wrongly pursued patient stays "a hospital in Northern Greece". This protects your friend, the partnership, and you.
-5. **Use one canonical feature list.** The counts don't match across your documents, and a juror who compares will notice:
-   - the Jumpstarter application says 11 categories;
-   - the September pitch and the PhD proposal say 12, counting risk scoring and Excel I/O as classes;
-   - my June demo script has its own 11 labels. Three of those I added myself (undercoding, date mismatch, repeated same-day), and they found nothing in your dataset.
-
-   Pick one list and use it everywhere.
+5. **Use one canonical feature list: 11 error types.** That is what the engine runs (D1–D11) and what the deck says. The September pitch and the PhD proposal say 12, and the canvases said 9; align them to 11. The EOPYY claim pre-checks are built but not yet tested on EOPYY data, so present them as "next". Market numbers: Greece has about 140 private hospitals (ELSTAT 2023), not "over 300" as in the Jumpstarter application.
 6. **Rehearse the ten hardest questions**, 20 seconds each:
    1. Where's the AI?
    2. Why won't SAP or the hospital's IT vendor just add this?
