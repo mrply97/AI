@@ -603,15 +603,17 @@ notes(s, "[~15 s] What exists today: a working prototype with a tamper-evident a
 s = prs.slides.add_slide(BLANK)
 chrome(s, "09  ·  TEAM", "A founder from inside hospital finance")
 people = (("MP", False, "Maria Polychroniadou", "Founder & CEO",
-           "Built the prototype from zero code · M.Sc. Data Analytics in Accounting & Finance · GR / DE / EN",
+           "Clients, product and vision · built the prototype from zero code · M.Sc. Data Analytics in Accounting & Finance",
            "European University Cyprus"),
-          ("AK", False, "Prof. Alexios Kythreotis", "Academic mentor · PhD supervisor",
-           "Associate Professor of Financial Accounting",
-           "European University Cyprus"),
-          ("+", True, "Hospital CFO", "Advisor · recruiting",
-           "The buyer's view on pricing and procurement", "Recruiting now"),
-          ("+", True, "Audit & data protection", "Advisors · recruiting",
-           "The audit channel, GDPR and the EU AI Act", "Recruiting now"))
+          ("EP", False, "Eleftheria Psilou", "Advisor · IT",
+           "Co-founder of Theon Health · M.Sc. student in Computer Science",
+           "University of Crete"),
+          ("VS", False, "Viktória Schultz", "Advisor · operations",
+           "Contracts, scheduling and administration · supply planner in the automotive industry",
+           "Hochschule Niederrhein"),
+          ("+", True, "Hospital finance", "Advisor · recruiting",
+           "A hospital CFO or audit partner: the buyer's view and the audit channel",
+           "Recruiting now"))
 colw = 11.7 / 4
 for i, (initials, open_seat, name, role, bg, org) in enumerate(people):
     cx = 0.82 + colw * i + colw / 2
@@ -629,9 +631,10 @@ for i, (initials, open_seat, name, role, bg, org) in enumerate(people):
     text(s, x, 5.85, w, 0.34, org, size=12, color=GOLD, bold=True, align=PP_ALIGN.CENTER)
 
 notes(s, "[~10 s] I built the prototype myself, from zero code, alongside a master's in "
-         "data analytics for accounting. My PhD supervisor, Prof. Kythreotis, is my "
-         "academic mentor. And I am recruiting two kinds of advisors: a hospital CFO, and "
-         "audit and data-protection experts.")
+         "data analytics for accounting. Eleftheria Psilou, co-founder of Theon Health, "
+         "advises on IT. Viktória Schultz takes care of contracts, scheduling and "
+         "administration, so I can spend my time with hospitals and new ideas. And I am "
+         "recruiting a hospital finance advisor: a CFO or an audit partner.")
 
 
 # ── 14 · ASK ───────────────────────────────────────────────────────────────────

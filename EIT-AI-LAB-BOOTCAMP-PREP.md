@@ -164,7 +164,7 @@ Sources for "already established": the EIT Jumpstarter application (April 2026),
 **Founders × AI Office Exchange** (11:30): use your strongest question, either the back-office one or "is a rules engine an AI system?".
 
 **Afternoon: Trust as Value**
-- **Trust Your Team** (14:15): be ready for "who's your team?". Solo founder, Prof. Kythreotis as academic mentor, and three advisors you're recruiting: a hospital CFO, a healthcare audit partner, a data-protection specialist.
+- **Trust Your Team** (14:15): be ready for "who's your team?". You as founder; Eleftheria Psilou (co-founder of Theon Health) as IT advisor; Viktória Schultz for contracts, scheduling and administration; and a hospital finance advisor you're recruiting. Prof. Kythreotis is your PhD supervisor, not part of the business team.
 - **Clinic III** (15:45): bring one concrete problem, for example "How do I present access through my PhD in tomorrow's Proof Room without overclaiming?"
 - **George Panagiotakopoulos and Orestis Trasanidis** (16:20; they run tomorrow's Proof Room): "My first customers come through a research partnership, and the CEO meetings are in February. What evidence would convince you tomorrow?"
 - **Dinner:** ask any speaker the questions the sessions didn't answer.
