@@ -198,8 +198,8 @@ notes(s, "[~15 s] INTRO (Sam Horn: 'Did you know?'). Don't say your name yet. Pa
          "look at one juror, then:\n"
          "Did you know that up to one in four hospital bills processed by hand contains "
          "an error? (pause)\n"
-         "Did you know that in Germany alone, insurers estimate wrong hospital bills at up "
-         "to one and a half billion euros a year? (pause)\n"
+         "Did you know that in Cyprus, the national health insurer rejected 80,000 claims "
+         "from healthcare providers, worth ten million euros? (pause)\n"
          "And did you know that in most hospitals, it is nobody's job to catch them?\n"
          "-> click")
 
@@ -257,22 +257,23 @@ s = prs.slides.add_slide(BLANK)
 chrome(s, "02  ·  THE PROBLEM", "Billing errors are common, costly and invisible")
 stat_boxes(s, [
     ("FREQUENT", "up to 26%", "of manually processed hospital bills contain errors"),
-    ("COSTLY", "€1.5 bn", "a year in incorrect hospital bills in Germany alone, by statutory insurers' estimate"),
+    ("COSTLY", "€10 M", "in 80,000 provider claims rejected by Cyprus's national health insurer (reported 2024)"),
     ("INVISIBLE", "weeks", "before an error surfaces: at claim rejection, at payment, or in an audit"),
 ], head_fill=RED, body_fill=RED_LT, body_line=RED, num_color=RED)
 text(s, 0.82, 5.32, 11.7, 0.55,
      "Nobody’s job title is “billing errors”, so nobody catches them.",
      size=22, font=HEAD, italic=True, color=INK, align=PP_ALIGN.CENTER)
 text(s, 0.82, 6.55, 11.7, 0.3,
-     "Sources: Nimkar et al. (2024)  ·  German statutory health insurers, via The Local  ·  "
+     "Sources: Nimkar et al. (2024)  ·  Cyprus Mail (Feb 2024): claims rejected by the HIO  ·  "
      "HealthLedger AI field interviews in Greek hospital accounting",
      size=10, color=INK_MUTE)
 
 notes(s, "[~8 s] You already asked the questions in the intro, so keep this short. "
          "Point at the three boxes: Common. Costly. Invisible. Errors stay hidden for "
          "weeks, until a payer refuses the claim or an auditor finds them.\n\n"
-         "If challenged on the 1.5 billion: it is the insurers' own estimate; hospitals "
-         "dispute how much of it is error rather than medical judgment.")
+         "If asked about the 10 million: Cyprus's Health Insurance Organisation (HIO) "
+         "rejected about 80,000 provider claims worth 10 million euros, reported by Cyprus "
+         "Mail in February 2024. That is about 125 euros per rejected claim.")
 
 
 # ── 4 · WHY IT STAYS UNSOLVED ──────────────────────────────────────────────────
@@ -375,7 +376,8 @@ text(s, 0.82, 6.05, 11.7, 0.35,
      size=12, color=INK_MUTE, align=PP_ALIGN.CENTER)
 
 notes(s, "[~15 s] Now imagine every invoice checked before the money leaves the hospital. "
-         "That is HealthLedger AI. In our "
+         "That is HealthLedger AI. Cyprus's health insurer is already investing in AI to "
+         "check claims; hospitals need the same before they submit. In our "
          "test set of 506 invoices it flagged 20,800 euros at risk, in about a second, "
          "across 11 error types. Every alert is logged in a tamper-evident audit trail, "
          "and a human always makes the final decision. (If asked: the test data is "
@@ -444,29 +446,29 @@ notes(s, "[~25 s] ('For example') For example: this is real output from the prot
          "(about one second). Otherwise this slide is the demo.")
 
 
-# ── 8 · MARKET ─────────────────────────────────────────────────────────────────
 # ── 7b · COST REDUCTION ────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "03  ·  THE SOLUTION  ·  COST REDUCTION", "Cost reduction a CFO can count")
 stat_boxes(s, [
     ("BREAK-EVEN", "< 2", "caught errors a month pay for the licence (€425: the average error in our test data)"),
     ("FEWER DENIALS", "15–30%", "fewer claim denials with AI-enabled revenue-cycle tools (Nimkar et al., 2024)"),
-    ("LESS REWORK", "$25–118", "staff cost to rework one denied claim, avoided when the error is caught first (US data)"),
+    ("PER REJECTION", "€125", "average value of a claim rejected by Cyprus's health insurer (€10M ÷ 80,000 claims)"),
 ], head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE)
 text(s, 0.82, 5.32, 11.7, 0.5, "The first pilot measures it for each hospital, in euros.",
      size=20, font=HEAD, italic=True, color=INK, align=PP_ALIGN.CENTER)
 text(s, 0.82, 6.4, 11.7, 0.45,
      "Break-even: €8K top licence ÷ €425 average error at risk (synthetic test data)  ·  "
-     "Rework cost: MGMA; Change Healthcare (US)  ·  Denials: Nimkar et al. (2024)",
+     "Rejected claims: Cyprus Mail (Feb 2024)  ·  Denials: Nimkar et al. (2024)",
      size=10, color=INK_MUTE)
 
 notes(s, "[~15 s] For a CFO, this is the point. Fewer than two caught errors a month pay "
-         "for the licence, at the average error size in our test data. Studies show AI "
-         "cuts claim denials by 15 to 30 percent, and every denial avoided saves the staff "
-         "time to rework it. The first pilot will measure the real number, in euros, for "
-         "each hospital.")
+         "for the licence, at the average error size in our test data. In Cyprus, every "
+         "claim the insurer rejects is worth about 125 euros, and studies show AI cuts "
+         "claim denials by 15 to 30 percent. The first pilot will measure the real number, "
+         "in euros, for each hospital.")
 
 
+# ── 8 · MARKET ─────────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "04  ·  MARKET", "Start focused, then grow across Europe and the Gulf")
 box(s, 1.3, 1.85, 4.45, 4.45, fill=SAGE_LT, line=SAGE_MID, shape=MSO_SHAPE.OVAL)
