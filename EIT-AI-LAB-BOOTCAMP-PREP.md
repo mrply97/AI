@@ -235,6 +235,7 @@ The organisers want you to meet potential customers, stakeholders and experts. C
 6. **Ewa Kocinska-Lange, Policy Officer, European Commission (EIC)** (15–20 min; contacted via LinkedIn). Orientation only, not application advice: is the EIC Accelerator realistic at your stage or is Women TechEU the better first step, what to have in place before applying, and which national contact point to use.
 7. **Charley Territo, Hayden AI** (Chief Growth Officer per METRO Magazine; spoke on Day 2). **Booked: Monday 16 Nov, 16:00 Paris time** (he travels Thu–Fri); invite to charles.territo@hayden.ai. Expert view on selling AI to slow, regulated public buyers: the first customer, procurement, and building trust around data.
 8. **Tolga Varol, Founder & Managing Director, RailEyes** (Day 2 speaker; you spoke after his session). 20-minute video call requested for Thursday 12:00: show HealthLedger AI and ask for his honest opinion.
+9. **Kamel Merzouk, SMEs Project Manager, Systematic Paris-Region** (Day 2 speaker; kamel.merzouk@systematic-paris-region.org). Ask about joining the One Health or Data Science & AI hub, hospital or health-finance partners in his network, and help with EU consortia (EIC, Horizon Europe).
 
 Afterwards, write one page: three things you heard, what surprised you, and which assumption you changed. That page is your Proof Room material on Thursday and your "what changed this week" line on Friday.
 
