@@ -170,7 +170,7 @@ text(s, 0.9, 1.25, 8, 0.3,
      size=11, color=GOLD, bold=True, spacing=200)
 box(s, 0.92, 2.3, 0.26, 0.26, fill=SAGE_GLOW, shape=MSO_SHAPE.OVAL)
 text(s, 1.32, 1.82, 7.2, 1.1, "HealthLedger AI", size=58, font=HEAD, color=WHITE)
-text(s, 0.9, 3.0, 7.3, 0.95, "Catching hospital billing errors before payment.",
+text(s, 0.9, 3.0, 7.3, 0.95, "Catching costly hospital billing errors before payment.",
      size=24, font=HEAD, italic=True, color=GOLD_LT)
 box(s, 0.92, 4.1, 3.8, 0.03, fill=GOLD)
 text(s, 0.9, 4.32, 7, 0.45, "Maria Polychroniadou", size=20, font=HEAD, color=WHITE)
@@ -190,7 +190,7 @@ text(s, 10.45, 3.1, 1.75, 0.4, "€4,728.14", size=18, font=HEAD, color=RED,
 text(s, 8.9, 3.52, 3.3, 0.3, "Maximum allowed by contract: €900", size=11, color=RED)
 box(s, 8.85, 4.15, 3.0, 0.12, fill=LINE_GREY)
 box(s, 8.85, 4.42, 2.2, 0.12, fill=LINE_GREY)
-text(s, 8.85, 4.9, 3.4, 0.75, "Flagged before payment,\nin about a second.", size=13,
+text(s, 8.85, 4.9, 3.4, 0.75, "€3,828 overcharge flagged\nbefore payment.", size=13,
      color=SAGE, bold=True)
 bang(s, 12.05, 1.12, 0.62, size=26)
 
@@ -244,24 +244,28 @@ notes(s, "[~25 s] This really happened in a private hospital in Greece. Two pati
 
 # ── 3 · PROBLEM ────────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
-chrome(s, "02  ·  THE PROBLEM", "Billing errors are common, complex and invisible")
+chrome(s, "02  ·  THE PROBLEM", "Billing errors are common, costly and invisible")
 stat_boxes(s, [
     ("FREQUENT", "up to 26%", "of manually processed hospital bills contain errors"),
-    ("COMPLEX", "200+", "cooperation agreements per hospital, each with its own rates and rules"),
+    ("COSTLY", "€1.5 bn", "a year in incorrect hospital bills in Germany alone, by statutory insurers' estimate"),
     ("INVISIBLE", "weeks", "before an error surfaces: at claim rejection, at payment, or in an audit"),
 ], head_fill=RED, body_fill=RED_LT, body_line=RED, num_color=RED)
 text(s, 0.82, 5.32, 11.7, 0.55,
      "Nobody’s job title is “billing errors”, so nobody catches them.",
      size=22, font=HEAD, italic=True, color=INK, align=PP_ALIGN.CENTER)
 text(s, 0.82, 6.55, 11.7, 0.3,
-     "Sources: Nimkar et al. (2024)  ·  HealthLedger AI field interviews in Greek hospital accounting",
+     "Sources: Nimkar et al. (2024)  ·  German statutory health insurers, via The Local  ·  "
+     "HealthLedger AI field interviews in Greek hospital accounting",
      size=10, color=INK_MUTE)
 
 notes(s, "[~20 s] This is not one bad day. Studies put manual hospital billing error "
-         "rates at up to 26 percent. A single hospital can hold more than 200 "
-         "cooperation agreements, each with its own rates. And errors stay invisible "
-         "for weeks, until a payer rejects the claim, the money doesn't arrive, or an "
-         "auditor finds it. Nobody's job title is 'billing errors', so nobody catches them.")
+         "rates at up to 26 percent. In Germany alone, the statutory insurers estimate "
+         "incorrect hospital bills at up to 1.5 billion euros a year, and hospitals face "
+         "audits and repayments over them. And errors stay invisible for weeks, until a "
+         "payer rejects the claim, the money doesn't arrive, or an auditor finds it. "
+         "Nobody's job title is 'billing errors', so nobody catches them.\n\n"
+         "If challenged on the 1.5 billion: it is the insurers' own estimate; hospitals "
+         "dispute how much of it is error rather than medical judgment.")
 
 
 # ── 4 · WHY IT STAYS UNSOLVED ──────────────────────────────────────────────────
@@ -298,8 +302,8 @@ for i, (title, body) in enumerate((
     text(s, 7.15, y + 0.1, 5.4, 0.4, title, size=16, font=HEAD, color=INK)
     text(s, 7.15, y + 0.5, 5.4, 0.6, body, size=12.5, color=INK_SOFT)
 
-text(s, 0.82, 5.82, 4, 0.28, "WHAT IT COSTS", size=10, color=GOLD, bold=True, spacing=180)
-for i, chip in enumerate(("Lost revenue", "Rejected claims", "Audit findings", "Patients wrongly billed")):
+text(s, 0.82, 5.82, 5, 0.28, "WHAT IT COSTS THE HOSPITAL", size=10, color=GOLD, bold=True, spacing=180)
+for i, chip in enumerate(("Money paid twice", "Claims refused", "Repayments after audits", "Hours of rework")):
     x = 0.82 + i * (2.75 + 0.23)
     box(s, x, 6.15, 2.75, 0.5, fill=RED_LT, line=RED, line_w=0.75,
         shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
@@ -326,9 +330,9 @@ text(s, 1.1, 2.15, 11.15, 3.2, [[
     ("checking every invoice against each hospital's own contract rates and records", HL),
     (". ", N), ("HealthLedger AI", HL), (" allows ", N),
     ("private hospitals' finance teams", HL), (" to ", N),
-    ("stop revenue leaks and protect patients from wrong bills", HL), (" by ", N),
+    ("cut the cost of billing errors and protect patients from wrong bills", HL), (" by ", N),
     ("running read-only inside the hospital, with every decision logged for auditors", HL),
-    (".", N)]], size=23, font=HEAD, line_spacing=1.25, anchor=MSO_ANCHOR.MIDDLE)
+    (".", N)]], size=22, font=HEAD, line_spacing=1.25, anchor=MSO_ANCHOR.MIDDLE)
 text(s, 0.82, 5.75, 11.7, 0.35,
      "company  ·  type  ·  what we do  ·  how  ·  customers  ·  impact  ·  value-add",
      size=12, color=INK_MUTE, align=PP_ALIGN.CENTER)
@@ -342,8 +346,8 @@ notes(s, "[~15 s] Read it slowly, once: HealthLedger AI is a health-finance AI c
 s = prs.slides.add_slide(BLANK)
 chrome(s, "03  ·  THE SOLUTION", "Every invoice checked before the money leaves")
 stat_boxes(s, [
-    ("FAST", "~1 s", "to analyse 506 invoices against every rule"),
-    ("THOROUGH", "11", "error types checked, from duplicate invoices to patient mix-ups"),
+    ("SAVES", "€20.8K", "at risk, flagged before payment, in 506 test invoices"),
+    ("FAST", "~1 s", "to check all 506 invoices against 11 error types"),
     ("TRUSTED", "100%", "of alerts logged in a tamper-evident audit trail. A human always decides."),
 ], head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE,
     top=1.85, head_h=0.6, body_h=2.1)
@@ -363,11 +367,12 @@ text(s, 0.82, 6.05, 11.7, 0.35,
      "Working prototype  ·  tested on synthetic hospital data  ·  read-only, the data stays in the hospital",
      size=12, color=INK_MUTE, align=PP_ALIGN.CENTER)
 
-notes(s, "[~15 s] HealthLedger AI checks every invoice before the money leaves. It "
-         "analyses 506 invoices in about a second, across 11 error types. Every alert is "
-         "logged in a tamper-evident audit trail, and a human always makes the final "
-         "decision. (If asked: checks against EOPYY's claim rules are built and are next "
-         "to be tested on EOPYY data.)")
+notes(s, "[~15 s] HealthLedger AI checks every invoice before the money leaves. In our "
+         "test set of 506 invoices it flagged 20,800 euros at risk, in about a second, "
+         "across 11 error types. Every alert is logged in a tamper-evident audit trail, "
+         "and a human always makes the final decision. (If asked: the test data is "
+         "synthetic; checks against EOPYY's claim rules are built and are next to be "
+         "tested on EOPYY data.)")
 
 
 # ── 7 · DEMO ───────────────────────────────────────────────────────────────────
@@ -378,35 +383,37 @@ box(s, 0.82, 1.72, 11.7, 0.66, fill=INK)
 seg = 11.7 / 4
 for i, (num, label, col) in enumerate((("506", "invoices analysed", WHITE),
                                         ("70", "alerts flagged", WHITE),
-                                        ("53", "high risk", RED_GLOW),
-                                        ("17", "medium risk", AMBER_GLOW))):
+                                        ("€20.8K", "at risk", GOLD_LT),
+                                        ("53", "high risk", RED_GLOW))):
     text(s, 0.82 + i * seg, 1.72, seg, 0.66,
          [[(num, {"font": HEAD, "size": 24, "bold": True, "color": col}),
            ("   " + label, {"size": 13, "color": CREAM})]],
          align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 
-text(s, 0.82, 2.6, 5.2, 0.32, "ALERTS BY TYPE", size=11, color=GOLD, bold=True, spacing=180)
-bars = (("Duplicate invoice", 19, RED), ("Unregistered practitioner", 10, RED),
-        ("Upcoding", 10, RED), ("Repeated same-day procedure", 9, AMBER),
-        ("Phantom billing", 8, RED), ("Credit balance", 8, AMBER),
-        ("Unbundling", 3, RED), ("Patient identity collision", 3, RED))
-for i, (label, n, col) in enumerate(bars):
-    y = 3.0 + i * 0.42
-    text(s, 0.82, y, 2.6, 0.36, label, size=12.5, color=INK_SOFT, anchor=MSO_ANCHOR.MIDDLE)
-    bw = n / 19 * 2.2
-    box(s, 3.45, y + 0.06, bw, 0.25, fill=col)
-    text(s, 3.45 + bw + 0.08, y, 0.5, 0.36, str(n), size=12.5, color=INK, bold=True,
+text(s, 0.82, 2.6, 5.2, 0.32, "EUROS AT RISK BY TYPE", size=11, color=GOLD, bold=True, spacing=180)
+bars = (("Upcoding", 10750), ("Unregistered practitioner", 3757),
+        ("Duplicate invoices", 2400), ("Credit balances (overpaid)", 2206),
+        ("Phantom billing (no visit)", 1671))
+for i, (label, eur) in enumerate(bars):
+    y = 3.0 + i * 0.5
+    text(s, 0.82, y, 2.6, 0.4, label, size=12.5, color=INK_SOFT, anchor=MSO_ANCHOR.MIDDLE)
+    bw = eur / 10750 * 1.9
+    box(s, 3.45, y + 0.07, bw, 0.27, fill=RED)
+    text(s, 3.45 + bw + 0.08, y, 1.0, 0.4, f"€{eur:,}", size=12.5, color=INK, bold=True,
          anchor=MSO_ANCHOR.MIDDLE)
+text(s, 0.82, 5.55, 5.3, 0.6,
+     "Plus 3 patient identity collisions: no euro value, but a patient at risk.",
+     size=12, italic=True, color=INK_SOFT)
 
-cards = (("PATIENT IDENTITY COLLISION  ·  HIGH",
-          "Two patient records share the same name and date of birth.",
-          "Action: freeze both accounts until a human verifies identity."),
-         ("UPCODING  ·  HIGH",
+cards = (("UPCODING  ·  HIGH  ·  €3,828 AT RISK",
           "CT scan abdomen billed at €4,728.14. Maximum allowed: €900.",
           "Action: withhold payment and request clinical justification."),
-         ("UNBUNDLING  ·  HIGH",
-          "One appendectomy billed as 3 codes instead of 1 bundle.",
-          "Action: rebill as a single bundle code."))
+         ("DUPLICATE INVOICE  ·  HIGH  ·  €145 AT RISK",
+          "Radiology: the same €145 invoice billed twice on 3 Feb 2026.",
+          "Action: reject the duplicate before it is paid twice."),
+         ("PATIENT IDENTITY COLLISION  ·  HIGH",
+          "Two patient records share the same name and date of birth.",
+          "Action: freeze both accounts until a human verifies identity."))
 for i, (head, finding, action) in enumerate(cards):
     y = 2.6 + i * 1.25
     box(s, 6.45, y, 6.07, 1.12, fill=RED_LT)
@@ -419,15 +426,38 @@ text(s, 0.82, 6.5, 11.7, 0.32,
      size=11, italic=True, color=INK_MUTE)
 
 notes(s, "[~25 s] This is real output from the prototype, on synthetic data. 506 invoices "
-         "in, 70 alerts out, 53 of them high risk. Here, two patient records with the same "
-         "name and birth date: frozen until a human checks. A CT scan billed at over five "
-         "times the contract maximum. An appendectomy split into three bills.\n\n"
+         "in, 70 alerts out, and 20,800 euros at risk, caught before payment. The biggest "
+         "item: a CT scan billed at over five times the contract maximum, 3,828 euros too "
+         "much on one invoice. A radiology invoice billed twice. And two patient records "
+         "with the same name and birth date, frozen until a human checks.\n\n"
          "LIVE OPTION (only if the format allows and the laptop is yours): open Command "
          "Prompt in the HealthLedgerAI folder and run: python healthledgerai_demo.py "
          "(about one second). Otherwise this slide is the demo.")
 
 
 # ── 8 · MARKET ─────────────────────────────────────────────────────────────────
+# ── 7b · COST REDUCTION ────────────────────────────────────────────────────────
+s = prs.slides.add_slide(BLANK)
+chrome(s, "03  ·  THE SOLUTION  ·  COST REDUCTION", "Cost reduction a CFO can count")
+stat_boxes(s, [
+    ("BREAK-EVEN", "< 2", "caught errors a month pay for the licence (€425: the average error in our test data)"),
+    ("FEWER DENIALS", "15–30%", "fewer claim denials with AI-enabled revenue-cycle tools (Nimkar et al., 2024)"),
+    ("LESS REWORK", "$25–118", "staff cost to rework one denied claim, avoided when the error is caught first (US data)"),
+], head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE)
+text(s, 0.82, 5.32, 11.7, 0.5, "The first pilot measures it for each hospital, in euros.",
+     size=20, font=HEAD, italic=True, color=INK, align=PP_ALIGN.CENTER)
+text(s, 0.82, 6.4, 11.7, 0.45,
+     "Break-even: €8K top licence ÷ €425 average error at risk (synthetic test data)  ·  "
+     "Rework cost: MGMA; Change Healthcare (US)  ·  Denials: Nimkar et al. (2024)",
+     size=10, color=INK_MUTE)
+
+notes(s, "[~15 s] For a CFO, this is the point. Fewer than two caught errors a month pay "
+         "for the licence, at the average error size in our test data. Studies show AI "
+         "cuts claim denials by 15 to 30 percent, and every denial avoided saves the staff "
+         "time to rework it. The first pilot will measure the real number, in euros, for "
+         "each hospital.")
+
+
 s = prs.slides.add_slide(BLANK)
 chrome(s, "04  ·  MARKET", "Start focused, then grow across Europe and the Gulf")
 box(s, 1.3, 1.85, 4.45, 4.45, fill=SAGE_LT, line=SAGE_MID, shape=MSO_SHAPE.OVAL)
@@ -615,15 +645,15 @@ text(s, 3.2, 3.6, 6.95, 1.9, [
     [("It gets the first hospital pilot ready for 2027:", {"bold": True, "color": INK})],
     [("1.  Company set-up in Cyprus", {})],
     [("2.  Data-protection and ethics groundwork (DPA, DPIA)", {})],
-    [("3.  A pilot version that runs inside the hospital", {})]],
+    [("3.  A pilot that measures each hospital's error cost, in euros", {})]],
     size=16, color=INK_SOFT, align=PP_ALIGN.CENTER, space_after=6)
 text(s, 0.82, 5.85, 11.7, 0.5,
      "And from this room: introductions to hospital CFOs, audit firms and health-AI investors.",
      size=18, font=HEAD, italic=True, color=SAGE, align=PP_ALIGN.CENTER)
 
 notes(s, "[~15 s] With 10,000 euros I get the first hospital pilot ready for 2027: the "
-         "company in Cyprus, the data-protection and ethics groundwork, and a pilot "
-         "version that runs inside the hospital. And from this room, I'd love "
+         "company in Cyprus, the data-protection and ethics groundwork, and a pilot that "
+         "measures each hospital's error cost in euros. And from this room, I'd love "
          "introductions to hospital CFOs, audit firms and health-AI investors.")
 
 
