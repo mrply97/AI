@@ -194,8 +194,14 @@ text(s, 8.85, 4.9, 3.4, 0.75, "€3,828 overcharge flagged\nbefore payment.", si
      color=SAGE, bold=True)
 bang(s, 12.05, 1.12, 0.62, size=26)
 
-notes(s, "[~10 s] Hello, I'm Maria. Imagine being taken to court for a hospital bill "
-         "that was never yours. That is where HealthLedger AI starts.")
+notes(s, "[~15 s] INTRO (Sam Horn: 'Did you know?'). Don't say your name yet. Pause, "
+         "look at one juror, then:\n"
+         "Did you know that up to one in four hospital bills processed by hand contains "
+         "an error? (pause)\n"
+         "Did you know that in Germany alone, insurers estimate wrong hospital bills at up "
+         "to one and a half billion euros a year? (pause)\n"
+         "And did you know that in most hospitals, it is nobody's job to catch them?\n"
+         "-> click")
 
 
 # ── 2 · ISSUE ──────────────────────────────────────────────────────────────────
@@ -235,11 +241,15 @@ text(s, 0.6, 6.55, 12, 0.3,
      "A real case from a private hospital in Greece. Names and details changed.",
      size=11, italic=True, color=INK_MUTE)
 
-notes(s, "[~25 s] This really happened in a private hospital in Greece. Two patients "
-         "shared the same name and the same date of birth. An invoice was assigned to "
-         "the wrong one, and that patient ended up facing legal proceedings. One "
-         "automated check would have prevented it. I heard this from someone inside "
-         "a hospital accounting department, and it is why I built HealthLedger AI.")
+notes(s, "[~20 s] INTRO ('Imagine'):\n"
+         "Imagine opening a letter from a lawyer, about a hospital bill that was never "
+         "yours. (pause)\n"
+         "That happened to a patient in Greece. Same name, same date of birth as another "
+         "patient, and the invoice went to the wrong person. One automated check would "
+         "have stopped it. (pause)\n"
+         "I'm Maria Polychroniadou, and I built HealthLedger AI so that no hospital, and "
+         "no patient, finds out this way again.\n"
+         "-> click")
 
 
 # ── 3 · PROBLEM ────────────────────────────────────────────────────────────────
@@ -258,12 +268,9 @@ text(s, 0.82, 6.55, 11.7, 0.3,
      "HealthLedger AI field interviews in Greek hospital accounting",
      size=10, color=INK_MUTE)
 
-notes(s, "[~20 s] This is not one bad day. Studies put manual hospital billing error "
-         "rates at up to 26 percent. In Germany alone, the statutory insurers estimate "
-         "incorrect hospital bills at up to 1.5 billion euros a year, and hospitals face "
-         "audits and repayments over them. And errors stay invisible for weeks, until a "
-         "payer rejects the claim, the money doesn't arrive, or an auditor finds it. "
-         "Nobody's job title is 'billing errors', so nobody catches them.\n\n"
+notes(s, "[~8 s] You already asked the questions in the intro, so keep this short. "
+         "Point at the three boxes: Common. Costly. Invisible. Errors stay hidden for "
+         "weeks, until a payer refuses the claim or an auditor finds them.\n\n"
          "If challenged on the 1.5 billion: it is the insurers' own estimate; hospitals "
          "dispute how much of it is error rather than medical judgment.")
 
@@ -367,7 +374,8 @@ text(s, 0.82, 6.05, 11.7, 0.35,
      "Working prototype  ·  tested on synthetic hospital data  ·  read-only, the data stays in the hospital",
      size=12, color=INK_MUTE, align=PP_ALIGN.CENTER)
 
-notes(s, "[~15 s] HealthLedger AI checks every invoice before the money leaves. In our "
+notes(s, "[~15 s] Now imagine every invoice checked before the money leaves the hospital. "
+         "That is HealthLedger AI. In our "
          "test set of 506 invoices it flagged 20,800 euros at risk, in about a second, "
          "across 11 error types. Every alert is logged in a tamper-evident audit trail, "
          "and a human always makes the final decision. (If asked: the test data is "
@@ -425,7 +433,8 @@ text(s, 0.82, 6.5, 11.7, 0.32,
      "Real output of the HealthLedger AI prototype on synthetic data. The full run takes about one second.",
      size=11, italic=True, color=INK_MUTE)
 
-notes(s, "[~25 s] This is real output from the prototype, on synthetic data. 506 invoices "
+notes(s, "[~25 s] ('For example') For example: this is real output from the prototype, "
+         "on synthetic data. 506 invoices "
          "in, 70 alerts out, and 20,800 euros at risk, caught before payment. The biggest "
          "item: a CT scan billed at over five times the contract maximum, 3,828 euros too "
          "much on one invoice. A radiology invoice billed twice. And two patient records "
