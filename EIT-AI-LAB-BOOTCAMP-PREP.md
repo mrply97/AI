@@ -240,6 +240,36 @@ The organisers want you to meet potential customers, stakeholders and experts. C
 
 Afterwards, write one page: three things you heard, what surprised you, and which assumption you changed. That page is your Proof Room material on Thursday and your "what changed this week" line on Friday.
 
+### Done — Martine van Veelen, Director EIT Community @ EIT Food (Thu 12 Nov, Amsterdam)
+
+From your voice memo (about 6 minutes; it ends when she asks about competition and you both run out of time).
+
+**What she advised**
+
+- **Say what you sell in one sentence.** "A software tool. It needs a set-up first, so there is a one-off set-up cost. Then a yearly fee to use it." Charge per year, not per month: "once the installment, and one yearly."
+- **The alert has to say what is wrong, not only raise a flag.** She asked "does it also say what?" Your answer was the right one: three levels (high, medium, low), where the error is, and why ("this invoice already exists", "this patient had no appointment", "the amount isn't right").
+- **B2B first.** Consumers could come later if patients feel the pain too, for example as a yearly protection they buy. You both agreed hospitals come first.
+- **The PhD is a win-win.** You test the tool in the hospitals during the research, so you avoid the "first client" problem other founders have.
+
+**What she asked — expect the jury to ask the same**
+
+- Is there a conflict of interest? Is your supervisor okay with it?
+- Do you have an IT person working with you?
+- Any competition? (not answered: time ran out)
+
+**Your own best lines from the meeting — use them on stage**
+
+- "I don't want to replace them. I want to make it safer for them as employees, save the hospital money, and protect the patients."
+- "I'm the only one here from the business side." It explains why the deck is in plain words.
+
+**What changed in the deck because of it (v7)**
+
+- Business model (slide 11): three price boxes became two steps, "1 · once: set-up" then "2 · every year: yearly fee".
+- How it works (slide 8): the flagged invoice now shows WHY and NEXT; the labels say "Red flag (high · medium · low)" and "Every step is recorded".
+- Speaker notes: plain-words description of the tool on the reveal (slide 5), and short answers to her three questions on the last slide.
+
+**For the Proof Room page:** heard — (1) say what you sell in one sentence, (2) an alert must explain itself, (3) B2B first; surprised — an EIT director saw the PhD as the advantage, and asked about conflict of interest; assumption changed — pricing is now "one set-up, then one yearly fee" instead of three price lines.
+
 ### Also
 
 - **Prepare a 60-second ask** for mentors and peers, and make it specific. For example: "an introduction to someone who has run a hospital R&D pilot in Cyprus", or "an advisor in anomaly detection".
@@ -261,7 +291,7 @@ Afterwards, write one page: three things you heard, what surprised you, and whic
 - **Your unfair advantage, in one line:** "I met a founder whose app never got into a hospital because she was an outsider. I go in as a doctoral researcher, with my university's partner hospitals."
 - **Your own closing line:** "find out, in a room full of people who will tell me the truth, whether anyone will actually pay for it." By Friday you will have spent four days in that room.
 - **Brand and site:** healthledgerai.com.
-- **Pitch deck:** `HealthLedgerAI_EIT_Pitch.pptx` (16 slides, talk track in the speaker notes). Opens on name + details; "How it works" is a 3-click animation (slides 6–8: the invoice travels the pipeline and gets flagged); market info sits inside the bubbles; competition is a simple 2×2 with HealthLedger AI alone top-right (13); traction is ONE slide (14): a path Done → Feb 2027 → Outreach, where the last two stages wipe in on two clicks — same rhythm as the old three traction slides; LinkedIn QR on the Ask. The demo steps use PowerPoint Morph — in older PowerPoint they fall back to a fade; as PDF they're simple cuts, and the traction slide simply shows all three stages. Slides 4, 11 and 13 are optional for a 3-minute slot. Rebuild with `python3 build_eit_pitch.py`.
+- **Pitch deck:** `HealthLedgerAI_EIT_Pitch.pptx` (16 slides, talk track in the speaker notes). Opens on name + details; "How it works" is a 3-click animation (slides 6–8: the invoice travels the pipeline and gets flagged); market info sits inside the bubbles; competition is a simple 2×2 with HealthLedger AI alone top-right (13); traction is ONE slide (14): a path Done → Feb 2027 → Outreach, where the last two stages wipe in on two clicks — same rhythm as the old three traction slides; LinkedIn QR on the Ask. After the meeting with Martine van Veelen (12 Nov): the business model (11) is two steps, "once: set-up" then "every year: yearly fee"; the flagged invoice on slide 8 shows WHY and NEXT; short Q&A answers sit in the notes of the last slide. The demo steps use PowerPoint Morph — in older PowerPoint they fall back to a fade; as PDF they're simple cuts, and the traction slide simply shows all three stages. For a 3-minute slot, slide 4 is the one to skip first; 11 now takes about 8 seconds, and 13 answers the competition question. Rebuild with `python3 build_eit_pitch.py`.
 
 ### Still to face
 

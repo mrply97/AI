@@ -1,7 +1,8 @@
 """
 HealthLedger AI — EIT AI Entrepreneurs Lab pitch deck (Demo Day, 13 Nov 2026)
 
-Structure v6 (Maria, 12 Nov):
+Structure v7 (Maria, 12 Nov — after the meeting with Martine van Veelen, EIT Food:
+plain words; "one set-up, then one yearly fee"; the red flag says why and what to do):
  1  Title: name + details, dark design
  2  Issue: patient story, centred
  3  Problem: BILLING ERROR / MISSING REVENUE / UNKNOWN (Cyprus figures)
@@ -11,7 +12,8 @@ Structure v6 (Maria, 12 Nov):
       (Morph transitions; on older PowerPoint they degrade to a fade)
  9  Cost reduction a CFO can count
 10  Market: the information inside the bubbles
-11  Business model (optional)   12 Go-to-market
+11  Business model: 1 · once (set-up) -> 2 · every year (yearly fee)
+12  Go-to-market
 13  Competition: a simple 2x2, one occupant per quadrant (optional)
 14  Traction: ONE slide — a 3-stage path (done → Feb 2027 → outreach);
     stages 2 and 3 appear on two clicks (in-slide animation, no extra pages)
@@ -440,16 +442,19 @@ text(s, 0.95, 6.35, 6, 0.3, "synthetic test data", size=11, italic=True, color=I
 
 notes(s, "[~20 s] THE REVEAL (don't read the slide):\n"
          "…That's why I've created — HealthLedger AI.\n"
-         "It catches hospital billing errors before payment, by checking every invoice "
-         "against the hospital's own contract rates and records. It runs read-only inside "
-         "the hospital, and every decision is logged for the auditors.\n"
+         "It is a software tool for hospital accounting. It checks every invoice before "
+         "payment. If something looks wrong, it raises a red flag and tells the team where "
+         "the error is, and why. It doesn't replace the staff: it makes their work safer, "
+         "saves the hospital money, and protects the patient.\n"
          "Point at the number: in one test run, it flagged 21 thousand euros at risk — "
          "including the bill in my hand. Let me show you how.  -> click")
 
 
 # ── 6-8 · HOW IT WORKS: 3-CLICK ANIMATION ─────────────────────────────────────
-STEPS = ("Billing data\n(Excel export)", "11 error\nchecks", "Ranked alerts\n(high · medium)",
-         "A human\ndecides", "Tamper-evident\naudit trail")
+# Plain words (after the meeting with Martine van Veelen, 12 Nov): the tool
+# raises a red flag, says why and what to do; a human decides.
+STEPS = ("Billing data\n(Excel export)", "11 error\nchecks", "Red flag\n(high · medium · low)",
+         "A human\ndecides", "Every step\nis recorded")
 SW, AW = 2.16, 0.4
 X0 = (W - (len(STEPS) * SW + (len(STEPS) - 1) * AW)) / 2
 PIPE_Y = 4.5
@@ -518,9 +523,19 @@ notes(s, "[~10 s] Eleven error checks run on every invoice — against the hospi
          "contract rates, not generic rules. This CT scan is billed at €4,728. The "
          "contract says €900 maximum. Caught.  -> click (the invoice becomes a ranked alert)")
 
-# step 3 — ranked alert + the numbers (Morph)
-s = demo_slide("Alerts are ranked — a human always decides.")
+# step 3 — the red flag explains itself + the numbers (Morph)
+s = demo_slide("A red flag says why, and what to do — a human always decides.")
 invoice(s, 2, flagged=True, high=True)
+# what the alert tells the team (the prototype's "detail" and "action" fields)
+WX, WY, WW, WH = 8.3, 2.42, 4.45, 1.3
+box(s, WX, WY, WW, WH, fill=RED_LT, name="!!why_bg")
+box(s, WX, WY, 0.07, WH, fill=RED, name="!!why_bar")
+text(s, WX + 0.28, WY + 0.08, WW - 0.4, WH - 0.16, [
+    [("WHY   ", {"bold": True, "color": RED, "size": 11.5, "spacing": 120}),
+     ("Billed 5× the contract maximum", {})],
+    [("NEXT  ", {"bold": True, "color": RED, "size": 11.5, "spacing": 120}),
+     ("Hold the payment, ask why", {})]],
+    size=15, color=INK, anchor=MSO_ANCHOR.MIDDLE, space_after=7, name="!!why_t")
 box(s, 1.5, 5.85, 10.33, 0.95, fill=INK, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12,
     name="!!band")
 seg = 10.33 / 4
@@ -533,10 +548,12 @@ for i, (num, lab, col) in enumerate((("506", "invoices", WHITE), ("70", "alerts"
 text(s, 10.6, 1.63, 2.1, 0.3, "~1 second per run", size=12, color=INK_MUTE, italic=True,
      align=PP_ALIGN.RIGHT)
 s3 = s
-notes(s, "[~12 s] The alert is ranked high, with the action to take — and a human always "
-         "makes the final decision, with every step logged for the auditors. The whole "
-         "run: 506 invoices, 70 alerts, 21 thousand euros at risk — in about one second. "
-         "(All on synthetic test data.)\n\n"
+notes(s, "[~12 s] The tool raises a red flag — high, medium or low. It tells the team why: "
+         "here, billed five times the contract maximum. And what to do next: hold the "
+         "payment and ask why. A human always decides — I don't replace the staff, I make "
+         "their work safer. Every step is recorded for the auditors. The whole run: 506 "
+         "invoices, 70 alerts, 21 thousand euros at risk — in about one second. (All on "
+         "synthetic test data.)\n\n"
          "LIVE OPTION (only if the format allows and the laptop is yours): run "
          "python healthledgerai_demo.py in the HealthLedgerAI folder — about one second.")
 
@@ -606,23 +623,37 @@ notes(s, "[~15 s] We start where I have access and speak the language: Greece an
          "the two pilot hospitals have proven it.")
 
 
-# ── 11 · BUSINESS MODEL (optional) ─────────────────────────────────────────────
+# ── 11 · BUSINESS MODEL — one set-up, then one yearly fee ─────────────────────
+# Martine van Veelen's framing (12 Nov): "what you sell is a tool: once the
+# installment, and one yearly fee" — per year, not per month.
 s = prs.slides.add_slide(BLANK)
-chrome(s, "05  ·  BUSINESS MODEL", "Annual licence, plus set-up and review")
-stat_boxes(s, [
-    ("LICENCE", "€3–8K", "per hospital, per year"),
-    ("SET-UP", "€1.5–3K", "one-off on-site discovery: the hospital's contracts become its rules"),
-    ("REVIEW & MODULES", "€1–5K", "per year: recalibration and custom checks"),
-], head_fill=GOLD, body_fill=CREAM, body_line=GOLD, num_color=INK)
-text(s, 0.82, 5.32, 11.7, 0.5, "Prices are hypotheses: the first pilots will validate them.",
+chrome(s, "05  ·  BUSINESS MODEL", "One set-up, then one yearly fee")
+BM_W, BM_GAP = 4.6, 1.3
+BM_X = (W - (2 * BM_W + BM_GAP)) / 2
+stat_boxes(s, [("1  ·  ONCE", "€1.5–3K", "Set-up: the hospital's contracts become its rules")],
+           head_fill=GOLD, body_fill=CREAM, body_line=GOLD, num_color=INK,
+           top=1.9, head_h=0.6, body_h=2.1, x0=BM_X, w=BM_W)
+box(s, BM_X + BM_W + 0.3, 3.05, BM_GAP - 0.6, 0.5, fill=GOLD, shape=MSO_SHAPE.RIGHT_ARROW)
+stat_boxes(s, [("2  ·  EVERY YEAR", "€3–8K", "Yearly fee, per hospital")],
+           head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE,
+           top=1.9, head_h=0.6, body_h=2.1, x0=BM_X + BM_W + BM_GAP, w=BM_W)
+for i, lab in enumerate(("YEAR 1", "YEAR 2", "YEAR 3", "…")):   # it repeats
+    px = BM_X + BM_W + BM_GAP + 0.1 + i * 1.12
+    box(s, px, 4.78, 1.02, 0.36, fill=WHITE, line=SAGE, line_w=1.0,
+        shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
+    text(s, px, 4.78, 1.02, 0.36, lab, size=11, color=SAGE, bold=True, spacing=120,
+         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+text(s, 0.82, 5.62, 11.7, 0.5, "Prices are hypotheses: the first pilots will validate them.",
      size=19, font=HEAD, italic=True, color=SAGE, align=PP_ALIGN.CENTER)
-text(s, 0.82, 5.88, 11.7, 0.36,
-     "Grants bridge the start: EIT, Research & Innovation Foundation Cyprus, EIC.",
-     size=13, color=INK_MUTE, align=PP_ALIGN.CENTER)
 
-notes(s, "[~10 s] An annual licence per hospital, a one-off set-up where we turn the "
-         "hospital's contracts into its rules, and yearly review. The pilots will test "
-         "these prices. (Optional slide: skip if short on time.)")
+notes(s, "[~8 s] What I sell is a software tool. First, a one-off set-up: we turn the "
+         "hospital's own contracts into its rules. Then one yearly fee per hospital — per "
+         "year, not per month — for as long as they use it. The pilots will test these "
+         "prices.\n\n"
+         "If asked — later: add-on checks and a yearly review, 1 to 5 thousand euros. "
+         "Grants bridge the start: EIT, Research & Innovation Foundation Cyprus, EIC.\n"
+         "If asked about patients (B2C): it could be adapted later, for example as a "
+         "yearly protection for patients. I start with hospitals: B2B first.")
 
 
 # ── 12 · GO-TO-MARKET ──────────────────────────────────────────────────────────
@@ -841,7 +872,21 @@ notes(s, "[~15 s] With 10,000 euros I get the first hospital pilot ready for 202
          "company in Cyprus, the data-protection and ethics groundwork, and a pilot that "
          "measures each hospital's error cost in euros. And from this room, I'd love "
          "introductions to hospital CFOs, audit firms and health-AI investors. The QR "
-         "code goes to my LinkedIn — I'd be glad to connect.")
+         "code goes to my LinkedIn — I'd be glad to connect.\n\n"
+         "Q&A — SHORT ANSWERS (the questions Martine from EIT Food asked on 12 Nov):\n"
+         "• What exactly do you sell?  A software tool. One set-up, then one yearly fee "
+         "per hospital.\n"
+         "• Does the alert say what is wrong?  Yes: where the error is, why, and what to "
+         "do next. Three levels: high, medium, low.\n"
+         "• Do you have an IT person?  I built the prototype myself, with AI coding tools. "
+         "Eleftheria Psilou, co-founder of Theon Health, advises me on IT.\n"
+         "• Conflict of interest with the PhD?  No. My supervisor encouraged me to go for "
+         "it. During the PhD I test the tool in the partner hospitals — a win-win.\n"
+         "• And patients (B2C)?  Possible later, for example as a yearly protection. I "
+         "start with hospitals: B2B first.\n"
+         "• Competition?  SAP and Oracle check with generic rules; insurers, Excel and "
+         "auditors find errors after the damage. We check before payment, on each "
+         "hospital's own rules (slide 13).")
 
 
 # ── MORPH TRANSITIONS on the animation steps ───────────────────────────────────
