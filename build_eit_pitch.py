@@ -1,18 +1,20 @@
 """
 HealthLedger AI — EIT AI Entrepreneurs Lab pitch deck (Demo Day, 13 Nov 2026)
 
-Structure v4, after Maria's mentor review (handwritten notes, 11 Nov):
- 1  Title: name + details only, dark design
- 2  Issue: patient story, centred and bigger
+Structure v5 (Maria, 12 Nov):
+ 1  Title: name + details, dark design
+ 2  Issue: patient story, centred
  3  Problem: BILLING ERROR / MISSING REVENUE / UNKNOWN (Cyprus figures)
  4  Why today's checks miss the errors (optional in a 3-minute slot)
- 5  Reveal: "that's why I've created…" — HealthLedger AI + €21K chip
- 6  Solution: FAST / TRUSTED + pipeline
- 7  Demo: the four big numbers only
- 8  Cost reduction a CFO can count
- 9  Market   10 Business model (optional)   11 Go-to-market
-12  Competition as wordmark badges (optional)   13 Traction (simple)
-14  Team (three seats)   15 Ask + LinkedIn QR code
+ 5  Reveal: HealthLedger AI + €21K, nothing else
+ 6-8  How it works: 3-click animation — an invoice travels the pipeline
+      (Morph transitions; on older PowerPoint they degrade to a fade)
+ 9  Cost reduction a CFO can count
+10  Market: the information inside the bubbles
+11  Business model (optional)   12 Go-to-market
+13  Competition as wordmark badges (optional)
+14-16  Traction: three-click build, short lines
+17  Team   18 Ask + LinkedIn QR
 
 Run:  python3 build_eit_pitch.py   ->  HealthLedgerAI_EIT_Pitch.pptx
 """
@@ -23,6 +25,8 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE, MSO_CONNECTOR
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR, MSO_AUTO_SIZE
 from pptx.enum.dml import MSO_LINE_DASH_STYLE
+from pptx.oxml.ns import qn
+from lxml import etree
 
 # ── COLOURS (Embryolab palette) ────────────────────────────────────────────────
 SAGE      = RGBColor(0x3D, 0x6B, 0x52)
@@ -43,7 +47,6 @@ RED_GLOW  = RGBColor(0xE8, 0x8A, 0x78)
 LINE_GREY = RGBColor(0xE8, 0xE2, 0xD6)
 OTHERS    = RGBColor(0x9D, 0xB0, 0xA4)
 
-# wordmark colours for the competition badges
 C_SAP    = RGBColor(0x0A, 0x6E, 0xD1)
 C_ORACLE = RGBColor(0xC7, 0x46, 0x34)
 C_EOPYY  = RGBColor(0x1B, 0x5E, 0xA6)
@@ -65,7 +68,7 @@ BLANK = prs.slide_layouts[6]
 # ── HELPERS ────────────────────────────────────────────────────────────────────
 
 def box(slide, x, y, w, h, fill=None, line=None, line_w=0.75,
-        shape=MSO_SHAPE.RECTANGLE, radius=None, dash=False):
+        shape=MSO_SHAPE.RECTANGLE, radius=None, dash=False, name=None):
     shp = slide.shapes.add_shape(shape, Inches(x), Inches(y), Inches(w), Inches(h))
     if fill is None:
         shp.fill.background()
@@ -82,12 +85,14 @@ def box(slide, x, y, w, h, fill=None, line=None, line_w=0.75,
     if radius is not None and len(shp.adjustments):
         shp.adjustments[0] = radius
     shp.shadow.inherit = False
+    if name:
+        shp.name = name
     return shp
 
 
 def text(slide, x, y, w, h, content, size=14, font=BODY, color=INK_SOFT,
          bold=False, italic=False, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP,
-         spacing=None, line_spacing=None, space_after=None):
+         spacing=None, line_spacing=None, space_after=None, name=None):
     tb = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
     tf = tb.text_frame
     tf.word_wrap = True
@@ -119,16 +124,20 @@ def text(slide, x, y, w, h, content, size=14, font=BODY, color=INK_SOFT,
             sp = o.get("spacing", spacing)
             if sp:
                 r._r.get_or_add_rPr().set("spc", str(int(sp)))
+    if name:
+        tb.name = name
     return tb
 
 
-def line(slide, x1, y1, x2, y2, color=GOLD, width=1.0, dash=False):
+def line(slide, x1, y1, x2, y2, color=GOLD, width=1.0, dash=False, name=None):
     c = slide.shapes.add_connector(MSO_CONNECTOR.STRAIGHT,
                                    Inches(x1), Inches(y1), Inches(x2), Inches(y2))
     c.line.color.rgb = color
     c.line.width = Pt(width)
     if dash:
         c.line.dash_style = MSO_LINE_DASH_STYLE.DASH
+    if name:
+        c.name = name
     return c
 
 
@@ -162,29 +171,34 @@ def stat_boxes(slide, items, head_fill, body_fill, body_line, num_color,
              size=15, color=INK_SOFT, align=PP_ALIGN.CENTER)
 
 
-def bang(slide, x, y, d, fill=RED, size=None):
-    box(slide, x, y, d, d, fill=fill, shape=MSO_SHAPE.OVAL)
+def bang(slide, x, y, d, fill=RED, size=None, name=None):
+    box(slide, x, y, d, d, fill=fill, shape=MSO_SHAPE.OVAL, name=name)
     text(slide, x, y, d, d, "!", size=size or int(d * 40), font=HEAD, color=WHITE,
-         bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+         bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE,
+         name=(name + "_t") if name else None)
 
 
-def invoice_card(s):
-    """The flagged-invoice card used on the reveal slide."""
-    box(s, 8.55, 1.35, 3.95, 4.55, fill=WHITE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.04)
-    text(s, 8.85, 1.62, 3.3, 0.3, "INVOICE 0458", size=11, color=INK_MUTE, bold=True, spacing=120)
-    text(s, 8.85, 1.92, 3.3, 0.3, "Private hospital  ·  billing run", size=11, color=INK_MUTE)
-    box(s, 8.85, 2.45, 3.2, 0.12, fill=LINE_GREY)
-    box(s, 8.85, 2.72, 2.6, 0.12, fill=LINE_GREY)
-    box(s, 8.75, 3.08, 3.55, 0.82, fill=RED_LT, line=RED, line_w=1.25)
-    text(s, 8.9, 3.16, 2.0, 0.32, "CT scan abdomen", size=13, color=INK, bold=True)
-    text(s, 10.45, 3.1, 1.75, 0.4, "€4,728.14", size=18, font=HEAD, color=RED,
-         bold=True, align=PP_ALIGN.RIGHT)
-    text(s, 8.9, 3.52, 3.3, 0.3, "Maximum allowed by contract: €900", size=11, color=RED)
-    box(s, 8.85, 4.15, 3.0, 0.12, fill=LINE_GREY)
-    box(s, 8.85, 4.42, 2.2, 0.12, fill=LINE_GREY)
-    text(s, 8.85, 4.9, 3.4, 0.75, "€3,828 overcharge flagged\nbefore payment.", size=13,
-         color=SAGE, bold=True)
-    bang(s, 12.05, 1.12, 0.62, size=26)
+MORPH_XML = (
+    '<mc:AlternateContent '
+    'xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" '
+    'xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">'
+    '<mc:Choice xmlns:p159="http://schemas.microsoft.com/office/powerpoint/2015/09/main" '
+    'Requires="p159">'
+    '<p:transition xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" '
+    'spd="slow" p14:dur="700"><p159:morph option="byObject"/></p:transition>'
+    '</mc:Choice>'
+    '<mc:Fallback><p:transition spd="slow"><p:fade/></p:transition></mc:Fallback>'
+    '</mc:AlternateContent>')
+
+
+def add_morph(slide):
+    """The slide ENTERS with a Morph transition (older PowerPoint: a fade)."""
+    el = etree.fromstring(MORPH_XML.encode())
+    clr = slide.element.find(qn('p:clrMapOvr'))
+    if clr is not None:
+        clr.addnext(el)
+    else:
+        slide.element.append(el)
 
 
 # ── 1 · TITLE: NAME + DETAILS ──────────────────────────────────────────────────
@@ -330,98 +344,123 @@ notes(s, "[~20 s] Why does nobody catch them? Hospital systems check one row at 
          "expensive. (Optional slide: skip if the pitch slot is 3 minutes.)")
 
 
-# ── 5 · REVEAL: HEALTHLEDGER AI ────────────────────────────────────────────────
+# ── 5 · REVEAL: HEALTHLEDGER AI + €21K ─────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 box(s, 0, 0, W, H, fill=INK)
-box(s, 0.92, 1.77, 0.26, 0.26, fill=SAGE_GLOW, shape=MSO_SHAPE.OVAL)
-text(s, 1.32, 1.3, 7.2, 1.0, "HealthLedger AI", size=54, font=HEAD, color=WHITE)
-text(s, 0.9, 2.5, 7.3, 0.95, "Catching costly hospital billing errors before payment.",
+box(s, 0.92, 1.92, 0.26, 0.26, fill=SAGE_GLOW, shape=MSO_SHAPE.OVAL)
+text(s, 1.32, 1.42, 10.8, 1.05, "HealthLedger AI", size=56, font=HEAD, color=WHITE)
+text(s, 0.92, 2.72, 10.5, 0.6, "Catching costly hospital billing errors before payment.",
      size=24, font=HEAD, italic=True, color=GOLD_LT)
-box(s, 0.92, 3.7, 3.8, 0.03, fill=GOLD)
-
-box(s, 0.92, 4.05, 4.7, 1.6, line=SAGE_GLOW, line_w=1.5)
-text(s, 1.17, 4.2, 1.9, 0.9, "€21K", size=42, font=HEAD, color=SAGE_GLOW, bold=True)
-text(s, 3.15, 4.28, 2.35, 1.2, "at risk, flagged before\npayment, in 506 test\ninvoices", size=13.5,
-     color=CREAM)
-text(s, 0.92, 5.78, 4.7, 0.3, "synthetic test data", size=10.5, italic=True, color=INK_MUTE)
-
-invoice_card(s)
+box(s, 0.92, 3.75, 3.8, 0.03, fill=GOLD)
+text(s, 0.88, 4.0, 5.4, 1.6, "€21K", size=96, font=HEAD, color=SAGE_GLOW, bold=True)
+text(s, 6.0, 4.42, 6.4, 0.9, "at risk, flagged before payment,\nin one test run of 506 invoices",
+     size=18, color=CREAM)
+text(s, 0.95, 6.35, 6, 0.3, "synthetic test data", size=11, italic=True, color=INK_MUTE)
 
 notes(s, "[~20 s] THE REVEAL (don't read the slide):\n"
          "…That's why I've created — HealthLedger AI.\n"
-         "HealthLedger AI is a health-finance AI company that catches hospital billing "
-         "errors before payment, by checking every invoice against each hospital's own "
-         "contract rates and records. It lets private hospitals' finance teams cut the "
-         "cost of billing errors and protect patients from wrong bills — running "
-         "read-only inside the hospital, with every decision logged for auditors.\n"
-         "Point at the chip: in one test run, it flagged 21 thousand euros at risk. "
-         "Point at the card: like this CT scan, billed at five times the contract rate.")
+         "It catches hospital billing errors before payment, by checking every invoice "
+         "against the hospital's own contract rates and records. It runs read-only inside "
+         "the hospital, and every decision is logged for the auditors.\n"
+         "Point at the number: in one test run, it flagged 21 thousand euros at risk — "
+         "including the bill in my hand. Let me show you how.  -> click")
 
 
-# ── 6 · SOLUTION ───────────────────────────────────────────────────────────────
-s = prs.slides.add_slide(BLANK)
-chrome(s, "03  ·  THE SOLUTION", "Every invoice checked before the money leaves")
-stat_boxes(s, [
-    ("FAST", "~1 s", "to check all 506 invoices against 11 error types"),
-    ("TRUSTED", "100%", "of alerts logged in a tamper-evident audit trail. A human always decides."),
-], head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE,
-    top=1.8, head_h=0.6, body_h=2.0, x0=1.82, w=4.6, gap=0.5)
-
-steps = ("Billing data\n(Excel export)", "11 error\nchecks", "Ranked alerts\n(high · medium)",
+# ── 6-8 · HOW IT WORKS: 3-CLICK ANIMATION ─────────────────────────────────────
+STEPS = ("Billing data\n(Excel export)", "11 error\nchecks", "Ranked alerts\n(high · medium)",
          "A human\ndecides", "Tamper-evident\naudit trail")
-sw, aw = 2.16, 0.4
-x0 = (W - (len(steps) * sw + (len(steps) - 1) * aw)) / 2
-for i, label in enumerate(steps):
-    x = x0 + i * (sw + aw)
-    box(s, x, 4.85, sw, 0.95, fill=CREAM, line=GOLD, line_w=0.75,
-        shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.15)
-    text(s, x, 4.85, sw, 0.95, label, size=14, color=INK, align=PP_ALIGN.CENTER,
-         anchor=MSO_ANCHOR.MIDDLE)
-    if i < len(steps) - 1:
-        box(s, x + sw + 0.05, 5.17, aw - 0.1, 0.32, fill=GOLD, shape=MSO_SHAPE.RIGHT_ARROW)
-text(s, 0.82, 6.15, 11.7, 0.35,
-     "Working prototype  ·  tested on synthetic hospital data  ·  read-only, the data stays in the hospital",
-     size=12, color=INK_MUTE, align=PP_ALIGN.CENTER)
-
-notes(s, "[~15 s] Now imagine every invoice checked before the money leaves. It takes "
-         "about a second for 506 invoices, across 11 error types. Every alert lands in a "
-         "tamper-evident audit trail, and a human always makes the final decision. "
-         "(If asked: the test data is synthetic; checks against EOPYY's claim rules are "
-         "built and are next to be tested on EOPYY data.)")
+SW, AW = 2.16, 0.4
+X0 = (W - (len(STEPS) * SW + (len(STEPS) - 1) * AW)) / 2
+PIPE_Y = 4.5
 
 
-# ── 7 · DEMO: THE FOUR NUMBERS ─────────────────────────────────────────────────
-s = prs.slides.add_slide(BLANK)
-chrome(s, "LIVE PROTOTYPE  ·  SYNTHETIC TEST DATA", "Demo: 506 invoices in, 70 alerts out")
-
-px, py, pw, ph = 1.5, 1.95, 10.33, 4.0
-box(s, px, py, pw, ph, fill=INK, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.05)
-cells = (("506", "invoices analysed", WHITE), ("70", "alerts flagged", WHITE),
-         ("€21K", "at risk", GOLD_LT), ("53", "high risk", RED_GLOW))
-for i, (num, label, col) in enumerate(cells):
-    cx = px + (i % 2) * (pw / 2)
-    cy = py + (i // 2) * (ph / 2)
-    text(s, cx, cy + 0.25, pw / 2, 1.1, num, size=56, font=HEAD, color=col, bold=True,
-         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.BOTTOM)
-    text(s, cx, cy + 1.4, pw / 2, 0.4, label, size=15, color=CREAM,
-         align=PP_ALIGN.CENTER, spacing=100)
-line(s, px + pw / 2, py + 0.45, px + pw / 2, py + ph - 0.45, color=INK_SOFT, width=1.0)
-line(s, px + 0.45, py + ph / 2, px + pw - 0.45, py + ph / 2, color=INK_SOFT, width=1.0)
-
-text(s, 0.82, 6.2, 11.7, 0.35,
-     "Real output of the HealthLedger AI prototype on synthetic data  ·  the full run takes about one second.",
-     size=12, italic=True, color=INK_MUTE, align=PP_ALIGN.CENTER)
-
-notes(s, "[~20 s] ('For example') For example: this is the real output of the prototype "
-         "on a synthetic test set. 506 invoices in, 70 alerts out, 21 thousand euros at "
-         "risk, 53 of the alerts high risk. The biggest single catch: that CT scan, "
-         "billed at over five times the contract maximum.\n\n"
-         "LIVE OPTION (only if the format allows and the laptop is yours): open Command "
-         "Prompt in the HealthLedgerAI folder and run: python healthledgerai_demo.py "
-         "(about one second). Otherwise this slide is the demo.")
+def node_x(i):
+    return X0 + i * (SW + AW)
 
 
-# ── 8 · COST REDUCTION ─────────────────────────────────────────────────────────
+def pipeline(s):
+    for i, label in enumerate(STEPS):
+        x = node_x(i)
+        box(s, x, PIPE_Y, SW, 0.95, fill=CREAM, line=GOLD, line_w=0.75,
+            shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.15, name=f"!!node{i}")
+        text(s, x, PIPE_Y, SW, 0.95, label, size=14, color=INK, align=PP_ALIGN.CENTER,
+             anchor=MSO_ANCHOR.MIDDLE, name=f"!!nodetxt{i}")
+        if i < len(STEPS) - 1:
+            box(s, x + SW + 0.05, PIPE_Y + 0.32, AW - 0.1, 0.32, fill=GOLD,
+                shape=MSO_SHAPE.RIGHT_ARROW, name=f"!!arr{i}")
+
+
+def invoice(s, at_node, flagged, high):
+    cx = node_x(at_node) + SW / 2
+    x, y, w, h = cx - 1.3, 2.35, 2.6, 1.45
+    line(s, cx, y + h, cx, PIPE_Y, color=RED if flagged else GOLD, width=1.25,
+         dash=True, name="!!inv_ln")
+    box(s, x, y, w, h, fill=WHITE, line=RED if flagged else INK_MUTE,
+        line_w=2.0 if flagged else 1.0, shape=MSO_SHAPE.ROUNDED_RECTANGLE,
+        radius=0.08, name="!!inv_bg")
+    text(s, x + 0.18, y + 0.1, w - 0.36, 0.26, "INVOICE 0458", size=10, color=INK_MUTE,
+         bold=True, spacing=120, name="!!inv_no")
+    text(s, x + 0.18, y + 0.38, w - 0.36, 0.3, "CT scan abdomen", size=13.5, color=INK,
+         bold=True, name="!!inv_proc")
+    text(s, x + 0.18, y + 0.7, w - 0.36, 0.34, "€4,728.14", size=17, font=HEAD,
+         color=RED if flagged else INK, bold=True, name="!!inv_amt")
+    if flagged:
+        text(s, x + 0.18, y + 1.08, w - 0.36, 0.28, "max by contract: €900", size=11,
+             color=RED, name="!!inv_max")
+        bang(s, x + w - 0.26, y - 0.19, 0.42, size=18, name="!!inv_bang")
+    if high:
+        box(s, x + w - 1.02, y + 0.12, 0.84, 0.3, fill=RED, name="!!inv_hi")
+        text(s, x + w - 1.02, y + 0.12, 0.84, 0.3, "HIGH", size=11, color=WHITE, bold=True,
+             align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, spacing=150, name="!!inv_hit")
+
+
+def demo_slide(subtitle):
+    s = prs.slides.add_slide(BLANK)
+    chrome(s, "03  ·  THE SOLUTION  ·  HOW IT WORKS", "How it works")
+    text(s, 0.6, 1.58, 12.1, 0.4, subtitle, size=17, font=HEAD, italic=True, color=SAGE)
+    pipeline(s)
+    return s
+
+
+# step 1 — the invoice arrives
+s = demo_slide("Your billing data comes in — invoice by invoice.")
+invoice(s, 0, flagged=False, high=False)
+notes(s, "[~8 s] Here is how it works. The hospital's billing data comes in as a simple "
+         "Excel export — no IT project. Every invoice enters the pipeline, like this "
+         "one.  -> click (the invoice moves to the checks)")
+
+# step 2 — the checks catch it (Morph)
+s = demo_slide("Each invoice is checked against the hospital's own contract rates.")
+invoice(s, 1, flagged=True, high=False)
+s2 = s
+notes(s, "[~10 s] Eleven error checks run on every invoice — against the hospital's own "
+         "contract rates, not generic rules. This CT scan is billed at €4,728. The "
+         "contract says €900 maximum. Caught.  -> click (the invoice becomes a ranked alert)")
+
+# step 3 — ranked alert + the numbers (Morph)
+s = demo_slide("Alerts are ranked — a human always decides.")
+invoice(s, 2, flagged=True, high=True)
+box(s, 1.5, 5.85, 10.33, 0.95, fill=INK, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12,
+    name="!!band")
+seg = 10.33 / 4
+for i, (num, lab, col) in enumerate((("506", "invoices", WHITE), ("70", "alerts", WHITE),
+                                     ("€21K", "at risk", GOLD_LT), ("53", "high risk", RED_GLOW))):
+    text(s, 1.5 + i * seg, 5.85, seg, 0.95,
+         [[(num, {"font": HEAD, "size": 26, "bold": True, "color": col}),
+           ("  " + lab, {"size": 13, "color": CREAM})]],
+         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, name=f"!!bandt{i}")
+text(s, 10.6, 1.63, 2.1, 0.3, "~1 second per run", size=12, color=INK_MUTE, italic=True,
+     align=PP_ALIGN.RIGHT)
+s3 = s
+notes(s, "[~12 s] The alert is ranked high, with the action to take — and a human always "
+         "makes the final decision, with every step logged for the auditors. The whole "
+         "run: 506 invoices, 70 alerts, 21 thousand euros at risk — in about one second. "
+         "(All on synthetic test data.)\n\n"
+         "LIVE OPTION (only if the format allows and the laptop is yours): run "
+         "python healthledgerai_demo.py in the HealthLedgerAI folder — about one second.")
+
+
+# ── 9 · COST REDUCTION ─────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "03  ·  THE SOLUTION  ·  COST REDUCTION", "Cost reduction a CFO can count")
 stat_boxes(s, [
@@ -443,38 +482,50 @@ notes(s, "[~15 s] For a CFO, this is the point. Fewer than two caught errors a m
          "in euros, for each hospital.")
 
 
-# ── 9 · MARKET ─────────────────────────────────────────────────────────────────
+# ── 10 · MARKET: THE INFORMATION IN THE BUBBLES ───────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "04  ·  MARKET", "Start focused, then grow: Europe, the Gulf, the USA")
-box(s, 1.3, 1.85, 4.45, 4.45, fill=SAGE_LT, line=SAGE_MID, shape=MSO_SHAPE.OVAL)
-box(s, 1.93, 3.1, 3.2, 3.2, fill=SAGE_MID, line=SAGE_DARK, shape=MSO_SHAPE.OVAL)
-box(s, 2.48, 4.2, 2.1, 2.1, fill=SAGE_DARK, line=SAGE, shape=MSO_SHAPE.OVAL)
-for y, sym in ((2.15, "€€€"), (3.33, "€€"), (4.65, "€")):
-    text(s, 1.3, y, 4.45, 0.6, sym, size=30, font=HEAD, color=INK, bold=True,
-         align=PP_ALIGN.CENTER)
 
-for (x1, y1), (title, sub) in (
-        ((5.15, 2.55), ("EU hospitals", "2.3 million hospital beds (Eurostat, 2022)")),
-        ((4.8, 3.7), ("Private hospitals in Greece and Cyprus",
-                      "~140 private hospitals in Greece alone (ELSTAT, 2023)")),
-        ((4.56, 5.0), ("Our first three years", "15 hospitals  ·  €120K annual revenue (plan)"))):
-    line(s, x1, y1, 6.75, y1, color=GOLD, width=1.0, dash=True)
-    text(s, 6.9, y1 - 0.36, 5.8, 0.38, title, size=19, font=HEAD, color=INK)
-    text(s, 6.9, y1 + 0.03, 5.8, 0.34, sub, size=13.5, color=INK_SOFT)
-text(s, 6.9, 5.85, 5.8, 0.3, "NEXT", size=10, color=GOLD, bold=True, spacing=180)
-text(s, 6.9, 6.13, 5.8, 0.62,
-     "Private hospitals in the Gulf (Qatar) and the USA — first introductions via EBAN",
-     size=14, color=SAGE, bold=True)
+bx = 3.9  # centre x of the nested bubbles
+box(s, bx - 2.5, 1.72, 5.0, 5.0, fill=SAGE_LT, line=SAGE_MID, shape=MSO_SHAPE.OVAL)
+box(s, bx - 1.75, 3.2, 3.5, 3.5, fill=SAGE_MID, line=SAGE_DARK, shape=MSO_SHAPE.OVAL)
+box(s, bx - 1.05, 4.58, 2.1, 2.1, fill=SAGE_DARK, line=SAGE, shape=MSO_SHAPE.OVAL)
 
-notes(s, "[~15 s] We start where I have access and speak the language: private hospitals "
-         "in Greece and Cyprus, about 140 private hospitals in Greece alone. The plan is "
-         "15 hospitals in three years, then the rest of Europe, with 2.3 million hospital "
-         "beds, the Gulf, where I already have contacts — and the USA, a largely private "
-         "hospital market: this week EBAN's Martin Skea connected me to the US, for "
-         "expansion once the two pilot hospitals have proven it.")
+text(s, bx - 2.0, 2.08, 4.0, 0.75, [
+    [("EU HOSPITALS", {"bold": True, "size": 15, "color": SAGE})],
+    [("2.3 million beds (Eurostat)", {"size": 12.5, "color": INK_SOFT})]],
+    align=PP_ALIGN.CENTER)
+text(s, bx - 1.7, 3.52, 3.4, 0.75, [
+    [("GREECE & CYPRUS", {"bold": True, "size": 14, "color": SAGE})],
+    [("~140 private hospitals in GR (ELSTAT)", {"size": 11.5, "color": INK_SOFT})]],
+    align=PP_ALIGN.CENTER)
+text(s, bx - 1.0, 5.1, 2.0, 1.1, [
+    [("15 HOSPITALS", {"bold": True, "size": 13, "color": INK})],
+    [("in 3 years", {"size": 11.5, "color": INK_SOFT})],
+    [("€120K / yr (plan)", {"size": 11.5, "color": INK_SOFT})]],
+    align=PP_ALIGN.CENTER)
+
+box(s, 7.35, 3.52, 0.6, 0.38, fill=GOLD, shape=MSO_SHAPE.RIGHT_ARROW)
+box(s, 8.3, 2.5, 3.3, 3.3, fill=None, line=GOLD, line_w=2.0,
+    shape=MSO_SHAPE.OVAL, dash=True)
+text(s, 8.55, 3.15, 2.8, 2.0, [
+    [("NEXT", {"bold": True, "size": 11, "color": GOLD, "spacing": 180})],
+    [("", {"size": 6})],
+    [("Gulf (Qatar)", {"font": HEAD, "size": 19, "color": INK})],
+    [("USA", {"font": HEAD, "size": 19, "color": INK})],
+    [("", {"size": 6})],
+    [("first introductions via EBAN", {"size": 12, "color": INK_SOFT, "italic": True})]],
+    align=PP_ALIGN.CENTER)
+
+notes(s, "[~15 s] We start where I have access and speak the language: Greece and Cyprus, "
+         "about 140 private hospitals in Greece alone — 15 hospitals in the first three "
+         "years. Then the rest of Europe, with 2.3 million hospital beds. And next: the "
+         "Gulf, where I already have contacts, and the USA — a largely private hospital "
+         "market. This week EBAN's Martin Skea connected me to the US, for expansion once "
+         "the two pilot hospitals have proven it.")
 
 
-# ── 10 · BUSINESS MODEL (optional) ─────────────────────────────────────────────
+# ── 11 · BUSINESS MODEL (optional) ─────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "05  ·  BUSINESS MODEL", "Annual licence, plus set-up and review")
 stat_boxes(s, [
@@ -493,7 +544,7 @@ notes(s, "[~10 s] An annual licence per hospital, a one-off set-up where we turn
          "these prices. (Optional slide: skip if short on time.)")
 
 
-# ── 11 · GO-TO-MARKET ──────────────────────────────────────────────────────────
+# ── 12 · GO-TO-MARKET ──────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "06  ·  GO-TO-MARKET", "In through research, out through trusted channels")
 for x, head, fill in ((0.82, "STRATEGY 1  ·  THE RESEARCH DOOR", SAGE),
@@ -518,7 +569,7 @@ notes(s, "[~15 s] Getting into hospitals is the hardest part for health founders
          "have the hospitals' trust, carry us further.")
 
 
-# ── 12 · COMPETITION (optional) ────────────────────────────────────────────────
+# ── 13 · COMPETITION (optional) ────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "07  ·  COMPETITION", "Before payment, and built on each hospital's own rules")
 line(s, 1.6, 4.15, 11.8, 4.15, color=INK, width=1.5)
@@ -559,39 +610,55 @@ notes(s, "[~10 s] Most checks today are either generic, like ERP duplicate check
          "payment and on each hospital's own rules. (Optional slide.)")
 
 
-# ── 13 · TRACTION ──────────────────────────────────────────────────────────────
-s = prs.slides.add_slide(BLANK)
-chrome(s, "08  ·  TRACTION", "Built, tested, and the doors are opening")
-cols = (("CURRENT", SAGE, SAGE_LT, (
-            "Working prototype: 11 error checks + tamper-evident audit trail",
-            "Prototype field-tested in a Greek accounting office — complete",
-            "Selected for this Lab from 300+ applications · patent disclosure prepared")),
-        ("IN PROGRESS", GOLD, CREAM, (
-            "PhD at European University Cyprus — February 2027",
-            "CEO meetings at 2 university partner hospitals (Cyprus & Greece) — February 2027",
-            "Company registration in Cyprus — February 2027")),
-        ("OUTREACH", INK, RGBColor(0xEF, 0xEC, 0xE6), (
-            "Hospital CFOs, audit firms and data-protection experts",
-            "AI founders and growth leaders",
-            "Private hospitals in the Gulf (Qatar) · the USA via EBAN")))
-for i, (head, hfill, bfill, items) in enumerate(cols):
-    x = 0.82 + i * (3.6 + 0.45)
-    box(s, x, 1.85, 3.6, 0.75, fill=hfill)
-    text(s, x, 1.85, 3.6, 0.75, head, size=19, color=WHITE, bold=True,
-         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, spacing=150)
-    box(s, x, 2.6, 3.6, 3.8, fill=bfill)
-    text(s, x + 0.25, 2.85, 3.15, 3.4,
-         [[("•  ", {"color": hfill, "bold": True}), (item, {})] for item in items],
-         size=15, color=INK_SOFT, space_after=14)
-
-notes(s, "[~15 s] What exists today: a working prototype with a tamper-evident audit "
-         "trail, field-tested in a Greek accounting office, and a place in this Lab from "
-         "more than 300 applications. In progress: my PhD, the CEO meetings at the two "
-         "partner hospitals, and the company in Cyprus — all February 2027. And this "
-         "week, EBAN connected me toward the USA for the expansion after the pilots.")
+# ── 14-16 · TRACTION: 3-CLICK BUILD ───────────────────────────────────────────
+TR_COLS = (("CURRENT", SAGE, SAGE_LT, (
+                "Working prototype — 11 error checks",
+                "Field-tested in a Greek accounting office",
+                "Top 11 of 300+  ·  patent drafted")),
+           ("IN PROGRESS — FEB 2027", GOLD, CREAM, (
+                "PhD at European University Cyprus",
+                "CEO meetings — 2 partner hospitals",
+                "Company set-up in Cyprus")),
+           ("OUTREACH", INK, RGBColor(0xEF, 0xEC, 0xE6), (
+                "CFOs · audit firms · DPOs",
+                "Gulf: Qatar",
+                "USA — via EBAN")))
 
 
-# ── 14 · TEAM ──────────────────────────────────────────────────────────────────
+def traction_slide(n_cols):
+    s = prs.slides.add_slide(BLANK)
+    chrome(s, "08  ·  TRACTION", "Built, tested, and the doors are opening")
+    for i in range(n_cols):
+        head, hfill, bfill, items = TR_COLS[i]
+        x = 0.82 + i * (3.6 + 0.45)
+        box(s, x, 2.0, 3.6, 0.8, fill=hfill, name=f"!!tr{i}_h")
+        text(s, x, 2.0, 3.6, 0.8, head, size=17, color=WHITE, bold=True,
+             align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, spacing=120,
+             name=f"!!tr{i}_ht")
+        box(s, x, 2.8, 3.6, 3.4, fill=bfill, name=f"!!tr{i}_b")
+        text(s, x + 0.28, 3.15, 3.05, 2.9,
+             [[("•  ", {"color": hfill, "bold": True}), (item, {})] for item in items],
+             size=16, color=INK_SOFT, space_after=20, name=f"!!tr{i}_t")
+    return s
+
+
+s = traction_slide(1)
+notes(s, "[~8 s] Where we stand. Today: a working prototype with 11 error checks, "
+         "field-tested in a Greek accounting office, selected for this Lab from more "
+         "than 300 applications, and the patent disclosure is drafted.  -> click")
+s = traction_slide(2)
+tr2 = s
+notes(s, "[~8 s] In progress, all February 2027: my PhD starts at European University "
+         "Cyprus, I meet the CEOs of the two partner hospitals, and the company is "
+         "registered in Cyprus.  -> click")
+s = traction_slide(3)
+tr3 = s
+notes(s, "[~8 s] And the doors opening: hospital CFOs, audit firms and data-protection "
+         "experts — then Qatar, and this week EBAN connected me toward the USA for the "
+         "expansion after the pilots.")
+
+
+# ── 17 · TEAM ──────────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "09  ·  TEAM", "A founder from inside hospital finance")
 people = (("MP", "Maria Polychroniadou", "Founder & CEO",
@@ -625,7 +692,7 @@ notes(s, "[~10 s] I built the prototype myself, from zero code, alongside a mast
          "recruiting a hospital finance advisor: a CFO or an audit partner.")
 
 
-# ── 15 · ASK + QR ──────────────────────────────────────────────────────────────
+# ── 18 · ASK + QR ──────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "10  ·  THE ASK", "What €10,000 unlocks")
 text(s, 0.82, 1.7, 11.7, 1.3, "€10,000", size=72, font=HEAD, color=INK,
@@ -642,7 +709,6 @@ text(s, 0.82, 5.85, 11.7, 0.5,
      "And from this room: introductions to hospital CFOs, audit firms and health-AI investors.",
      size=18, font=HEAD, italic=True, color=SAGE, align=PP_ALIGN.CENTER)
 
-# QR code to Maria's LinkedIn profile (generated locally)
 import qrcode
 qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=10, border=2)
 qr.add_data(LINKEDIN_URL)
@@ -659,6 +725,12 @@ notes(s, "[~15 s] With 10,000 euros I get the first hospital pilot ready for 202
          "introductions to hospital CFOs, audit firms and health-AI investors. The QR "
          "code goes to my LinkedIn — I'd be glad to connect.")
 
+
+# ── MORPH TRANSITIONS on the animation steps ───────────────────────────────────
+add_morph(s2)   # demo step 2 enters with Morph
+add_morph(s3)   # demo step 3
+add_morph(tr2)  # traction step 2
+add_morph(tr3)  # traction step 3
 
 out = "HealthLedgerAI_EIT_Pitch.pptx"
 prs.save(out)
