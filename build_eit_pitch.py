@@ -10,7 +10,7 @@ plain words; "one set-up, then one yearly fee"; the red flag says why and what t
  5  Reveal: HealthLedger AI + €21K, nothing else
  6-8  How it works: 3-click animation — an invoice travels the pipeline
       (Morph transitions; on older PowerPoint they degrade to a fade)
- 9  Cost reduction a CFO can count
+ 9  Cost reduction as one picture: 2 caught errors a month = the yearly fee
 10  Market: the information inside the bubbles
 11  Business model: 1 · once (set-up) -> 2 · every year (yearly fee)
 12  Go-to-market
@@ -558,26 +558,53 @@ notes(s, "[~12 s] The tool raises a red flag — high, medium or low. It tells t
          "python healthledgerai_demo.py in the HealthLedgerAI folder — about one second.")
 
 
-# ── 9 · COST REDUCTION ─────────────────────────────────────────────────────────
+# ── 9 · COST REDUCTION — one picture: 2 caught errors a month = the yearly fee ─
 s = prs.slides.add_slide(BLANK)
-chrome(s, "03  ·  THE SOLUTION  ·  COST REDUCTION", "Cost reduction a CFO can count")
-stat_boxes(s, [
-    ("BREAK-EVEN", "< 2", "caught errors a month pay for the licence (€425: the average error in our test data)"),
-    ("FEWER DENIALS", "15–30%", "fewer claim denials with AI-enabled revenue-cycle tools (Nimkar et al., 2024)"),
-    ("PER REJECTION", "€125", "average value of a claim rejected by Cyprus's health insurer (€10M ÷ 80,000 claims)"),
-], head_fill=SAGE, body_fill=SAGE_LT, body_line=SAGE, num_color=SAGE)
-text(s, 0.82, 5.32, 11.7, 0.5, "The first pilot measures it for each hospital, in euros.",
-     size=20, font=HEAD, italic=True, color=INK, align=PP_ALIGN.CENTER)
-text(s, 0.82, 6.4, 11.7, 0.45,
-     "Break-even: €8K top licence ÷ €425 average error at risk (synthetic test data)  ·  "
-     "Rejected claims: Cyprus Mail (Feb 2024)  ·  Denials: Nimkar et al. (2024)",
-     size=10, color=INK_MUTE)
+chrome(s, "03  ·  THE SOLUTION  ·  COST REDUCTION", "It pays for itself")
+CR_Y, CR_H, CR_CW = 2.15, 1.35, 1.8          # row top, card height, error-card width
+CR_X = (W - (2 * CR_CW + 0.35 + 0.5 + 0.9 + 0.5 + 3.3)) / 2
+for k in range(2):                             # two invoices with an error
+    x = CR_X + k * (CR_CW + 0.35)
+    box(s, x, CR_Y, CR_CW, CR_H, fill=WHITE, line=RED, line_w=2.0,
+        shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
+    text(s, x + 0.18, CR_Y + 0.12, CR_CW - 0.36, 0.26, "INVOICE", size=9.5, color=INK_MUTE,
+         bold=True, spacing=120)
+    box(s, x + 0.18, CR_Y + 0.52, 1.1, 0.1, fill=LINE_GREY)
+    box(s, x + 0.18, CR_Y + 0.74, 0.8, 0.1, fill=LINE_GREY)
+    box(s, x + 0.18, CR_Y + 0.99, 0.62, 0.14, fill=RED)
+    bang(s, x + CR_CW - 0.27, CR_Y - 0.2, 0.44, size=19)
+EQ_X = CR_X + 2 * CR_CW + 0.35 + 0.5
+text(s, EQ_X, CR_Y, 0.9, CR_H, "=", size=54, font=HEAD, color=INK, align=PP_ALIGN.CENTER,
+     anchor=MSO_ANCHOR.MIDDLE)
+PX = EQ_X + 0.9 + 0.5                          # the yearly fee, paid
+box(s, PX, CR_Y, 3.3, CR_H, fill=SAGE_LT, line=SAGE, line_w=2.0,
+    shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
+text(s, PX + 0.2, CR_Y + 0.12, 2.9, 0.26, "YEARLY FEE", size=9.5, color=SAGE, bold=True,
+     spacing=120)
+tick(s, PX + 0.4, CR_Y + 0.5, 0.62, SAGE, 5.0)
+text(s, PX + 1.25, CR_Y + 0.42, 1.9, 0.78, "PAID", size=30, font=HEAD, color=SAGE, bold=True,
+     anchor=MSO_ANCHOR.MIDDLE)
+text(s, 0.82, 3.95, 11.7, 0.6,
+     [[("2 caught errors a month", {"color": RED}), (" pay the yearly fee.", {"color": SAGE})]],
+     size=26, font=HEAD, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+text(s, 0.82, 4.8, 11.7, 0.55, "Every error after that is money saved.",
+     size=22, font=HEAD, italic=True, color=INK_SOFT, align=PP_ALIGN.CENTER,
+     anchor=MSO_ANCHOR.MIDDLE)
+text(s, 0.82, 6.45, 11.7, 0.3,
+     "Based on the top yearly fee (€8K) and the average error in our test data (€425, "
+     "synthetic). The first pilot measures the real number for each hospital.",
+     size=10.5, color=INK_MUTE, align=PP_ALIGN.CENTER)
 
-notes(s, "[~15 s] For a CFO, this is the point. Fewer than two caught errors a month pay "
-         "for the licence, at the average error size in our test data. In Cyprus, every "
-         "claim the insurer rejects is worth about 125 euros, and studies show AI cuts "
-         "claim denials by 15 to 30 percent. The first pilot will measure the real number, "
-         "in euros, for each hospital.")
+notes(s, "[~10 s] For the hospital, the question is simple: does it pay? Yes. Two caught "
+         "errors a month pay the yearly fee. Every error it catches after that is money "
+         "saved. The first pilot will measure the real number, in euros, for each "
+         "hospital.\n\n"
+         "If asked how you calculated it: the yearly fee is at most 8 thousand euros. The "
+         "average error in my test data is 425 euros. 8,000 divided by 425 is about 19 "
+         "errors a year — fewer than two a month.\n"
+         "Extra facts, only if you need them: in Cyprus each claim the insurer rejects is "
+         "worth about 125 euros (€10M ÷ 80,000 claims; Cyprus Mail, Feb 2024). Studies "
+         "show AI tools cut claim denials by 15 to 30 percent (Nimkar et al., 2024).")
 
 
 # ── 10 · MARKET: THE INFORMATION IN THE BUBBLES ───────────────────────────────
