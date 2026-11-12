@@ -1,7 +1,7 @@
 """
 HealthLedger AI — EIT AI Entrepreneurs Lab pitch deck (Demo Day, 13 Nov 2026)
 
-Structure v5 (Maria, 12 Nov):
+Structure v6 (Maria, 12 Nov):
  1  Title: name + details, dark design
  2  Issue: patient story, centred
  3  Problem: BILLING ERROR / MISSING REVENUE / UNKNOWN (Cyprus figures)
@@ -12,9 +12,10 @@ Structure v5 (Maria, 12 Nov):
  9  Cost reduction a CFO can count
 10  Market: the information inside the bubbles
 11  Business model (optional)   12 Go-to-market
-13  Competition as wordmark badges (optional)
-14-16  Traction: three-click build, short lines
-17  Team   18 Ask + LinkedIn QR
+13  Competition: a simple 2x2, one occupant per quadrant (optional)
+14  Traction: ONE slide — a 3-stage path (done → Feb 2027 → outreach);
+    stages 2 and 3 appear on two clicks (in-slide animation, no extra pages)
+15  Team   16 Ask + LinkedIn QR
 
 Run:  python3 build_eit_pitch.py   ->  HealthLedgerAI_EIT_Pitch.pptx
 """
@@ -189,6 +190,86 @@ MORPH_XML = (
     '</mc:Choice>'
     '<mc:Fallback><p:transition spd="slow"><p:fade/></p:transition></mc:Fallback>'
     '</mc:AlternateContent>')
+
+
+def arrowheads(conn):
+    """Arrowheads on both ends of a connector (used for the 2x2 axes)."""
+    ln = conn.line._get_or_add_ln()
+    for tag in ("a:headEnd", "a:tailEnd"):
+        el = etree.SubElement(ln, qn(tag))
+        el.set("type", "triangle")
+        el.set("w", "med")
+        el.set("len", "med")
+    return conn
+
+
+def tick(sh, x, y, s, color=WHITE, width=3.0):
+    """A check mark drawn as lines (no font needed) inside the square (x, y, s)."""
+    pts = [(x + 0.16 * s, y + 0.54 * s), (x + 0.42 * s, y + 0.78 * s),
+           (x + 0.86 * s, y + 0.24 * s)]
+    fb = sh.shapes.build_freeform(Inches(pts[0][0]), Inches(pts[0][1]))
+    fb.add_line_segments([(Inches(px), Inches(py)) for px, py in pts[1:]], close=False)
+    shp = fb.convert_to_shape()
+    shp.fill.background()
+    shp.line.color.rgb = color
+    shp.line.width = Pt(width)
+    ln = shp.line._get_or_add_ln()
+    ln.set("cap", "rnd")
+    etree.SubElement(ln, qn("a:round"))
+    shp.shadow.inherit = False
+    return shp
+
+
+# In-slide click animation: each click reveals the next shape with a wipe from
+# the left. Same XML PowerPoint writes for Animations → Wipe → From Left,
+# Start: On Click.
+TIMING_XML = (
+    '<p:timing xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">'
+    '<p:tnLst><p:par><p:cTn id="1" dur="indefinite" restart="never" nodeType="tmRoot">'
+    '<p:childTnLst><p:seq concurrent="1" nextAc="seek">'
+    '<p:cTn id="2" dur="indefinite" nodeType="mainSeq"><p:childTnLst>{clicks}'
+    '</p:childTnLst></p:cTn>'
+    '<p:prevCondLst><p:cond evt="onPrev" delay="0"><p:tgtEl><p:sldTgt/></p:tgtEl>'
+    '</p:cond></p:prevCondLst>'
+    '<p:nextCondLst><p:cond evt="onNext" delay="0"><p:tgtEl><p:sldTgt/></p:tgtEl>'
+    '</p:cond></p:nextCondLst>'
+    '</p:seq></p:childTnLst></p:cTn></p:par></p:tnLst></p:timing>')
+
+CLICK_XML = (
+    '<p:par><p:cTn id="{a}" fill="hold"><p:stCondLst><p:cond delay="indefinite"/>'
+    '</p:stCondLst><p:childTnLst>'
+    '<p:par><p:cTn id="{b}" fill="hold"><p:stCondLst><p:cond delay="0"/></p:stCondLst>'
+    '<p:childTnLst><p:par>'
+    '<p:cTn id="{c}" presetID="22" presetClass="entr" presetSubtype="8" fill="hold" '
+    'nodeType="clickEffect"><p:stCondLst><p:cond delay="0"/></p:stCondLst><p:childTnLst>'
+    '<p:set><p:cBhvr><p:cTn id="{d}" dur="1" fill="hold"><p:stCondLst>'
+    '<p:cond delay="0"/></p:stCondLst></p:cTn>'
+    '<p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl>'
+    '<p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst>'
+    '</p:cBhvr><p:to><p:strVal val="visible"/></p:to></p:set>'
+    '<p:animEffect transition="in" filter="wipe(left)"><p:cBhvr>'
+    '<p:cTn id="{e}" dur="{dur}"/><p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl>'
+    '</p:cBhvr></p:animEffect>'
+    '</p:childTnLst></p:cTn></p:par></p:childTnLst></p:cTn></p:par>'
+    '</p:childTnLst></p:cTn></p:par>')
+
+MC_ALT = "{http://schemas.openxmlformats.org/markup-compatibility/2006}AlternateContent"
+
+
+def add_click_reveals(slide, spids, dur=600):
+    """One click per shape id: the shape (or group) wipes in from the left."""
+    clicks = [CLICK_XML.format(a=3 + 5 * k, b=4 + 5 * k, c=5 + 5 * k, d=6 + 5 * k,
+                               e=7 + 5 * k, spid=spid, dur=dur)
+              for k, spid in enumerate(spids)]
+    el = etree.fromstring(TIMING_XML.format(clicks="".join(clicks)).encode())
+    prev = None   # <p:timing> must follow clrMapOvr and any transition
+    for child in slide.element:
+        if child.tag in (qn("p:clrMapOvr"), qn("p:transition"), MC_ALT):
+            prev = child
+    if prev is not None:
+        prev.addnext(el)
+    else:
+        slide.element.append(el)
 
 
 def add_morph(slide):
@@ -569,96 +650,133 @@ notes(s, "[~15 s] Getting into hospitals is the hardest part for health founders
          "have the hospitals' trust, carry us further.")
 
 
-# ── 13 · COMPETITION (optional) ────────────────────────────────────────────────
+# ── 13 · COMPETITION (optional) — a simple 2x2, one occupant per quadrant ─────
 s = prs.slides.add_slide(BLANK)
-chrome(s, "07  ·  COMPETITION", "Before payment, and built on each hospital's own rules")
-line(s, 1.6, 4.15, 11.8, 4.15, color=INK, width=1.5)
-line(s, 6.7, 1.95, 6.7, 6.4, color=INK, width=1.5)
-text(s, 0.45, 3.85, 1.1, 0.6, "Generic\nrules", size=12, color=INK, bold=True,
-     align=PP_ALIGN.RIGHT)
-text(s, 11.9, 3.85, 1.3, 0.6, "Hospital's\nown rules", size=12, color=INK, bold=True)
-text(s, 5.2, 1.6, 3.0, 0.32, "Before payment", size=12, color=INK, bold=True,
-     align=PP_ALIGN.CENTER)
-text(s, 5.2, 6.45, 3.0, 0.32, "After the damage", size=12, color=INK, bold=True,
-     align=PP_ALIGN.CENTER)
+chrome(s, "07  ·  COMPETITION", "Before payment, on each hospital's own rules")
+QL, QR, QT, QB = 1.9, 11.4, 1.95, 6.45          # frame of the 2x2
+AX, AY = (QL + QR) / 2, (QT + QB) / 2            # where the axes cross
+box(s, AX, QT, QR - AX, AY - QT, fill=SAGE_LT)   # our quadrant, tinted
+arrowheads(line(s, QL, AY, QR, AY, color=INK, width=1.75))
+arrowheads(line(s, AX, QT, AX, QB, color=INK, width=1.75))
+text(s, 0.4, AY - 0.36, QL - 0.55, 0.72, "Generic\nrules", size=14, color=INK, bold=True,
+     align=PP_ALIGN.RIGHT, anchor=MSO_ANCHOR.MIDDLE)
+text(s, QR + 0.15, AY - 0.36, W - QR - 0.3, 0.72, "Hospital's\nown rules", size=14,
+     color=INK, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+text(s, AX - 1.6, QT - 0.42, 3.2, 0.36, "Before payment", size=14, color=INK, bold=True,
+     align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.BOTTOM)
+text(s, AX - 1.6, QB + 0.06, 3.2, 0.36, "After the damage", size=14, color=INK,
+     bold=True, align=PP_ALIGN.CENTER)
+
+LEFT_X, RIGHT_X = (QL + AX) / 2, (AX + QR) / 2   # quadrant centres
+TOP_Y, BOT_Y = (QT + AY) / 2, (AY + QB) / 2
+DOT = ("  ·  ", {"color": INK_MUTE})
 
 
-def badge(x, y, w, label, col, caption):
-    box(s, x, y, w, 0.52, fill=WHITE, line=LINE_GREY, line_w=1.0,
+def quad_pill(cx, cy, w, runs):
+    box(s, cx - w / 2, cy - 0.33, w, 0.66, fill=WHITE, line=LINE_GREY, line_w=1.25,
         shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
-    text(s, x, y, w, 0.52, label, size=15, font=BODY, color=col, bold=True,
+    text(s, cx - w / 2, cy - 0.33, w, 0.66, [runs], size=17, bold=True,
          align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, spacing=60)
-    text(s, x - 0.3, y + 0.56, w + 0.6, 0.3, caption, size=10.5, italic=True,
-         color=OTHERS, align=PP_ALIGN.CENTER)
 
 
-badge(1.9, 2.3, 2.9, "SAP  ·  ORACLE", C_SAP, "ERP duplicate checks")
-badge(3.3, 3.25, 2.9, "US RCM SOFTWARE", C_GREY, "revenue-cycle tools")
-badge(1.7, 4.85, 2.0, "EOPYY", C_EOPYY, "payer rejections · insurers")
-badge(7.2, 5.4, 2.3, "AUDIT FIRMS", INK_SOFT, "external audits")
-badge(9.3, 4.5, 2.0, "EXCEL", C_EXCEL, "manual checks")
+quad_pill(LEFT_X, TOP_Y, 3.0, [("SAP", {"color": C_SAP}), DOT, ("ORACLE", {"color": C_ORACLE})])
+quad_pill(LEFT_X, BOT_Y, 2.5, [("INSURERS", {"color": C_EOPYY})])
+quad_pill(RIGHT_X, BOT_Y, 3.4, [("EXCEL", {"color": C_EXCEL}), DOT,
+                                ("AUDITORS", {"color": INK_SOFT})])
+# HealthLedger AI, alone in the top-right
+box(s, RIGHT_X - 1.85, TOP_Y - 0.84, 3.7, 1.68, line=SAGE_MID, line_w=2.0,
+    shape=MSO_SHAPE.OVAL)
+box(s, RIGHT_X - 1.6, TOP_Y - 0.62, 3.2, 1.24, fill=SAGE, shape=MSO_SHAPE.OVAL)
+text(s, RIGHT_X - 1.6, TOP_Y - 0.62, 3.2, 1.24, "HealthLedger AI", size=20, font=HEAD,
+     color=WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 
-box(s, 9.45, 2.0, 2.7, 1.45, line=SAGE, line_w=3.0, shape=MSO_SHAPE.OVAL)
-text(s, 9.45, 2.0, 2.7, 1.45, "HealthLedger AI", size=17, font=HEAD, color=INK, bold=True,
-     align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-text(s, 0.6, 6.7, 12.1, 0.28,
-     "Wordmarks shown for comparison — replace with official logos before presenting.",
-     size=9, italic=True, color=INK_MUTE)
-
-notes(s, "[~10 s] Most checks today are either generic, like ERP duplicate checks, or "
-         "come too late, like payer rejections and audits. HealthLedger AI works before "
-         "payment and on each hospital's own rules. (Optional slide.)")
-
-
-# ── 14-16 · TRACTION: 3-CLICK BUILD ───────────────────────────────────────────
-TR_COLS = (("CURRENT", SAGE, SAGE_LT, (
-                "Working prototype — 11 error checks",
-                "Field-tested in a Greek accounting office",
-                "Top 11 of 300+  ·  patent drafted")),
-           ("IN PROGRESS — FEB 2027", GOLD, CREAM, (
-                "PhD at European University Cyprus",
-                "CEO meetings — 2 partner hospitals",
-                "Company set-up in Cyprus")),
-           ("OUTREACH", INK, RGBColor(0xEF, 0xEC, 0xE6), (
-                "CFOs · audit firms · DPOs",
-                "Gulf: Qatar",
-                "USA — via EBAN")))
+notes(s, "[~10 s] Today, billing errors are caught either by generic software — SAP or "
+         "Oracle duplicate checks — or too late: insurer rejections, Excel checks, "
+         "audits. HealthLedger AI sits alone top-right: before payment, on each "
+         "hospital's own rules. (Optional slide.)\n\n"
+         "If asked — insurers: EOPYY in Greece, the HIO in Cyprus. US revenue-cycle "
+         "software applies generic payer rules; we start from each hospital's own "
+         "contract rates.\n"
+         "Note: the brand names are typed wordmarks; swap in official logos if you have "
+         "permission to use them.")
 
 
-def traction_slide(n_cols):
-    s = prs.slides.add_slide(BLANK)
-    chrome(s, "08  ·  TRACTION", "Built, tested, and the doors are opening")
-    for i in range(n_cols):
-        head, hfill, bfill, items = TR_COLS[i]
-        x = 0.82 + i * (3.6 + 0.45)
-        box(s, x, 2.0, 3.6, 0.8, fill=hfill, name=f"!!tr{i}_h")
-        text(s, x, 2.0, 3.6, 0.8, head, size=17, color=WHITE, bold=True,
-             align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, spacing=120,
-             name=f"!!tr{i}_ht")
-        box(s, x, 2.8, 3.6, 3.4, fill=bfill, name=f"!!tr{i}_b")
-        text(s, x + 0.28, 3.15, 3.05, 2.9,
-             [[("•  ", {"color": hfill, "bold": True}), (item, {})] for item in items],
-             size=16, color=INK_SOFT, space_after=20, name=f"!!tr{i}_t")
-    return s
+# ── 14 · TRACTION — one slide: a path with three stages ───────────────────────
+# Stage 1 is visible when the slide opens; stages 2 and 3 wipe in on two clicks.
+s = prs.slides.add_slide(BLANK)
+chrome(s, "08  ·  TRACTION", "Built, tested, and the doors are opening")
+ST_X = (2.62, 6.67, 10.72)          # stage centres
+ST_Y, ST_D = 2.35, 1.05             # path height, station diameter
+CHIP_W, CHIP_H, CHIP_Y0, CHIP_GAP = 3.55, 0.62, 3.6, 0.2
+STAGES = (("DONE", SAGE, SAGE_LT, None,
+           ("Prototype  ·  11 checks", "Field-tested in Greece", "Top 11 of 300+",
+            "Patent drafted")),
+          ("IN PROGRESS", GOLD, CREAM, GOLD_LT,
+           ("PhD in Cyprus", "Meeting 2 hospital CEOs", "Company in Cyprus")),
+          ("OUTREACH", INK, WHITE, INK_MUTE,
+           ("CFOs  ·  auditors  ·  DPOs", "Qatar", "USA via EBAN")))
 
 
-s = traction_slide(1)
-notes(s, "[~8 s] Where we stand. Today: a working prototype with 11 error checks, "
-         "field-tested in a Greek accounting office, selected for this Lab from more "
-         "than 300 applications, and the patent disclosure is drafted.  -> click")
-s = traction_slide(2)
-tr2 = s
-notes(s, "[~8 s] In progress, all February 2027: my PhD starts at European University "
-         "Cyprus, I meet the CEOs of the two partner hospitals, and the company is "
-         "registered in Cyprus.  -> click")
-s = traction_slide(3)
-tr3 = s
-notes(s, "[~8 s] And the doors opening: hospital CFOs, audit firms and data-protection "
-         "experts — then Qatar, and this week EBAN connected me toward the USA for the "
-         "expansion after the pilots.")
+def stage(sh, i):
+    """Draw stage i (path into it, station, label, chips) onto a slide or group."""
+    label, col, fill, edge, items = STAGES[i]
+    cx, r = ST_X[i], ST_D / 2
+    if i:   # the path into this stage: solid to Feb 2027, dashed to what's next
+        line(sh, ST_X[i - 1] + r + 0.1, ST_Y, cx - r - 0.1, ST_Y,
+             color=GOLD if i == 1 else INK_MUTE, width=3.0, dash=(i == 2))
+    if i == 2:   # station: open (not there yet)
+        box(sh, cx - r, ST_Y - r, ST_D, ST_D, fill=WHITE, line=INK, line_w=2.25,
+            dash=True, shape=MSO_SHAPE.OVAL)
+        box(sh, cx - 0.27, ST_Y - 0.2, 0.54, 0.4, fill=INK, shape=MSO_SHAPE.RIGHT_ARROW)
+    else:
+        box(sh, cx - r, ST_Y - r, ST_D, ST_D, fill=col, shape=MSO_SHAPE.OVAL)
+        if i == 0:
+            tick(sh, cx - 0.3, ST_Y - 0.3, 0.6, WHITE, 5.0)
+        else:
+            text(sh, cx - r, ST_Y - r, ST_D, ST_D,
+                 [[("FEB", {"size": 17})], [("2027", {"size": 13})]], color=WHITE,
+                 bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    text(sh, cx - 1.8, ST_Y + r + 0.14, 3.6, 0.36, label, size=14, color=col, bold=True,
+         align=PP_ALIGN.CENTER, spacing=160)
+    for k, item in enumerate(items):
+        x, y = cx - CHIP_W / 2, CHIP_Y0 + k * (CHIP_H + CHIP_GAP)
+        box(sh, x, y, CHIP_W, CHIP_H, fill=fill, line=edge, line_w=1.25, dash=(i == 2),
+            shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
+        if i == 0:     # done: a tick
+            tick(sh, x + 0.2, y + 0.16, 0.3, SAGE, 2.75)
+        elif i == 1:   # in progress: a filled dot
+            box(sh, x + 0.27, y + CHIP_H / 2 - 0.09, 0.18, 0.18, fill=GOLD,
+                shape=MSO_SHAPE.OVAL)
+        else:          # next: an open dot
+            box(sh, x + 0.26, y + CHIP_H / 2 - 0.1, 0.2, 0.2, line=INK, line_w=1.5,
+                shape=MSO_SHAPE.OVAL)
+        text(sh, x + 0.62, y, CHIP_W - 0.8, CHIP_H, item, size=16.5, color=INK,
+             anchor=MSO_ANCHOR.MIDDLE)
 
 
-# ── 17 · TEAM ──────────────────────────────────────────────────────────────────
+stage(s, 0)
+grp2 = s.shapes.add_group_shape()
+stage(grp2, 1)
+grp2.name = "Stage 2 - in progress (click 1)"
+grp3 = s.shapes.add_group_shape()
+stage(grp3, 2)
+grp3.name = "Stage 3 - outreach (click 2)"
+add_click_reveals(s, [grp2.shape_id, grp3.shape_id])
+
+notes(s, "[~25 s] Where we stand. Done: a working prototype with 11 error checks, "
+         "field-tested in a Greek accounting office; selected for this Lab from more than "
+         "300 applications; and the patent disclosure is drafted.\n"
+         "  -> click (In progress appears)\n"
+         "In progress, all in February 2027: my PhD starts at European University Cyprus, "
+         "I meet the CEOs of the two partner hospitals, and the company is registered in "
+         "Cyprus.\n"
+         "  -> click (Outreach appears)\n"
+         "And the doors opening: hospital CFOs, audit firms and data-protection experts, "
+         "then Qatar, and this week EBAN connected me toward the USA, for the expansion "
+         "after the pilots.")
+
+
+# ── 15 · TEAM ──────────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "09  ·  TEAM", "A founder from inside hospital finance")
 people = (("MP", "Maria Polychroniadou", "Founder & CEO",
@@ -692,7 +810,7 @@ notes(s, "[~10 s] I built the prototype myself, from zero code, alongside a mast
          "recruiting a hospital finance advisor: a CFO or an audit partner.")
 
 
-# ── 18 · ASK + QR ──────────────────────────────────────────────────────────────
+# ── 16 · ASK + QR ──────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
 chrome(s, "10  ·  THE ASK", "What €10,000 unlocks")
 text(s, 0.82, 1.7, 11.7, 1.3, "€10,000", size=72, font=HEAD, color=INK,
@@ -729,8 +847,6 @@ notes(s, "[~15 s] With 10,000 euros I get the first hospital pilot ready for 202
 # ── MORPH TRANSITIONS on the animation steps ───────────────────────────────────
 add_morph(s2)   # demo step 2 enters with Morph
 add_morph(s3)   # demo step 3
-add_morph(tr2)  # traction step 2
-add_morph(tr3)  # traction step 3
 
 out = "HealthLedgerAI_EIT_Pitch.pptx"
 prs.save(out)
