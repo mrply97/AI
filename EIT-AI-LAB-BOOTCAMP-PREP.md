@@ -261,7 +261,7 @@ Afterwards, write one page: three things you heard, what surprised you, and whic
 - **Your unfair advantage, in one line:** "I met a founder whose app never got into a hospital because she was an outsider. I go in as a doctoral researcher, with my university's partner hospitals."
 - **Your own closing line:** "find out, in a room full of people who will tell me the truth, whether anyone will actually pay for it." By Friday you will have spent four days in that room.
 - **Brand and site:** healthledgerai.com.
-- **Pitch deck:** `HealthLedgerAI_EIT_Pitch.pptx` (16 slides, talk track in the speaker notes). Cost leads the story: €10 M in claims rejected in Cyprus, €20.8K flagged in test data, break-even under 2 caught errors a month. Slides 4, 10 and 12 are optional for a 3-minute slot. Rebuild with `python3 build_eit_pitch.py`.
+- **Pitch deck:** `HealthLedgerAI_EIT_Pitch.pptx` (15 slides, mentor-review structure of 11 Nov, talk track in the speaker notes). Opens on name + details, reveal slide 5 ("that's why I've created…"), demo = the four big numbers, €21K flagged in test data, Cyprus figures throughout, LinkedIn QR on the Ask. Slides 4, 10 and 12 are optional for a 3-minute slot. Rebuild with `python3 build_eit_pitch.py`.
 
 ### Still to face
 
