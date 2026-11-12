@@ -201,14 +201,18 @@ text(s, 0.92, 6.85, 11, 0.3,
      "EIT AI ENTREPRENEURS LAB  ·  AI HOUSE AMSTERDAM  ·  13 NOVEMBER 2026",
      size=10, color=GOLD, bold=True, spacing=200)
 
-notes(s, "[~15 s] INTRO (Sam Horn: 'Did you know?'). Pause, look at one juror, then:\n"
-         "Did you know that up to one in four hospital bills processed by hand contains "
-         "an error? (pause)\n"
-         "Did you know that in Cyprus, the national health insurer rejected 80,000 claims "
-         "from healthcare providers, worth ten million euros? (pause)\n"
-         "And did you know that in most hospitals, it is nobody's job to catch them? "
-         "(pause)\n"
-         "I'm Maria Polychroniadou.  -> click")
+notes(s, "[~35 s] THE OPENER — live sketch. Prop: the printed INVOICE 0458 (A4). Pick "
+         "your partner during the 14:35 'Meet the Jury' reverse pitch — the most playful "
+         "juror, or a friendly founder in the front row.\n"
+         "'What's your name?' — (answer) — 'Really?! Mine too!' (big smile, keep moving)\n"
+         "'And let me guess — born on the 14th of May? …In this story, you are.'\n"
+         "(hold up the bill) 'So why did I receive an invoice for a procedure I never "
+         "had?!'\n"
+         "(beat — drop the smile)\n"
+         "'Ladies and gentlemen, my name is Maria Polychroniadou — and what I just played "
+         "for you is not a joke. It happened.'  -> click\n\n"
+         "IF THE PARTNER refuses or clowns: 'See — finding one match in this room is "
+         "hard. Hospital databases find them every day.' — and carry on.")
 
 
 # ── 2 · ISSUE: THE PATIENT STORY ───────────────────────────────────────────────
@@ -244,12 +248,11 @@ text(s, 0.6, 6.6, 12, 0.3,
      "A real case from a private hospital in Greece. Names and details changed.",
      size=11, italic=True, color=INK_MUTE)
 
-notes(s, "[~20 s] INTRO ('Imagine'):\n"
-         "Imagine opening a letter from a lawyer, about a hospital bill that was never "
-         "yours. (pause)\n"
-         "That happened to a patient in Greece. Same name, same date of birth as another "
-         "patient, and the invoice went to the wrong person. One automated check would "
-         "have stopped it.\n"
+notes(s, "[~15 s] Land the sketch:\n"
+         "'A private hospital in Greece. Two patients. Same name, same date of birth. "
+         "The invoice went to the wrong one — and she ended up facing legal proceedings. "
+         "(pause) One automated check would have stopped it. That's why I built what "
+         "I'll show you today.'\n"
          "-> click")
 
 
@@ -442,7 +445,7 @@ notes(s, "[~15 s] For a CFO, this is the point. Fewer than two caught errors a m
 
 # ── 9 · MARKET ─────────────────────────────────────────────────────────────────
 s = prs.slides.add_slide(BLANK)
-chrome(s, "04  ·  MARKET", "Start focused, then grow across Europe and the Gulf")
+chrome(s, "04  ·  MARKET", "Start focused, then grow: Europe, the Gulf, the USA")
 box(s, 1.3, 1.85, 4.45, 4.45, fill=SAGE_LT, line=SAGE_MID, shape=MSO_SHAPE.OVAL)
 box(s, 1.93, 3.1, 3.2, 3.2, fill=SAGE_MID, line=SAGE_DARK, shape=MSO_SHAPE.OVAL)
 box(s, 2.48, 4.2, 2.1, 2.1, fill=SAGE_DARK, line=SAGE, shape=MSO_SHAPE.OVAL)
@@ -459,13 +462,16 @@ for (x1, y1), (title, sub) in (
     text(s, 6.9, y1 - 0.36, 5.8, 0.38, title, size=19, font=HEAD, color=INK)
     text(s, 6.9, y1 + 0.03, 5.8, 0.34, sub, size=13.5, color=INK_SOFT)
 text(s, 6.9, 5.85, 5.8, 0.3, "NEXT", size=10, color=GOLD, bold=True, spacing=180)
-text(s, 6.9, 6.13, 5.8, 0.36, "Private hospitals in the Gulf, starting with Qatar",
+text(s, 6.9, 6.13, 5.8, 0.62,
+     "Private hospitals in the Gulf (Qatar) and the USA — first introductions via EBAN",
      size=14, color=SAGE, bold=True)
 
 notes(s, "[~15 s] We start where I have access and speak the language: private hospitals "
          "in Greece and Cyprus, about 140 private hospitals in Greece alone. The plan is "
          "15 hospitals in three years, then the rest of Europe, with 2.3 million hospital "
-         "beds, and the Gulf, where I already have contacts.")
+         "beds, the Gulf, where I already have contacts — and the USA, a largely private "
+         "hospital market: this week EBAN's Martin Skea connected me to the US, for "
+         "expansion once the two pilot hospitals have proven it.")
 
 
 # ── 10 · BUSINESS MODEL (optional) ─────────────────────────────────────────────
@@ -567,7 +573,7 @@ cols = (("CURRENT", SAGE, SAGE_LT, (
         ("OUTREACH", INK, RGBColor(0xEF, 0xEC, 0xE6), (
             "Hospital CFOs, audit firms and data-protection experts",
             "AI founders and growth leaders",
-            "Private hospitals in the Gulf (Qatar)")))
+            "Private hospitals in the Gulf (Qatar) · the USA via EBAN")))
 for i, (head, hfill, bfill, items) in enumerate(cols):
     x = 0.82 + i * (3.6 + 0.45)
     box(s, x, 1.85, 3.6, 0.75, fill=hfill)
@@ -581,7 +587,8 @@ for i, (head, hfill, bfill, items) in enumerate(cols):
 notes(s, "[~15 s] What exists today: a working prototype with a tamper-evident audit "
          "trail, field-tested in a Greek accounting office, and a place in this Lab from "
          "more than 300 applications. In progress: my PhD, the CEO meetings at the two "
-         "partner hospitals, and the company in Cyprus — all February 2027.")
+         "partner hospitals, and the company in Cyprus — all February 2027. And this "
+         "week, EBAN connected me toward the USA for the expansion after the pilots.")
 
 
 # ── 14 · TEAM ──────────────────────────────────────────────────────────────────
