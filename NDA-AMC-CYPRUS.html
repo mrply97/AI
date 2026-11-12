@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confidentiality Agreement — HealthLedgerAI × American Medical Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F4EFE4;
+      --gold: #A08558;
+      --gold-lt: #C9AA7C;
+      --sage: #4A6B5A;
+      --ink: #1E1A14;
+      --ink-soft: #4A4438;
+      --ink-mute: #8A8070;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 60px 64px;
+      background: #fff;
+      border: 1px solid rgba(160,133,88,0.2);
+    }
+
+    /* Header */
+    .doc-header {
+      text-align: center;
+      border-bottom: 1px solid rgba(160,133,88,0.3);
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .logo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+
+    .doc-type {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .doc-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    /* Parties block */
+    .parties-block {
+      background: rgba(160,133,88,0.05);
+      border: 1px solid rgba(160,133,88,0.2);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .parties-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .party-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .party-row:last-child { margin-bottom: 0; }
+
+    .party-marker {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gold);
+      min-width: 24px;
+      padding-top: 1px;
+    }
+
+    .party-detail {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    .party-detail strong {
+      color: var(--ink);
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    /* Body text */
+    .intro-text {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: 28px;
+    }
+
+    /* Clause sections */
+    .clause {
+      margin-bottom: 24px;
+    }
+
+    .clause-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .clause-text {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
+
+    .clause-text p { margin-bottom: 8px; }
+    .clause-text p:last-child { margin-bottom: 0; }
+
+    .clause-list {
+      list-style: none;
+      margin: 8px 0 8px 16px;
+    }
+
+    .clause-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .clause-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-lt);
+    }
+
+    /* Divider */
+    .clause-divider {
+      height: 1px;
+      background: rgba(160,133,88,0.2);
+      margin: 28px 0;
+    }
+
+    /* Signature section */
+    .sig-section {
+      margin-top: 40px;
+      border-top: 1px solid rgba(160,133,88,0.3);
+      padding-top: 32px;
+    }
+
+    .sig-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .sig-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sig-block { }
+
+    .sig-party-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .sig-party-role {
+      font-size: 11px;
+      color: var(--ink-mute);
+      letter-spacing: 0.06em;
+      margin-bottom: 32px;
+    }
+
+    .sig-line {
+      border-bottom: 1px solid var(--ink);
+      margin-bottom: 8px;
+      height: 32px;
+    }
+
+    .sig-field-label {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .doc-footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(160,133,88,0.15);
+      text-align: center;
+      font-size: 10px;
+      color: var(--ink-mute);
+      line-height: 1.6;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: rgba(139,58,42,0.05);
+      border: 1px solid rgba(139,58,42,0.15);
+      border-left: 3px solid rgba(139,58,42,0.4);
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      font-size: 11px;
+      color: #8B3A2A;
+      line-height: 1.6;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; font-size: 11.5px; }
+      .page { margin: 0; padding: 48px 56px; border: none; max-width: 100%; box-shadow: none; }
+      .disclaimer { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="logo-row">
+      <span class="logo-dot"></span>
+      <span class="logo-text">HealthLedger AI</span>
+    </div>
+    <p class="doc-type">Mutual Non-Disclosure &amp; Confidentiality Agreement</p>
+    <h1 class="doc-title">Confidentiality Agreement</h1>
+    <p class="doc-subtitle">HealthLedgerAI &amp; American Medical Center, Cyprus</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Note to Parties:</strong> This agreement is a template prepared by HealthLedgerAI. Both parties are advised to have this document reviewed by their respective legal counsel before signing. This document does not constitute legal advice.
+  </div>
+
+  <!-- Parties -->
+  <div class="parties-block">
+    <p class="parties-label">The Parties</p>
+    <div class="party-row">
+      <span class="party-marker">(1)</span>
+      <div class="party-detail">
+        <strong>The Disclosing Party:</strong> The individual researcher and founder operating under the business name <strong>HealthLedgerAI</strong>, conducting doctoral research on hospital cooperation agreements in Cyprus and Greece (hereinafter "<strong>HealthLedgerAI</strong>" or "<strong>the Disclosing Party</strong>"); and
+      </div>
+    </div>
+    <div class="party-row">
+      <span class="party-marker">(2)</span>
+      <div class="party-detail">
+        <strong>The Receiving Party:</strong> <strong>C &amp; S American Heart Institute Limited</strong>, operating as American Medical Center / American Heart Institute, with registered address at 215 Spyrou Kyprianou Avenue, Strovolos, Nicosia 2047, Cyprus (hereinafter "<strong>AMC</strong>" or "<strong>the Receiving Party</strong>").
+      </div>
+    </div>
+  </div>
+
+  <p class="intro-text">
+    This Mutual Non-Disclosure and Confidentiality Agreement (the "<strong>Agreement</strong>") is entered into as of the date last signed below. HealthLedgerAI intends to disclose certain confidential and proprietary information to AMC for the sole purpose of evaluating a potential business relationship or collaboration (the "<strong>Purpose</strong>"). Both parties agree to protect such information under the following terms.
+  </p>
+
+  <div class="clause-divider"></div>
+
+  <!-- Clause 1 -->
+  <div class="clause">
+    <p class="clause-number">1. Definition of Confidential Information</p>
+    <div class="clause-text">
+      <p>"<strong>Confidential Information</strong>" means all information disclosed by HealthLedgerAI to AMC, whether orally, in writing, electronically, or by demonstration, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure. Without limitation, Confidential Information specifically includes:</p>
+      <ul class="clause-list">
+        <li>The concept, design, architecture, and methodology of the HealthLedgerAI product, platform, and AI system</li>
+        <li>All doctoral research findings, data, analyses, fieldwork notes, and conclusions related to hospital cooperation agreements in Cyprus and Greece</li>
+        <li>Business strategy, market analysis, go-to-market plans, pricing models, and financial projections</li>
+        <li>Hospital-specific research, intelligence briefs, and competitive analyses prepared by HealthLedgerAI</li>
+        <li>Technical documentation, software architecture, AI training methodology, and product roadmaps</li>
+        <li>The identity of current or prospective clients, partners, and investors</li>
+        <li>All information disclosed in any presentation, demonstration, or meeting between the parties</li>
+        <li>The existence and content of this Agreement itself</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Clause 2 -->
+  <div class="clause">
+    <p class="clause-number">2. Obligations of the Receiving Party</p>
+    <div class="clause-text">
+      <p>AMC agrees to:</p>
+      <ul class="clause-list">
+        <li>Hold all Confidential Information in strict confidence and protect it with at least the same degree of care it uses for its own confidential information, and in no event less than reasonable care</li>
+        <li>Not disclose any Confidential Information to any third party, including employees, contractors, or advisors, except those with a strict need to know for the Purpose, and only after such persons have agreed in writing to obligations no less restrictive than those in this Agreement</li>
+        <li>Use the Confidential Information solely for the Purpose of evaluating a potential business relationship with HealthLedgerAI, and for no other purpose whatsoever</li>
+        <li>Promptly notify HealthLedgerAI in writing upon discovery of any unauthorised use or disclosure of Confidential Information</li>
+        <li>Not copy, reproduce, or summarise Confidential Information except as strictly necessary for the Purpose</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Clause 3 -->
+  <div class="clause">
+    <p class="clause-number">3. Non-Use and Non-Development</p>
+    <div class="clause-text">
+      <p>AMC agrees that it will not, directly or indirectly, use any Confidential Information to:</p>
+      <ul class="clause-list">
+        <li>Develop, design, or procure any product, software, service, or methodology that is substantially similar to or derived from the HealthLedgerAI product or concept</li>
+        <li>Implement, adapt, or apply any methodology, framework, or system described in the Confidential Information without the express written consent of HealthLedgerAI</li>
+        <li>Brief, instruct, or engage any third party (including technology vendors, consultants, or developers) to build or replicate any aspect of the HealthLedgerAI concept</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Clause 4 -->
+  <div class="clause">
+    <p class="clause-number">4. Non-Circumvention</p>
+    <div class="clause-text">
+      <p>AMC agrees not to circumvent HealthLedgerAI by contacting, engaging, or entering into any agreement with any person, company, or institution identified by HealthLedgerAI during the course of disclosures, where such contact relates to the subject matter of the Confidential Information, without the prior written consent of HealthLedgerAI.</p>
+    </div>
+  </div>
+
+  <!-- Clause 5 -->
+  <div class="clause">
+    <p class="clause-number">5. Exclusions</p>
+    <div class="clause-text">
+      <p>The obligations of confidentiality shall not apply to information that AMC can demonstrate by written evidence:</p>
+      <ul class="clause-list">
+        <li>Was already in the public domain at the time of disclosure, or subsequently enters the public domain through no fault of AMC</li>
+        <li>Was already rightfully known to AMC without restriction prior to disclosure</li>
+        <li>Was independently developed by AMC without use of or reference to the Confidential Information</li>
+        <li>Is required to be disclosed by applicable law or court order, provided that AMC gives HealthLedgerAI prompt written notice and cooperates in seeking a protective order</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Clause 6 -->
+  <div class="clause">
+    <p class="clause-number">6. Intellectual Property</p>
+    <div class="clause-text">
+      <p>Nothing in this Agreement grants AMC any licence, right, title, or interest in or to any Confidential Information, or in any intellectual property of HealthLedgerAI. All Confidential Information, including any intellectual property embedded therein, remains the exclusive property of HealthLedgerAI. No licence or right to use any trademark, patent, copyright, or other intellectual property of HealthLedgerAI is granted by this Agreement or by the disclosure of Confidential Information.</p>
+    </div>
+  </div>
+
+  <!-- Clause 7 -->
+  <div class="clause">
+    <p class="clause-number">7. Return or Destruction of Materials</p>
+    <div class="clause-text">
+      <p>Upon written request from HealthLedgerAI, or upon termination of discussions between the parties for any reason, AMC shall promptly return or certify the destruction of all Confidential Information in its possession, including all copies, notes, summaries, and derivative works, in any format or medium.</p>
+    </div>
+  </div>
+
+  <!-- Clause 8 -->
+  <div class="clause">
+    <p class="clause-number">8. Term</p>
+    <div class="clause-text">
+      <p>This Agreement shall remain in force for a period of <strong>five (5) years</strong> from the date of last signature. The obligations of confidentiality under Clauses 2, 3, and 4 shall survive the expiration or termination of this Agreement with respect to Confidential Information received during its term.</p>
+    </div>
+  </div>
+
+  <!-- Clause 9 -->
+  <div class="clause">
+    <p class="clause-number">9. Remedies</p>
+    <div class="clause-text">
+      <p>AMC acknowledges that any breach or threatened breach of this Agreement would cause HealthLedgerAI irreparable harm for which monetary damages would be an inadequate remedy, and that HealthLedgerAI shall be entitled, in addition to any other remedies available at law or in equity, to seek injunctive or other equitable relief without the requirement to post any bond or prove actual damages.</p>
+    </div>
+  </div>
+
+  <!-- Clause 10 -->
+  <div class="clause">
+    <p class="clause-number">10. No Obligation to Proceed</p>
+    <div class="clause-text">
+      <p>Nothing in this Agreement obligates either party to proceed with any business relationship, transaction, or further discussions. Either party may terminate discussions at any time without liability, subject to the ongoing confidentiality obligations set out herein.</p>
+    </div>
+  </div>
+
+  <!-- Clause 11 -->
+  <div class="clause">
+    <p class="clause-number">11. Entire Agreement &amp; Amendments</p>
+    <div class="clause-text">
+      <p>This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior discussions, understandings, and agreements relating to confidentiality between the parties. This Agreement may not be amended except by a written instrument signed by duly authorised representatives of both parties.</p>
+    </div>
+  </div>
+
+  <!-- Clause 12 -->
+  <div class="clause">
+    <p class="clause-number">12. Governing Law &amp; Jurisdiction</p>
+    <div class="clause-text">
+      <p>This Agreement shall be governed by and construed in accordance with the laws of the <strong>Republic of Cyprus</strong>. Any dispute arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of <strong>Nicosia, Cyprus</strong>.</p>
+    </div>
+  </div>
+
+  <div class="clause-divider"></div>
+
+  <!-- Signatures -->
+  <div class="sig-section">
+    <p class="sig-label">Signatures — In Witness Whereof</p>
+    <p style="font-size:13px; color: var(--ink-soft); margin-bottom: 28px;">The parties have executed this Agreement as of the date written below.</p>
+
+    <div class="sig-grid">
+
+      <div class="sig-block">
+        <p class="sig-party-name">HealthLedgerAI</p>
+        <p class="sig-party-role">Disclosing Party</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Signature</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Full Name (Print)</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Title / Role</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Date</p>
+      </div>
+
+      <div class="sig-block">
+        <p class="sig-party-name">American Medical Center</p>
+        <p class="sig-party-role">Receiving Party — C &amp; S American Heart Institute Limited</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Signature</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Full Name (Print)</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Title / Role</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Date</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    HealthLedgerAI · info@healthledgerai.com · healthledgerai.com<br>
+    This document is confidential. Governed by the laws of the Republic of Cyprus. · © 2026 HealthLedgerAI
+  </div>
+
+</div>
+
+</body>
+</html>

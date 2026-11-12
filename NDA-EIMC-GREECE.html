@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confidentiality Agreement — HealthLedgerAI × Ιατρικό Διαβαλκανικό</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F4EFE4;
+      --gold: #A08558;
+      --gold-lt: #C9AA7C;
+      --sage: #4A6B5A;
+      --ink: #1E1A14;
+      --ink-soft: #4A4438;
+      --ink-mute: #8A8070;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 60px 64px;
+      background: #fff;
+      border: 1px solid rgba(160,133,88,0.2);
+    }
+
+    .doc-header {
+      text-align: center;
+      border-bottom: 1px solid rgba(160,133,88,0.3);
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .logo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+
+    .doc-type {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .doc-type-gr {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .doc-title-gr {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin-bottom: 8px;
+    }
+
+    .doc-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--ink-soft);
+    }
+
+    .parties-block {
+      background: rgba(160,133,88,0.05);
+      border: 1px solid rgba(160,133,88,0.2);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .parties-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .party-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .party-row:last-child { margin-bottom: 0; }
+
+    .party-marker {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gold);
+      min-width: 24px;
+      padding-top: 1px;
+    }
+
+    .party-detail {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+    }
+
+    .party-detail strong {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .intro-text {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+      margin-bottom: 28px;
+    }
+
+    .clause { margin-bottom: 24px; }
+
+    .clause-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .clause-text {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink-soft);
+    }
+
+    .clause-text p { margin-bottom: 8px; }
+    .clause-text p:last-child { margin-bottom: 0; }
+
+    .clause-list {
+      list-style: none;
+      margin: 8px 0 8px 16px;
+    }
+
+    .clause-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .clause-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-lt);
+    }
+
+    .clause-divider {
+      height: 1px;
+      background: rgba(160,133,88,0.2);
+      margin: 28px 0;
+    }
+
+    .sig-section {
+      margin-top: 40px;
+      border-top: 1px solid rgba(160,133,88,0.3);
+      padding-top: 32px;
+    }
+
+    .sig-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .sig-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sig-party-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .sig-party-role {
+      font-size: 11px;
+      color: var(--ink-mute);
+      letter-spacing: 0.06em;
+      margin-bottom: 32px;
+    }
+
+    .sig-line {
+      border-bottom: 1px solid var(--ink);
+      margin-bottom: 8px;
+      height: 32px;
+    }
+
+    .sig-field-label {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 20px;
+    }
+
+    .doc-footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(160,133,88,0.15);
+      text-align: center;
+      font-size: 10px;
+      color: var(--ink-mute);
+      line-height: 1.6;
+    }
+
+    .disclaimer {
+      background: rgba(139,58,42,0.05);
+      border: 1px solid rgba(139,58,42,0.15);
+      border-left: 3px solid rgba(139,58,42,0.4);
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      font-size: 11px;
+      color: #8B3A2A;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11.5px; }
+      .page { margin: 0; padding: 48px 56px; border: none; max-width: 100%; box-shadow: none; }
+      .disclaimer { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="doc-header">
+    <div class="logo-row">
+      <span class="logo-dot"></span>
+      <span class="logo-text">HealthLedger AI</span>
+    </div>
+    <p class="doc-type">Mutual Non-Disclosure &amp; Confidentiality Agreement</p>
+    <p class="doc-type-gr">Σύμφωνο Εμπιστευτικότητας και Μη Αποκάλυψης</p>
+    <h1 class="doc-title">Confidentiality Agreement</h1>
+    <p class="doc-title-gr">Σύμφωνο Εμπιστευτικότητας</p>
+    <p class="doc-subtitle">HealthLedgerAI &amp; Ιατρικό Διαβαλκανικό Θεσσαλονίκης</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Note to Parties / Σημείωση:</strong> This agreement is a template prepared by HealthLedgerAI. Both parties are advised to have this document reviewed by their respective legal counsel before signing. This document does not constitute legal advice and is prepared in English as the operative language; a Greek translation may be provided upon request.
+  </div>
+
+  <!-- Parties -->
+  <div class="parties-block">
+    <p class="parties-label">The Parties / Τα Μέρη</p>
+    <div class="party-row">
+      <span class="party-marker">(1)</span>
+      <div class="party-detail">
+        <strong>The Disclosing Party / Το Αποκαλύπτον Μέρος:</strong> The individual researcher and founder operating under the business name <strong>HealthLedgerAI</strong>, conducting doctoral research on hospital cooperation agreements in Cyprus and Greece (hereinafter "<strong>HealthLedgerAI</strong>" or "<strong>the Disclosing Party</strong>"); and
+      </div>
+    </div>
+    <div class="party-row">
+      <span class="party-marker">(2)</span>
+      <div class="party-detail">
+        <strong>The Receiving Party / Το Λαμβάνον Μέρος:</strong> <strong>ΙΑΤΡΙΚΟ ΔΙΑΒΑΛΚΑΝΙΚΟ ΘΕΣΣΑΛΟΝΙΚΗΣ</strong> (European Interbalkan Medical Center), a business unit of Athens Medical Group S.A. (Ιατρικό Αθηνών Ε.Α.Ε., ΑΦΜ: 000356301000), listed on the Athens Stock Exchange (ticker: ΙΑΤΡ), with registered address at Ασκληπιού 10, Πυλαία, 55535, Θεσσαλονίκη, Greece (hereinafter "<strong>EIMC</strong>" or "<strong>the Receiving Party</strong>").
+      </div>
+    </div>
+  </div>
+
+  <p class="intro-text">
+    This Mutual Non-Disclosure and Confidentiality Agreement (the "<strong>Agreement</strong>") is entered into as of the date last signed below. HealthLedgerAI intends to disclose certain confidential and proprietary information to EIMC for the sole purpose of evaluating a potential business relationship or collaboration (the "<strong>Purpose</strong>"). Both parties agree to protect such information under the following terms.
+  </p>
+
+  <div class="clause-divider"></div>
+
+  <div class="clause">
+    <p class="clause-number">1. Definition of Confidential Information</p>
+    <div class="clause-text">
+      <p>"<strong>Confidential Information</strong>" means all information disclosed by HealthLedgerAI to EIMC, whether orally, in writing, electronically, or by demonstration, that is designated as confidential or that reasonably should be understood to be confidential. Without limitation, Confidential Information specifically includes:</p>
+      <ul class="clause-list">
+        <li>The concept, design, architecture, and methodology of the HealthLedgerAI product, platform, and AI system</li>
+        <li>All doctoral research findings, data, analyses, fieldwork notes, and conclusions related to hospital cooperation agreements in Cyprus and Greece</li>
+        <li>Business strategy, market analysis, go-to-market plans, pricing models, and financial projections</li>
+        <li>Hospital-specific research, intelligence briefs, and competitive analyses prepared by HealthLedgerAI</li>
+        <li>Technical documentation, software architecture, AI training methodology, and product roadmaps</li>
+        <li>The identity of current or prospective clients, partners, and investors</li>
+        <li>All information — in Greek or English — disclosed in any presentation, demonstration, or meeting between the parties</li>
+        <li>The existence and terms of this Agreement itself</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">2. Obligations of the Receiving Party</p>
+    <div class="clause-text">
+      <p>EIMC and Athens Medical Group S.A. agree to:</p>
+      <ul class="clause-list">
+        <li>Hold all Confidential Information in strict confidence and protect it with at least the same degree of care used for their own confidential information, and in no event less than reasonable care</li>
+        <li>Not disclose any Confidential Information to any third party, including employees, contractors, board members, or advisors, except those with a strict need to know for the Purpose, and only after such persons have agreed in writing to obligations no less restrictive than those in this Agreement</li>
+        <li>Use the Confidential Information solely for the Purpose of evaluating a potential business relationship with HealthLedgerAI, and for no other purpose</li>
+        <li>Promptly notify HealthLedgerAI in writing upon discovery of any unauthorised use or disclosure of Confidential Information</li>
+        <li>Not copy, reproduce, or summarise Confidential Information except as strictly necessary for the Purpose</li>
+        <li>Ensure that these obligations extend to and are binding upon all members of the Athens Medical Group who receive or are exposed to Confidential Information</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">3. Non-Use and Non-Development</p>
+    <div class="clause-text">
+      <p>EIMC and Athens Medical Group S.A. agree that they will not, directly or indirectly, use any Confidential Information to:</p>
+      <ul class="clause-list">
+        <li>Develop, design, or procure any product, software, service, or methodology that is substantially similar to or derived from the HealthLedgerAI product or concept</li>
+        <li>Implement, adapt, or apply any methodology, framework, or system described in the Confidential Information without the express written consent of HealthLedgerAI</li>
+        <li>Brief, instruct, or engage any third party — including technology vendors, AI companies, consultants, or developers — to build or replicate any aspect of the HealthLedgerAI concept</li>
+        <li>Use any hospital-specific research prepared by HealthLedgerAI for any purpose other than evaluating the proposed business relationship</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">4. Non-Circumvention</p>
+    <div class="clause-text">
+      <p>EIMC and Athens Medical Group S.A. agree not to circumvent HealthLedgerAI by contacting, engaging, or entering into any agreement with any person, company, institution, or research body identified by HealthLedgerAI during the course of disclosures, where such contact relates directly or indirectly to the subject matter of the Confidential Information, without the prior written consent of HealthLedgerAI. This clause applies for a period of three (3) years from the date of last disclosure.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">5. Group-Wide Application</p>
+    <div class="clause-text">
+      <p>Because EIMC operates as a business unit of Athens Medical Group S.A., the obligations and restrictions in this Agreement apply to and are binding upon Athens Medical Group S.A. and all of its subsidiaries, affiliates, and related entities, including but not limited to all other hospital units within the AMG group, to the same extent as they apply to EIMC directly. The signatory on behalf of EIMC/AMG represents that they have the authority to bind the group accordingly.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">6. Exclusions</p>
+    <div class="clause-text">
+      <p>The obligations of confidentiality shall not apply to information that EIMC or AMG can demonstrate by written evidence:</p>
+      <ul class="clause-list">
+        <li>Was already in the public domain at the time of disclosure, or subsequently enters the public domain through no fault of EIMC or AMG</li>
+        <li>Was already rightfully known to EIMC or AMG without restriction prior to disclosure</li>
+        <li>Was independently developed by EIMC or AMG without use of or reference to the Confidential Information</li>
+        <li>Is required to be disclosed by applicable Greek law, EU regulation, or court or regulatory order, provided that HealthLedgerAI is given prompt written notice and the opportunity to seek a protective order</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">7. Intellectual Property &amp; Research Ownership</p>
+    <div class="clause-text">
+      <p>Nothing in this Agreement grants EIMC or AMG any licence, right, title, or interest in or to any Confidential Information, or in any intellectual property of HealthLedgerAI. All Confidential Information — including the doctoral research, AI methodology, product concept, and any intellectual property embedded therein — remains the exclusive property of HealthLedgerAI. No disclosure under this Agreement shall be construed as granting any rights under any patent, copyright, trade secret, or other intellectual property right. The doctoral research underlying HealthLedgerAI is the independent academic work of the Disclosing Party and is explicitly protected under this Agreement.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">8. Return or Destruction of Materials</p>
+    <div class="clause-text">
+      <p>Upon written request from HealthLedgerAI, or upon termination of discussions between the parties for any reason, EIMC and AMG shall promptly return or certify the destruction of all Confidential Information in their possession, including all copies, notes, presentations, summaries, and derivative works, in any format or medium, and shall confirm such return or destruction in writing within ten (10) business days.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">9. Term</p>
+    <div class="clause-text">
+      <p>This Agreement shall remain in force for a period of <strong>five (5) years</strong> from the date of last signature. The obligations of confidentiality under Clauses 2, 3, 4, and 5 shall survive the expiration or termination of this Agreement with respect to Confidential Information received during its term. The non-circumvention obligations under Clause 4 shall survive for three (3) years from the date of last disclosure.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">10. Remedies</p>
+    <div class="clause-text">
+      <p>EIMC and AMG acknowledge that any breach or threatened breach of this Agreement would cause HealthLedgerAI irreparable harm for which monetary damages would be an inadequate remedy. HealthLedgerAI shall be entitled, in addition to any other remedies available at law or in equity under Greek law or EU law, to seek injunctive or other equitable relief from any competent court, without the requirement to post any bond, prove actual damages, or exhaust other remedies first.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">11. GDPR Compliance</p>
+    <div class="clause-text">
+      <p>Both parties agree to handle any personal data exchanged in connection with this Agreement in compliance with Regulation (EU) 2016/679 (GDPR) and applicable Greek implementing legislation. No personal data of hospital patients, staff, or third parties shall be included in any Confidential Information exchanged under this Agreement without the prior written agreement of both parties and appropriate legal basis.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">12. No Obligation to Proceed</p>
+    <div class="clause-text">
+      <p>Nothing in this Agreement obligates either party to proceed with any business relationship, transaction, or further discussions. Either party may terminate discussions at any time without liability, subject to the ongoing confidentiality obligations set out herein.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">13. Entire Agreement &amp; Amendments</p>
+    <div class="clause-text">
+      <p>This Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior discussions, understandings, and agreements relating to confidentiality. This Agreement may not be amended except by a written instrument signed by duly authorised representatives of both parties.</p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <p class="clause-number">14. Governing Law &amp; Jurisdiction</p>
+    <div class="clause-text">
+      <p>This Agreement shall be governed by and construed in accordance with the laws of the <strong>Hellenic Republic (Greece)</strong>. Any dispute arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the competent courts of <strong>Thessaloniki, Greece</strong>. The parties agree that the English language version of this Agreement shall be controlling in the event of any conflict with any translation.</p>
+    </div>
+  </div>
+
+  <div class="clause-divider"></div>
+
+  <!-- Signatures -->
+  <div class="sig-section">
+    <p class="sig-label">Signatures / Υπογραφές — In Witness Whereof</p>
+    <p style="font-size:13px; color: var(--ink-soft); margin-bottom: 28px;">The parties have executed this Agreement as of the date written below. / Τα μέρη συνήψαν αυτή τη Συμφωνία κατά την ημερομηνία που αναγράφεται κατωτέρω.</p>
+
+    <div class="sig-grid">
+
+      <div class="sig-block">
+        <p class="sig-party-name">HealthLedgerAI</p>
+        <p class="sig-party-role">Disclosing Party / Αποκαλύπτον Μέρος</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Signature / Υπογραφή</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Full Name / Ονοματεπώνυμο</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Title / Ιδιότητα</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Date / Ημερομηνία</p>
+      </div>
+
+      <div class="sig-block">
+        <p class="sig-party-name">Ιατρικό Διαβαλκανικό</p>
+        <p class="sig-party-role">Receiving Party · Athens Medical Group S.A.</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Signature / Υπογραφή</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Full Name / Ονοματεπώνυμο</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Title / Ιδιότητα</p>
+
+        <div class="sig-line"></div>
+        <p class="sig-field-label">Date / Ημερομηνία</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    HealthLedgerAI · info@healthledgerai.com · healthledgerai.com<br>
+    This document is prepared in English as the operative language. Governed by the laws of the Hellenic Republic. · © 2026 HealthLedgerAI
+  </div>
+
+</div>
+
+</body>
+</html>
